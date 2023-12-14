@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        poppins: ['poppins', 'sans-serif'], 'poppins-medium': ['poppins-medium', 'sans-serif'],
+        'poppins-bold': ['poppins-bold', 'sans-serif'], 'poppins-black': ['poppins-black', 'sans-serif'],
+        arbutus: ['arbutus', 'sans-serif'],
+      },
+      colors: {
+        brown: '#755B3E',
+      }
     },
   },
   plugins: [],
