@@ -2,29 +2,24 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import React from "react";
 
 const Navbar = () => {
-  const [toggleDropdown, setToggleDropdown] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [handleClick, setClicked] = useState(false);
-  const [hamburgerColor, setHamburgerColor] = useState("#F9F7F7");
+  const [navSize, setnavSize] = useState("10rem");
+  const [navColor, setnavColor] = useState("#fffff");
 
-  function HandleScroll() {
-    if (window.scrollY > 0) {
-      setScrolled(true);
-      setHamburgerColor("#000");
-    } else {
-      setScrolled(false);
-      setHamburgerColor("#F9F7F7");
-    }
-  }
-
-  function handleNav() {
-    setClicked((event) => !event);
-  }
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
 
   return (
     <nav className="flex place-content-between sm:px-16 w-full py-3 fixed z-10">
@@ -54,14 +49,12 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
         <div className="flex">
-          {toggleDropdown && (
-            <div className="dropdown">
-              <Link href="/" className="btn">
-                Book
-                <MdKeyboardDoubleArrowRight />
-              </Link>
-            </div>
-          )}
+          <div className="dropdown">
+            <Link href="/" className="btn">
+              Book
+              <MdKeyboardDoubleArrowRight />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

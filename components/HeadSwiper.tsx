@@ -23,11 +23,11 @@ export default function Page() {
           loop={true}
           spaceBetween={10}
           navigation={true}
-          thumbs={{
-            swiper:
-              thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-          }}
-          modules={[FreeMode, Navigation, Thumbs]}
+          // thumbs={{
+          //   swiper:
+          //     thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+          // }}
+          modules={[FreeMode, Navigation]}
           className=""
         >
           {images.map((image, index) => (
