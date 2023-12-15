@@ -47,3 +47,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <!-- Colors -->
 -- brown: #755B3E
+-- yellow: #FFCC29
+-- Light Blue: #91D8F7
+-- Blue: #0098DA

@@ -1,8 +1,19 @@
+import React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Arbutus_Slab, Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const arbutus = Arbutus_Slab({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-arbutus",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Villa Relax",
@@ -19,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${poppins.variable} font-poppins ${arbutus.variable} font-arbutus`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
