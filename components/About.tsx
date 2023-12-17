@@ -1,27 +1,6 @@
+import { LocationToVisit } from "../lib/LocationToVisit";
+
 function About() {
-  type LocationToVisitData = {
-    placeToVisit: string;
-  };
-
-  type DataObject = {
-    locations: LocationToVisitData[];
-    // You can add more arrays or properties if needed
-  };
-
-  const dataObject: DataObject = {
-    locations: [
-      {
-        placeToVisit: `<a href="https://www.aquacolors.eu" className="text-brown">www.aquacolors.eu</a> - The Aquacolors water amusement park is only 10 km from our villas.`,
-      },
-      { placeToVisit: "Beach" },
-      { placeToVisit: "Center" },
-      { placeToVisit: "Sea" },
-      { placeToVisit: "Beach" },
-      // Add more locations as needed
-    ],
-    // You can add more arrays or properties if needed
-  };
-
   return (
     <section className="flex justify-center">
       <div className="max-w-6xl p-3 pt-20">
@@ -57,7 +36,7 @@ function About() {
         <div className="pt-5">
           <h2 className="font-semibold">What to see and visit:</h2>
           <ul className="list-disc	p-3 pl-8">
-            {dataObject.locations.map((item, index) => (
+            {LocationToVisit.locations.map((item, index) => (
               <li
                 key={index}
                 className=""

@@ -4,25 +4,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import React from "react";
 
 const Navbar = () => {
-  const [navSize, setnavSize] = useState("10rem");
-  const [navColor, setnavColor] = useState("#fffff");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
-  const listenScrollEvent = () => {
-    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    const isScrolledDown = currentScrollPos < prevScrollPos;
+
+    setVisible(isScrolledDown);
+    setPrevScrollPos(currentScrollPos);
   };
+
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("scroll", listenScrollEvent);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   return (
-    <nav className="flex place-content-between sm:px-16 w-full py-3 fixed z-10">
+    <nav
+      className={`bg-white	 flex place-content-between sm:px-8 w-full py-2 fixed z-10 ${
+        visible ? "transleteNavUp" : "transleteNav"
+      }`}
+    >
       <Link href="/" className="flex gap-2 items-center">
         <Image
           src="/assets/images/logo.png"

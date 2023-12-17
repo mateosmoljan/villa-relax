@@ -33,7 +33,29 @@ a {
   text-decoration: none;
 }
 
+/* SwiperJs styles */
+
+.swiper-nav-btns {
+  @apply absolute z-10 top-0 flex justify-between w-screen ;
+}
+
+.swiper-prev,
+.swiper-next {
+  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-brown;
+}
+
+
 
 .btn {
-  @apply flex items-center p-2 bg-brown rounded-md font-poppins text-white tracking-widest	;
+  @apply flex items-center p-2 bg-brown rounded-md font-poppins text-white tracking-widest	text-amber-100 hover:bg-darkbrown;
+}
+
+/* Translate Nav */
+
+.transleteNav {
+  @apply -translate-y-full transition-transform;
+}
+
+.transleteNavUp {
+  @apply  transform-none transition-transform;
 }
