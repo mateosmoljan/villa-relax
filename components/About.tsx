@@ -2,7 +2,7 @@ import { LocationToVisit } from "../lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center" id="info">
       <div className="max-w-6xl p-3 pt-20">
         <h1 className="flex justify-center font-arbutus text-4xl font-bold">
           Villa Relax - Pula
@@ -11,26 +11,28 @@ function About() {
           <p>
             Boasting air-conditioned accommodation with a private pool, Villa
             Relax is situated in Pula. This property offers access to a balcony,
-            pool at the pool table, free private parking and free WiFi. The
-            villa has a children's playground and a sauna.
+            pool at the pool table, free private parking and <b>free WiFi</b>.
+            The villa has a <b>children's playground</b> and a <b>sauna</b>.
           </p>
           <br />
           <p>
-            The spacious villa features 5 bedrooms, 5 bathrooms, bed linen,
-            towels, a flat-screen TV with satellite channels, a dining area, a
-            fully equipped kitchen, and a terrace with city views. For added
-            privacy, the accommodation features a private entrance.
+            The spacious villa features <b>5 bedrooms</b>, <b>5 bathrooms</b>,
+            bed linen, towels, a flat-screen TV with satellite channels, a
+            dining area, a <b>fully equipped kitchen</b>, and a terrace with
+            <b> city views</b>. For added privacy, the accommodation features a
+            <b> private entrance</b>.
           </p>
           <br />
           <p>
-            You can play darts at this 5-star villa. The villa has a barbecue
-            and a garden, which can be enjoyed by guests if the weather permits.
+            You can play darts at this <b>5-star villa</b>. The villa has a
+            barbecue and a garden, which can be enjoyed by guests if the weather
+            permits.
           </p>
           <br />
           <p>
-            Valsaline Beach is 1.8 km from Villa Relax, while Saccorgiana Beach
-            is 2.3 km from the property. The nearest airport is Pula Airport, 9
-            km from the accommodation.
+            Valsaline <b>Beach is 1.8 km</b> from Villa Relax, while Saccorgiana
+            Beach is 2.3 km from the property. The nearest airport is Pula
+            Airport, 9 km from the accommodation.
           </p>
         </div>
         <div className="pt-5">

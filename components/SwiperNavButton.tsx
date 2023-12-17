@@ -8,19 +8,19 @@ export const SwiperNavButtons = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="swiper-nav-btns">
+    <>
       <button
         onClick={() => swiper.slidePrev()}
-        className="h-screen w-1/5 flex justify-center items-center"
+        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 "
       >
         <FaArrowCircleLeft className="swiper-prev" />
       </button>
       <button
         onClick={() => swiper.slideNext()}
-        className="h-screen w-1/5 flex justify-center items-center"
+        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 right-0"
       >
         <FaArrowCircleRight className="swiper-next" />
       </button>
-    </div>
+    </>
   );
 };

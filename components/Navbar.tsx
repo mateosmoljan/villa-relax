@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white	 flex place-content-between sm:px-8 w-full py-2 fixed z-10 ${
+      className={`bg-white shadow-md flex place-content-between sm:px-8 w-full py-2 fixed z-10 ${
         visible ? "transleteNavUp" : "transleteNav"
       }`}
     >

@@ -22,7 +22,9 @@ const config: Config = {
         darkbrown: "#54422e",
         yellow: "#FFCC29",
         light_blue: "#91D8F7",
-        blue: "#0098DA"
+        blue: "#0098DA",
+        pink: "#cc3bb1",
+        dark_yellow: "#afb020",
       }
     },
   },

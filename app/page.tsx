@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Acommodation from "@/components/Acommodation";
 import Distances from "@/components/Distances";
 import HeadSwiper from "@/components/HeadSwiper";
 import Navbar from "@/components/Navbar";
@@ -14,6 +15,7 @@ function Home() {
       <main>
         <About />
         <Distances />
+        <Acommodation />
       </main>
     </div>
   );
