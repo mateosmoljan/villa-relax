@@ -23,21 +23,19 @@ export const SwiperNavButtonsAcommodation = () => {
     <div
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
-      className={`absolute z-10 top-0 flex items-center justify-between w-full h-full`}
+      className={` absolute z-10 top-0 flex items-center justify-between w-full h-full ${
+        isHovered ? "shadow-a" : ""
+      }`}
     >
       <button
         onClick={() => swiper.slidePrev()}
-        className={`shadow-a-but h-full rounded-t-md ${
-          isHovered ? "block" : "hidden"
-        }`}
+        className={` h-full rounded-t-md ${isHovered ? "block" : "hidden"}`}
       >
         <MdOutlineKeyboardArrowLeft className={` text-6xl text-white  `} />
       </button>
       <button
         onClick={() => swiper.slideNext()}
-        className={`h-full  shadow-a-but rounded-t-md ${
-          isHovered ? "block" : "hidden"
-        }`}
+        className={` h-full rounded-t-md ${isHovered ? "block" : "hidden"}`}
       >
         <MdOutlineKeyboardArrowRight className={`text-6xl text-white`} />
       </button>

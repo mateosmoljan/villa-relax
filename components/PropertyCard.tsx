@@ -14,7 +14,7 @@ interface SwiperNavButtonsProps {
 
 function PropertyCard() {
   return (
-    <div className=" w-2/5 card_shadow rounded-md z-10 max-w-full overflow-hidden">
+    <div className=" w-1/2 card_shadow rounded-md z-10 max-w-full overflow-hidden">
       <Swiper lazy="true" loop={true} spaceBetween={0}>
         {images.map((image, index) => (
           <SwiperSlide key={index}>
@@ -22,7 +22,7 @@ function PropertyCard() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                className="object-cover block rounded-t-md h-52 w-full"
+                className="object-cover block rounded-t-md h-60 w-full"
               />
             </div>
           </SwiperSlide>

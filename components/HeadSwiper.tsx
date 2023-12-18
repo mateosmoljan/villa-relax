@@ -51,7 +51,7 @@ export default function HeadSwiper() {
                   alt={image.alt}
                   className="object-cover block h-screen w-full"
                 />
-                <div className="z-20 absolute bottom-8 flex items-center justify-center flex-col bg-black bg-opacity-50 rounded-md p-8 gap-3">
+                <div className="z-20 absolute bottom-8 flex items-center justify-center flex-col bg-black bg-opacity-60 rounded-md p-8 gap-3">
                   <h1 className="text-white font-arbutus text-3xl font-bold">
                     {image.title}
                   </h1>
