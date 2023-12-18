@@ -8,7 +8,7 @@ function Distances() {
       <div className="max-w-6xl">
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-xl">Distances from Villa Relax</h1>
-          <button className="btn">Show Map</button>
+          <button className="btn-2">Show Map</button>
         </div>
         <div className="flex flex-wrap">
           {dataObject.locations.map((item, index) => (

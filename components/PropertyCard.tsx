@@ -8,10 +8,6 @@ import { images } from "@/lib/images";
 import "swiper/css";
 import { SwiperNavButtonsAcommodation } from "./SwiperNavButtonsAcommodation";
 
-interface SwiperNavButtonsProps {
-  className?: string;
-}
-
 function PropertyCard() {
   return (
     <div className=" w-1/2 card_shadow rounded-md z-10 max-w-full overflow-hidden">
@@ -30,11 +26,11 @@ function PropertyCard() {
         <SwiperNavButtonsAcommodation />
       </Swiper>
       <div className="p-3">
-        <h2 className="font-bold text-xl font-arbutus">Villa Relax</h2>
-        <p>Maximum of 12 people</p>
-        <p>
+        <h2 className="font-black text-xl font-arbutus">Villa Relax</h2>
+        <p className="text-sm">Maximum of 12 people</p>
+        <p className="text-sm">
           Price from{" "}
-          <span className="font-bold text-dark_yellow text-3xl">375 €</span> per
+          <span className="font-bold text-dark_yellow text-2xl">375 €</span> per
           night
         </p>
       </div>

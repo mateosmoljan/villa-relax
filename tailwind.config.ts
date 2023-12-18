@@ -25,6 +25,7 @@ const config: Config = {
         blue: "#0098DA",
         pink: "#cc3bb1",
         dark_yellow: "#afb020",
+        dark_blue_black: "#343a40", 
       }
     },
   },
