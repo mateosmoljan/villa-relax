@@ -1,4 +1,7 @@
+"use client";
+
 import { dataObject } from "../lib/LocationDistance";
+import AppMap from "./Geocoder";
 
 function Distances() {
   const totalLocations = dataObject.locations.length;
