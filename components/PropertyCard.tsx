@@ -30,8 +30,7 @@ function PropertyCard() {
         <p className="text-sm">Maximum of 12 people</p>
         <p className="text-sm">
           Price from{" "}
-          <span className="font-bold text-dark_yellow text-2xl">375 €</span> per
-          night
+          <span className="font-bold text-yellow text-xl">375 €</span> per night
         </p>
       </div>
     </div>

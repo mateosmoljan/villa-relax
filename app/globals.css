@@ -64,3 +64,22 @@ a {
 .transleteNavUp {
   @apply  transform-none transition-transform;
 }
+
+.transitionMap {
+  transition: background 0.3s ease-in;
+}
+
+.transitionMap {
+  animation: translateMap 0.3s ease-in;
+}
+
+@keyframes translateMap {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
