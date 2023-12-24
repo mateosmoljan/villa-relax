@@ -23,7 +23,7 @@ function GoogleMaps({ showMap, onClose }: GoogleMapsProps) {
             width={1128}
             height={500}
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className="py-3 flex justify-end">
