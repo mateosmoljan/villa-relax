@@ -29,7 +29,6 @@ export default function HeadSwiper() {
     <section className="block h-screen max-w-screen relative">
       <div className="block container relative max-w-full !important ">
         <Swiper
-          lazy={true}
           loop={true}
           effect={"fade"}
           spaceBetween={0}
