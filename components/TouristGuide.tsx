@@ -15,7 +15,7 @@ function TouristGuide() {
         </div>
         <div className=" ">
           <Swiper
-            lazy="true"
+            lazy={true}
             loop={true}
             slidesPerView={4}
             spaceBetween={10}
