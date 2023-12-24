@@ -50,6 +50,7 @@ export default function HeadSwiper() {
                   src={image.src}
                   alt={image.alt}
                   className="object-cover block h-screen w-full"
+                  loading="lazy"
                 />
                 <div className="z-20 absolute bottom-8 flex items-center justify-center flex-col bg-black bg-opacity-60 rounded-md p-8 gap-3">
                   <h1 className="text-white font-arbutus text-3xl font-bold">

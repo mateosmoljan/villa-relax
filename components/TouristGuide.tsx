@@ -28,6 +28,7 @@ function TouristGuide() {
                     src={image.src}
                     alt={image.alt}
                     className="object-cover  h-full w-full rounded-md"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute bottom-3 left-3 flex flex-col gap-2">
