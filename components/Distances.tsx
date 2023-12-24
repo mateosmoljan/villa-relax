@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { dataObject } from "../lib/LocationDistance";
 import GoogleMaps from "./GoogleMaps";
 
@@ -12,11 +12,12 @@ function Distances() {
     setShowMap(false);
   };
 
-  if (showMap) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
-  }
+  useEffect(() => {
+    document.body.style.overflow = showMap ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showMap]);
 
   return (
     <section className="flex justify-center">
