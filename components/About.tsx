@@ -2,9 +2,9 @@ import { LocationToVisit } from "../lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="flex justify-center" id="info">
-      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl p-3 pt-20">
-        <h1 className="flex justify-center font-arbutus text-4xl font-bold">
+    <section className="flex justify-center py-20" id="info">
+      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5">
+        <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold">
           Villa Relax - Pula
         </h1>
         <div className="pt-10">

@@ -20,7 +20,7 @@ const config: Config = {
       colors: {
         brown: '#755B3E',
         darkbrown: "#54422e",
-        yellow: "#FFCC29",
+        yellow: "#B29600",
         light_blue: "#91D8F7",
         blue: "#0098DA",
         pink: "#cc3bb1",

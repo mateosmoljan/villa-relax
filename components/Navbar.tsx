@@ -39,7 +39,7 @@ const Navbar = () => {
           height={40}
           className="object-contain"
         />
-        <p className="font-arbutus font-black text-2xl text-brown">
+        <p className="font-arbutus font-black text-2xl text-yellow">
           <span className="text-black">Villa</span>Relax
         </p>
       </Link>
