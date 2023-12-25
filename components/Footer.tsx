@@ -3,8 +3,8 @@ import SSL from "../public/assets/images/ssl.png";
 
 function Footer() {
   return (
-    <section className="bg-dark_blue_black px-20 py-10">
-      <div className="flex w-full text-white justify-evenly">
+    <section className="bg-dark_blue_black xl:px-20 py-10 xl:pb-20 ">
+      <div className="grid w-full text-white justify-evenly col-start-2 col-end-2">
         <div>
           <div className="space-y-4 ">
             <Image src={SSL} alt="ssl Villa Relax" width={200} />

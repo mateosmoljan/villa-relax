@@ -8,7 +8,7 @@ import { SwiperNavButtonsGuide } from "./SwiperNavButtonsGuide";
 function TouristGuide() {
   return (
     <section className="flex justify-center">
-      <div className="max-w-6xl p-3 py-20">
+      <div className="xl:max-w-6xl max-w-5xl py-20">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Tourist Guide</h2>
           <h1 className="font-bold text-3xl">What to visit, see and do?</h1>
@@ -22,7 +22,7 @@ function TouristGuide() {
           >
             {TouristImageData.image.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="flex  items-center justify-center h-96 w-full">
+                <div className="flex  items-center justify-center xl:h-80 lg:h-96 w-full">
                   <Image
                     src={image.src}
                     alt={image.alt}

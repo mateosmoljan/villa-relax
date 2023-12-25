@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --col-deepblue: #4478e3;
+}
 
 html {
   scroll-behavior: smooth;
@@ -82,4 +85,49 @@ a {
     transform: translateY(0);
     opacity: 100;
   }
+}
+
+/* Footer Wawes */
+
+.wave_svg {
+  overflow:visible;
+}
+
+.wave {
+  animation: wave 10s linear;
+  animation-iteration-count:infinite;
+  fill: #343a40;
+}
+
+.gooeff {
+    filter: url(#goo);
+}
+#wave2 {
+  animation-duration:15s;
+  animation-direction: reverse;
+  opacity: .6
+}
+#wave3 {
+  animation-duration: 20s;
+  opacity:.3;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(25px); 
+  }
+  30% {
+    transform: translateY(-10px) scale(.1);
+  }
+  30.001% {
+    transform: translateY(25px) scale(1); 
+  }
+  70% {
+    transform: translateY(25px); 
+  }
+  100% { 
+    transform: translateY(-10px) scale(.1);  
+  }
+}
+@keyframes wave {
+  to {transform: translateX(-100%);}
 }

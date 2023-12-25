@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Acommodation from "@/components/Acommodation";
 import Distances from "@/components/Distances";
 import Footer from "@/components/Footer";
+import FooterSvg from "@/components/FooterSvg";
 import HeadSwiper from "@/components/HeadSwiper";
 import Navbar from "@/components/Navbar";
 import Photogalleries from "@/components/Photogalleries";
@@ -23,6 +24,7 @@ function Home() {
         <Photogalleries />
         <TouristGuide />
         <SendMessage />
+        <FooterSvg />
       </main>
       <footer>
         <Footer />
