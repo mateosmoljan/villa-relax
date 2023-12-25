@@ -1,7 +1,7 @@
 function SendMessage() {
   return (
     <section className="flex justify-center">
-      <div className="max-w-6xl p-3 py-20">
+      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl p-3 py-20">
         <div className="flex justify-between items-center w-full shadow-2xl p-10 gap-12">
           <div>
             <p className="text-base">

@@ -21,7 +21,7 @@ function Distances() {
 
   return (
     <section className="flex justify-center">
-      <div className="max-w-6xl">
+      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <div className="flex justify-between items-center">
           <h1 className="font-bold text-xl">Distances from Villa Relax</h1>
           <button className="btn-2" onClick={() => setShowMap(true)}>

@@ -26,7 +26,11 @@ const config: Config = {
         pink: "#cc3bb1",
         dark_yellow: "#afb020",
         dark_blue_black: "#343a40", 
+      },
+      inset: {
+        "1/10": "10%",
       }
+
     },
   },
   plugins: [],

@@ -24,9 +24,9 @@ function Home() {
         <Photogalleries />
         <TouristGuide />
         <SendMessage />
-        <FooterSvg />
       </main>
       <footer>
+        <FooterSvg />
         <Footer />
       </footer>
     </div>

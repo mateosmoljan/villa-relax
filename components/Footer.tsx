@@ -3,16 +3,16 @@ import SSL from "../public/assets/images/ssl.png";
 
 function Footer() {
   return (
-    <section className="bg-dark_blue_black xl:px-20 py-10 xl:pb-20 ">
-      <div className="grid w-full text-white justify-evenly col-start-2 col-end-2">
-        <div>
+    <section className="flex justify-center bg-dark_blue_black xl:px-20 py-10 xl:pb-20 ">
+      <div className="max-w-screen-2xl grid w-full text-white sm:grid-cols-2 gap-y-8 lg:grid-cols-4 place-items-center">
+        <div className="h-full relative left-1/10  sm:left-auto w-full sm:w-3/5 lg:w-auto">
           <div className="space-y-4 ">
             <Image src={SSL} alt="ssl Villa Relax" width={200} />
             <p>©2023 . Villa Relax - Pula</p>
             <p>All rights protected</p>
           </div>
         </div>
-        <div>
+        <div className="h-full relative left-1/10  sm:left-auto w-full sm:w-3/5 lg:w-auto">
           <h2 className="font-bold uppercase text-xl pb-5">Usefull Links</h2>
           <ul className="space-y-4">
             <li>
@@ -29,7 +29,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="h-full relative left-1/10  sm:left-auto w-full sm:w-3/5 lg:w-auto">
           <h2 className="font-bold uppercase text-xl pb-5">
             DISCOVER PULA & ISTRIA
           </h2>
@@ -42,7 +42,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="h-full relative left-1/10  sm:left-auto w-full sm:w-3/5 lg:w-auto">
           <h2 className="font-bold uppercase text-xl pb-5">Contact Us</h2>
           <ul className="space-y-4">
             <li>Sandra Smoljan</li>
