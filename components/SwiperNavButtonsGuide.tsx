@@ -18,15 +18,15 @@ export const SwiperNavButtonsGuide: React.FC<SwiperButtonsProps> = ({
         <div className="mt-5">
           <button
             onClick={() => swiper.slidePrev()}
-            className="h-full  relative left-0 top-0 text-4xl z-10 hover:text-brown"
+            className="h-full  relative left-0 top-0 text-3xl z-10"
           >
-            <FaArrowCircleLeft className=" z-10" color="black" />
+            <FaArrowCircleLeft className="text-dark_blue_black hover:text-neutral-800" />
           </button>
           <button
             onClick={() => swiper.slideNext()}
-            className="h-full  relative -right-10 top-0 text-4xl z-10"
+            className="h-full  relative -right-10 top-0 text-3xl z-10"
           >
-            <FaArrowCircleRight className="" color="black" />
+            <FaArrowCircleRight className="text-dark_blue_black hover:text-neutral-800" />
           </button>
         </div>
       )}

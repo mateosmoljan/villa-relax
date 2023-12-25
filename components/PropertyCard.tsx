@@ -10,7 +10,7 @@ import { SwiperNavButtonsAcommodation } from "./SwiperNavButtonsAcommodation";
 
 function PropertyCard() {
   return (
-    <div className=" w-1/2 card_shadow rounded-md z-10 max-w-full overflow-hidden">
+    <div className=" w-full md:w-3/5 lg:w-1/2 card_shadow rounded-md z-10 max-w-full overflow-hidden">
       <Swiper loop={true} spaceBetween={0}>
         {images.map((image, index) => (
           <SwiperSlide key={index}>

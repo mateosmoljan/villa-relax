@@ -33,13 +33,13 @@ function TouristGuide() {
   }, []);
 
   return (
-    <section className="flex justify-center">
+    <section className=" flex justify-center">
       <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl py-20">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Tourist Guide</h2>
           <h1 className="font-bold text-3xl">What to visit, see and do?</h1>
         </div>
-        <div className=" w-full">
+        <div className="block container min-w-full">
           <Swiper
             loop={true}
             slidesPerView={windowSize}
