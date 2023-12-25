@@ -10,7 +10,7 @@ type LocationToVisitData = {
   export const LocationToVisit: DataObject = {
     locations: [
       {
-        placeToVisit: `<a href="https://www.aquacolors.eu" className="text-brown">www.aquacolors.eu</a> - The Aquacolors water amusement park is only 10 km from our villas.`,
+        placeToVisit: `<a href="https://www.aquacolors.eu" className="text-yellow">www.aquacolors.eu</a> - The Aquacolors water amusement park is only 10 km from our villas.`,
       },
       { placeToVisit: "Beach" },
       { placeToVisit: "Center" },

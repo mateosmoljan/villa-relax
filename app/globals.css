@@ -25,6 +25,7 @@ ul {
 
 a {
   text-decoration: none;
+  @apply text-yellow;
 }
 
 /* SwiperJs styles */
@@ -35,7 +36,7 @@ a {
 
 .swiper-prev,
 .swiper-next {
-  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-brown;
+  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-yellow;
 }
 
 /* Button */

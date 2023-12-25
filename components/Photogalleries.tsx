@@ -8,7 +8,7 @@ function Photogalleries() {
       <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5 py-20">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Photogalleries</h2>
-          <h1 className="font-bold text-2xl sm:text-3xl">
+          <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
             Select photos from Villa Relax
           </h1>
         </div>

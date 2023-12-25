@@ -40,7 +40,7 @@ const Navbar = () => {
           className="object-contain"
         />
         <p className="font-arbutus font-black text-2xl text-yellow">
-          <span className="text-black">Villa</span>Relax
+          <span className="text-dark_blue_black">Villa</span>Relax
         </p>
       </Link>
 
