@@ -24,12 +24,16 @@ const config: Config = {
         light_blue: "#91D8F7",
         blue: "#0098DA",
         pink: "#cc3bb1",
-        dark_yellow: "#afb020",
+        dark_yellow: "#857001",
         dark_blue_black: "#343a40", 
       },
       inset: {
         "1/10": "10%",
+      },
+      letterSpacing: {
+        widest: '.25em'
       }
+      
 
     },
   },

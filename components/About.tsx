@@ -2,7 +2,7 @@ import { LocationToVisit } from "../lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="flex justify-center py-20" id="info">
+    <section className="flex justify-center pt-20" id="info">
       <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5">
         <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold text-dark_blue_black">
           Villa Relax - Pula
@@ -36,7 +36,7 @@ function About() {
           </p>
         </div>
         <div className="pt-5">
-          <h2 className="font-semibold text-yellow">What to see and visit:</h2>
+          <h2 className="font-semibold">What to see and visit:</h2>
           <ul className="list-disc	p-3 pl-8">
             {LocationToVisit.locations.map((item, index) => (
               <li

@@ -4,14 +4,20 @@ import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { images } from "@/lib/images";
-
+import { EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import { SwiperNavButtonsAcommodation } from "./SwiperNavButtonsAcommodation";
 
 function PropertyCard() {
   return (
     <div className=" md:w-3/5 lg:w-1/2 card_shadow rounded-md z-10 max-w-full overflow-hidden">
-      <Swiper loop={true} spaceBetween={0}>
+      <Swiper
+        loop={true}
+        spaceBetween={0}
+        effect={"fade"}
+        modules={[EffectFade]}
+      >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="flex relative items-center justify-center h-full w-full">

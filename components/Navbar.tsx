@@ -40,14 +40,15 @@ const Navbar = () => {
           className="object-contain"
         />
         <p className="font-arbutus font-black text-2xl text-yellow">
-          <span className="text-dark_blue_black">Villa</span>Relax
+          <span className="text-dark_blue_black">Villa</span>
+          Relax
         </p>
       </Link>
 
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
         <div className="flex gap-3 md:gap-5">
-          <Link href="/" className="btn">
+          <Link href="/" className="btn first-child:tracking-widest">
             Book
             <MdKeyboardDoubleArrowRight />
           </Link>

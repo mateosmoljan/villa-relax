@@ -42,8 +42,12 @@ a {
 /* Button */
 
 .btn {
-  @apply flex items-center p-2 bg-yellow rounded-md font-poppins text-white tracking-widest uppercase text-sm	 hover:bg-dark_yellow;
+  @apply flex items-center p-2 bg-yellow rounded-md font-poppins   text-white uppercase text-sm	 px-4 hover:bg-dark_yellow tracking-widest;
 }
+
+/* .btn:first-child {
+  letter-spacing: 0.1em;
+} */
 
 .btn-2 {
   @apply flex items-center p-2 bg-dark_blue_black rounded-md font-poppins text-white tracking-widest uppercase text-sm  hover:bg-neutral-800;
@@ -132,3 +136,29 @@ a {
 @keyframes wave {
   to {transform: translateX(-100%);}
 }
+
+
+@media all and (min-width: 	1280px){
+  .google_maps {
+    width: 72rem;
+  }
+}
+  
+@media all and (min-width: 1024px){
+  .google_maps {
+    width: 56rem;
+  }
+}
+  
+@media all and (min-width: 	768px){
+  .google_maps {
+    width: 42rem;
+  }
+}
+  
+@media all and (min-width: 	640px){
+  .google_maps {
+    width: 36rem;
+  }
+}
+  
