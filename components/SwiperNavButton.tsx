@@ -11,13 +11,13 @@ export const SwiperNavButtons = () => {
     <>
       <button
         onClick={() => swiper.slidePrev()}
-        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 "
+        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 focus:outline-none active:bg-transparent !important"
       >
         <FaArrowCircleLeft className="swiper-prev" />
       </button>
       <button
         onClick={() => swiper.slideNext()}
-        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 right-0"
+        className="h-screen w-1/5 flex justify-center items-center absolute z-10 top-0 right-0 focus:outline-none active:bg-transparent !important"
       >
         <FaArrowCircleRight className="swiper-next" />
       </button>
