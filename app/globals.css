@@ -136,29 +136,3 @@ a {
 @keyframes wave {
   to {transform: translateX(-100%);}
 }
-
-
-@media all and (min-width: 	1280px){
-  .google_maps {
-    width: 72rem;
-  }
-}
-  
-@media all and (min-width: 1024px){
-  .google_maps {
-    width: 56rem;
-  }
-}
-  
-@media all and (min-width: 	768px){
-  .google_maps {
-    width: 42rem;
-  }
-}
-  
-@media all and (min-width: 	640px){
-  .google_maps {
-    width: 36rem;
-  }
-}
-  
