@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [navActive, setNavActive] = useState<boolean>(false);
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -24,10 +26,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
-
   return (
     <nav
-      className={`bg-white shadow-md flex place-content-between sm:px-8 w-full py-2 fixed z-50 ${
+      className={`bg-white shadow-md flex place-content-between sm:px-8 px-4 w-full py-2 fixed z-50 ${
         visible ? "transleteNavUp" : "transleteNav"
       }`}
     >
@@ -57,14 +58,46 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
-        <div className="flex">
-          <div className="dropdown">
-            <Link href="/" className="btn">
-              Book
-              <MdKeyboardDoubleArrowRight />
-            </Link>
+        <button onClick={() => setNavActive(() => !navActive)}>
+          <RxHamburgerMenu />
+        </button>
+        {navActive && (
+          <div className="fixed left-0 top-14 bg-white w-full p-2 shadow-md">
+            <ul className="flex flex-col gap-2">
+              <li>
+                <Link href="" className="nav_list">
+                  Villa Relax
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="nav_list">
+                  Pricelist
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="nav_list">
+                  Photogallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="nav_list">
+                  Pula
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="nav_list">
+                  Contact
+                </Link>
+              </li>
+              <li className="flex">
+                <Link href="/" className="btn">
+                  Book
+                  <MdKeyboardDoubleArrowRight />
+                </Link>
+              </li>
+            </ul>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
