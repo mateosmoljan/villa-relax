@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,23 +11,24 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [navActive, setNavActive] = useState<boolean>(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const menuVars = {
     initial: {
-      maxHeight: 0,
+      height: 0,
     },
     animate: {
-      maxHeight: 184,
+      height: 184,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: [0.22, 1, 0.36, 1],
       },
     },
     exit: {
-      maxHeight: 0,
+      height: 0,
 
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: [0.12, 0, 0.39, 0],
       },
     },
@@ -48,6 +49,25 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
+
+  const handleCloseNav = () => {
+    setNavActive(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        handleCloseNav();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav
       className={`bg-white shadow-md flex place-content-between sm:px-8 px-4 w-full py-2 fixed z-50 ${
@@ -108,7 +128,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden flex relative">
+      <div className="md:hidden flex relative" ref={navRef}>
         <button onClick={() => setNavActive(() => !navActive)}>
           <RxHamburgerMenu />
         </button>
