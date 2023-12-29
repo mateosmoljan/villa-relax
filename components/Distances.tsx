@@ -22,13 +22,15 @@ function Distances() {
   return (
     <section className="flex justify-center">
       <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <h1 className="font-bold text-xl text-dark_blue_black">
             Distances from Villa Relax
           </h1>
-          <button className="btn-2" onClick={() => setShowMap(true)}>
-            Show Map
-          </button>
+          <div className="flex justify-end">
+            <button className="btn-2" onClick={() => setShowMap(true)}>
+              Show Map
+            </button>
+          </div>
         </div>
 
         {/* Google Maps */}

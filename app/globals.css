@@ -58,16 +58,15 @@ a {
 } */
 
 .btn-2 {
-  @apply flex items-center p-2 bg-dark_blue_black rounded-md font-poppins text-white tracking-widest uppercase text-sm  hover:bg-neutral-800;
+  @apply flex items-center p-2 bg-dark_blue_black rounded-md font-poppins text-white tracking-widest px-4 uppercase text-sm  hover:bg-neutral-800;
 }
 
 /* Navigation */
 
-
-
 .nav_list {
-  @apply text-dark_blue_black active:underline font-semibold text-sm relative;
+  @apply text-dark_blue_black font-semibold text-sm relative;
 }
+
 
 .nav_list::after {
   content: "";
@@ -75,7 +74,8 @@ a {
   width: 100%;
   left: 0;
   top: 100%;
-  height: 3px;
+  height: 2px;
+  border-radius: 10px;
   background-color: #343a40;
 }
 
