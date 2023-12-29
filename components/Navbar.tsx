@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
+import { autocompleteClasses } from "@mui/material";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -14,52 +15,21 @@ const Navbar = () => {
 
   const menuVars = {
     initial: {
-      scaleY: 0,
+      maxHeight: 0,
     },
     animate: {
-      scaleY: 1,
+      maxHeight: 184,
       transition: {
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       },
     },
     exit: {
-      scaleY: 0,
+      maxHeight: 0,
+
       transition: {
         duration: 0.5,
         ease: [0.12, 0, 0.39, 0],
-      },
-    },
-  };
-
-  const menuVarsList = {
-    initial: {
-      y: "5vh",
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    open: {
-      y: 0,
-      transition: {
-        duration: 0.7,
-        ease: [0, 0.55, 0.45, 1],
-      },
-    },
-  };
-
-  const menuVarsLinks = {
-    initial: {
-      transition: {
-        staggerChildren: 0.09,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      transition: {
-        staggerChildren: 0.09,
-        staggerDirection: 1,
       },
     },
   };
@@ -150,59 +120,46 @@ const Navbar = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className={`fixed left-0 top-14 bg-white w-full px-2 pb-2 shadow-md origin-top overflow-hidden`}
+              className={`fixed left-0 top-14 bg-white w-full px-2  pb-2 shadow-md origin-top overflow-hidden`}
             >
-              <motion.ul
-                initial="initial"
-                animate="open"
-                exit="initial"
-                variants={menuVarsList}
-                className="flex flex-col gap-2"
-              >
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks}>
-                    <Link href="" className="nav_list">
-                      Villa Relax
-                    </Link>
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks}>
-                    <Link href="/" className="nav_list">
-                      Pricelist
-                    </Link>
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks}>
-                    <Link href="/" className="nav_list">
-                      Photogallery
-                    </Link>
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks}>
-                    <Link href="/" className="nav_list">
-                      Pula
-                    </Link>
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks}>
-                    <Link href="/" className="nav_list">
-                      Contact
-                    </Link>
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden">
-                  <motion.li variants={menuVarsLinks} className="flex">
-                    <Link href="/" className="btn">
-                      Book
-                      <MdKeyboardDoubleArrowRight />
-                    </Link>
-                  </motion.li>
-                </div>
-              </motion.ul>
+              <ul className="flex flex-col gap-2 origin-top">
+                <li>
+                  <Link href="" className="nav_list">
+                    Villa Relax
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/" className="nav_list">
+                    Pricelist
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/" className="nav_list">
+                    Photogallery
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/" className="nav_list">
+                    Pula
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/" className="nav_list">
+                    Contact
+                  </Link>
+                </li>
+
+                <li className="flex">
+                  <Link href="/" className="btn">
+                    Book
+                    <MdKeyboardDoubleArrowRight />
+                  </Link>
+                </li>
+              </ul>
             </motion.div>
           )}
         </AnimatePresence>
