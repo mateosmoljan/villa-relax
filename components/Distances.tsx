@@ -44,7 +44,7 @@ function Distances() {
                 index === totalLocations - 1 || index === totalLocations - 2
                   ? ""
                   : "sm:border-b sm:border-inherit"
-              } border-b border-inherit last:border-none`}
+              } mobile_border`}
             >
               <span className="font-medium">{item.place}</span>
               <span className="text-sm	font-bold">{item.distance} km</span>
