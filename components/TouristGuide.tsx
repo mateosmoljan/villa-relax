@@ -3,6 +3,8 @@ import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 
 import { SwiperNavButtonsGuide } from "./SwiperNavButtonsGuide";
 
@@ -41,12 +43,19 @@ function TouristGuide() {
             What to visit, see and do?
           </h1>
         </div>
-        <div className="">
+        <div className="relative">
           <Swiper
             loop={true}
             slidesPerView={windowSize}
             spaceBetween={10}
             grabCursor={true}
+            modules={[Pagination]}
+            pagination={{
+              dynamicBullets: true,
+              el: "swiper-pagination",
+              clickable: true,
+            }}
+            className="mySwiper"
           >
             {TouristImageData.image.map((image, index) => (
               <SwiperSlide key={index}>

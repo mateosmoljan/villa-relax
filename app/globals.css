@@ -67,6 +67,15 @@ a {
   @apply text-gray hover:text-dark_blue_black font-semibold text-sm relative block;
 }
 
+/* Tourist Guide */
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 
 .nav_list.after::after {
   content: "";
