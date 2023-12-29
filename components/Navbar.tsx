@@ -100,9 +100,9 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="sm:flex hidden">
+      <div className="md:flex hidden">
         <div className="flex gap-3 md:gap-5">
-          <ul className="flex flex-col gap-2">
+          <ul className="flex gap-4 items-center">
             <li>
               <Link href="" className="nav_list">
                 Villa Relax
@@ -128,14 +128,8 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <li className="flex">
-              <Link href="/" className="btn">
-                Book
-                <MdKeyboardDoubleArrowRight />
-              </Link>
-            </li>
             <li>
-              <Link href="/" className="btn first-child:tracking-widest">
+              <Link href="/" className="btn">
                 Book
                 <MdKeyboardDoubleArrowRight />
               </Link>
@@ -145,7 +139,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="sm:hidden flex relative">
+      <div className="md:hidden flex relative">
         <button onClick={() => setNavActive(() => !navActive)}>
           <RxHamburgerMenu />
         </button>
@@ -166,67 +160,42 @@ const Navbar = () => {
                 className="flex flex-col gap-2"
               >
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                  >
+                  <motion.li variants={menuVarsLinks}>
                     <Link href="" className="nav_list">
                       Villa Relax
                     </Link>
                   </motion.li>
                 </div>
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                  >
+                  <motion.li variants={menuVarsLinks}>
                     <Link href="/" className="nav_list">
                       Pricelist
                     </Link>
                   </motion.li>
                 </div>
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                  >
+                  <motion.li variants={menuVarsLinks}>
                     <Link href="/" className="nav_list">
                       Photogallery
                     </Link>
                   </motion.li>
                 </div>
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                  >
+                  <motion.li variants={menuVarsLinks}>
                     <Link href="/" className="nav_list">
                       Pula
                     </Link>
                   </motion.li>
                 </div>
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                  >
+                  <motion.li variants={menuVarsLinks}>
                     <Link href="/" className="nav_list">
                       Contact
                     </Link>
                   </motion.li>
                 </div>
                 <div className="overflow-hidden">
-                  <motion.li
-                    initial="initial"
-                    animate="open"
-                    variants={menuVarsLinks}
-                    className="flex"
-                  >
+                  <motion.li variants={menuVarsLinks} className="flex">
                     <Link href="/" className="btn">
                       Book
                       <MdKeyboardDoubleArrowRight />

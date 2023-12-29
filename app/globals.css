@@ -64,11 +64,11 @@ a {
 /* Navigation */
 
 .nav_list {
-  @apply text-dark_blue_black font-semibold text-sm relative;
+  @apply text-gray hover:text-dark_blue_black font-semibold text-sm relative block;
 }
 
 
-.nav_list::after {
+.nav_list.after::after {
   content: "";
   position: absolute;
   width: 100%;

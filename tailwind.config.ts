@@ -26,9 +26,10 @@ const config: Config = {
         pink: "#cc3bb1",
         dark_yellow: "#857001",
         dark_blue_black: "#343a40", 
+        gray: "rgba(0, 0, 0, 0.6)",
       },
       inset: {
-        "1/10": "10%",
+        "1/20": "5%",
       },
       letterSpacing: {
         widest: '.25em'

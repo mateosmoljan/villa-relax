@@ -43,8 +43,8 @@ function Distances() {
               className={`flex items-center justify-between w-full sm:w-1/2 p-3 pt-5 ${
                 index === totalLocations - 1 || index === totalLocations - 2
                   ? ""
-                  : "border-b border-inherit"
-              }`}
+                  : "sm:border-b sm:border-inherit"
+              } border-b border-inherit last:border-none`}
             >
               <span className="font-medium">{item.place}</span>
               <span className="text-sm	font-bold">{item.distance} km</span>
