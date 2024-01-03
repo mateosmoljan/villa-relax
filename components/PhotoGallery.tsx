@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { TouristImageData } from "../lib/TouristImageData";
 import FullscreenButton from "./FullScreenButton";
 import { useEffect } from "react";
@@ -13,7 +14,7 @@ interface Props {
 
 function PhotoGallery({ active }: Props) {
   const pagination = {
-    clickable: true,
+    type: "fraction",
     // renderBullet: function (index: number, className: string) {
     //   return '<span class="' + className + '">' + (index + 1) + "</span>";
     // },
@@ -26,39 +27,30 @@ function PhotoGallery({ active }: Props) {
   }, [active]);
 
   return (
-    <section className="fixed ">
-      <div className="container">
+    <section className="fixed inset-0 w-screen h-screen bg-black/80 z-50">
+      <div className="m-auto">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <FullscreenButton />
         </div>
-        <div className="relative">
+        <div className="m-auto photo_gallery sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
           <Swiper
             loop={true}
             slidesPerView={1}
-            spaceBetween={10}
+            spaceBetween={20}
             grabCursor={true}
-            modules={[Pagination]}
-            pagination={{
-              dynamicBullets: true,
-              el: "swiper-pagination",
-              clickable: true,
-            }}
+            modules={[Pagination, Navigation]}
+            navigation={true}
+            pagination={pagination}
           >
             {TouristImageData.image.map((image, index) => (
               <SwiperSlide key={index}>
-                <div className="flex  items-center justify-center xl:h-80 h-96 w-full">
+                <div className="flex  items-center justify-center relative image_gallery m-auto overflow-hidden">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     className="object-cover  h-full w-full rounded-md"
                     loading="lazy"
                   />
-                </div>
-                <div className="absolute bottom-3 left-3 flex flex-col gap-2">
-                  <h2 className="text-white font-bold text-xl">
-                    {image.title}
-                  </h2>
-                  <p className="text-white">{image.des}</p>
                 </div>
               </SwiperSlide>
             ))}

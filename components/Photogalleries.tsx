@@ -3,7 +3,7 @@ import { ImageGallery } from "@/lib/galleryImages";
 import Image from "next/image";
 import { useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
-import PhotoGallery from "./PhotoGallery";
+import Gallery from "./Gallery";
 
 function Photogalleries() {
   const [showGallery, setshowGallery] = useState<boolean>(false);
@@ -33,7 +33,7 @@ function Photogalleries() {
             <span>Show Photogallery</span>
           </button>
         </div>
-        {true && <PhotoGallery />}
+        <Gallery />
       </div>
     </section>
   );
