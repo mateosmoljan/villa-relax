@@ -36,16 +36,6 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* SwiperJs styles */
-
-.swiper-nav-btns {
-  @apply absolute z-10 top-0 flex justify-between w-screen ;
-}
-
-.swiper-prev,
-.swiper-next {
-  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-yellow;
-}
 
 /* Button */
 
@@ -63,17 +53,6 @@ a {
 .nav_list {
   @apply text-gray hover:text-dark_blue_black font-semibold text-sm relative block;
 }
-
-/* Tourist Guide */
-
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-
 .nav_list.after::after {
   content: "";
   position: absolute;
@@ -84,6 +63,7 @@ a {
   border-radius: 10px;
   background-color: #343a40;
 }
+
 
 /* Shadow */
 
@@ -175,4 +155,97 @@ a {
   .mobile_border {
     @apply border-b border-inherit last:border-none;
   }
+  /* Tourist Guide */
+  .tourist-guide .swiper-pagination {
+    display: block;
+    position: relative;
+    z-index: 10;
+    height: 100px;
+  }
+
+  .tourist-guide .swiper-pagination-bullet {
+    width: 30px !important;
+    height: 3px !important;
+    border-radius: 0 !important;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .tourist-guide .swiper-pagination-bullet-active {
+    background: #000 !important;
+  }
+  
+  .tourist-guide .swiper-slide img {
+    height: 90%;
+  }
 }
+
+@media (min-width: 640px) {
+  .tourist-guide .swiper-pagination {
+    display: none;
+  }
+}
+
+
+
+/* .swiper {
+  
+} */
+/* 
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .swiper-slide img {
+  
+} */
+
+/* .swiper-button-next, 
+.swiper-button-prev {
+  @apply text-yellow;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  font-size: 30px;
+}
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0;
+} */
+
+
+.head_swiper .swiper-pagination-bullet {
+  width: 30px !important;
+  height: 3px !important;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  border-radius: 0 !important;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.head_swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #000 !important;
+}
+
+/* SwiperJs styles */
+
+.swiper-nav-btns {
+  @apply absolute z-10 top-0 flex justify-between w-screen ;
+}
+
+.swiper-prev,
+.swiper-next {
+  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-yellow;
+}
+

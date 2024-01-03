@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { SwiperNavButtons } from "./SwiperNavButton";
@@ -25,9 +26,13 @@ export default function HeadSwiper() {
     }
   };
 
+  const pagination = {
+    clickable: true,
+  };
+
   return (
     <section className="block h-screen max-w-screen relative">
-      <div className="block container relative max-w-full !important ">
+      <div className="block relative max-w-full !important head_swiper ">
         <Swiper
           loop={true}
           effect={"fade"}
@@ -37,9 +42,7 @@ export default function HeadSwiper() {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+          pagination={pagination}
           grabCursor={true}
         >
           {images.map((image, index) => (

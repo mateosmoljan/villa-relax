@@ -2,8 +2,8 @@ import { LocationToVisit } from "../lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="flex justify-center pt-20" id="info">
-      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5">
+    <section className="pt-20" id="info">
+      <div className="container">
         <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold text-dark_blue_black">
           Villa Relax - Pula
         </h1>

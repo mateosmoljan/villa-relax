@@ -18,7 +18,7 @@ const Navbar = () => {
       height: 0,
     },
     animate: {
-      height: 184,
+      height: 224,
       transition: {
         duration: 0.3,
         ease: [0.22, 1, 0.36, 1],
@@ -141,7 +141,7 @@ const Navbar = () => {
               exit="exit"
               className={`fixed left-0 top-14 bg-white w-full px-2  pb-2 shadow-md origin-top overflow-hidden`}
             >
-              <ul className="flex flex-col gap-2 origin-top">
+              <ul className="flex flex-col gap-4 origin-top">
                 <li>
                   <Link href="" className="nav_list">
                     Villa Relax

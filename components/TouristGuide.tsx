@@ -11,7 +11,6 @@ import { SwiperNavButtonsGuide } from "./SwiperNavButtonsGuide";
 function TouristGuide() {
   const [windowSize, setWindowSize] = useState<number>(4);
   const [screenSize, setScreenSize] = useState<boolean>(true);
-
   useEffect(() => {
     const updateWindowSize = () => {
       const width = window.innerWidth;
@@ -35,15 +34,15 @@ function TouristGuide() {
   }, []);
 
   return (
-    <section className=" flex justify-center py-20">
-      <div className="max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl sm:p-3 p-5">
+    <section className="">
+      <div className="container">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Tourist Guide</h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
             What to visit, see and do?
           </h1>
         </div>
-        <div className="relative">
+        <div className="mx-auto tourist-guide">
           <Swiper
             loop={true}
             slidesPerView={windowSize}
@@ -51,30 +50,29 @@ function TouristGuide() {
             grabCursor={true}
             modules={[Pagination]}
             pagination={{
-              dynamicBullets: true,
-              el: "swiper-pagination",
               clickable: true,
             }}
-            className="mySwiper"
           >
-            {TouristImageData.image.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex  items-center justify-center xl:h-80 h-96 w-full">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    className="object-cover  h-full w-full rounded-md"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="absolute bottom-3 left-3 flex flex-col gap-2">
-                  <h2 className="text-white font-bold text-xl">
-                    {image.title}
-                  </h2>
-                  <p className="text-white">{image.des}</p>
-                </div>
-              </SwiperSlide>
-            ))}
+            <div className="divInside">
+              {TouristImageData.image.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <div className=" xl:h-80 h-96 w-full">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="object-cover  h-full w-full rounded-md"
+                      loading="lazy"
+                    />
+                    <div className="relative text-left pl-1/10 bottom-20 z-10 flex flex-col gap-2">
+                      <h2 className="text-white font-bold text-xl">
+                        {image.title}
+                      </h2>
+                      <p className="text-white">{image.des}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </div>
             <SwiperNavButtonsGuide visible={screenSize} />
           </Swiper>
         </div>

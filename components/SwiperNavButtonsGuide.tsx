@@ -15,7 +15,7 @@ export const SwiperNavButtonsGuide: React.FC<SwiperButtonsProps> = ({
   return (
     <>
       {visible && (
-        <div className="mt-5">
+        <div className="mt-5 top-0">
           <button
             onClick={() => swiper.slidePrev()}
             className="h-full  relative left-0 top-0 text-3xl z-10"
