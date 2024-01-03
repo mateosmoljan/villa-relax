@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { useState } from "react";
-import FullscreenButton from "./FullScreenButton";
+import FullscreenButton from "./FullscreenButton";
 
 function Gallery() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
