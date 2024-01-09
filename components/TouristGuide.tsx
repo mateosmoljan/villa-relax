@@ -34,7 +34,7 @@ function TouristGuide() {
   }, []);
 
   return (
-    <section className="">
+    <section className="py-10 bg-gray-100">
       <div className="container">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Tourist Guide</h2>

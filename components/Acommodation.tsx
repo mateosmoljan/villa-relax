@@ -2,7 +2,7 @@ import PropertyCard from "./PropertyCard";
 
 function Acommodation() {
   return (
-    <section className="">
+    <section className="bg-gray-100 py-10">
       <div className="container">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">ACOMMODATION</h2>

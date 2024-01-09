@@ -3,7 +3,7 @@ import SSL from "../public/assets/images/ssl.png";
 
 function Footer() {
   return (
-    <section className="flex justify-center bg-dark_blue_black xl:px-20 py-10 xl:pb-20 ">
+    <section className="flex justify-center bg-dark_blue_black xl:px-20 pb-10 xl:pb-20 ">
       <div className="max-w-screen-2xl grid w-full text-white sm:grid-cols-2 gap-y-8 lg:grid-cols-4 place-items-center">
         <div className="h-full relative pl-5 sm:pl-0 w-full sm:w-3/5 lg:w-auto">
           <div className="space-y-4 ">

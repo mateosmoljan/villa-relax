@@ -6,8 +6,13 @@ import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { useState } from "react";
 import FullscreenButton from "./FullscreenButton";
+import { RxCross2 } from "react-icons/rx";
 
-function Gallery() {
+interface Props {
+  onClose: () => void;
+}
+
+function Gallery({ onClose }: Props) {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const totalImages = TouristImageData.image.length;
   const settings = {
@@ -26,6 +31,7 @@ function Gallery() {
       <div className="mx-auto  w-full ">
         <div className="">
           <FullscreenButton />
+          <RxCross2 onClick={onClose} />
         </div>
         <Slider
           {...settings}
@@ -33,7 +39,7 @@ function Gallery() {
         >
           {TouristImageData.image.map((image, index) => (
             <div key={index}>
-              <div className="flex  items-center justify-center relative image_gallery m-auto overflow-hidden">
+              <div className="flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                 <Image
                   src={image.src}
                   alt={image.alt}

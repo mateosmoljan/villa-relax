@@ -43,7 +43,7 @@ const config: Config = {
         pink: "#cc3bb1",
         dark_yellow: "#857001",
         dark_blue_black: "#343a40", 
-        gray: "rgba(0, 0, 0, 0.6)",
+        grey: "rgba(0, 0, 0, 0.6)",
       },
       inset: {
         "1/20": "5%",

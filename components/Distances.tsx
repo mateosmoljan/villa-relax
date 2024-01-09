@@ -20,7 +20,7 @@ function Distances() {
   }, [showMap]);
 
   return (
-    <section className="py-20">
+    <section className="py-10">
       <div className="container">
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <h1 className="font-bold text-xl text-dark_blue_black">

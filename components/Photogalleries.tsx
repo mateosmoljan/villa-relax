@@ -6,10 +6,14 @@ import { TfiGallery } from "react-icons/tfi";
 import Gallery from "./Gallery";
 
 function Photogalleries() {
-  const [showGallery, setshowGallery] = useState<boolean>(false);
+  const [showGallery, setShowGallery] = useState<boolean>(false);
+
+  function handleOnClose() {
+    setShowGallery(false);
+  }
   return (
     <section className="">
-      <div className="container py-20">
+      <div className="container py-10">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase">Photogalleries</h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
@@ -23,6 +27,7 @@ function Photogalleries() {
                 src={image.src}
                 alt={image.alt}
                 className=" object-cover rounded-md block w-full h-full hover:opacity-90"
+                onClick={() => setShowGallery(true)}
               />
             </div>
           ))}
@@ -33,7 +38,7 @@ function Photogalleries() {
             <span>Show Photogallery</span>
           </button>
         </div>
-        <Gallery />
+        {showGallery && <Gallery onClose={handleOnClose} />}
       </div>
     </section>
   );
