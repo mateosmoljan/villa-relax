@@ -27,11 +27,13 @@ function Gallery({ onClose }: Props) {
     ),
   };
   return (
-    <section className="flex fixed inset-0 w-screen h-screen bg-black/80 z-40">
+    <section className="flex fixed inset-0 w-screen h-screen bg-black/80 z-50">
       <div className="mx-auto  w-full ">
-        <div className="">
+        <div className="w-full flex justify-end items-center pr-10 p-2">
           <FullscreenButton />
-          <RxCross2 onClick={onClose} />
+          <div className="text-white cursor-pointer p-4">
+            <RxCross2 onClick={onClose} className="w-6 h-6" />
+          </div>
         </div>
         <Slider
           {...settings}

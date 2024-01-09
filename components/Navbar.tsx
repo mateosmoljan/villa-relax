@@ -70,7 +70,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white shadow-md flex place-content-between sm:px-8 px-4 w-full py-2 fixed z-50 ${
+      className={`bg-white shadow-md flex place-content-between sm:px-8 px-4 w-full py-2 fixed z-40 ${
         visible ? "transleteNavUp" : "transleteNav"
       }`}
     >

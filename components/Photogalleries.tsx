@@ -26,7 +26,7 @@ function Photogalleries() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                className=" object-cover rounded-md block w-full h-full hover:opacity-90"
+                className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
                 onClick={() => setShowGallery(true)}
               />
             </div>
