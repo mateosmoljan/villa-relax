@@ -32,11 +32,11 @@ function Gallery({initIndex} : Props) {
   return (
     <section className="flex fixed inset-0 w-screen h-screen bg-black/80 z-50">
       <div className="mx-auto  w-full ">
-        <div className="w-full flex justify-end items-center pr-10 p-2">
+        <div className="w-full flex justify-end items-center gap-1 pr-10 p-2">
           <FullscreenButton />
-          <div className="text-white cursor-pointer p-4">
-            <RxCross2 onClick={() => setOpenIndex(!openIndex)} className="w-6 h-6" />
-          </div>
+          <button onClick={() => setOpenIndex(!openIndex)} className="text-white cursor-pointer p-4">
+            <RxCross2 className=" text-2xl" />
+          </button>
         </div>
         <Slider
           {...settings}

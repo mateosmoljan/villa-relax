@@ -48,22 +48,6 @@ a {
   @apply flex items-center p-2 bg-dark_blue_black rounded-md font-poppins text-white tracking-widest px-4 uppercase text-sm  hover:bg-neutral-800;
 }
 
-/* Navigation */
-
-.nav_list {
-  @apply text-grey hover:text-dark_blue_black font-semibold text-sm relative block;
-}
-.nav_list.after::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  height: 2px;
-  border-radius: 10px;
-  background-color: #343a40;
-}
-
 
 /* Shadow */
 
@@ -74,119 +58,6 @@ a {
 .shadow-a {
   box-shadow: 50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset, -50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset;
 }
-
-/* Translate Nav */
-
-.transleteNav {
-  @apply -translate-y-full transition-transform;
-}
-
-.transleteNavUp {
-  @apply  transform-none transition-transform;
-}
-
-.transitionMap {
-  transition: background 0.3s ease-in;
-}
-
-.transitionMap {
-  animation: translateMap 0.3s ease-in;
-}
-
-@keyframes translateMap {
-  0% {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 100;
-  }
-}
-
-/* Footer Wawes */
-
-.wave_svg {
-  overflow:visible;
-}
-
-.wave {
-  animation: wave 10s linear;
-  animation-iteration-count:infinite;
-  fill: #343a40;
-}
-
-.gooeff {
-    filter: url(#goo);
-}
-#wave2 {
-  animation-duration:15s;
-  animation-direction: reverse;
-  opacity: .6
-}
-#wave3 {
-  animation-duration: 20s;
-  opacity:.3;
-}
-@keyframes drop {
-  0% {
-    transform: translateY(25px); 
-  }
-  30% {
-    transform: translateY(-10px) scale(.1);
-  }
-  30.001% {
-    transform: translateY(25px) scale(1); 
-  }
-  70% {
-    transform: translateY(25px); 
-  }
-  100% { 
-    transform: translateY(-10px) scale(.1);  
-  }
-}
-@keyframes wave {
-  to {transform: translateX(-100%);}
-}
-
-
-/* Distances */
-@media (max-width: 640px) {
-  .mobile_border {
-    @apply border-b border-inherit last:border-none;
-  }
-  /* Tourist Guide */
-  .tourist-guide .swiper-pagination {
-    display: block;
-    position: relative;
-    z-index: 10;
-    height: 100px;
-  }
-
-  .tourist-guide .swiper-pagination-bullet {
-    width: 30px !important;
-    height: 3px !important;
-    border-radius: 0 !important;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .tourist-guide .swiper-pagination-bullet-active {
-    background: #000 !important;
-  }
-  
-  .tourist-guide .swiper-slide img {
-    height: 90%;
-  }
-}
-
-@media (min-width: 640px) {
-  .tourist-guide .swiper-pagination {
-    display: none;
-  }
-}
-
-
 
 
 
@@ -257,11 +128,13 @@ a {
 }
 
 .slick-next {
-  right: -55px !important;
+  right: -10% !important;
+  padding: 20rem 5rem !important;
 }
 
 .slick-prev {
-  left: -55px !important;
+  left: -10% !important;
+  padding: 20rem 5rem 20rem 0.8rem !important;
 }
 
 .slick-dots {

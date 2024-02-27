@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
+import "./nav.css"
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);

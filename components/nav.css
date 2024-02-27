@@ -1,0 +1,13 @@
+.nav_list {
+    @apply text-grey hover:text-dark_blue_black font-semibold text-sm relative block;
+  }
+  .nav_list.after::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #343a40;
+  }

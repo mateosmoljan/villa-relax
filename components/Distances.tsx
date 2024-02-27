@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { dataObject } from "../lib/LocationDistance";
 import GoogleMaps from "./GoogleMaps";
+import "./distances.css"
 
 function Distances() {
   const totalLocations = dataObject.locations.length;
