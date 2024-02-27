@@ -10,7 +10,6 @@ import { images } from "@/lib/images";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -35,15 +34,15 @@ export default function HeadSwiper() {
       <div className="block relative max-w-full !important head_swiper ">
         <Swiper
           loop={true}
-          effect={"fade"}
           spaceBetween={0}
-          modules={[FreeMode, Autoplay, Pagination, EffectFade]}
+          modules={[FreeMode, Autoplay, Pagination]}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
           }}
           pagination={pagination}
           grabCursor={true}
+          speed={900}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>

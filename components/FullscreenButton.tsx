@@ -34,12 +34,12 @@ const FullscreenButton = () => {
   }, []); // Empty dependency array ensures that this effect runs only once
 
   return (
-    <div className="p-4">
+    <div className="p-4 flex items-center">
       <button onClick={handleFullscreen} className=" text-white">
         {isFullscreen ? (
-          <RiFullscreenExitFill className="text-white" />
+          <RiFullscreenExitFill className="text-white text-xl" />
         ) : (
-          <RiFullscreenFill className="text-white" />
+          <RiFullscreenFill className="text-white text-xl" />
         )}
       </button>
     </div>

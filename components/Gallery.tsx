@@ -7,13 +7,15 @@ import Image from "next/image";
 import { useState } from "react";
 import FullscreenButton from "./FullscreenButton";
 import { RxCross2 } from "react-icons/rx";
+import { useGlobalContext } from "./Photogalleries";
 
 interface Props {
-  onClose: () => void;
+  initIndex: number;
 }
 
-function Gallery({ onClose }: Props) {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+function Gallery({initIndex} : Props) {
+  const { openIndex, setOpenIndex } = useGlobalContext();
+  const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
   const totalImages = TouristImageData.image.length;
   const settings = {
     dots: true,
@@ -25,6 +27,7 @@ function Gallery({ onClose }: Props) {
     customPaging: (i: number) => (
       <div className="w-10 text-white">{/* Empty div for dot */}</div>
     ),
+    initialSlide: initIndex,
   };
   return (
     <section className="flex fixed inset-0 w-screen h-screen bg-black/80 z-50">
@@ -32,7 +35,7 @@ function Gallery({ onClose }: Props) {
         <div className="w-full flex justify-end items-center pr-10 p-2">
           <FullscreenButton />
           <div className="text-white cursor-pointer p-4">
-            <RxCross2 onClick={onClose} className="w-6 h-6" />
+            <RxCross2 onClick={() => setOpenIndex(!openIndex)} className="w-6 h-6" />
           </div>
         </div>
         <Slider

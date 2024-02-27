@@ -1,16 +1,30 @@
 "use client";
 import { ImageGallery } from "@/lib/galleryImages";
 import Image from "next/image";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
 import Gallery from "./Gallery";
 
-function Photogalleries() {
-  const [showGallery, setShowGallery] = useState<boolean>(false);
+export type AppContextType = {
+  openIndex: boolean;
+  setOpenIndex: (_value: boolean) => void;
+};
 
-  function handleOnClose() {
-    setShowGallery(false);
-  }
+export const AppContext = createContext<AppContextType>({
+  openIndex: false,
+  setOpenIndex: (_value: boolean) => {},
+});
+
+export const useGlobalContext = () => useContext(AppContext);
+function Photogalleries() {
+  const [openIndex, setOpenIndex] = useState<boolean>(false);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
+
+  const handleImageClick = (index: number) => {
+    setOpenIndex(!openIndex);
+    setActiveIndex(index);
+  };
+
   return (
     <section className="">
       <div className="container py-10">
@@ -20,25 +34,27 @@ function Photogalleries() {
             Select photos from Villa Relax
           </h1>
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-          {ImageGallery.images.map((image, index) => (
-            <div key={index} className="w-full h-full rounded-md	">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
-                onClick={() => setShowGallery(true)}
-              />
-            </div>
-          ))}
-        </div>
+        <AppContext.Provider value={{ openIndex, setOpenIndex }}>
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
+            {ImageGallery.images.map((image, index) => (
+              <div key={index} className="w-full h-full rounded-md	">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
+                  onClick={() => handleImageClick(index)}
+                />
+              </div>
+            ))}
+          </div>
         <div className="pt-5 flex justify-end">
           <button className="btn-2 flex gap-2">
             <TfiGallery />
             <span>Show Photogallery</span>
           </button>
         </div>
-        {showGallery && <Gallery onClose={handleOnClose} />}
+        {openIndex && <Gallery initIndex={activeIndex}/>}
+      </AppContext.Provider>
       </div>
     </section>
   );
