@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SSL from "../public/assets/images/ssl.png";
+import SSL from "@/public/assets/images/ssl.png";
 import "./footer.css"
 
 function Footer() {

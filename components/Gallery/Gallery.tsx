@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { useState } from "react";
-import FullscreenButton from "./FullscreenButton";
+import FullscreenButton from "../About/FullscreenButton";
 import { RxCross2 } from "react-icons/rx";
 import { useGlobalContext } from "./Photogalleries";
 

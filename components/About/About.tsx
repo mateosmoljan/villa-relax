@@ -1,4 +1,4 @@
-import { LocationToVisit } from "../lib/LocationToVisit";
+import { LocationToVisit } from "../../lib/LocationToVisit";
 
 function About() {
   return (

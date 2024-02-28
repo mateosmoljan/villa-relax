@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Arbutus_Slab, Poppins } from "next/font/google";
+import Navbar from "@/components/Navigation/Navbar";
 
 const arbutus = Arbutus_Slab({
   subsets: ["latin"],
@@ -33,6 +34,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-poppins ${arbutus.variable} font-arbutus`}
       >
+        <header>
+        <Navbar />
+      </header>
         {children}
       </body>
     </html>

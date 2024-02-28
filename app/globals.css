@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --col-deepblue: #4478e3;
+  --titleBold: 700;
+  --PRegular: 400;
+  --Bold: 600;
+  --medium: 500;
+  --ExtraBold: 900;
 }
 
 html {

@@ -7,12 +7,15 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
 import "./nav.css"
+import { NavigationLinks } from "@/lib/Links";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [navActive, setNavActive] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   const menuVars = {
     initial: {
@@ -93,31 +96,13 @@ const Navbar = () => {
       <div className="md:flex hidden">
         <div className="flex gap-3 md:gap-5">
           <ul className="flex gap-4 items-center">
-            <li>
-              <Link href="" className="nav_list">
-                Villa Relax
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="nav_list">
-                Pricelist
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="nav_list">
-                Photogallery
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="nav_list">
-                Pula
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="nav_list">
-                Contact
-              </Link>
-            </li>
+          {NavigationLinks.NavData.map((item, index) => (
+                <li key={index} className={`${pathname === item.path ? "" : "hover_nav"}`}>
+                  <Link href={item.path} className={`nav_list ${pathname === item.path ? "active_nav" : ""}`}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             <li>
               <Link href="/" className="btn">
                 Book

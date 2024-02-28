@@ -1,20 +1,18 @@
-import About from "@/components/About";
-import Acommodation from "@/components/Acommodation";
-import Distances from "@/components/Distances";
-import Footer from "@/components/Footer";
-import FooterSvg from "@/components/FooterSvg";
-import HeadSwiper from "@/components/HeadSwiper";
-import Navbar from "@/components/Navbar";
-import Photogalleries from "@/components/Photogalleries";
-import SendMessage from "@/components/SendMessage";
-import TouristGuide from "@/components/TouristGuide";
+import About from "@/components/About/About";
+import Acommodation from "@/components/Acommodations/Acommodation";
+import Distances from "@/components/About/Distances";
+import Footer from "@/components/Footer/Footer";
+import FooterSvg from "@/components/Footer/FooterSvg";
+import HeadSwiper from "@/components/HeadSwiper/HeadSwiper";
+import Photogalleries from "@/components/Gallery/Photogalleries";
+import SendMessage from "@/components/SendMessage/SendMessage";
+import TouristGuide from "@/components/TouristGuide/TouristGuide";
 import React from "react";
 
 function Home() {
   return (
     <div>
       <header>
-        <Navbar />
         <HeadSwiper />
       </header>
       <main>

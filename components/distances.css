@@ -1,6 +1,0 @@
-/* Distances */
-@media (max-width: 640px) {
-    .mobile_border {
-      @apply border-b border-inherit last:border-none;
-    }
-}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { dataObject } from "../lib/LocationDistance";
+import { dataObject } from "../../lib/LocationDistance";
 import GoogleMaps from "./GoogleMaps";
 import "./distances.css"
 

@@ -30,6 +30,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontWeight: {
+        titleBold: "var(--titleBold)",
+        PRegular: "var(--PRegular)",
+        Bold: "var(--Bold)",
+        medium: "var(--medium)",
+        ExtraBold: "var(--ExtraBold)",
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         arbutus: ["var(--font-arbutus)"]
