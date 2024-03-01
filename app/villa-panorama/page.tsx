@@ -1,4 +1,7 @@
+import AvailabilityCalendar from "@/components/AvailabilityCalendar/AvailabilityCalendar";
 import BookYourStayCard from "@/components/BookYourStayCard/BookYourStayCard";
+import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
+import PriceTable from "@/components/PriceTable/PriceTable";
 import PropertyGallery from "@/components/PropertyGallery/PropertyGallery";
 import { Categorization } from "@/lib/categorization";
 import { Features } from "@/lib/features";
@@ -31,40 +34,68 @@ function VillaPanorama() {
                   </button>
                 ))}
               </div>
-              <hr className="my-4" />
+              <hr />
             </div>
-            <h2 className="font-bold text-xl text-dark_blue_black">
-              Villa Panorama
-            </h2>
-            <p>
-              6 bedrooms with TV, 4 bathrooms (1 bath, 3 shower cabins), hair
-              dryer, irons, ironing boards, vacuum cleaners, washing machine,
-              safe, kitchen with dishwasher, microwave and oven, dining table
-              with 12 seats places, heated pool of 26.5 m2 with a waterfall and
-              massage pumps, jacuzzi, sauna, deck chairs, exercise bike,
-              children's playground, trampoline, collection of books in English,
-              German and Italian board games and toys for children.
-            </p>
-            <hr className="my-8" />
-            <h2 className="font-bold text-xl text-dark_blue_black">Features</h2>
-            <ul className="grid grid-cols-2">
-              {Features.features.map((item, index) => (
-                <li
-                  key={index}
-                  className={`py-4 ${
-                    index != featuresLength - 1 && index != featuresLength - 2
-                      ? "border-b-[1px] border-[#e5e7eb]"
-                      : ""
-                  }`}
-                >
-                  {item.title}
-                </li>
-              ))}
-            </ul>
+            <div className="py-10">
+              <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
+                Villa Panorama
+              </h2>
+              <p>
+                6 bedrooms with TV, 4 bathrooms (1 bath, 3 shower cabins), hair
+                dryer, irons, ironing boards, vacuum cleaners, washing machine,
+                safe, kitchen with dishwasher, microwave and oven, dining table
+                with 12 seats places, heated pool of 26.5 m2 with a waterfall
+                and massage pumps, jacuzzi, sauna, deck chairs, exercise bike,
+                children's playground, trampoline, collection of books in
+                English, German and Italian board games and toys for children.
+              </p>
+            </div>
+            <hr />
+            <div className="py-10">
+              <h2 className="font-bold text-2xl text-dark_blue_black">
+                Features
+              </h2>
+              <ul className="grid grid-cols-2">
+                {Features.features.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`py-4 ${
+                      index != featuresLength - 1 && index != featuresLength - 2
+                        ? "border-b-[1px] border-[#e5e7eb]"
+                        : ""
+                    }`}
+                  >
+                    {item.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <hr />
+            <div className="py-10">
+              <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
+                Pricelist
+              </h2>
+              <PriceTable />
+              <p className="text-grey1 text-sm mt-4">
+                *The price refers to the period of 7 nights in Euros
+              </p>
+            </div>
+            <div>
+              <PaymentConditions />
+            </div>
           </div>
+
           <div className="w-1/3">
-            <BookYourStayCard />
+            <div className="sticky top-16 ml-2.5">
+              <BookYourStayCard />
+            </div>
           </div>
+        </div>
+        <div className="container py-10">
+          <h2 className="block text-center font-bold text-2xl text-dark_blue_black mb-6">
+            Availability Calendar
+          </h2>
+          <AvailabilityCalendar />
         </div>
       </div>
     </section>

@@ -17,11 +17,9 @@
 }
 
 .PropertySWiperThumbnail .swiper-slide img {
-    display: block;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     object-fit: cover;
-    @apply rounded-md
 }
 
 .PropertySWiperThumbnail .swiper-slide,
@@ -43,7 +41,7 @@
 }
 
 .PropertySwiper {
-    height: 400px !important;
+    height: 500px !important;
     width: 100%;
 }
 
@@ -51,18 +49,17 @@
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
-    width: 95%;
+    width:100%;
 }
 
 .PropertySWiperThumbnail .swiper-slide {
-    width: 25%;
     height: 100% ;
 }
 w
  .PropertySwiper .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
 }
 

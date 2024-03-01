@@ -50,6 +50,8 @@ const config: Config = {
         pink: "#cc3bb1",
         dark_yellow: "#857001",
         dark_blue_black: "#343a40", 
+        grey1: "#495057",
+        grey2: "#e9ecef",
         grey: "rgba(0, 0, 0, 0.6)",
       },
       inset: {

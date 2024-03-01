@@ -17,7 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Villa Relax",
+  title: "Villa Panorama",
   description: "Experience world-class service at Villa Relax",
   icons: {
     icon: "/assets/images/logo.png",
@@ -35,8 +35,8 @@ export default function RootLayout({
         className={`${poppins.variable} font-poppins ${arbutus.variable} font-arbutus`}
       >
         <header>
-        <Navbar />
-      </header>
+          <Navbar />
+        </header>
         {children}
       </body>
     </html>
