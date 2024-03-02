@@ -1,7 +1,7 @@
 "use client";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
