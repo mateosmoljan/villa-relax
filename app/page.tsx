@@ -23,10 +23,6 @@ function Home() {
         <TouristGuide />
         <SendMessage />
       </main>
-      <footer>
-        <FooterSvg />
-        <Footer />
-      </footer>
     </div>
   );
 }

@@ -5,7 +5,9 @@ function Acommodation() {
     <section className="bg-gray-100 py-10">
       <div className="container">
         <div className="w-6xl flex flex-col gap-3 pb-10">
-          <h2 className="text-pink font-semibold uppercase">ACOMMODATION</h2>
+          <h2 className="text-pink font-semibold uppercase tracking-widest">
+            ACOMMODATION
+          </h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
             We offer you 1 Villa
           </h1>

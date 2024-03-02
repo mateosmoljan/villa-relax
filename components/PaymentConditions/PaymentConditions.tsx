@@ -3,9 +3,6 @@ import React from "react";
 function PaymentConditions() {
   return (
     <div>
-      <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
-        Payment and booking conditions
-      </h2>
       <div className="flex flex-col gap-5 mb-5">
         <p>Tourist tax is not included in the price!</p>
         <p>

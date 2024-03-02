@@ -29,7 +29,9 @@ function Photogalleries() {
     <section className="">
       <div className="container py-10">
         <div className="w-6xl flex flex-col gap-3 pb-10">
-          <h2 className="text-pink font-semibold uppercase">Photogalleries</h2>
+          <h2 className="text-pink font-semibold uppercase tracking-widest">
+            Photogalleries
+          </h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
             Select photos from Villa Relax
           </h1>
@@ -47,14 +49,14 @@ function Photogalleries() {
               </div>
             ))}
           </div>
-        <div className="pt-5 flex justify-end">
-          <button className="btn-2 flex gap-2">
-            <TfiGallery />
-            <span>Show Photogallery</span>
-          </button>
-        </div>
-        {openIndex && <Gallery initIndex={activeIndex}/>}
-      </AppContext.Provider>
+          <div className="pt-5 flex justify-end">
+            <button className="btn-2 flex gap-2">
+              <TfiGallery />
+              <span>Show Photogallery</span>
+            </button>
+          </div>
+          {openIndex && <Gallery initIndex={activeIndex} />}
+        </AppContext.Provider>
       </div>
     </section>
   );

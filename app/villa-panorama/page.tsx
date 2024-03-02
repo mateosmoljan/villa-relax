@@ -11,8 +11,8 @@ function VillaPanorama() {
   return (
     <section className="pt-[10rem]">
       <div className="container">
-        <h1 className="mb-12 flex justify-center font-arbutus text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black">
-          Villa Panorama - Istra
+        <h1 className="mb-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
+          Holiday Home Villa Panorama
         </h1>
         <div className="flex gap-8">
           <div className="w-2/3">
@@ -80,7 +80,11 @@ function VillaPanorama() {
                 *The price refers to the period of 7 nights in Euros
               </p>
             </div>
-            <div>
+            <hr />
+            <div className="py-10">
+              <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
+                Payment and booking conditions
+              </h2>
               <PaymentConditions />
             </div>
           </div>

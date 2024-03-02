@@ -2,7 +2,7 @@ function FooterSvg() {
   return (
     <>
       <svg
-        className="wave_svg sm:-mb-16 md:-mb-20 lg:-mb-24 xl:-mb-28 object-cover w-full h-full"
+        className="wave_svg bg-gray-100 sm:-mb-16 md:-mb-20 lg:-mb-24 xl:-mb-28 object-cover w-full h-full"
         viewBox="0 0 120 28"
       >
         <defs>

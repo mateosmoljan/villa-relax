@@ -22,12 +22,7 @@ export default function PropertyGallery() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Set isLoaded to true once the component has mounted
     setIsLoaded(true);
-    // Cleanup function
-    return () => {
-      // Perform any cleanup actions here if needed
-    };
   }, []);
 
   return (
