@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -17,7 +17,7 @@ import { SwiperNavButtons } from "./SwiperNavButton";
 import Loading from "../Loading/Loading";
 
 export default function PropertyGallery() {
-  const [thumbsSwiper, setThumbsSwiper] = React.useState();
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -33,10 +33,7 @@ export default function PropertyGallery() {
             effect={"fade"}
             spaceBetween={10}
             navigation={true}
-            thumbs={{
-              swiper:
-                thumbsSwiper && !thumbsSwiper?.destroyed ? thumbsSwiper : null,
-            }}
+            thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs, EffectFade]}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="PropertySwiper !overflow-visible"
