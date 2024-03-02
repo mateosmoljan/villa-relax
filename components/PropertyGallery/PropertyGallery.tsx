@@ -17,7 +17,7 @@ import { SwiperNavButtons } from "./SwiperNavButton";
 import Loading from "../Loading/Loading";
 
 export default function PropertyGallery() {
-  const [thumbsSwiper, setThumbsSwiper] = useState<typeof Swiper | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = React.useState();
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -33,7 +33,10 @@ export default function PropertyGallery() {
             effect={"fade"}
             spaceBetween={10}
             navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
+            thumbs={{
+              swiper:
+                thumbsSwiper && !thumbsSwiper?.destroyed ? thumbsSwiper : null,
+            }}
             modules={[FreeMode, Navigation, Thumbs, EffectFade]}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="PropertySwiper !overflow-visible"
