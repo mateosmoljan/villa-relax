@@ -17,7 +17,7 @@ import { SwiperNavButtons } from "./SwiperNavButton";
 import Loading from "../Loading/Loading";
 
 export default function PropertyGallery() {
-  const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<typeof Swiper | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isLoaded, setIsLoaded] = useState(false);
 
