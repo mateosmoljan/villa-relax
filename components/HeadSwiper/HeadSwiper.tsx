@@ -31,7 +31,7 @@ export default function HeadSwiper() {
 
   return (
     <section className="block h-screen max-w-screen relative">
-      <div className="block relative max-w-full !important head_swiper ">
+      <div className="block relative max-w-full head_swiper ">
         <Swiper
           loop={true}
           spaceBetween={0}

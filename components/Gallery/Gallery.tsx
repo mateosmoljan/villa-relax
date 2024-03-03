@@ -13,7 +13,7 @@ interface Props {
   initIndex: number;
 }
 
-function Gallery({initIndex} : Props) {
+function Gallery({ initIndex }: Props) {
   const { openIndex, setOpenIndex } = useGlobalContext();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
   const totalImages = TouristImageData.image.length;
@@ -34,7 +34,10 @@ function Gallery({initIndex} : Props) {
       <div className="mx-auto  w-full ">
         <div className="w-full flex justify-end items-center gap-1 pr-10 p-2">
           <FullscreenButton />
-          <button onClick={() => setOpenIndex(!openIndex)} className="text-white cursor-pointer p-4">
+          <button
+            onClick={() => setOpenIndex(!openIndex)}
+            className="text-white cursor-pointer p-4"
+          >
             <RxCross2 className=" text-2xl" />
           </button>
         </div>

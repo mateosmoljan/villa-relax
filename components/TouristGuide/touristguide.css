@@ -1,32 +1,12 @@
-@media (max-width: 640px) {
 
-/* Tourist Guide */
-.tourist-guide .swiper-pagination {
-    display: block;
-    position: relative;
-    z-index: 10;
-    height: 100px;
-  }
-
-  .tourist-guide .swiper-pagination-bullet {
-    width: 30px !important;
-    height: 3px !important;
-    border-radius: 0 !important;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .tourist-guide .swiper-pagination-bullet-active {
-    background: #000 !important;
-  }
-  
-  .tourist-guide .swiper-slide img {
-    height: 90%;
-  }
-}
-
-@media (min-width: 640px) {
-    .tourist-guide .swiper-pagination {
-      display: none;
+    .Tourist .slick-slide>div {
+      @apply mx-2.5;
     }
-  }
+    .Tourist .slick-dots li.slick-active div {
+      /* color:orange !important; */
+      @apply bg-white/40;
+    }
+
+        .Tourist .slick-dots li {
+          @apply text-black;
+        }

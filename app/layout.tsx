@@ -36,14 +36,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-poppins ${arbutus.variable} font-arbutus`}
       >
-        <header>
-          <Navbar />
-        </header>
+        <Navbar />
         {children}
-        <footer>
-          <FooterSvg />
-          <Footer />
-        </footer>
+
+        <FooterSvg />
+        <Footer />
       </body>
     </html>
   );

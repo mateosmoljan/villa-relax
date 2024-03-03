@@ -4,6 +4,7 @@ import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
 import Gallery from "./Gallery";
+import "./style.css";
 
 export type AppContextType = {
   openIndex: boolean;
@@ -26,7 +27,7 @@ function Photogalleries() {
   };
 
   return (
-    <section className="">
+    <section className="Photo">
       <div className="container py-10">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase tracking-widest">
