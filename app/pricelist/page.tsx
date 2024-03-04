@@ -4,7 +4,6 @@ import PaymentConditions from "@/components/PaymentConditions/PaymentConditions"
 import PriceTable from "@/components/PriceTable/PriceTable";
 import SendMessage from "@/components/SendMessage/SendMessage";
 import TouristGuide from "@/components/TouristGuide/TouristGuide";
-import React from "react";
 
 function Pricelist() {
   return (
