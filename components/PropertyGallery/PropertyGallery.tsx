@@ -57,11 +57,22 @@ export default function PropertyGallery() {
             onSwiper={setThumbsSwiper}
             spaceBetween={0}
             grabCursor
-            slidesPerView={5}
+            slidesPerView={3}
             freeMode={true}
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs]}
             className="PropertySWiperThumbnail"
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
           >
             {PropertyGalleryLib.images.map((image, index) => (
               <SwiperSlide key={index}>

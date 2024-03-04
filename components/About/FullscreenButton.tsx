@@ -26,20 +26,18 @@ const FullscreenButton = () => {
       });
 
       return () => {
-        document.removeEventListener("fullscreenchange", () => {
-          // Clean up event listener if needed
-        });
+        document.removeEventListener("fullscreenchange", () => {});
       };
     }
-  }, []); // Empty dependency array ensures that this effect runs only once
+  }, []);
 
   return (
     <div className="flex items-center">
-      <button onClick={handleFullscreen} className=" text-white p-4">
+      <button onClick={handleFullscreen} className="  p-2">
         {isFullscreen ? (
-          <RiFullscreenExitFill className="text-white text-xl" />
+          <RiFullscreenExitFill className=" text-2xl text-dark_blue_black" />
         ) : (
-          <RiFullscreenFill className="text-white text-xl" />
+          <RiFullscreenFill className=" text-2xl text-dark_blue_black" />
         )}
       </button>
     </div>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
 import Gallery from "./Gallery";
-import "./style.css";
 
 export type AppContextType = {
   openIndex: boolean;

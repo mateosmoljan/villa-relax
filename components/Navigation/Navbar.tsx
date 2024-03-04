@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
-import "./nav.css"
+import "./nav.css";
 import { NavigationLinks } from "@/lib/Links";
 import { usePathname } from "next/navigation";
 
@@ -96,13 +96,21 @@ const Navbar = () => {
       <div className="md:flex hidden">
         <div className="flex gap-3 md:gap-5">
           <ul className="flex gap-4 items-center">
-          {NavigationLinks.NavData.map((item, index) => (
-                <li key={index} className={`${pathname === item.path ? "" : "hover_nav"}`}>
-                  <Link href={item.path} className={`nav_list ${pathname === item.path ? "active_nav" : ""}`}>
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+            {NavigationLinks.NavData.map((item, index) => (
+              <li
+                key={index}
+                className={`${pathname === item.path ? "" : "hover_nav"}`}
+              >
+                <Link
+                  href={item.path}
+                  className={`nav_list ${
+                    pathname === item.path ? "active_nav" : ""
+                  }`}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
             <li>
               <Link href="/" className="btn">
                 Book
@@ -128,37 +136,28 @@ const Navbar = () => {
               className={`fixed left-0 top-14 bg-white w-full px-2  pb-2 shadow-md origin-top overflow-hidden`}
             >
               <ul className="flex flex-col gap-4 origin-top">
-                <li>
-                  <Link href="" className="nav_list">
-                    Villa Relax
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/" className="nav_list">
-                    Pricelist
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/" className="nav_list">
-                    Photogallery
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/" className="nav_list">
-                    Pula
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/" className="nav_list">
-                    Contact
-                  </Link>
-                </li>
-
-                <li className="flex">
+                {NavigationLinks.NavData.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`flex ${
+                      pathname === item.path ? "" : "hover_nav"
+                    }`}
+                    onClick={() => setNavActive(() => !navActive)}
+                  >
+                    <Link
+                      href={item.path}
+                      className={`nav_list${
+                        pathname === item.path ? "active_nav" : ""
+                      }`}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+                <li
+                  className="flex"
+                  onClick={() => setNavActive(() => !navActive)}
+                >
                   <Link href="/" className="btn">
                     Book
                     <MdKeyboardDoubleArrowRight />

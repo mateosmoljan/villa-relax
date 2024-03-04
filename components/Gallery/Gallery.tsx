@@ -4,10 +4,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FullscreenButton from "../About/FullscreenButton";
 import { RxCross2 } from "react-icons/rx";
 import { useGlobalContext } from "./Photogalleries";
+import { usePropertyGalleryContext } from "./ShowcaseGallery";
+import { NextArrow, PrevArrow } from "./SwiperNavButtons";
+import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
 
 interface Props {
   initIndex: number;
@@ -15,39 +18,70 @@ interface Props {
 
 function Gallery({ initIndex }: Props) {
   const { openIndex, setOpenIndex } = useGlobalContext();
+  const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
+    usePropertyGalleryContext();
+  const {
+    openIndexShowcaseGallery2Context,
+    setOpenIndexShowcaseGallery2Context,
+  } = useShowcaseGallery2Context();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
   const totalImages = TouristImageData.image.length;
   const settings = {
     dots: true,
     infinite: true,
+    fade: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     afterChange: (index: number) => setCurrentSlide(index),
     customPaging: (i: number) => (
       <div className="w-10 text-white">{/* Empty div for dot */}</div>
     ),
     initialSlide: initIndex,
   };
+
+  function handleClose() {
+    if (document.body) {
+      document.body.style.overflow = "auto"; // Re-enable scrolling
+    }
+    setOpenIndexPropertyGallery(false);
+    setOpenIndex(false);
+    setOpenIndexShowcaseGallery2Context(false);
+  }
+
+  useEffect(() => {
+    if (document.body) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    }
+  }, []);
+
   return (
-    <section className="flex fixed inset-0 w-screen h-screen bg-black/80 z-50">
+    <section className=" fixed inset-0 w-screen h-screen bg-black z-50 overflow-y-hidden ">
       <div className="mx-auto  w-full ">
-        <div className="w-full flex justify-end items-center gap-1 pr-10 p-2">
-          <FullscreenButton />
-          <button
-            onClick={() => setOpenIndex(!openIndex)}
-            className="text-white cursor-pointer p-4"
-          >
-            <RxCross2 className=" text-2xl" />
-          </button>
+        <div className="flex justify-end mr-4">
+          <div className="inline-block ml-auto">
+            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4">
+              <button className="fullscreen-button">
+                <FullscreenButton />
+              </button>
+              <button
+                onClick={() => handleClose()}
+                className="text-white cursor-pointer p-2 close-button"
+              >
+                <RxCross2
+                  className=" text-2xl text-dark_blue_black hover:scale-150
+                  transition-scale duration-300"
+                />
+              </button>
+            </div>
+          </div>
         </div>
-        <Slider
-          {...settings}
-          className="mt-[50%] sm:mt-[15%] lg:mt-[7.5%] xl:mt-[2%] mx-auto w-10/12"
-        >
+        <Slider {...settings} className="">
           {TouristImageData.image.map((image, index) => (
             <div key={index}>
-              <div className="flex items-center justify-center relative image_gallery m-auto overflow-hidden">
+              <div className="container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                 <Image
                   src={image.src}
                   alt={image.alt}

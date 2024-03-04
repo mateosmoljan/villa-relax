@@ -14,8 +14,8 @@ function VillaPanorama() {
         <h1 className="mb-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
           Holiday Home Villa Panorama
         </h1>
-        <div className="flex gap-8">
-          <div className="w-2/3">
+        <div className="flex gap-8 flex-col lg:flex-row">
+          <div className="w-full sm:w-2/3 mx-auto">
             <PropertyGallery />
             <div className="flex flex-col gap-4">
               <hr />
@@ -23,12 +23,12 @@ function VillaPanorama() {
                 {Categorization.categorization.map((item, index) => (
                   <button
                     key={index}
-                    className="py-2 rounded-md border-[1px] border-black flex items-center justify-center gap-2"
+                    className="py-2 rounded-md border-[1px] border-black flex items-center flex-col lg:fle-row justify-center gap-2"
                   >
-                    <span className="tracking-widest uppercase text-sm">
+                    <span className="tracking-widest uppercase text-xs lg:text-sm ">
                       {item.title}
                     </span>
-                    <span className="font-Bold text-sm uppercase tracking-widest">
+                    <span className="font-Bold text-xs lg:text-sm uppercase tracking-widest">
                       {item.value}
                     </span>
                   </button>
@@ -88,9 +88,8 @@ function VillaPanorama() {
               <PaymentConditions />
             </div>
           </div>
-
-          <div className="w-1/3">
-            <div className="sticky top-16 ml-2.5">
+          <div className="w-full lg:w-1/3">
+            <div className="mx-auto !sticky top-16 ml-2.5 w-full">
               <BookYourStayCard />
             </div>
           </div>

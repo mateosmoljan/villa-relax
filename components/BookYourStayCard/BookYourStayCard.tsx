@@ -12,7 +12,7 @@ function BookYourStayCard() {
         hovered ? "custom_shadow_hovered" : "custom_shadow"
       }`}
     >
-      <p className="font-poppins text-grey font-ExtraBold text-right">
+      <p className="font-poppins text-grey font-ExtraBold text-center lg:text-right">
         from <span className="text-3xl text-yellow">375 €</span> per night
       </p>
       <hr />

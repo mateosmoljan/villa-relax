@@ -13,7 +13,7 @@ type LinksData = {
         {title: "Villa Panorama", path: "/villa-panorama", },
         {title: "Pricelist", path: "/pricelist"},
         {title: "Photogallery", path: "/photogallery"},
-        {title: "Environs", path: "/travel-guide"},
+        {title: "Environs", path: "/environs"},
         {title: "Contact", path: "/contact"},
       ],
   };
