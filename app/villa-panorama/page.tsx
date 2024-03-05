@@ -23,7 +23,7 @@ function VillaPanorama() {
                 {Categorization.categorization.map((item, index) => (
                   <button
                     key={index}
-                    className="py-2 rounded-md border-[1px] border-black flex items-center flex-col lg:fle-row justify-center gap-2"
+                    className="py-2 rounded-md border-[1px] border-black flex items-center flex-col lg:flex-row justify-center gap-2"
                   >
                     <span className="tracking-widest uppercase text-xs lg:text-sm ">
                       {item.title}

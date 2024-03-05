@@ -11,21 +11,32 @@ import { useGlobalContext } from "./Photogalleries";
 import { usePropertyGalleryContext } from "./ShowcaseGallery";
 import { NextArrow, PrevArrow } from "./SwiperNavButtons";
 import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
+import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
+import { useFourGalleryContext } from "./FourGallery";
 
 interface Props {
   initIndex: number;
 }
 
 function Gallery({ initIndex }: Props) {
+  const { openFourGalleryContext, setFourGalleryContext } =
+    useFourGalleryContext();
   const { openIndex, setOpenIndex } = useGlobalContext();
+
   const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
     usePropertyGalleryContext();
+
   const {
     openIndexShowcaseGallery2Context,
     setOpenIndexShowcaseGallery2Context,
   } = useShowcaseGallery2Context();
+
+  const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
+
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
+
   const totalImages = TouristImageData.image.length;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -44,11 +55,13 @@ function Gallery({ initIndex }: Props) {
 
   function handleClose() {
     if (document.body) {
-      document.body.style.overflow = "auto"; // Re-enable scrolling
+      document.body.style.overflow = "auto";
     }
     setOpenIndexPropertyGallery(false);
     setOpenIndex(false);
     setOpenIndexShowcaseGallery2Context(false);
+    setOpenGalleryContext(false);
+    setFourGalleryContext(false);
   }
 
   useEffect(() => {
@@ -58,7 +71,7 @@ function Gallery({ initIndex }: Props) {
   }, []);
 
   return (
-    <section className=" fixed inset-0 w-screen h-screen bg-black z-50 overflow-y-hidden ">
+    <section className=" fixed inset-0 w-screen h-screen bg-black z-[1000] overflow-y-hidden ">
       <div className="mx-auto  w-full ">
         <div className="flex justify-end mr-4">
           <div className="inline-block ml-auto">
