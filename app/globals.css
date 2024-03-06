@@ -63,6 +63,10 @@ a {
   box-shadow: 50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset, -50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset;
 }
 
+.custom_border {
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.4rem;
+}
 
 
 

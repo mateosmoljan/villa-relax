@@ -1,7 +1,12 @@
-import React from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 function Loading() {
-  return <div className="text-black">Loading...</div>;
+  return (
+    <div className="flex justify-center">
+      <CircularProgress className="!text-black" />
+    </div>
+  );
 }
 
 export default Loading;

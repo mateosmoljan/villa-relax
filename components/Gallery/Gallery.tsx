@@ -91,20 +91,24 @@ function Gallery({ initIndex }: Props) {
             </div>
           </div>
         </div>
-        <Slider {...settings} className="">
-          {TouristImageData.image.map((image, index) => (
-            <div key={index}>
-              <div className="container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  className="object-cover  h-full w-full rounded-md"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <div className="flex-1 flex items-center justify-center">
+          <div className="h-screen sm:h-auto">
+            <Slider {...settings} className="">
+              {TouristImageData.image.map((image, index) => (
+                <div key={index}>
+                  <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      className="object-cover  h-full w-full rounded-md"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
         <div className="mx-auto z-50 flex justify-center">
           <div className="block text-white">
             {currentSlide + 1}/{totalImages}
