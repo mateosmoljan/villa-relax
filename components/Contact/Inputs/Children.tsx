@@ -15,7 +15,7 @@ function Children() {
       </InputLabel>
       <Select
         labelId="demo-simple-select-label"
-        className="w-full bg-white"
+        className="w-full bg-white label:text-grey3"
         id="demo-simple-select"
         size="small"
         value={children}

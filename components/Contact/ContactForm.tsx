@@ -18,7 +18,7 @@ function ContactForm() {
               id="outlined-required"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "font-Bold",
+                className: "font-Bold text-grey3",
               }}
               label="Name"
               size="small"
@@ -30,7 +30,7 @@ function ContactForm() {
               id="outlined-required"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "font-Bold",
+                className: "font-Bold text-grey3",
               }}
               label="Email:"
               size="small"
@@ -44,7 +44,7 @@ function ContactForm() {
               id="outlined-required"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "font-Bold",
+                className: "font-Bold text-grey3",
               }}
               label="Phone/Mobile"
               size="small"
@@ -73,13 +73,13 @@ function ContactForm() {
             }}
             id="filled-multiline-static"
             label="Inquiry"
-            className="bg-white w-full"
+            className="bg-white w-full mb-4"
             multiline
             rows={4}
             variant="outlined"
           />
         </div>
-        <p className="text-xs">
+        <p className="text-xs mb-4 text-grey3">
           The content of this form will be sent directly to the e-mail address
           of the owner of accommodation and is used exclusively for sending
           inquiries about booking of listed property.
