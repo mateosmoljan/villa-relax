@@ -5,6 +5,7 @@ import HolidayHome from "./Inputs/HolidayHome";
 import Adults from "./Inputs/Adults";
 import Children from "./Inputs/Children";
 import { IoIosSend } from "react-icons/io";
+import DataRangeComponent from "./Inputs/DateRangeComponent";
 
 function ContactForm() {
   return (
@@ -52,6 +53,9 @@ function ContactForm() {
           <div className="w-1/2 px-2">
             <HolidayHome />
           </div>
+        </div>
+        <div>
+          <DataRangeComponent />
         </div>
         <div className="flex items-end mb-4">
           <div className="w-1/2 px-2">

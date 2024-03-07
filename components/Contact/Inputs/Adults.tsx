@@ -19,7 +19,7 @@ function Adults() {
         id="demo-simple-select"
         size="small"
         value={adults}
-        label="Holiday home"
+        label={<span className="text-black">Adults</span>}
         onChange={handleChange}
       >
         <MenuItem value={1}>1</MenuItem>

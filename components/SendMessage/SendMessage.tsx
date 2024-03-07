@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function SendMessage() {
   return (
     <section className="">
@@ -11,7 +13,9 @@ function SendMessage() {
             </p>
           </div>
           <div className=" flex justify-end ">
-            <button className="btn lg:min-w-full">Send Message</button>
+            <Link href="/contact" className="btn lg:min-w-full">
+              Send Message
+            </Link>
           </div>
         </div>
       </div>

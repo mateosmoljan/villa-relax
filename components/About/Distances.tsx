@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { dataObject } from "../../lib/LocationDistance";
 import GoogleMaps from "./GoogleMaps";
-import "./distances.css"
 
 function Distances() {
   const totalLocations = dataObject.locations.length;
@@ -34,7 +33,7 @@ function Distances() {
           </div>
         </div>
         {/* Google Maps */}
-        {showMap && <GoogleMaps showMap={showMap} onClose={handleMapClose} />}
+        {showMap && <GoogleMaps onClose={handleMapClose} />}
         <div className="flex flex-wrap">
           {dataObject.locations.map((item, index) => (
             <div

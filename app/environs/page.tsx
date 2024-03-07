@@ -13,7 +13,7 @@ function Environs() {
           </h1>
         </div>
         <div>
-          <FourGallery />
+          <FourGallery mapButton={true} />
         </div>
         <div>
           <p className="">
@@ -65,7 +65,7 @@ function Environs() {
           </p>
         </div>
         <div>
-          <FourGallery />
+          <FourGallery mapButton={false} />
         </div>
         <div>
           <h2 className="font-titleBold text-xl mb-4">
@@ -100,7 +100,7 @@ function Environs() {
             </ul>
           </div>
           <div>
-            <FourGallery />
+            <FourGallery mapButton={false} />
           </div>
           <div>
             <SendMessage />

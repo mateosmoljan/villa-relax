@@ -4,6 +4,7 @@ import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import Gallery from "./Gallery";
 import { FaMap } from "react-icons/fa";
+import GoogleMaps from "../About/GoogleMaps";
 
 export type AppContextType = {
   openFourGalleryContext: boolean;
@@ -16,14 +17,23 @@ export const AppContext = createContext<AppContextType>({
 });
 
 export const useFourGalleryContext = () => useContext(AppContext);
-function FourGallery() {
+
+interface Props {
+  mapButton: boolean;
+}
+
+function FourGallery({ mapButton }: Props) {
   const [openFourGalleryContext, setFourGalleryContext] =
     useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number>(-1);
-
+  const [showMap, setShowMap] = useState(false);
   const handleImageClick = (index: number) => {
     setFourGalleryContext(true);
     setActiveIndex(index);
+  };
+
+  const handleMapClose = () => {
+    setShowMap(false);
   };
 
   return (
@@ -45,21 +55,24 @@ function FourGallery() {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90 aspect-square"
+                    className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90 aspect-video md:aspect-square"
                     onClick={() => handleImageClick(index)}
                   />
                 </div>
               ))}
             </div>
-            <div className="flex justify-end">
-              <button
-                onClick={() => setFourGalleryContext(true)}
-                className=" btn-2 gap-2 mt-4"
-              >
-                <FaMap />
-                <span>Show Map</span>
-              </button>
-            </div>
+            {mapButton && (
+              <div className="flex justify-end">
+                <button
+                  onClick={() => setShowMap(true)}
+                  className=" btn-2 gap-2 mt-4"
+                >
+                  <FaMap />
+                  <span>Show Map</span>
+                </button>
+                {showMap && <GoogleMaps onClose={handleMapClose} />}
+              </div>
+            )}
           </div>
 
           {openFourGalleryContext && <Gallery initIndex={activeIndex} />}

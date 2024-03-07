@@ -15,20 +15,20 @@ function VillaPanorama() {
           Holiday Home Villa Panorama
         </h1>
         <div className="flex gap-8 flex-col lg:flex-row">
-          <div className="w-full sm:w-2/3 mx-auto">
+          <div className="w-full lg:w-2/3 mx-auto">
             <PropertyGallery />
             <div className="flex flex-col gap-4">
               <hr />
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {Categorization.categorization.map((item, index) => (
                   <button
                     key={index}
-                    className="py-2 rounded-md border-[1px] border-black flex items-center flex-col lg:flex-row justify-center gap-2"
+                    className="py-2 rounded-md border-[1px] border-black flex items-center lg:flex-row justify-center gap-2"
                   >
-                    <span className="tracking-widest uppercase text-xs lg:text-sm ">
+                    <span className="tracking-widest uppercase text-xs xl:text-sm ">
                       {item.title}
                     </span>
-                    <span className="font-Bold text-xs lg:text-sm uppercase tracking-widest">
+                    <span className="font-Bold text-xs xl:text-sm uppercase tracking-widest">
                       {item.value}
                     </span>
                   </button>
@@ -55,7 +55,7 @@ function VillaPanorama() {
               <h2 className="font-bold text-2xl text-dark_blue_black">
                 Features
               </h2>
-              <ul className="grid grid-cols-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2">
                 {Features.features.map((item, index) => (
                   <li
                     key={index}
@@ -89,7 +89,7 @@ function VillaPanorama() {
             </div>
           </div>
           <div className="w-full lg:w-1/3">
-            <div className="mx-auto !sticky top-16 ml-2.5 w-full">
+            <div className="mx-auto !sticky top-16 lg:ml-2.5 w-full">
               <BookYourStayCard />
             </div>
           </div>

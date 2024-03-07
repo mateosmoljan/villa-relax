@@ -26,17 +26,28 @@ const rows = [
 export default function PriceTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="Pricing Table ">
+      <Table aria-label="Pricing Table ">
         <TableHead className="">
           <TableRow className="bg-grey2 !font-titleBold ">
-            <TableCell className="!font-titleBold !py-2 ">Period</TableCell>
-            <TableCell align="right" className="!font-titleBold !py-2 ">
-              Price
+            <TableCell className="!font-titleBold !py-2 px-0 w-[160px] text-center">
+              Period
             </TableCell>
-            <TableCell align="right" className="!font-titleBold !py-2 ">
+            <TableCell
+              align="right"
+              className="!font-titleBold !py-2 px-0 w-[112px] text-center"
+            >
+              Price*
+            </TableCell>
+            <TableCell
+              align="right"
+              className="!font-titleBold !py-2 px-0 w-[112px] text-center"
+            >
               Persons
             </TableCell>
-            <TableCell align="right" className="!font-titleBold !py-2 ">
+            <TableCell
+              align="right"
+              className="!font-titleBold py-2 px-0 w-[112px] text-center"
+            >
               Min. Stay
             </TableCell>
           </TableRow>
@@ -50,17 +61,26 @@ export default function PriceTable() {
               <TableCell
                 component="th"
                 scope="row"
-                className="!font-Bold !py-2"
+                className="px-0 !font-Bold !py-2 text-center"
               >
                 {row.period}
               </TableCell>
-              <TableCell align="right" className="!font-ExtraBold !py-2">
+              <TableCell
+                align="right"
+                className="px-0 !font-ExtraBold !py-2 text-center"
+              >
                 {row.price} €
               </TableCell>
-              <TableCell align="right" className="!font-Bold !py-2">
+              <TableCell
+                align="right"
+                className="px-0 !font-Bold !py-2 text-center"
+              >
                 {row.persons}
               </TableCell>
-              <TableCell align="right" className="!font-Bold !py-2">
+              <TableCell
+                align="right"
+                className="px-0 !font-Bold !py-2 text-center"
+              >
                 {row.stay}
               </TableCell>
             </TableRow>

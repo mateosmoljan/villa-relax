@@ -66,7 +66,7 @@ function ShowcaseGallery() {
                   {index === 3 && (
                     <div className="absolute inline-block md:bottom-4 md:right-4 bottom-2 right-2 ">
                       <button
-                        onClick={() => setOpenIndexPropertyGallery(true)}
+                        onClick={() => handleImageClick(0)}
                         className=" flex items-center p-2 sm:px-4 sm:py-2 rounded-md uppercase tracking-widest pxflex gap-2 !bg-grey2 !text-dark_blue_black font-Bold text-xs xl:text-sm"
                       >
                         <MdPhotoCamera />

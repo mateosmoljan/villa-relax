@@ -52,12 +52,18 @@ a {
   @apply flex items-center p-2 bg-dark_blue_black rounded-md font-poppins text-white tracking-widest px-4 uppercase text-sm  hover:bg-neutral-800;
 }
 
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(178,
+    150,
+    0, 0.5);
+}
+
+.btn-2:focus {
+      box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
 
 /* Shadow */
-
-.card_shadow {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
 
 .shadow-a {
   box-shadow: 50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset, -50px 0px 30px 0px rgba(0, 0, 0, 0.233) inset;
@@ -87,13 +93,32 @@ a {
   background: #000 !important;
 }
 
-/* SwiperJs styles */
 
-.swiper-nav-btns {
-  @apply absolute z-10 top-0 flex justify-between w-screen ;
+
+/* Distances */
+@media (max-width: 640px) {
+  .mobile_border {
+    @apply border-b border-inherit last:border-none;
+  }
 }
 
-.swiper-prev,
-.swiper-next {
-  @apply absolute  z-10 w-10 h-10 text-cyan-100 hover:text-yellow;
+/* Translate Nav */
+.transitionMap {
+  transition: background 0.3s ease-in;
+}
+
+.transitionMap {
+  animation: translateMap 0.3s ease-in;
+}
+
+@keyframes translateMap {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
 }

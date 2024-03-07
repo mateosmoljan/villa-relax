@@ -4,6 +4,7 @@ import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
 import Gallery from "./Gallery";
+import Link from "next/link";
 
 export type AppContextType = {
   openIndex: boolean;
@@ -50,10 +51,10 @@ function Photogalleries() {
             ))}
           </div>
           <div className="pt-5 flex justify-end">
-            <button className="btn-2 flex gap-2">
+            <Link href="/photogallery" className="btn-2 flex gap-2">
               <TfiGallery />
               <span>Show Photogallery</span>
-            </button>
+            </Link>
           </div>
           {openIndex && <Gallery initIndex={activeIndex} />}
         </AppContext.Provider>

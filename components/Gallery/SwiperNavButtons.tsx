@@ -1,15 +1,18 @@
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export function NextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <>
       <button
-        className="h-full  block absolute right-8 top-0 text-4xl z-10"
+        className="h-full block absolute right-0 top-0 text-4xl z-10"
         onClick={onClick}
       >
-        <FaArrowCircleRight className="text-grey1 hover:text-grey2 active:scale-75 transition-scale duration-200" />
+        <div className="bg-grey2 sm:p-1 rounded-l-md">
+          <IoIosArrowRoundForward className="text-black active:scale-75 transition-scale duration-100" />
+        </div>
       </button>
     </>
   );
@@ -20,10 +23,12 @@ export function PrevArrow(props: any) {
   return (
     <>
       <button
-        className="h-full  absolute  block top-0 text-4xl left-8 z-40"
+        className="h-full absolute block top-0 text-4xl left-0 z-40"
         onClick={onClick}
       >
-        <FaArrowCircleLeft className="text-grey1 hover:text-grey2 active:scale-75 transition-scale duration-200" />
+        <div className="bg-grey2 sm:p-1 rounded-l-md">
+          <IoIosArrowRoundBack className="text-black active:scale-75 transition-scale duration-100" />
+        </div>
       </button>
     </>
   );

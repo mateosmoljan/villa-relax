@@ -6,6 +6,7 @@ import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { useState } from "react";
 import { NextArrow, PrevArrow } from "./SwiperNavButtonsGuide";
+import Link from "next/link";
 
 function TouristSwiper() {
   const settings = {
@@ -47,14 +48,17 @@ function TouristSwiper() {
         <Slider {...settings}>
           {TouristImageData.image.map((image, index) => (
             <div key={index} className="xl:h-80 h-96">
-              <div className="flex items-center justify-center relative xl:h-80 h-96">
+              <Link
+                href="/environs"
+                className="flex items-center justify-center relative xl:h-80 h-96"
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   className="object-cover  h-full w-full rounded-md"
                   loading="lazy"
                 />
-              </div>
+              </Link>
               <div className="relative text-left pl-1/10 bottom-20 z-10 flex flex-col gap-2">
                 <h2 className="text-white font-bold text-xl">{image.title}</h2>
                 <p className="text-white">{image.des}</p>

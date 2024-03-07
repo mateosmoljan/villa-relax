@@ -65,7 +65,7 @@ export default function PropertyGallery() {
             >
               {PropertyGalleryLib.images.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex items-center justify-center w-full h-full">
+                  <div className="flex items-center justify-center w-full h-full cursor-pointer">
                     <Image
                       src={image.original}
                       alt={image.alt}

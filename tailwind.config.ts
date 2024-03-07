@@ -49,10 +49,12 @@ const config: Config = {
         blue: "#0098DA",
         pink: "#cc3bb1",
         dark_yellow: "#857001",
-        dark_blue_black: "#343a40", 
+        dark_blue_black: "#343a40",
+        grey: "rgba(0, 0, 0, 0.6)",
         grey1: "#495057",
         grey2: "#e9ecef",
-        grey: "rgba(0, 0, 0, 0.6)",
+        grey3: "#6c757d",
+        
       },
       inset: {
         "1/20": "5%",

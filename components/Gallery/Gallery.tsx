@@ -22,23 +22,18 @@ function Gallery({ initIndex }: Props) {
   const { openFourGalleryContext, setFourGalleryContext } =
     useFourGalleryContext();
   const { openIndex, setOpenIndex } = useGlobalContext();
-
   const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
     usePropertyGalleryContext();
-
   const {
     openIndexShowcaseGallery2Context,
     setOpenIndexShowcaseGallery2Context,
   } = useShowcaseGallery2Context();
-
   const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
-
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
-
   const totalImages = TouristImageData.image.length;
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     fade: true,
     speed: 500,
@@ -55,7 +50,7 @@ function Gallery({ initIndex }: Props) {
 
   function handleClose() {
     if (document.body) {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     }
     setOpenIndexPropertyGallery(false);
     setOpenIndex(false);
@@ -66,14 +61,13 @@ function Gallery({ initIndex }: Props) {
 
   useEffect(() => {
     if (document.body) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.body.style.overflowY = "hidden"; // Disable scrolling
     }
   }, []);
-
   return (
     <section className=" fixed inset-0 w-screen h-screen bg-black z-[1000] overflow-y-hidden ">
       <div className="mx-auto  w-full ">
-        <div className="flex justify-end mr-4">
+        <div className="flex justify-end mr-4 absolute w-full">
           <div className="inline-block ml-auto">
             <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4">
               <button className="fullscreen-button">
@@ -91,27 +85,27 @@ function Gallery({ initIndex }: Props) {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex items-center justify-center">
-          <div className="h-screen sm:h-auto">
-            <Slider {...settings} className="">
+        <div className="h-screen flex items-center justify-center">
+          <div className="w-screen m-auto">
+            <div className="mx-auto z-50 flex justify-center mb-3 sm:mb-10">
+              <div className="block text-white">
+                {currentSlide + 1}/{totalImages}
+              </div>
+            </div>
+            <Slider {...settings}>
               {TouristImageData.image.map((image, index) => (
-                <div key={index}>
+                <div key={index} className="my-auto">
                   <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      className="object-cover  h-full w-full rounded-md"
+                      className="object-contain w-full h-full rounded-md m-auto"
                       loading="lazy"
                     />
                   </div>
                 </div>
               ))}
             </Slider>
-          </div>
-        </div>
-        <div className="mx-auto z-50 flex justify-center">
-          <div className="block text-white">
-            {currentSlide + 1}/{totalImages}
           </div>
         </div>
       </div>
