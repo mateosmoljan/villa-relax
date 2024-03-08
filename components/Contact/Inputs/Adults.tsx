@@ -18,6 +18,7 @@ function Adults() {
         className="w-full bg-white"
         id="demo-simple-select"
         size="small"
+        name="adults"
         value={adults}
         label={<span className="text-black">Adults</span>}
         onChange={handleChange}

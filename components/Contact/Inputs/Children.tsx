@@ -18,6 +18,7 @@ function Children() {
         className="w-full bg-white label:text-grey3"
         id="demo-simple-select"
         size="small"
+        name="children"
         value={children}
         label="Holiday home"
         onChange={handleChange}

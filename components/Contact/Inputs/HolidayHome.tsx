@@ -18,6 +18,7 @@ function HolidayHome() {
         className="w-full bg-white"
         id="demo-simple-select"
         size="small"
+        name="holidayHome"
         value={home}
         label="Holiday home"
         onChange={handleChange}

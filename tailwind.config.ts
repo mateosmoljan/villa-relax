@@ -54,7 +54,6 @@ const config: Config = {
         grey1: "#495057",
         grey2: "#e9ecef",
         grey3: "#6c757d",
-        
       },
       inset: {
         "1/20": "5%",

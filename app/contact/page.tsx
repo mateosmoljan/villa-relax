@@ -8,7 +8,7 @@ function Contact() {
         <h1 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
           Contact Us
         </h1>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row gap-3">
           <div className="w-full sm:w-2/3">
             <ContactForm />
           </div>

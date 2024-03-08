@@ -89,7 +89,7 @@ function VillaPanorama() {
             </div>
           </div>
           <div className="w-full lg:w-1/3">
-            <div className="mx-auto !sticky top-16 lg:ml-2.5 w-full">
+            <div className="mx-auto !sticky top-14 lg:ml-2.5 w-full">
               <BookYourStayCard />
             </div>
           </div>

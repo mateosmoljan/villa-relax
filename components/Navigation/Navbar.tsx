@@ -112,7 +112,7 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <Link href="/" className="btn">
+              <Link href="/contact" className="btn">
                 Book
                 <MdKeyboardDoubleArrowRight />
               </Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
                   className="flex"
                   onClick={() => setNavActive(() => !navActive)}
                 >
-                  <Link href="/" className="btn">
+                  <Link href="/contact" className="btn">
                     Book
                     <MdKeyboardDoubleArrowRight />
                   </Link>

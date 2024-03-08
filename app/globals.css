@@ -122,3 +122,13 @@ a {
     opacity: 100;
   }
 }
+
+/* Calendar */
+
+.rdrDayDisabled .rdrDayNumber span {
+  
+}
+
+.rdrDayDisabled .rdrDayNumber {
+  @apply bg-red-400;
+}
