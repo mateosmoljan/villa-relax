@@ -1,10 +1,10 @@
 "use client";
-import { ImageGallery } from "@/lib/galleryImages";
 import Image from "next/image";
 import { createContext, useContext, useState } from "react";
-import Gallery from "./Gallery";
+import Gallery from "./PropertyGallery";
 import { FaMap } from "react-icons/fa";
 import GoogleMaps from "../About/GoogleMaps";
+import { PropertyGalleryLib } from "@/lib/property_gallery";
 
 export type AppContextType = {
   openFourGalleryContext: boolean;
@@ -47,7 +47,7 @@ function FourGallery({ mapButton }: Props) {
         >
           <div className="w-full flex flex-col ">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-              {ImageGallery.images.slice(0, 4).map((image, index) => (
+              {PropertyGalleryLib.images.slice(0, 4).map((image, index) => (
                 <div
                   key={index}
                   className="w-full h-full rounded-md flex relative"

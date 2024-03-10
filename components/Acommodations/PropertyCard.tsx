@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { images } from "@/lib/images";
 import { EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { SwiperNavButtonsAcommodation } from "./SwiperNavButtonsAcommodation";
+import { PropertyGalleryLib } from "@/lib/property_gallery";
 
 function PropertyCard() {
   return (
@@ -17,7 +17,7 @@ function PropertyCard() {
         effect={"fade"}
         modules={[EffectFade]}
       >
-        {images.map((image, index) => (
+        {PropertyGalleryLib.images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="flex relative items-center justify-center h-full w-full">
               <Image

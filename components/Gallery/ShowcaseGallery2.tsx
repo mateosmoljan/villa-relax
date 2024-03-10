@@ -1,9 +1,9 @@
 "use client";
-import { ImageGallery } from "@/lib/galleryImages";
 import Image from "next/image";
 import { createContext, useContext, useState } from "react";
-import Gallery from "./Gallery";
+import Gallery from "./PropertyGallery";
 import { MdPhotoCamera } from "react-icons/md";
+import { PropertyGalleryLib } from "@/lib/property_gallery";
 
 export type AppContextType = {
   openIndexShowcaseGallery2Context: boolean;
@@ -46,18 +46,18 @@ function ShowcaseGallery2() {
           }}
         >
           <div className="w-full flex flex-col sm:flex-row gap-3 sm:h-96 ">
-            {ImageGallery.images.length > 0 && (
+            {PropertyGalleryLib.images.length > 0 && (
               <div className=" rounded-md sm:w-1/2 w-full">
                 <Image
-                  src={ImageGallery.images[0].src}
-                  alt={ImageGallery.images[0].alt}
+                  src={PropertyGalleryLib.images[0].src}
+                  alt={PropertyGalleryLib.images[0].alt}
                   className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
                   onClick={() => handleImageClick(0)}
                 />
               </div>
             )}
             <div className="grid grid-cols-2 sm:w-1/2 w-full gap-3">
-              {ImageGallery.images.slice(1, 5).map((image, index) => (
+              {PropertyGalleryLib.images.slice(1, 5).map((image, index) => (
                 <div
                   key={index}
                   className="w-full h-full rounded-md flex relative"

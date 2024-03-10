@@ -1,38 +1,73 @@
-import { LocationToVisit } from "../../lib/LocationToVisit";
+import { LocationToVisit } from "@/lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="pt-20" id="info">
+    <section className="pt-20" id="about">
       <div className="container">
         <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold text-dark_blue_black">
-          Villa Relax - Pula
+          Villa Panorama - Istra
         </h1>
         <div className="pt-10">
           <p>
-            Boasting air-conditioned accommodation with a private pool, Villa
-            Relax is situated in Pula. This property offers access to a balcony,
-            pool at the pool table, free private parking and <b>free WiFi</b>.
-            The villa has a <b>children's playground</b> and a <b>sauna</b>.
+            Beautiful Villa Panorama Istria surrounded by nature. It's an ideal
+            place to rest for all lovers of peace , quiet, and nature. Villa of
+            520m square is located on a plot of 2500 m2. You have at your
+            disposal a beautiful garden and a large lawn for play and
+            entertainment(trampoline, football goals). The villa is carefully
+            furnished , with quality furniture and great attention to
+            detail.Traditional and modern elements blend together to form an
+            interesting whole. Beautiful <b>Villa Panorama Istria</b> surrounded
+            by <b>nature</b>. It's an ideal place to <b>rest</b> for all lovers
+            of
+            <b>peace</b>, <b>quiet</b>, and <b>nature</b>. Villa of{" "}
+            <b>520m square</b> is located on a plot of <b>2500 m2</b>. You have
+            at your disposal a beautiful <b>garden</b> and a large <b>lawn</b>{" "}
+            for play and
+            <b>entertainment</b> (<b>trampoline</b>, <b>football goals</b>). The
+            villa is carefully <b>furnished</b>, with <b>quality furniture</b>{" "}
+            and great attention to detail. <b>Traditional</b> and{" "}
+            <b>modern elements</b> blend together to form an interesting{" "}
+            <b>whole</b>.
           </p>
           <br />
+          <h2 className="font-ExtraBold text-lg">The space</h2>
           <p>
-            The spacious villa features <b>5 bedrooms</b>, <b>5 bathrooms</b>,
-            bed linen, towels, a flat-screen TV with satellite channels, a
-            dining area, a <b>fully equipped kitchen</b>, and a terrace with
-            <b> city views</b>. For added privacy, the accommodation features a
-            <b> private entrance</b>.
+            In front of the Villa there is a spacious summer kitchen with a
+            wood-burning fireplace that serves for dining and
+            entertainment(table football, piccado and billiards).Also there is a
+            working room and a bathroom.In addition to the summer kitchen there
+            is a{" "}
+            <b>
+              68 m square swimming pool with air massage facilities, a waterfall
+            </b>
+            .Traditional speciality is occupied by an Istrian cape built in
+            stone style.It consists of a fire pit for setting a grill or baking
+            for dining.It is especially attractive large terrace that spreads on
+            one side of the villa overlooking the sea and surrounding green
+            areas, which also makes it an ideal place for dining and resting.{" "}
+            <br />
+            <br />
+            It consists of a spacious living room, fully equipped kitchen ,{" "}
+            <b>7 charming bedrooms with bathrooms, air conditioning and TV</b>.
+            Heating in every room with radiators. All rooms are air conditioned.
+            In addition to the villa, there is a wellness room (
+            <b>sauna ,jacuzzi, exercise equipment</b>).It is also a garage with{" "}
+            <b>2 parking spaces</b> and there are <b>8 bikes</b>. Parking space
+            offers the possibility of more than a dozen parking spaces. <br />
+            <br />
+            It consists of a spacious living room, fully equipped kitchen ,{" "}
+            <b>7 charming bedrooms with bathrooms, air conditioning and TV</b>.
+            Heating in every room with radiators. All rooms are air conditioned.
+            In addition to the villa, there is a wellness room (
+            <b>sauna ,jacuzzi, exercise equipment</b>).It is also a garage with{" "}
+            <b>2 parking spaces</b> and there are <b>8 bikes</b>. Parking space
+            offers the possibility of more than a dozen parking spaces.
           </p>
           <br />
+          <h2 className="font-ExtraBold text-lg">Guest access</h2>
           <p>
-            You can play darts at this <b>5-star villa</b>. The villa has a
-            barbecue and a garden, which can be enjoyed by guests if the weather
-            permits.
-          </p>
-          <br />
-          <p>
-            Valsaline <b>Beach is 1.8 km</b> from Villa Relax, while Saccorgiana
-            Beach is 2.3 km from the property. The nearest airport is Pula
-            Airport, 9 km from the accommodation.
+            Jacuzzi, sauna, fitness, bikes, karaoke, billiards, foosball, darts,
+            trampoline.
           </p>
         </div>
         <div className="pt-5">
@@ -41,7 +76,7 @@ function About() {
             {LocationToVisit.locations.map((item, index) => (
               <li
                 key={index}
-                className=""
+                className="mb-2"
                 dangerouslySetInnerHTML={{ __html: item.placeToVisit }}
               ></li>
             ))}

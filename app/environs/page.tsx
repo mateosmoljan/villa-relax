@@ -24,68 +24,29 @@ function Environs() {
               height={150}
               className="aspect-square float-left"
             />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. <br />
-            <br />
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. <br />
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. <br />
-            <br />
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+            Gajana is a perfect place to experience a relaxing vacation, but
+            it's also close enough to all kinds of activities if you change your
+            mind. Gajana is surrounded by vineyards, olive groves, woods and a
+            lot of beautiful sights. You can visit Kazun Park - a park with
+            traditional Istrian houses made of stone, and it's a place with most
+            kazun's located in one place in the Mediterranean area. <br />
+            National Park Brijuni (which is visible from the villa) and Limski
+            zaljev (Channel of Lim) are also located in this region. Since
+            Gajana is a place surrounded by vineyards and olive groves, the best
+            way to experience it is to take some of hiking or cycling routes
+            through the area. Since the coast is only 5 km away, you can try
+            fishing, sailing or diving activities. Beach, bars, restaurants and
+            grocery shops can be found in 5 km range.
           </p>
         </div>
         <div>
           <FourGallery mapButton={false} />
         </div>
         <div>
-          <h2 className="font-titleBold text-xl mb-4">
-            Attractions in Gajana and surroundings
-          </h2>
+          <h2 className="font-titleBold text-xl mb-4">Getting around</h2>
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+            You can reach the villa by car or taxi. Parking is free and
+            available on site.
           </p>
           <div>
             <h3 className="font-semibold">Attractions nearby:</h3>

@@ -88,7 +88,7 @@ const Navbar = () => {
         />
         <p className="font-arbutus font-black text-2xl text-yellow">
           <span className="text-dark_blue_black">Villa</span>
-          Relax
+          Panorama
         </p>
       </Link>
 
@@ -158,7 +158,7 @@ const Navbar = () => {
                   className="flex"
                   onClick={() => setNavActive(() => !navActive)}
                 >
-                  <Link href="/contact" className="btn">
+                  <Link href="/contact" className="btn pb-2">
                     Book
                     <MdKeyboardDoubleArrowRight />
                   </Link>

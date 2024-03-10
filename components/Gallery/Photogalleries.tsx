@@ -1,10 +1,10 @@
 "use client";
-import { ImageGallery } from "@/lib/galleryImages";
 import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
-import Gallery from "./Gallery";
+import PropetyGallery from "./PropertyGallery";
 import Link from "next/link";
+import { PropertyGalleryLib } from "@/lib/property_gallery";
 
 export type AppContextType = {
   openIndex: boolean;
@@ -39,7 +39,7 @@ function Photogalleries() {
         </div>
         <AppContext.Provider value={{ openIndex, setOpenIndex }}>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-            {ImageGallery.images.map((image, index) => (
+            {PropertyGalleryLib.images.slice(0, 8).map((image, index) => (
               <div key={index} className="w-full h-full rounded-md	">
                 <Image
                   src={image.src}
@@ -56,7 +56,7 @@ function Photogalleries() {
               <span>Show Photogallery</span>
             </Link>
           </div>
-          {openIndex && <Gallery initIndex={activeIndex} />}
+          {openIndex && <PropetyGallery initIndex={activeIndex} />}
         </AppContext.Provider>
       </div>
     </section>

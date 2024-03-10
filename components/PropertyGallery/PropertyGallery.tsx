@@ -15,7 +15,7 @@ import Image from "next/image";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 import { SwiperNavButtons } from "./SwiperNavButton";
 import Loading from "../Loading/Loading";
-import Gallery from "../Gallery/Gallery";
+import Gallery from "../Gallery/PropertyGallery";
 
 export type AppContextType = {
   openGalleryContext: boolean;
@@ -67,7 +67,7 @@ export default function PropertyGallery() {
                 <SwiperSlide key={index}>
                   <div className="flex items-center justify-center w-full h-full cursor-pointer">
                     <Image
-                      src={image.original}
+                      src={image.src}
                       alt={image.alt}
                       width={748}
                       height={470}
@@ -107,7 +107,7 @@ export default function PropertyGallery() {
                 <SwiperSlide key={index}>
                   <div className={`flex items-center justify-center `}>
                     <Image
-                      src={image.original}
+                      src={image.src}
                       alt={image.alt}
                       width={150}
                       height={100}

@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Image from "next/image";
-import { useState } from "react";
 import { NextArrow, PrevArrow } from "./SwiperNavButtonsGuide";
 import Link from "next/link";
 

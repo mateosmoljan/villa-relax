@@ -125,10 +125,6 @@ a {
 
 /* Calendar */
 
-.rdrDayDisabled .rdrDayNumber span {
-  
-}
-
 .rdrDayDisabled .rdrDayNumber {
   @apply bg-red-400;
 }
