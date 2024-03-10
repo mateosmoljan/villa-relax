@@ -13,6 +13,7 @@ import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
 import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
 import { useFourGalleryContext } from "./FourGallery";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
+import Loading from "../Loading/Loading";
 
 interface Props {
   initIndex: number;
@@ -55,8 +56,14 @@ function Gallery({ initIndex }: Props) {
     setOpenIndex(false);
     setOpenIndexShowcaseGallery2Context(false);
     setOpenGalleryContext(false);
-    // setFourGalleryContext(false);
+    exitFullscreenIfActive();
   }
+
+  const exitFullscreenIfActive = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
+  };
 
   useEffect(() => {
     if (document.body) {
@@ -66,9 +73,9 @@ function Gallery({ initIndex }: Props) {
   return (
     <section className=" fixed inset-0 w-screen h-screen bg-black z-[1000] overflow-y-hidden ">
       <div className="mx-auto  w-full ">
-        <div className="flex justify-end mr-4 absolute w-full">
+        <div className="flex justify-end mr-4 absolute w-full z-[100]">
           <div className="inline-block ml-auto">
-            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4">
+            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4  landscape:mt-3 landscape:m-3 landscape:z-[10000] landscape:flex-col-reverse">
               <button className="fullscreen-button">
                 <FullscreenButton />
               </button>
@@ -85,9 +92,9 @@ function Gallery({ initIndex }: Props) {
           </div>
         </div>
         <div className="h-screen flex items-center justify-center">
-          <div className="w-screen m-auto">
-            <div className="mx-auto z-50 flex justify-center mb-3 sm:mb-10">
-              <div className="block text-white">
+          <div className="w-screen m-auto landscape:m-0">
+            <div className="mx-auto z-50 flex justify-center landscape:inline-block mb-3 sm:mb-10">
+              <div className="block text-white landscape:pl-3 landscape:pt-3 landscape:absolute landscape:inline-block landscape:top-0">
                 {currentSlide + 1}/{totalImages}
               </div>
             </div>
@@ -98,6 +105,8 @@ function Gallery({ initIndex }: Props) {
                     <Image
                       src={image.src}
                       alt={image.alt}
+                      quality={100}
+                      placeholder="blur"
                       className="object-contain w-full h-full rounded-md m-auto"
                       loading="lazy"
                     />

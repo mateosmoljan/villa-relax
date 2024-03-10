@@ -5,6 +5,7 @@ import { TfiGallery } from "react-icons/tfi";
 import PropetyGallery from "./PropertyGallery";
 import Link from "next/link";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
+import PhotogalleriesImages from "./PhotogalleriesImages";
 
 export type AppContextType = {
   openIndex: boolean;
@@ -38,18 +39,7 @@ function Photogalleries() {
           </h1>
         </div>
         <AppContext.Provider value={{ openIndex, setOpenIndex }}>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
-            {PropertyGalleryLib.images.slice(0, 8).map((image, index) => (
-              <div key={index} className="w-full h-full rounded-md	">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
-                  onClick={() => handleImageClick(index)}
-                />
-              </div>
-            ))}
-          </div>
+          <PhotogalleriesImages handleImageClick={handleImageClick} />
           <div className="pt-5 flex justify-end">
             <Link href="/photogallery" className="btn-2 flex gap-2">
               <TfiGallery />

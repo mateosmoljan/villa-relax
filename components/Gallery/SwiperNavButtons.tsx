@@ -10,7 +10,10 @@ export function NextArrow(props: any) {
         className="h-full block absolute right-0 top-0 text-4xl z-10"
         onClick={onClick}
       >
-        <div className="bg-grey2 sm:p-1 rounded-l-md">
+        <div
+          className="bg-grey2 sm:p-1 rounded-l-md sm:opacity-100
+        opacity-30"
+        >
           <IoIosArrowRoundForward className="text-black active:scale-75 transition-scale duration-100" />
         </div>
       </button>
@@ -26,7 +29,10 @@ export function PrevArrow(props: any) {
         className="h-full absolute block top-0 text-4xl left-0 z-40"
         onClick={onClick}
       >
-        <div className="bg-grey2 sm:p-1 rounded-l-md">
+        <div
+          className="bg-grey2 sm:p-1 rounded-r-md sm:opacity-100
+        opacity-30"
+        >
           <IoIosArrowRoundBack className="text-black active:scale-75 transition-scale duration-100" />
         </div>
       </button>

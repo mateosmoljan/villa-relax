@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
 
-import one from "@/public/assets/images/outside/draw-well.jpg";
-import two from "@/public/assets/images/inside/jacuzzi.jpg";
+import one from "@/public/assets/images/outside/swimming-pool.jpg";
+import two from "@/public/assets/images/outside/draw-well.jpg";
 import three from "@/public/assets/images/inside/fire-place2.jpg";
 import four from "@/public/assets/images/inside/dinning-table.jpg";
 import five from "@/public/assets/images/inside/pool-table.jpg";
 import six from "@/public/assets/images/outside/entrance.jpg";
-import seven from "@/public/assets/images/outside/swimming-pool.jpg";
+import seven from "@/public/assets/images/inside/jacuzzi.jpg";
 import eight from "@/public/assets/images/outside/night-swimming-pool2.jpg";
 import nine from "@/public/assets/images/outside/sky-view8.jpg";
 import ten from "@/public/assets/images/outside/sky-view3.jpg";
