@@ -23,8 +23,8 @@ function PaymentConditions() {
           <span className="font-titleBold">from 4 pm</span>.
         </p>
         <p>
-          Pets are welcome and are charged an additional{" "}
-          <span className="font-titleBold">10 €</span> for 1 night.
+          Kindly note that <span className="font-titleBold">pets</span> are not
+          permitted on the premises.
         </p>
       </div>
       <div>

@@ -35,7 +35,7 @@ function Photogalleries() {
             Photogalleries
           </h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
-            Select photos from Villa Relax
+            Select photos from Villa Panorama
           </h1>
         </div>
         <AppContext.Provider value={{ openIndex, setOpenIndex }}>

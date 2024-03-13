@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function BookYourStayCard() {
   return (
     <div
@@ -7,7 +9,9 @@ function BookYourStayCard() {
         from <span className="text-3xl text-yellow">375 €</span> per night
       </p>
       <hr />
-      <button className="btn justify-center">Book Your Stay</button>
+      <Link href="/contact" className="btn justify-center">
+        Book Your Stay
+      </Link>
     </div>
   );
 }

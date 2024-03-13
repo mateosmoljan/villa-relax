@@ -98,6 +98,7 @@ function Gallery({ initIndex }: Props) {
                     <Image
                       src={image.src}
                       alt={image.alt}
+                      placeholder="blur"
                       className="object-contain w-full h-full rounded-md m-auto"
                       loading="lazy"
                     />

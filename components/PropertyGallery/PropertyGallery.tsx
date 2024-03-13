@@ -71,6 +71,7 @@ export default function PropertyGallery() {
                       alt={image.alt}
                       width={748}
                       height={470}
+                      placeholder="blur"
                       className="object-cover block rounded-md max-w-full aspect-[748/470]"
                       onClick={() => handleImageClick(index)}
                     />
@@ -111,6 +112,7 @@ export default function PropertyGallery() {
                       alt={image.alt}
                       width={150}
                       height={100}
+                      placeholder="blur"
                       className={` border-4${
                         activeIndex == index ? " border-4 !border-yellow" : ""
                       } border-transparent object-cover block rounded-md aspect-[15/10] max-w-full`}

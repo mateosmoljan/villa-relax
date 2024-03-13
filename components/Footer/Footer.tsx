@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SSL from "@/public/assets/images/ssl.png";
-import "./footer.css"
+import "./footer.css";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -9,47 +10,40 @@ function Footer() {
         <div className="h-full relative pl-5 sm:pl-0 w-full sm:w-3/5 lg:w-auto">
           <div className="space-y-4 ">
             <Image src={SSL} alt="ssl Villa Relax" width={200} />
-            <p>©2023 . Villa Relax - Pula</p>
+            <p>©2024 . Villa Panorama - Istria</p>
             <p>All rights protected</p>
           </div>
         </div>
-        <div className="h-full relative w-full pl-5 sm:pl-0 sm:w-3/5 lg:w-auto">
-          <h2 className="font-bold uppercase text-xl pb-5">Usefull Links</h2>
-          <ul className="space-y-4">
-            <li>
-              <a href="/">Weather forecast</a>
-            </li>
-            <li>
-              <a href="/">Tourismusverband Poreč</a>
-            </li>
-            <li>
-              <a href="/">Road conditions</a>
-            </li>
-            <li>
-              <a href="/">Via Michelin route planner</a>
-            </li>
-          </ul>
-        </div>
         <div className="w-full h-full relative pl-5 sm:pl-0 sm:w-3/5 lg:w-auto">
-          <h2 className="font-bold uppercase text-xl pb-5">
-            DISCOVER PULA & ISTRIA
-          </h2>
-          <ul className="space-y-4">
+          <h2 className="font-bold uppercase text-xl pb-5">DISCOVER ISTRIA</h2>
+          <ul className="space-y-4 !text-white">
             <li>
-              <a href="/">About Pula</a>
+              <Link
+                href="https://www.pulainfo.hr/"
+                target="_blank"
+                className="!text-white hover:underline hover:!text-yellow"
+              >
+                Pula Info
+              </Link>
             </li>
             <li>
-              <a href="https://www.istra.hr/">Tourist guide Istra</a>
+              <Link
+                href="https://www.istra.hr/"
+                target="_blank"
+                className="!text-white hover:underline hover:!text-yellow"
+              >
+                Tourist guide Istra
+              </Link>
             </li>
           </ul>
         </div>
         <div className="h-full relative pl-5 sm:pl-0 w-full sm:w-3/5 lg:w-auto">
           <h2 className="font-bold uppercase text-xl pb-5">Contact Us</h2>
           <ul className="space-y-4">
-            <li>Sandra Smoljan</li>
-            <li>Schiavuzzijev prilaz 55</li>
-            <li>+(385) 98263136</li>
-            <li>villa.relax@gmail.com</li>
+            <li>Alen Smoljan</li>
+            <li>Tršičani 43, 52215, Vodnjan</li>
+            <li>+(385) 989406130</li>
+            <li>villa.panorama@gmail.com</li>
           </ul>
         </div>
       </div>

@@ -2,10 +2,10 @@ import { LocationToVisit } from "@/lib/LocationToVisit";
 
 function About() {
   return (
-    <section className="pt-20" id="about">
+    <section className="pt-20 Visit" id="about">
       <div className="container">
         <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold text-dark_blue_black">
-          Villa Panorama - Istra
+          Villa Panorama - Istria
         </h1>
         <div className="pt-10">
           <p>
@@ -71,12 +71,12 @@ function About() {
           </p>
         </div>
         <div className="pt-5">
-          <h2 className="font-semibold">What to see and visit:</h2>
+          <h2 className="font-ExtraBold">What to see and visit:</h2>
           <ul className="list-disc	p-3 pl-8">
             {LocationToVisit.locations.map((item, index) => (
               <li
                 key={index}
-                className="mb-2"
+                className="mb-2 Visit"
                 dangerouslySetInnerHTML={{ __html: item.placeToVisit }}
               ></li>
             ))}

@@ -49,18 +49,35 @@ function TouristSwiper() {
             <div key={index} className="xl:h-80 h-96">
               <Link
                 href="/environs"
-                className="flex items-center justify-center relative xl:h-80 h-96"
+                className="flex items-center justify-center relative h-full"
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
+                  placeholder="blur"
                   className="object-cover  h-full w-full rounded-md"
                   loading="lazy"
                 />
               </Link>
-              <div className="relative text-left pl-1/10 bottom-20 z-10 flex flex-col gap-2">
-                <h2 className="text-white font-bold text-xl">{image.title}</h2>
-                <p className="text-white">{image.des}</p>
+              <div className="absolute text-left p-4 bottom-0 z-10 flex flex-col gap-2">
+                <h2
+                  className="text-white font-bold text-xl drop-shadow-xl"
+                  style={{
+                    textShadow:
+                      "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em #B29600",
+                  }}
+                >
+                  {image.title}
+                </h2>
+                <p
+                  className="text-white drop-shadow-xl"
+                  style={{
+                    textShadow:
+                      "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em #B29600",
+                  }}
+                >
+                  {image.des}
+                </p>
               </div>
             </div>
           ))}

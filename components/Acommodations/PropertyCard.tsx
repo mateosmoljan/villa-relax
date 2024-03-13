@@ -23,6 +23,9 @@ function PropertyCard() {
               <Image
                 src={image.src}
                 alt={image.alt}
+                width={559}
+                height={240}
+                placeholder="blur"
                 className="object-cover block rounded-t-md h-60 w-full"
               />
             </div>
@@ -31,7 +34,7 @@ function PropertyCard() {
         <SwiperNavButtonsAcommodation />
       </Swiper>
       <div className="p-3">
-        <h2 className="font-black text-xl font-arbutus">Villa Relax</h2>
+        <h2 className="font-black text-xl font-arbutus">Villa Panorama</h2>
         <p className="text-sm">Maximum of 12 people</p>
         <p className="text-sm">
           Price from{" "}
