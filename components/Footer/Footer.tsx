@@ -21,7 +21,7 @@ function Footer() {
               <Link
                 href="https://www.pulainfo.hr/"
                 target="_blank"
-                className="!text-white hover:underline hover:!text-yellow"
+                className="!text-white underline hover:!text-yellow"
               >
                 Pula Info
               </Link>
@@ -30,7 +30,7 @@ function Footer() {
               <Link
                 href="https://www.istra.hr/"
                 target="_blank"
-                className="!text-white hover:underline hover:!text-yellow"
+                className="!text-white underline hover:!text-yellow"
               >
                 Tourist guide Istra
               </Link>

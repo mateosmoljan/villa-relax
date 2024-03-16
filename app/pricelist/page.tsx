@@ -51,7 +51,7 @@ function Pricelist() {
             <HowToReserve />
           </div>
         </div>
-        <div className="container">
+        <div>
           <SendMessage />
         </div>
       </div>

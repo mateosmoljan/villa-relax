@@ -7,30 +7,22 @@ import { useEffect, useState } from "react";
 import FullscreenButton from "../About/FullscreenButton";
 import { RxCross2 } from "react-icons/rx";
 import { useGlobalContext } from "./Photogalleries";
-import { usePropertyGalleryContext } from "./ShowcaseGallery";
 import { NextArrow, PrevArrow } from "./SwiperNavButtons";
 import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
-import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
-import { useFourGalleryContext } from "./FourGallery";
-import { PropertyGalleryLib } from "@/lib/property_gallery";
+import { TouristImageData } from "@/lib/TouristImageData";
 
 interface Props {
   initIndex: number;
 }
 
-function Gallery({ initIndex }: Props) {
-  const { openFourGalleryContext, setFourGalleryContext } =
-    useFourGalleryContext();
+function TouristGallery({ initIndex }: Props) {
   const { openIndex, setOpenIndex } = useGlobalContext();
-  const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
-    usePropertyGalleryContext();
   const {
     openIndexShowcaseGallery2Context,
     setOpenIndexShowcaseGallery2Context,
   } = useShowcaseGallery2Context();
-  const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
-  const totalImages = PropertyGalleryLib.images.length;
+  const totalImages = TouristImageData.image.length;
 
   const settings = {
     infinite: true,
@@ -51,11 +43,9 @@ function Gallery({ initIndex }: Props) {
     if (document.body) {
       document.body.style.overflowY = "auto";
     }
-    setOpenIndexPropertyGallery(false);
-    setOpenIndex(false);
     setOpenIndexShowcaseGallery2Context(false);
-    setOpenGalleryContext(false);
-    setFourGalleryContext(false);
+    setOpenIndex(false);
+    exitFullscreenIfActive();
   }
 
   useEffect(() => {
@@ -63,12 +53,19 @@ function Gallery({ initIndex }: Props) {
       document.body.style.overflowY = "hidden"; // Disable scrolling
     }
   }, []);
+
+  const exitFullscreenIfActive = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
+  };
+
   return (
     <section className=" fixed inset-0 w-screen h-screen bg-black z-[1000] overflow-y-hidden ">
       <div className="mx-auto  w-full ">
         <div className="flex justify-end mr-4 absolute w-full">
           <div className="inline-block ml-auto">
-            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4">
+            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4 landscape:mt-3 landscape:m-3 landscape:z-[10000] landscape:flex-col-reverse">
               <button className="fullscreen-button">
                 <FullscreenButton />
               </button>
@@ -85,14 +82,14 @@ function Gallery({ initIndex }: Props) {
           </div>
         </div>
         <div className="h-screen flex items-center justify-center">
-          <div className="w-screen m-auto">
-            <div className="mx-auto z-50 flex justify-center mb-3 sm:mb-10">
-              <div className="block text-white">
+          <div className="w-screen m-auto landscape:m-0">
+            <div className="mx-auto z-50 flex justify-center landscape:inline-block mb-3 sm:mb-10">
+              <div className="block text-white landscape:pl-3 landscape:pt-3 landscape:absolute landscape:inline-block landscape:top-0">
                 {currentSlide + 1}/{totalImages}
               </div>
             </div>
             <Slider {...settings}>
-              {PropertyGalleryLib.images.map((image, index) => (
+              {TouristImageData.image.map((image, index) => (
                 <div key={index} className="my-auto">
                   <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                     <Image
@@ -113,4 +110,4 @@ function Gallery({ initIndex }: Props) {
   );
 }
 
-export default Gallery;
+export default TouristGallery;

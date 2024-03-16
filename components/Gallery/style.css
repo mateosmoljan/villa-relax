@@ -1,0 +1,4 @@
+
+    .landscape_custom_buttons{
+        @apply landscape:mt-3 landscape:m-3 landscape:z-[10000] landscape:flex-col-reverse rounded-md bg-grey2 flex justify-end items-center gap-2 sm: mt-6 sm:m-4;
+    }

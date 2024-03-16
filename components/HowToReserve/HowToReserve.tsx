@@ -50,33 +50,24 @@ function HowToReserve() {
                 <ul className="flex flex-col gap-1">
                   <li>
                     Account owner:{" "}
-                    <span className="font-Bold">Srećko Lučić</span>
+                    <span className="font-Bold">Alen Smoljan</span>
                   </li>
                   <li>
                     Address:{" "}
-                    <span className="font-Bold">
-                      Mihatovići 57, 52440 Poreč, Croatia
-                    </span>
+                    <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
                   </li>
                   <li>
-                    Bank:{" "}
-                    <span className="font-Bold">Privredna banka Zagreb dd</span>
+                    Bank: <span className="font-Bold">Zagrebačka banka dd</span>
                   </li>
                   <li>
-                    <span className="font-Bold">
-                      Radnička cesta 50, 10000 Zagreb, Croatia
-                    </span>
+                    <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
                   </li>
                   <li>
-                    SWIFT: <span className="font-Bold">PBZGHR2X</span>
+                    SWIFT: <span className="font-Bold">*********</span>
                   </li>
                   <li>
                     IBAN (euro):{" "}
-                    <span className="font-Bold">HR6923400093231717432</span>
-                  </li>
-                  <li>
-                    IBAN(kuna):{" "}
-                    <span className="font-Bold">HR8623400093113155384</span>
+                    <span className="font-Bold">********************</span>
                   </li>
                 </ul>
               </div>
@@ -96,8 +87,8 @@ function HowToReserve() {
             <p>
               When payment is done, we will confirm your payment and
               reservation. Relax and await peacefully you vacation in summer and
-              enjoy in your vacations in holiday home Villa Eni in Poreč, Istria
-              - Croatia!
+              enjoy in your vacations in holiday home Villa Panorama, Istria -
+              Croatia!
             </p>
           </div>
         </div>

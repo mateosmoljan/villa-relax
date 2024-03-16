@@ -1,15 +1,35 @@
+"use client";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar/AvailabilityCalendar";
 import BookYourStayCard from "@/components/BookYourStayCard/BookYourStayCard";
+import FeaturesComponent from "@/components/Features/features";
 import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
 import PriceTable from "@/components/PriceTable/PriceTable";
 import PropertyGallery from "@/components/PropertyGallery/PropertyGallery";
 import { Categorization } from "@/lib/categorization";
 import { Features } from "@/lib/features";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const featuresLength = Features.features.length;
 function VillaPanorama() {
+  const [showFeatures, setShowFeatures] = useState<boolean>(false);
+
+  function handleClose() {
+    setShowFeatures(false);
+  }
+
+  useEffect(() => {
+    if (showFeatures) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure the overflow is reset when the component unmounts
+    };
+  }, [showFeatures]);
+
   return (
     <section className="pt-[10rem]">
       <div className="container">
@@ -84,21 +104,17 @@ function VillaPanorama() {
                 Features
               </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2">
-                {Features.features.map((item, index) => (
-                  <div key={index} className="flex gap-3 items-center">
-                    {item.icon_image && item.icon_alt ? (
-                      <Image src={item.icon_image} alt={item.icon_alt} />
-                    ) : (
-                      <span>{item.icon}</span>
-                    )}
-                    <li
-                      className={`py-4 flex flex-col justify-center ${
-                        index != featuresLength - 1 &&
-                        index != featuresLength - 2
-                          ? "border-b-[1px] border-[#e5e7eb]"
-                          : ""
-                      }`}
-                    >
+                {Features.features.slice(0, 6).map((item, index) => (
+                  <div
+                    key={index}
+                    className={`flex gap-3 items-center ${
+                      index != 4 && index != 5
+                        ? "border-b-[1px] border-[#e5e7eb]"
+                        : ""
+                    }`}
+                  >
+                    <Image src={item.icon} alt={item.icon_alt} />
+                    <li className={`py-4 flex flex-col justify-center`}>
                       {item.title}
 
                       <span className="text-sm text-grey">{item.des}</span>
@@ -106,6 +122,13 @@ function VillaPanorama() {
                   </div>
                 ))}
               </ul>
+              <button
+                className="btn-2 mt-3"
+                onClick={() => setShowFeatures(true)}
+              >
+                Show all 43 amenities
+              </button>
+              {showFeatures && <FeaturesComponent handleClose={handleClose} />}
             </div>
             <hr />
             <div className="py-10">

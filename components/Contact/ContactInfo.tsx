@@ -1,6 +1,6 @@
 function ContactInfo() {
   return (
-    <section className="sticky top-14 px-3">
+    <section className="sticky top-14 sm:px-3">
       <div className=" rounded-md custom_border shadow-md px-4 pt-8 pb-5 hover:shadow-xl">
         <div className="ml-4 mb-4">
           <h2 className="mb-4 font-titleBold text-xl">Alen Smoljan</h2>

@@ -8,8 +8,8 @@ function SendMessage() {
           <div className="lg:w-2/3">
             <p className="text-base">
               Please <span className="font-bold">send us an</span> answer and
-              would you like to belong to Villa Relax in Pula and secure your
-              reservation?
+              would you like to belong to Villa Panorama in Istria and secure
+              your reservation?
             </p>
           </div>
           <div className=" flex justify-end ">

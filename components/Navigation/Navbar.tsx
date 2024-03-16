@@ -38,6 +38,18 @@ const Navbar = () => {
     },
   };
 
+  useEffect(() => {
+    if (navActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure the overflow is reset when the component unmounts
+    };
+  }, [navActive]);
+
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
     const isScrolledDown = currentScrollPos < prevScrollPos;
@@ -133,7 +145,7 @@ const Navbar = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className={`fixed left-0 top-14 bg-white w-full px-2  pb-2 shadow-md origin-top overflow-hidden`}
+              className={`fixed left-0 top-14 bg-white w-full px-3  pb-3 shadow-md origin-top overflow-hidden`}
             >
               <ul className="flex flex-col gap-4 origin-top">
                 {NavigationLinks.NavData.map((item, index) => (

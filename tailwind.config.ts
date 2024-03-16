@@ -7,6 +7,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     container: {
       padding: {
         DEFAULT: '15px',
