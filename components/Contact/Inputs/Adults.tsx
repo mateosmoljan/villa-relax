@@ -14,6 +14,7 @@ function Adults() {
         Adults
       </InputLabel>
       <Select
+        required
         labelId="demo-simple-select-label"
         className="w-full bg-white"
         id="demo-simple-select"

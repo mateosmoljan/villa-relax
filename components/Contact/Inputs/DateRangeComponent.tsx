@@ -89,13 +89,15 @@ function DataRangeComponent() {
     }
   }, []);
 
-  const handleEndDateClick = () => {
-    setActiveDateRange(false); // Deactivate the date range selection
-  };
+  useEffect(() => {
+    if (state[0].startDate !== state[0].endDate) {
+      setActiveDateRange(false);
+    }
+  }, [state]);
 
   return (
     <div className="w-full px-2">
-      <div className="flex flex-col sm:flex-row w-full sm:gap-4">
+      <div className="flex flex-row w-full gap-4">
         <button
           className="text-grey3 border-solid border-2 bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={() => setActiveDateRange(true)}
@@ -127,15 +129,20 @@ function DataRangeComponent() {
             direction={
               calendarWidth === "horizontal" ? "horizontal" : "vertical"
             }
-            rangeColors={["#000"]}
+            rangeColors={["#B29600"]}
             disabledDates={disabledDates}
             dateDisplayFormat="d.M.y"
           />
         </div>
       )}
       <div>
-        <input type="hidden" name="arrivalDate" value={arrivalDate} />
-        <input type="hidden" name="departureDate" value={departureDate} />
+        <input type="hidden" required name="arrivalDate" value={arrivalDate} />
+        <input
+          type="hidden"
+          required
+          name="departureDate"
+          value={departureDate}
+        />
       </div>
     </div>
   );

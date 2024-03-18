@@ -59,7 +59,7 @@ function FeaturesComponent({ handleClose }: Props) {
                   key={index}
                   className={`flex gap-3 items-center border-b-[1px] border-[#e5e7eb]`}
                 >
-                  <Image src={item.icon} alt={item.icon_alt} />
+                  <Image src={item.icon} alt={item.icon_alt} quality={100} />
                   <li className={`py-4 flex flex-col justify-center`}>
                     {item.title}
 
