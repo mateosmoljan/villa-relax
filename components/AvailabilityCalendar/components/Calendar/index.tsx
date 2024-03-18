@@ -153,7 +153,7 @@ const Calendar = ({
   return (
     <section className={`calendar ${layoutClassName}`} data-testid="calendar">
       <h2 className=" text-4xl text-dark_blue_black mb-4">Villa Panorama</h2>
-      <div className="wrap">
+      <div className="wrap overflow-hidden">
         {!shouldRender.controls && !shouldRender.currentYear ? null : (
           <div className="controlWrap">
             {shouldRender.currentYear && (
@@ -166,7 +166,9 @@ const Calendar = ({
           </div>
         )}
 
-        <Year {...configYear} />
+        <div className="h-[280px] overflow-x-hidden overflow-y-scroll">
+          <Year {...configYear} />
+        </div>
 
         {shouldRender.key && <Key />}
       </div>

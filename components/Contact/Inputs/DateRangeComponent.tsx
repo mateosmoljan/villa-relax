@@ -15,10 +15,11 @@ interface CustomRange {
 function DataRangeComponent() {
   const dateRangeRef = useRef<HTMLDivElement>(null);
   const [activeDateRange, setActiveDateRange] = useState<boolean>(false);
+  const [activateDate, setActivateDate] = useState<boolean>(false);
   const [state, setState] = useState<CustomRange[]>([
     {
-      startDate: undefined,
-      endDate: undefined,
+      startDate: new Date(),
+      endDate: new Date(),
       key: "selection",
     },
   ]);
@@ -95,22 +96,27 @@ function DataRangeComponent() {
     }
   }, [state]);
 
+  const handleButtonClick = () => {
+    setActiveDateRange(true);
+    setActivateDate(true);
+  };
+
   return (
     <div className="w-full px-2">
       <div className="flex flex-row w-full gap-4">
         <button
           className="text-grey3 border-solid border-2 bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
-          onClick={() => setActiveDateRange(true)}
+          onClick={handleButtonClick}
         >
           <FaCalendarAlt />
-          <span>{arrivalDate ? arrivalDate : "Arrival*"}</span>
+          {activateDate ? arrivalDate : <span>Arrival*</span>}
         </button>
         <button
           className="text-grey3 border-solid border-2  bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={() => setActiveDateRange(!activeDateRange)}
         >
           <FaCalendarAlt />
-          <span>{departureDate ? departureDate : "Departure*"}</span>
+          <span>{activateDate ? departureDate : "Departure*"}</span>
         </button>
       </div>
       {activeDateRange && (

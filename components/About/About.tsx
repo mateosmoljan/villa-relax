@@ -9,16 +9,8 @@ function About() {
         </h1>
         <div className="pt-10">
           <p>
-            Beautiful Villa Panorama Istria surrounded by nature. It's an ideal
-            place to rest for all lovers of peace , quiet, and nature. Villa of
-            520m square is located on a plot of 2500 m2. You have at your
-            disposal a beautiful garden and a large lawn for play and
-            entertainment(trampoline, football goals). The villa is carefully
-            furnished , with quality furniture and great attention to
-            detail.Traditional and modern elements blend together to form an
-            interesting whole. Beautiful <b>Villa Panorama Istria</b> surrounded
-            by <b>nature</b>. It's an ideal place to <b>rest</b> for all lovers
-            of
+            Beautiful <b>Villa Panorama Istria</b> surrounded by <b>nature</b>.
+            It's an ideal place to <b>rest</b> for all lovers of
             <b>peace</b>, <b>quiet</b>, and <b>nature</b>. Villa of{" "}
             <b>520m square</b> is located on a plot of <b>2500 m2</b>. You have
             at your disposal a beautiful <b>garden</b> and a large <b>lawn</b>{" "}
@@ -54,14 +46,6 @@ function About() {
             <b>sauna ,jacuzzi, exercise equipment</b>).It is also a garage with{" "}
             <b>2 parking spaces</b> and there are <b>8 bikes</b>. Parking space
             offers the possibility of more than a dozen parking spaces. <br />
-            <br />
-            It consists of a spacious living room, fully equipped kitchen ,{" "}
-            <b>7 charming bedrooms with bathrooms, air conditioning and TV</b>.
-            Heating in every room with radiators. All rooms are air conditioned.
-            In addition to the villa, there is a wellness room (
-            <b>sauna ,jacuzzi, exercise equipment</b>).It is also a garage with{" "}
-            <b>2 parking spaces</b> and there are <b>8 bikes</b>. Parking space
-            offers the possibility of more than a dozen parking spaces.
           </p>
           <br />
           <h2 className="font-ExtraBold text-lg">Guest access</h2>
