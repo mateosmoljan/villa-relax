@@ -1,5 +1,6 @@
 import AvailabilityCalendar from "@/components/AvailabilityCalendar/AvailabilityCalendar";
 import HowToReserve from "@/components/HowToReserve/HowToReserve";
+import NavPath from "@/components/NavPath/NavPath";
 import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
 import PriceTable from "@/components/PriceTable/PriceTable";
 import SendMessage from "@/components/SendMessage/SendMessage";
@@ -7,9 +8,10 @@ import TouristGuide from "@/components/TouristGuide/TouristGuide";
 
 function Pricelist() {
   return (
-    <section className="pt-[10rem]">
+    <section className="pt-16 md:pt-14">
+      <NavPath />
       <div className="">
-        <div className="pb-28 container">
+        <div className="mt-12 pb-28 container">
           <h2 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
             Price list Villa Panorama
           </h2>

@@ -1,12 +1,14 @@
 import IFrameMaps from "@/components/About/iFrameMaps";
 import ContactForm from "@/components/Contact/ContactForm";
 import ContactInfo from "@/components/Contact/ContactInfo";
+import NavPath from "@/components/NavPath/NavPath";
 
 function Contact() {
   return (
-    <section className="pt-[10rem] -z-50">
+    <section className="pt-16 md:pt-14">
+      <NavPath />
       <div className="container">
-        <h1 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
+        <h1 className="mt-12 font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
           Contact Us
         </h1>
         <div className="flex flex-col sm:flex-row gap-3">

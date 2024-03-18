@@ -8,7 +8,7 @@ type Props = {
 function NavPath({ homePage = false }: Props) {
   const pathname = usePathname();
   return (
-    <div className="b bg-gray-100 py-2 px-4 sm:px-8">
+    <div className="b bg-gray-100 py-3 px-4 sm:px-8">
       <div className="flex items-center gap-2">
         <FaHome />
         {!homePage && (

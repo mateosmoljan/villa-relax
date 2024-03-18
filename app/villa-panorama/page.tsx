@@ -36,7 +36,7 @@ function VillaPanorama() {
     <section className="pt-16 md:pt-14">
       <NavPath />
       <div className="container">
-        <h1 className="my-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
+        <h1 className="my-12 text-center flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
           Holiday Home Villa Panorama
         </h1>
         <div className="flex gap-8 flex-col lg:flex-row">

@@ -1,14 +1,16 @@
 import FourGallery from "@/components/Gallery/FourGallery";
+import NavPath from "@/components/NavPath/NavPath";
 import SendMessage from "@/components/SendMessage/SendMessage";
 import { LocationToVisit } from "@/lib/LocationToVisit";
 import Image from "next/image";
 
 function Environs() {
   return (
-    <section className="pt-[10rem]">
+    <section className="pt-16 md:pt-14">
+      <NavPath />
       <div className="container">
         <div>
-          <h1 className="mb-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
+          <h1 className="mt-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
             Gajana & Istria
           </h1>
         </div>

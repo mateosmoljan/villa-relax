@@ -1,16 +1,16 @@
 import ShowcaseGallery from "@/components/Gallery/ShowcaseGallery";
 import ShowcaseGallery2 from "@/components/Gallery/ShowcaseGallery2";
+import NavPath from "@/components/NavPath/NavPath";
 import SendMessage from "@/components/SendMessage/SendMessage";
 
 function Photogallery() {
   return (
-    <section className="pt-[10rem]">
+    <section className="pt-16 md:pt-14">
+      <NavPath />
       <div className="">
-        <div className=" container">
-          <h2 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
-            Photogallery Villa Panorama, Istra
-          </h2>
-        </div>
+        <h2 className="mt-12 font-ExtraBold text-center text-4xl text-dark_blue_black tracking-wider">
+          Photogallery Villa Panorama, Istra
+        </h2>
         <div>
           <div>
             <ShowcaseGallery />
