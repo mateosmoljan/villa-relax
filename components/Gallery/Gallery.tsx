@@ -2,27 +2,37 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import FullscreenButton from "../About/FullscreenButton";
 import { RxCross2 } from "react-icons/rx";
 import { useGlobalContext } from "./Photogalleries";
+import { usePropertyGalleryContext } from "./ShowcaseGallery";
 import { NextArrow, PrevArrow } from "./SwiperNavButtons";
 import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
-import { TouristImageData } from "@/lib/TouristImageData";
+import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
+import { useFourGalleryContext } from "./FourGallery";
+import { PropertyGalleryLib } from "@/lib/property_gallery";
+import Loading from "../Loading/Loading";
 
-interface Props {
+type Props = {
   initIndex: number;
-}
+  library: { src: StaticImageData; alt: string }[];
+};
 
-function TouristGallery({ initIndex }: Props) {
+function Gallery({ initIndex, library }: Props) {
+  const { openFourGalleryContext, setFourGalleryContext } =
+    useFourGalleryContext();
   const { openIndex, setOpenIndex } = useGlobalContext();
+  const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
+    usePropertyGalleryContext();
   const {
     openIndexShowcaseGallery2Context,
     setOpenIndexShowcaseGallery2Context,
   } = useShowcaseGallery2Context();
+  const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
-  const totalImages = TouristImageData.image.length;
+  const totalImages = PropertyGalleryLib.images.length;
 
   const settings = {
     infinite: true,
@@ -43,16 +53,13 @@ function TouristGallery({ initIndex }: Props) {
     if (document.body) {
       document.body.style.overflowY = "auto";
     }
-    setOpenIndexShowcaseGallery2Context(false);
+    setOpenIndexPropertyGallery(false);
     setOpenIndex(false);
+    setOpenIndexShowcaseGallery2Context(false);
+    setOpenGalleryContext(false);
+    setFourGalleryContext(false);
     exitFullscreenIfActive();
   }
-
-  useEffect(() => {
-    if (document.body) {
-      document.body.style.overflowY = "hidden"; // Disable scrolling
-    }
-  }, []);
 
   const exitFullscreenIfActive = () => {
     if (document.fullscreenElement) {
@@ -60,12 +67,20 @@ function TouristGallery({ initIndex }: Props) {
     }
   };
 
+  useEffect(() => {
+    if (document.body) {
+      document.body.style.overflowY = "hidden"; // Disable scrolling
+    }
+  }, []);
+
+  const Library = library;
+
   return (
-    <section className=" fixed inset-0 w-screen h-screen bg-black z-[1000] overflow-y-hidden ">
+    <section className=" fixed !inset-0 w-screen !h-screen bg-black z-[1000] overflow-y-hidden ">
       <div className="mx-auto  w-full ">
-        <div className="flex justify-end mr-4 absolute w-full">
+        <div className="flex justify-end mr-4 absolute w-full z-[100]">
           <div className="inline-block ml-auto">
-            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4 landscape:mt-3 landscape:m-3 landscape:z-[10000] landscape:flex-col-reverse">
+            <div className="rounded-md bg-grey2 flex justify-end items-center gap-2 mt-6 m-4  landscape:mt-3 landscape:m-3 landscape:z-[10000] landscape:flex-col-reverse">
               <button className="fullscreen-button">
                 <FullscreenButton />
               </button>
@@ -89,14 +104,14 @@ function TouristGallery({ initIndex }: Props) {
               </div>
             </div>
             <Slider {...settings}>
-              {TouristImageData.image.map((image, index) => (
+              {Library.map((image, index) => (
                 <div key={index} className="my-auto">
-                  <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
+                  <div className="sm:container !flex !items-center !justify-center relative image_gallery m-auto overflow-hidden">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       placeholder="blur"
-                      className="object-contain w-full h-full rounded-md m-auto"
+                      className="object-contain object-center h-[300px] sm:h-[750px] m-auto"
                       loading="lazy"
                     />
                   </div>
@@ -110,4 +125,4 @@ function TouristGallery({ initIndex }: Props) {
   );
 }
 
-export default TouristGallery;
+export default Gallery;

@@ -2,10 +2,11 @@
 import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
-import PropetyGallery from "./PropertyGallery";
+import PropetyGallery from "./Gallery";
 import Link from "next/link";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 import PhotogalleriesImages from "./PhotogalleriesImages";
+import Gallery from "./Gallery";
 
 export type AppContextType = {
   openIndex: boolean;
@@ -46,7 +47,12 @@ function Photogalleries() {
               <span>Show Photogallery</span>
             </Link>
           </div>
-          {openIndex && <PropetyGallery initIndex={activeIndex} />}
+          {openIndex && (
+            <Gallery
+              library={PropertyGalleryLib.images}
+              initIndex={activeIndex}
+            />
+          )}
         </AppContext.Provider>
       </div>
     </section>

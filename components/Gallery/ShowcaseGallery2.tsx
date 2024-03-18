@@ -3,7 +3,7 @@ import Image from "next/image";
 import { createContext, useContext, useState } from "react";
 import { MdPhotoCamera } from "react-icons/md";
 import { TouristImageData } from "@/lib/TouristImageData";
-import TouristGallery from "./TouristGallery";
+import Gallery from "./Gallery";
 
 export type AppContextType = {
   openIndexShowcaseGallery2Context: boolean;
@@ -85,7 +85,7 @@ function ShowcaseGallery2() {
           </div>
 
           {openIndexShowcaseGallery2Context && (
-            <TouristGallery initIndex={activeIndex} />
+            <Gallery library={TouristImageData.image} initIndex={activeIndex} />
           )}
         </AppContext.Provider>
       </div>

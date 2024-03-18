@@ -1,32 +1,26 @@
 function FooterSvg() {
   return (
-    <>
-      <svg
-        className="wave_svg bg-transparent sm:-mb-16 md:-mb-20 lg:-mb-24 xl:-mb-28 object-cover w-full h-full z-[-100]"
-        viewBox="0 0 120 28"
-      >
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 13 -9"
-              result="goo"
-            />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-          <path
-            id="wave"
-            d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
-          />
-        </defs>
-
-        <use id="wave3" className="wave" xlinkHref="#wave" x="0" y="-2"></use>
-        <use id="wave2" className="wave" xlinkHref="#wave" x="0" y="0"></use>
-        <use id="wave1" className="wave" xlinkHref="#wave" x="0" y="1" />
-      </svg>
-    </>
+    <svg
+      className="waves position-absolute fixed-bottom"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shapeRendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g className="parallax">
+        <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(52,58,64,0.7)" />
+        <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(52,58,64,0.5)" />
+        <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(52,58,64,0.3)" />
+        <use xlinkHref="#gentle-wave" x="48" y="7" fill="#343A40" />
+      </g>
+    </svg>
   );
 }
 

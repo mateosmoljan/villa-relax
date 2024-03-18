@@ -1,5 +1,7 @@
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { FaArrowCircleRight } from "react-icons/fa";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 
 export function NextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -9,7 +11,7 @@ export function NextArrow(props: any) {
         className="h-full  block absolute -right-8 top-0 text-3xl z-10"
         onClick={onClick}
       >
-        <FaArrowCircleRight className="text-dark_blue_black hover:text-neutral-800" />
+        <MdOutlineArrowForwardIos className="rounded-full p-1 bg-black/70 hover:bg-black text-grey2 " />
       </button>
     </>
   );
@@ -23,7 +25,7 @@ export function PrevArrow(props: any) {
         className="h-full  absolute  block top-0 text-3xl -left-8 z-40"
         onClick={onClick}
       >
-        <FaArrowCircleLeft className="text-dark_blue_black hover:text-neutral-800" />
+        <MdOutlineArrowBackIosNew className="rounded-full p-1 bg-black/70 hover:bg-black text-grey2 " />
       </button>
     </>
   );

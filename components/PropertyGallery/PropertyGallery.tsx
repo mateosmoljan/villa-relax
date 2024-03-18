@@ -15,7 +15,7 @@ import Image from "next/image";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 import { SwiperNavButtons } from "./SwiperNavButton";
 import Loading from "../Loading/Loading";
-import Gallery from "../Gallery/PropertyGallery";
+import Gallery from "../Gallery/Gallery";
 
 export type AppContextType = {
   openGalleryContext: boolean;
@@ -80,7 +80,12 @@ export default function PropertyGallery() {
               ))}
               <SwiperNavButtons />
             </Swiper>
-            {openGalleryContext && <Gallery initIndex={activeIndex} />}
+            {openGalleryContext && (
+              <Gallery
+                library={PropertyGalleryLib.images}
+                initIndex={activeIndex}
+              />
+            )}
             <Swiper
               onSwiper={setThumbsSwiper}
               spaceBetween={0}

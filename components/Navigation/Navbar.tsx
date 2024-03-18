@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./nav.css";
 import { NavigationLinks } from "@/lib/Links";
 import { usePathname } from "next/navigation";
+import { Divide as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -135,8 +136,15 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className="md:hidden flex relative" ref={navRef}>
-        <button onClick={() => setNavActive(() => !navActive)}>
-          <RxHamburgerMenu />
+        <button className=" z-50">
+          <Hamburger
+            toggled={navActive}
+            toggle={setNavActive}
+            label="Show menu"
+            size={24}
+            color="#343a40"
+            rounded
+          />
         </button>
         <AnimatePresence>
           {navActive && (

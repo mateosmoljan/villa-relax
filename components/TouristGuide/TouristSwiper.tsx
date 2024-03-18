@@ -45,7 +45,7 @@ function TouristSwiper() {
     <>
       <div className="tourist-guide max-w-full">
         <Slider {...settings}>
-          {TouristImageData.image.map((image, index) => (
+          {TouristImageData.image.slice(0, 6).map((image, index) => (
             <div key={index} className="xl:h-80 h-96">
               <Link
                 href="/environs"

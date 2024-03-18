@@ -13,23 +13,16 @@ import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
 import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
 import { useFourGalleryContext } from "./FourGallery";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
-import Loading from "../Loading/Loading";
+import { TouristImageData } from "@/lib/TouristImageData";
 
 interface Props {
   initIndex: number;
 }
 
-function Gallery({ initIndex }: Props) {
-  // const { openFourGalleryContext, setFourGalleryContext } =
-  //   useFourGalleryContext();
+function GuideGallery({ initIndex }: Props) {
+  const { openFourGalleryContext, setFourGalleryContext } =
+    useFourGalleryContext();
   const { openIndex, setOpenIndex } = useGlobalContext();
-  const { openIndexPropertyGallery, setOpenIndexPropertyGallery } =
-    usePropertyGalleryContext();
-  const {
-    openIndexShowcaseGallery2Context,
-    setOpenIndexShowcaseGallery2Context,
-  } = useShowcaseGallery2Context();
-  const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
   const totalImages = PropertyGalleryLib.images.length;
 
@@ -52,10 +45,8 @@ function Gallery({ initIndex }: Props) {
     if (document.body) {
       document.body.style.overflowY = "auto";
     }
-    setOpenIndexPropertyGallery(false);
     setOpenIndex(false);
-    setOpenIndexShowcaseGallery2Context(false);
-    setOpenGalleryContext(false);
+    setFourGalleryContext(false);
     exitFullscreenIfActive();
   }
 
@@ -99,7 +90,7 @@ function Gallery({ initIndex }: Props) {
               </div>
             </div>
             <Slider {...settings}>
-              {PropertyGalleryLib.images.map((image, index) => (
+              {TouristImageData.image.map((image, index) => (
                 <div key={index} className="my-auto">
                   <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                     <Image
@@ -120,4 +111,4 @@ function Gallery({ initIndex }: Props) {
   );
 }
 
-export default Gallery;
+export default GuideGallery;

@@ -55,7 +55,9 @@ function Pricelist() {
           <SendMessage />
         </div>
       </div>
-      <TouristGuide />
+      <div className="mb-24">
+        <TouristGuide />
+      </div>
     </section>
   );
 }

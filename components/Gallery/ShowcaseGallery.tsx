@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { createContext, useContext, useState } from "react";
-import Gallery from "./PropertyGallery";
+import Gallery from "./Gallery";
 import { MdPhotoCamera } from "react-icons/md";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 
@@ -79,7 +79,12 @@ function ShowcaseGallery() {
             </div>
           </div>
 
-          {openIndexPropertyGallery && <Gallery initIndex={activeIndex} />}
+          {openIndexPropertyGallery && (
+            <Gallery
+              library={PropertyGalleryLib.images}
+              initIndex={activeIndex}
+            />
+          )}
         </AppContext.Provider>
       </div>
     </section>

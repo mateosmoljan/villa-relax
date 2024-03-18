@@ -19,7 +19,7 @@ function Photogallery() {
         <div>
           <ShowcaseGallery2 />
         </div>
-        <div>
+        <div className="mb-24">
           <SendMessage />
         </div>
       </div>

@@ -1,7 +1,9 @@
 "use client";
+import IFrameMaps from "@/components/About/iFrameMaps";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar/AvailabilityCalendar";
 import BookYourStayCard from "@/components/BookYourStayCard/BookYourStayCard";
 import FeaturesComponent from "@/components/Features/features";
+import NavPath from "@/components/NavPath/NavPath";
 import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
 import PriceTable from "@/components/PriceTable/PriceTable";
 import PropertyGallery from "@/components/PropertyGallery/PropertyGallery";
@@ -31,9 +33,10 @@ function VillaPanorama() {
   }, [showFeatures]);
 
   return (
-    <section className="pt-[10rem]">
+    <section className="pt-16 md:pt-14">
+      <NavPath />
       <div className="container">
-        <h1 className="mb-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
+        <h1 className="my-12 flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
           Holiday Home Villa Panorama
         </h1>
         <div className="flex gap-8 flex-col lg:flex-row">
@@ -147,6 +150,14 @@ function VillaPanorama() {
               </h2>
               <PaymentConditions />
             </div>
+            <div>
+              <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
+                Location on the map
+              </h2>
+              <div className="h-[400px] rounded-md overflow-hidden">
+                <IFrameMaps />
+              </div>
+            </div>
           </div>
           <div className="w-full lg:w-1/3">
             <div className="mx-auto !sticky top-14 lg:ml-2.5 w-full">
@@ -154,7 +165,7 @@ function VillaPanorama() {
             </div>
           </div>
         </div>
-        <div className="container py-10">
+        <div className="container py-10 mb-24">
           <h2 className="block text-center font-bold text-2xl text-dark_blue_black mb-6">
             Availability Calendar
           </h2>

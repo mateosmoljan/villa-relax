@@ -1,45 +1,75 @@
-/* Footer Wawes */
-
-.wave_svg {
-    overflow:visible;
-  }
+    @media (max-width: 768px) {
+      .waves {
+        height: 50px;
+        min-height: 50px;
+      }
+    }
   
-  .wave {
-    animation: wave 10s linear;
-    animation-iteration-count:infinite;
-    fill: #343a40;
-  }
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 15vh;
+      /* margin-bottom: -7px; */
+      min-height: 50px;
+      max-height: 80px;
+    }
   
-  .gooeff {
-      filter: url(#goo);
-  }
-  #wave2 {
-    animation-duration:15s;
-    animation-direction: reverse;
-    opacity: .6
-  }
-  #wave3 {
-    animation-duration: 20s;
-    opacity:.3;
-  }
-  @keyframes drop {
-    0% {
-      transform: translateY(25px); 
+    .fixed-bottom {
+      z-index: 500;
     }
-    30% {
-      transform: translateY(-10px) scale(.1);
-    }
-    30.001% {
-      transform: translateY(25px) scale(1); 
-    }
-    70% {
-      transform: translateY(25px); 
-    }
-    100% { 
-      transform: translateY(-10px) scale(.1);  
-    }
-  }
-  @keyframes wave {
-    to {transform: translateX(-100%);}
-  }
   
+    .fixed-bottom {
+      position: fixed;
+      right: 0;
+      top: -80px;
+      left: 0;
+      z-index: 1030;
+    }
+  
+    .position-absolute {
+      position: absolute !important;
+    }
+  
+    svg {
+      overflow: hidden;
+      vertical-align: middle;
+    }
+  
+  
+    .parallax>use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 20s;
+      fill: rgba(52, 58, 64, 0.7);
+    }
+  
+    .parallax>use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 15s;
+      fill: rgba(52, 58, 64, 0.5);
+    }
+  
+    .parallax>use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 25s;
+      fill: rgba(52, 58, 64, 0.3);
+    }
+  
+    .parallax>use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+      fill: #343a40;
+    }
+  
+    .parallax>use {
+      animation: move-forever 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+  
+    @keyframes move-forever {
+      0% {
+        transform: translate3d(-90px, 0, 0);
+      }
+  
+      100% {
+        transform: translate3d(85px, 0, 0);
+      }
+    }
