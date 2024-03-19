@@ -108,21 +108,21 @@ function DataRangeComponent() {
           className="text-grey3 border-solid border-2 bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={handleButtonClick}
         >
-          <FaCalendarAlt />
           {activateDate ? arrivalDate : <span>Arrival*</span>}
+          <FaCalendarAlt />
         </button>
         <button
           className="text-grey3 border-solid border-2  bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={() => setActiveDateRange(!activeDateRange)}
         >
-          <FaCalendarAlt />
           <span>{activateDate ? departureDate : "Departure*"}</span>
+          <FaCalendarAlt />
         </button>
       </div>
       {activeDateRange && (
         <div
           ref={dateRangeRef}
-          className="absolute  border-solid border-2 border-grey3 z-20"
+          className="absolute border-solid border-2 border-grey3 z-20"
         >
           <DateRange
             editableDateInputs={true}

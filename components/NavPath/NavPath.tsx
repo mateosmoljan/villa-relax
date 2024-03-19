@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaHome } from "react-icons/fa";
 
@@ -10,13 +11,17 @@ function NavPath({ homePage = false }: Props) {
   return (
     <div className="b bg-gray-100 py-3 px-4 sm:px-8">
       <div className="flex items-center gap-2">
-        <FaHome />
-        {!homePage && (
-          <div className="flex items-center gap-2">
-            <span className="text-xl"> {">"} </span>
-            {pathname.substring(1)}
-          </div>
-        )}
+        <Link href="/" className="text-dark_blue_black">
+          <FaHome />
+        </Link>
+        <Link href={pathname} className="text-dark_blue_black">
+          {!homePage && (
+            <div className="flex items-center gap-2">
+              <span className="text-xl"> {">"} </span>
+              {pathname.substring(1)}
+            </div>
+          )}
+        </Link>
       </div>
     </div>
   );

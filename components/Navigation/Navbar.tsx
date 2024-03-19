@@ -159,18 +159,22 @@ const Navbar = () => {
                 {NavigationLinks.NavData.map((item, index) => (
                   <li
                     key={index}
-                    className={`flex ${
-                      pathname === item.path ? "" : "hover_nav"
-                    }`}
+                    className={`flex `}
                     onClick={() => setNavActive(() => !navActive)}
                   >
                     <Link
                       href={item.path}
-                      className={`nav_list${
+                      className={`nav_list ${
                         pathname === item.path ? "active_nav" : ""
                       }`}
                     >
-                      {item.title}
+                      <div
+                        className={` ${
+                          pathname === item.path ? "active_nav" : "hover_nav"
+                        }`}
+                      >
+                        {item.title}
+                      </div>
                     </Link>
                   </li>
                 ))}

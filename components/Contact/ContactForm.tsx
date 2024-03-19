@@ -1,6 +1,6 @@
 "use client";
 import { Alert, Button, InputLabel, TextField } from "@mui/material";
-import React, { FormEvent, useEffect, useRef, useState } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 import HolidayHome from "./Inputs/HolidayHome";
 import Adults from "./Inputs/Adults";
 import Children from "./Inputs/Children";
@@ -15,11 +15,7 @@ function ContactForm() {
   const [messageSent, setMessageSent] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
-  const [phone, setPhone] = useState("");
-  const [isValidPhone, setIsValidPhone] = useState<boolean>(true);
-  const [isPhoneFocused, setIsPhoneFocused] = useState<boolean>(false);
   const [value, setValue] = React.useState("");
-  const [selectedCountry, setSelectedCountry] = useState<string>("");
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,56 +43,9 @@ function ContactForm() {
     }
   };
 
-  // Email validation
-  // const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setEmail(e.target.value);
-  // };
-
-  // const handleEmail = () => {
-  //   const isValidEmail = validateEmail(email);
-  //   setIsValidEmail(isValidEmail);
-  // };
-
-  // const validateEmail = (email: string) => {
-  //   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  //   return emailRegex.test(email);
-  // };
-
-  // Phone validation
-  // const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setPhone(e.target.value);
-  // };
-
-  // const validatePhone = (phone: string) => {
-  //   const phoneRegex = /^\d{10}$/;
-  //   return phoneRegex.test(phone);
-  // };
-
-  // const handlePhone = () => {
-  //   const isValidPhone = validatePhone(phone);
-  //   setIsValidPhone(isValidPhone);
-  //   setIsPhoneFocused(true);
-  // };
-
   const handleChange = (newValue: string) => {
     setValue(newValue);
   };
-
-  // Adjust country flag
-  // useEffect(() => {
-  //   async function fetchCountryFromIP() {
-  //     try {
-  //       const response = await fetch("https://ipinfo.io/json");
-  //       const data = await response.json();
-  //       const countryCode = mapCountryCode(data.country);
-  //       setDefaultCountry(countryCode);
-  //     } catch (error) {
-  //       console.error("Error fetching geolocation data:", error);
-  //     }
-  //   }
-
-  //   fetchCountryFromIP();
-  // }, []);
 
   return (
     <div className="rounded-md px-6 py-8 custom_border shadow-md bg-gray-100">
@@ -147,7 +96,7 @@ function ContactForm() {
               required
               onChange={handleChange}
               className="w-full bg-white rounded-md h-[40px]"
-              // defaultCountry={defaultCountry}
+              defaultCountry="US"
             />
           </div>
           <div className="w-full sm:w-1/2 mb-4 px-2">

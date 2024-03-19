@@ -23,6 +23,7 @@ function HolidayHome() {
         value={home}
         label="Holiday home"
         onChange={handleChange}
+        placeholder="Holiday home"
       >
         <MenuItem value={1}>Villa Panorama</MenuItem>
       </Select>

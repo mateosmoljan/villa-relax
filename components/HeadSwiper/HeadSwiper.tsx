@@ -36,8 +36,8 @@ export default function HeadSwiper() {
           spaceBetween={0}
           modules={[FreeMode, Autoplay, Pagination]}
           autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
+            delay: 10000,
+            disableOnInteraction: true,
           }}
           pagination={pagination}
           grabCursor={true}

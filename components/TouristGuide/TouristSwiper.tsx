@@ -14,7 +14,7 @@ function TouristSwiper() {
     loop: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 10000,
     pauseOnHover: true,
     slidesToShow: 4,
     swipeToSlide: true,
