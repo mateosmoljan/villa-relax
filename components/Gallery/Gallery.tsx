@@ -32,7 +32,7 @@ function Gallery({ initIndex, library }: Props) {
   } = useShowcaseGallery2Context();
   const { openGalleryContext, setOpenGalleryContext } = useGalleryContext();
   const [currentSlide, setCurrentSlide] = useState<number>(initIndex);
-  const totalImages = PropertyGalleryLib.images.length;
+  const totalImages = library.length;
 
   const settings = {
     infinite: true,
