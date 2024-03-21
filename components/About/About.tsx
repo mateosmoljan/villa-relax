@@ -10,11 +10,10 @@ function About() {
         <div className="pt-10">
           <p>
             Beautiful <b>Villa Panorama Istria</b> surrounded by <b>nature</b>.
-            It's an ideal place to <b>rest</b> for all lovers of
-            <b>peace</b>, <b>quiet</b>, and <b>nature</b>. Villa of{" "}
-            <b>520m square</b> is located on a plot of <b>2500 m2</b>. You have
-            at your disposal a beautiful <b>garden</b> and a large <b>lawn</b>{" "}
-            for play and
+            It's an ideal place to <b>rest</b> for all lovers of <b>peace</b>,{" "}
+            <b>quiet</b>, and <b>nature</b>. Villa of <b>520m square</b> is
+            located on a plot of <b>2500 m2</b>. You have at your disposal a
+            beautiful <b>garden</b> and a large <b>lawn</b> for play and{" "}
             <b>entertainment</b> (<b>trampoline</b>, <b>football goals</b>). The
             villa is carefully <b>furnished</b>, with <b>quality furniture</b>{" "}
             and great attention to detail. <b>Traditional</b> and{" "}
@@ -25,17 +24,16 @@ function About() {
           <h2 className="font-ExtraBold text-lg">The space</h2>
           <p>
             In front of the Villa there is a spacious summer kitchen with a
-            wood-burning fireplace that serves for dining and
-            entertainment(table football, piccado and billiards).Also there is a
-            working room and a bathroom.In addition to the summer kitchen there
-            is a{" "}
+            wood-burning fireplace that serves for dining and entertainment
+            (table football, piccado and billiards). Also there is a working
+            room and a bathroom. In addition to the summer kitchen there is a{" "}
             <b>
               68 m square swimming pool with air massage facilities, a waterfall
             </b>
-            .Traditional speciality is occupied by an Istrian cape built in
-            stone style.It consists of a fire pit for setting a grill or baking
-            for dining.It is especially attractive large terrace that spreads on
-            one side of the villa overlooking the sea and surrounding green
+            . Traditional speciality is occupied by an Istrian cape built in
+            stone style. It consists of a fire pit for setting a grill or baking
+            for dining. It is especially attractive large terrace that spreads
+            on one side of the villa overlooking the sea and surrounding green
             areas, which also makes it an ideal place for dining and resting.{" "}
             <br />
             <br />
