@@ -150,7 +150,8 @@ function VillaPanorama() {
               </h2>
               <PaymentConditions />
             </div>
-            <div>
+            <hr />
+            <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
                 Location on the map
               </h2>
