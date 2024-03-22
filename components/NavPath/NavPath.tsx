@@ -18,7 +18,7 @@ function NavPath({ homePage = false }: Props) {
           {!homePage && (
             <div className="flex items-center gap-2">
               <span className="text-xl"> {">"} </span>
-              {pathname.substring(1)}
+              {pathname.substring(4)}
             </div>
           )}
         </Link>

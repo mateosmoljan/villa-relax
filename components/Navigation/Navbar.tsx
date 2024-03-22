@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ChangeEvent, useTransition } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
 import "./nav.css";
 import { NavigationLinks } from "@/lib/Links";
 import { usePathname } from "next/navigation";
 import { Divide as Hamburger } from "hamburger-react";
+import LanguageSwitch from "./languageSwitch";
+import { useLocale } from "next-intl";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -17,13 +18,14 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const localeActive = useLocale();
 
   const menuVars = {
     initial: {
       height: 0,
     },
     animate: {
-      height: 224,
+      height: 270,
       transition: {
         duration: 0.3,
         ease: [0.22, 1, 0.36, 1],
@@ -115,7 +117,7 @@ const Navbar = () => {
                 className={`${pathname === item.path ? "" : "hover_nav"}`}
               >
                 <Link
-                  href={item.path}
+                  href={pathname.replace(localeActive, item.path)}
                   className={`nav_list ${
                     pathname === item.path ? "active_nav" : ""
                   }`}
@@ -124,6 +126,9 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <LanguageSwitch />
+            </li>
             <li>
               <Link href="/contact" className="btn">
                 Book
@@ -163,7 +168,7 @@ const Navbar = () => {
                     onClick={() => setNavActive(() => !navActive)}
                   >
                     <Link
-                      href={item.path}
+                      href={pathname.replace(localeActive, item.path)}
                       className={`nav_list ${
                         pathname === item.path ? "active_nav" : ""
                       }`}
@@ -178,6 +183,9 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <LanguageSwitch />
+                </li>
                 <li
                   className="flex"
                   onClick={() => setNavActive(() => !navActive)}

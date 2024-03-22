@@ -1,6 +1,9 @@
 import { LocationToVisit } from "@/lib/LocationToVisit";
+import { useTranslations } from "next-intl";
 
 function About() {
+  const t = useTranslations("Index");
+
   return (
     <section className="pt-20 Visit" id="about">
       <div className="container">
@@ -8,6 +11,7 @@ function About() {
           Villa Panorama - Istria
         </h1>
         <div className="pt-10">
+          {t("title")}
           <p>
             Beautiful <b>Villa Panorama Istria</b> surrounded by <b>nature</b>.
             It's an ideal place to <b>rest</b> for all lovers of <b>peace</b>,{" "}
