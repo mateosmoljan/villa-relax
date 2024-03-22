@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { useState, useEffect, useRef, ChangeEvent, useTransition } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
@@ -18,7 +18,6 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const localeActive = useLocale();
 
   const menuVars = {
     initial: {
@@ -117,7 +116,7 @@ const Navbar = () => {
                 className={`${pathname === item.path ? "" : "hover_nav"}`}
               >
                 <Link
-                  href={pathname.replace(localeActive, item.path)}
+                  href={item.path}
                   className={`nav_list ${
                     pathname === item.path ? "active_nav" : ""
                   }`}
@@ -168,7 +167,7 @@ const Navbar = () => {
                     onClick={() => setNavActive(() => !navActive)}
                   >
                     <Link
-                      href={pathname.replace(localeActive, item.path)}
+                      href={item.path}
                       className={`nav_list ${
                         pathname === item.path ? "active_nav" : ""
                       }`}
