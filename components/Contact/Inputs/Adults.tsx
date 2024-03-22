@@ -1,4 +1,10 @@
-import { InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 import React from "react";
 
 function Adults() {
@@ -9,7 +15,7 @@ function Adults() {
   };
 
   return (
-    <>
+    <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
         Adults
       </InputLabel>
@@ -39,7 +45,7 @@ function Adults() {
         <MenuItem value={13}>13</MenuItem>
         <MenuItem value={14}>14</MenuItem>
       </Select>
-    </>
+    </FormControl>
   );
 }
 

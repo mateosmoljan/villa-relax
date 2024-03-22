@@ -1,5 +1,48 @@
-{
-  "Index": {
-    "title": "Hello hr!"
+{"Buttons": {
+  "Book": "Rezerviraj",
+  "Read More": "",
+  "Show Map": "Prikaži mapu",
+  "Show Photogallery": "Prikaži Fotogaleriju",
+  "Send Message": "Pošalji upit"
+},
+"Navigation": {
+  "title": ""
+},
+
+  "About": {
+    "title": "Villa Panorama - Istra",
+    "des": "Prekrasna Villa Panorama Istra okružena prirodom. To je idealno mjesto za odmor za sve ljubitelje mira, tišine i prirode. Vila od 520 četvornih metara nalazi se na parceli od 2500 m2. Na raspolaganju imate prekrasan vrt i veliku travnatu površinu za igru i zabavu (trampolin, nogometni golovi). Vila je pažljivo namještena, s kvalitetnim namještajem i velikom pažnjom na detalje. Tradicionalni i moderni elementi stapaju se zajedno stvarajući zanimljivu cjelinu.",
+    "the_space": "",
+    "the_space_des": "",
+    "guest_access": "",
+    "guest_access_des": "",
+    "what_to_see": "",
+    "what_to_see_des": ""
+  },
+  "Distances": {
+    "title": "",
+    "card_title": ""
+  },
+  "Acommodation": {
+    "subtitle": "",
+    "title": "",
+    "card_title": "",
+    "card_des": ""
+  },
+  "Photogalleries": {
+    "subtitle": "",
+    "title": ""
+  },
+  "Tourist Guide": {
+    "subtitle": "",
+    "title": "",
+    "card_des": ""
+  },
+  "Send Message": {
+    "des": ""
+  },
+  "footer": {
+    "title": "",
+    "des": ""
   }
 }

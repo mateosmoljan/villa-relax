@@ -8,7 +8,7 @@ import { IoIosSend } from "react-icons/io";
 import DataRangeComponent from "./Inputs/DateRangeComponent";
 import emailjs from "@emailjs/browser";
 import { MuiTelInput } from "mui-tel-input";
-import ".//style.css";
+import "./style.css";
 
 function ContactForm() {
   const form = useRef(null);

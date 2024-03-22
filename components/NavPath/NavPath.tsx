@@ -10,7 +10,7 @@ function NavPath({ homePage = false }: Props) {
   const pathname = usePathname();
   return (
     <div className="b bg-gray-100 py-3 px-4 sm:px-8">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 container">
         <Link href="/" className="text-dark_blue_black">
           <FaHome />
         </Link>

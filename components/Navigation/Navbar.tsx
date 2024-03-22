@@ -10,7 +10,6 @@ import { NavigationLinks } from "@/lib/Links";
 import { usePathname } from "next/navigation";
 import { Divide as Hamburger } from "hamburger-react";
 import LanguageSwitch from "./languageSwitch";
-import { useLocale } from "next-intl";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -107,7 +106,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="md:flex hidden">
+      <div className="lg:flex hidden">
         <div className="flex gap-3 md:gap-5">
           <ul className="flex gap-4 items-center">
             {NavigationLinks.NavData.map((item, index) => (
@@ -139,7 +138,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden flex relative" ref={navRef}>
+      <div className="lg:hidden flex relative" ref={navRef}>
         <button className=" z-50">
           <Hamburger
             toggled={navActive}

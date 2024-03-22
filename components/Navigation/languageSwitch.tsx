@@ -1,44 +1,69 @@
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { ChangeEvent, useTransition } from "react";
-import english from "@/public/assets/icons/flags/united-states.png";
-import german from "@/public/assets/icons/flags/germany.png";
-import croatian from "@/public/assets/icons/flags/croatian.png";
-import italy from "@/public/assets/icons/flags/italy.png";
+import React, { useTransition } from "react";
+import en_src from "@/public/assets/icons/flags/en.png";
+import de_src from "@/public/assets/icons/flags/de.png";
+import hr_src from "@/public/assets/icons/flags/hr.png";
+import it_src from "@/public/assets/icons/flags/it.png";
 import Image, { StaticImageData } from "next/image";
+import {
+  FormControl,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
+
+interface LanguageLabel {
+  code: string;
+  src: StaticImageData;
+}
+
 function LanguageSwitch() {
   const [isPanding, startTransition] = useTransition();
   const router = useRouter();
   const localeActive = useLocale();
+  const [age, setAge] = React.useState("");
 
-  const handleLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
-    const nextLocale = e.target.value;
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+    const nextLocale = event.target.value;
     startTransition(() => {
       router.replace(`/${nextLocale}`);
     });
   };
+
+  const languageLabels: LanguageLabel[] = [
+    { code: "en", src: en_src },
+    { code: "de", src: de_src },
+    { code: "hr", src: hr_src },
+    { code: "it", src: it_src },
+  ];
+
   return (
-    <label>
-      <p className="sr-only">Change lg</p>
-      <select
-        defaultValue={localeActive}
-        onChange={handleLanguage}
-        disabled={isPanding}
-      >
-        <option value="en">
-          <Image src={english as StaticImageData} alt="english flag" />
-        </option>
-        <option value="de">
-          <Image src={german as StaticImageData} alt="german flag" />
-        </option>
-        <option value="hr">
-          <Image src={croatian as StaticImageData} alt="croatian flag" />
-        </option>
-        <option value="it">
-          <Image src={italy as StaticImageData} alt="italy flag" />
-        </option>
-      </select>
-    </label>
+    <div className="overflow-y-visible">
+      <FormControl sx={{}}>
+        <Select
+          value={localeActive}
+          defaultValue={localeActive}
+          onChange={handleChange}
+          disabled={isPanding}
+          displayEmpty
+          inputProps={{ "aria-label": "Without label" }}
+          size="small"
+        >
+          {languageLabels.map((label) => (
+            <MenuItem key={label.code} value={label.code}>
+              <Image
+                src={label.src}
+                alt={`${label.code} flag`}
+                width={24}
+                height={24}
+              />
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </div>
   );
 }
 

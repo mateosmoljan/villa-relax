@@ -1,4 +1,10 @@
-import { InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 import React from "react";
 
 function Children() {
@@ -9,7 +15,7 @@ function Children() {
   };
 
   return (
-    <>
+    <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
         Children
       </InputLabel>
@@ -21,7 +27,7 @@ function Children() {
         size="small"
         name="children"
         value={children}
-        label="Holiday home"
+        label="Children"
         onChange={handleChange}
       >
         <MenuItem value={1}>1</MenuItem>
@@ -39,7 +45,7 @@ function Children() {
         <MenuItem value={13}>13</MenuItem>
         <MenuItem value={14}>14</MenuItem>
       </Select>
-    </>
+    </FormControl>
   );
 }
 

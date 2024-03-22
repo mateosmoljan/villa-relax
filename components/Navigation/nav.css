@@ -60,3 +60,15 @@
     position: absolute;
     transition: width 200 ms ease-in-out;
   }
+
+.Mui-focusVisible {
+  outline: none!important;
+}
+
+.MuiSelect-select {
+  border: none !important;
+  @apply pl-0;
+}
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}

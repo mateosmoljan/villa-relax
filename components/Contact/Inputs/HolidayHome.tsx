@@ -1,4 +1,10 @@
-import { InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 import React from "react";
 
 function HolidayHome() {
@@ -9,7 +15,7 @@ function HolidayHome() {
   };
 
   return (
-    <>
+    <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
         Holiday home
       </InputLabel>
@@ -27,7 +33,7 @@ function HolidayHome() {
       >
         <MenuItem value={1}>Villa Panorama</MenuItem>
       </Select>
-    </>
+    </FormControl>
   );
 }
 
