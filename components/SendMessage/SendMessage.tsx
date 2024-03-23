@@ -1,20 +1,21 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Markdown from "react-markdown";
 
 function SendMessage() {
+  const t = useTranslations("Send_Message");
   return (
     <section className="">
       <div className="container py-10">
         <div className="flex justify-between gap-2 lg:items-center lg:flex-row flex-col w-full shadow-2xl p-10 ">
           <div className="lg:w-2/3">
             <p className="text-base">
-              Please <span className="font-bold">send us an</span> answer and
-              would you like to belong to Villa Panorama in Istria and secure
-              your reservation?
+              <Markdown>{t("des")}</Markdown>
             </p>
           </div>
           <div className=" flex justify-end ">
             <Link href="/contact" className="btn lg:min-w-full">
-              Send Message
+              {t("button")}
             </Link>
           </div>
         </div>

@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { dataObject } from "../../lib/LocationDistance";
+import { getDistancesData } from "../../lib/LocationDistance";
 import GoogleMaps from "./GoogleMaps";
+import { useLocale } from "next-intl";
 
 function Distances() {
-  const totalLocations = dataObject.locations.length;
-  const [showMap, setShowMap] = useState(false);
+  const localeActive = useLocale();
+  const DistancesData = getDistancesData(localeActive);
+  const totalLocations = DistancesData.locations.length;
+  const [showMap, setShowMap] = useState<boolean>(false);
 
   const handleMapClose = () => {
     setShowMap(false);
@@ -24,18 +27,18 @@ function Distances() {
       <div className="container">
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <h1 className="font-bold text-xl text-dark_blue_black">
-            Distances from Villa Panorama
+            {DistancesData.locations[0].title}
           </h1>
           <div className="flex justify-end">
             <button className="btn-2" onClick={() => setShowMap(true)}>
-              Show Map
+              {DistancesData.locations[0].button}
             </button>
           </div>
         </div>
         {/* Google Maps */}
         {showMap && <GoogleMaps onClose={handleMapClose} />}
         <div className="flex flex-wrap">
-          {dataObject.locations.map((item, index) => (
+          {DistancesData.locations.map((item, index) => (
             <div
               key={index}
               className={`flex items-center justify-between w-full sm:w-1/2 p-3 pt-5 ${

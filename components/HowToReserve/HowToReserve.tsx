@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import "./style.css";
 
 function HowToReserve() {
+  const t = useTranslations("How_Reserve");
   return (
     <section className="py-10 how_to_reserve">
       <div className="">
@@ -11,19 +13,8 @@ function HowToReserve() {
             </span>
           </div>
           <div className="mb-8">
-            <h3 className="font-titleBold text-xl mb-4">Send us an inquiry</h3>
-            <p>
-              Please send us inquiry via{" "}
-              <a
-                href="/contact"
-                className="hover:underline hover:text-dark_yellow text-yellow font-Bold"
-              >
-                contact form
-              </a>
-              , email or phone with all required information and period you wish
-              to spend a vacation in holiday home Villa Eni and expect fast
-              e-mail answer and our best offer
-            </p>
+            <h3 className="font-titleBold text-xl mb-4">{t("steps.title")}</h3>
+            <p>{t("steps.des")} </p>
           </div>
         </div>
         <div className="flex gap-4">
@@ -33,31 +24,23 @@ function HowToReserve() {
             </span>
           </div>
           <div className="mb-8 ">
-            <h3 className="font-titleBold text-xl mb-4">
-              Securing reservation (payment)
-            </h3>
-            <p>
-              For your reservation to be secured it is obligation to pay 30% of
-              the full amount in advance and rest of the amount on the day of
-              arrival. After you make payment, please send us notification and
-              we will send you confirmation of payment and booking. There are 2
-              options to make advance payment: bank transfer and via PayPal
-              (debit and credit cards).
-            </p>
+            <h3 className="font-titleBold text-xl mb-4">{t("steps.title2")}</h3>
+            <p>{t("steps.des2")}</p>
             <div className=" mt-8 px-4">
               <div className="">
-                <h4 className="font-titleBold mb-3">Bank Transfer</h4>
+                <h4 className="font-titleBold mb-3">{t("steps.subtitle")}</h4>
                 <ul className="flex flex-col gap-1">
                   <li>
-                    Account owner:{" "}
+                    {t("steps.span")}:{" "}
                     <span className="font-Bold">Alen Smoljan</span>
                   </li>
                   <li>
-                    Address:{" "}
+                    {t("steps.span2")}:{" "}
                     <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
                   </li>
                   <li>
-                    Bank: <span className="font-Bold">Zagrebačka banka dd</span>
+                    {t("steps.span3")}:{" "}
+                    <span className="font-Bold">Zagrebačka banka dd</span>
                   </li>
                   <li>
                     <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
@@ -81,15 +64,8 @@ function HowToReserve() {
             </span>
           </div>
           <div>
-            <h3 className="font-titleBold text-xl mb-4">
-              Confirmation of payment
-            </h3>
-            <p>
-              When payment is done, we will confirm your payment and
-              reservation. Relax and await peacefully you vacation in summer and
-              enjoy in your vacations in holiday home Villa Panorama, Istria -
-              Croatia!
-            </p>
+            <h3 className="font-titleBold text-xl mb-4">{t("steps.title3")}</h3>
+            <p>{t("steps.des3")}</p>
           </div>
         </div>
       </div>

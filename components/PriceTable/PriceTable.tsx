@@ -5,6 +5,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { getPriceTableData } from "@/lib/priceTable";
+import { useLocale } from "next-intl";
 
 function createData(
   period: string,
@@ -24,31 +26,33 @@ const rows = [
 ];
 
 export default function PriceTable() {
+  const localeActive = useLocale();
+  const PriceTableData = getPriceTableData(localeActive);
   return (
     <TableContainer component={Paper}>
       <Table aria-label="Pricing Table ">
         <TableHead className="">
           <TableRow className="bg-grey2 !font-titleBold ">
             <TableCell className="!font-titleBold !py-2 px-0 w-[160px] text-center">
-              Period
+              {PriceTableData.data[0].title}
             </TableCell>
             <TableCell
               align="right"
               className="!font-titleBold !py-2 px-0 w-[112px] text-center"
             >
-              Price*
+              {PriceTableData.data[0].title2}
             </TableCell>
             <TableCell
               align="right"
               className="!font-titleBold !py-2 px-0 w-[112px] text-center"
             >
-              Persons
+              {PriceTableData.data[0].title3}
             </TableCell>
             <TableCell
               align="right"
               className="!font-titleBold py-2 px-0 w-[112px] text-center"
             >
-              Min. Stay
+              {PriceTableData.data[0].title4}
             </TableCell>
           </TableRow>
         </TableHead>

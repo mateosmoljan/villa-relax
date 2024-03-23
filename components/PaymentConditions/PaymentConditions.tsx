@@ -1,34 +1,33 @@
+import { getPaymentConditionsData } from "@/lib/paymentConditions";
+import { useLocale } from "next-intl";
+import Markdown from "react-markdown";
+
 function PaymentConditions() {
+  const localeActive = useLocale();
+  const PaymentConditionsData = getPaymentConditionsData(localeActive);
+
   return (
     <div>
       <div className="flex flex-col gap-5 mb-5">
-        <p>Tourist tax is not included in the price!</p>
+        <p>{PaymentConditionsData.data[0].des}</p>
         <p>
-          For your reservation to be secured it is obligation to pay{" "}
-          <span className="font-titleBold">30%</span> of full price in advance
-          directly to owner of accommodation and{" "}
-          <span className="font-titleBold">70%</span> when you come to
-          accommodation unit.
-        </p>
-        <p>Deposit refundable if all is well: 500 euros.</p>
-        <p>
-          Possibility of free cancellation one week after booking (EXCEPT IN
-          LAST MINUTE RESERVATIONS, THEN THE DEADLINE IS 48 HOURS). Last minute
-          - Reservation two weeks before.
+          <Markdown>{PaymentConditionsData.data[0].des2}</Markdown>
         </p>
         <p>
-          On the last day of the stay, the guest is obliged to leave the
-          accommodation <span className="font-titleBold">until 10 am</span>, so
-          the other guests can check in{" "}
-          <span className="font-titleBold">from 4 pm</span>.
+          <Markdown>{PaymentConditionsData.data[0].des3}</Markdown>
         </p>
         <p>
-          Kindly note that <span className="font-titleBold">pets</span> are not
-          permitted on the premises.
+          <Markdown>{PaymentConditionsData.data[0].des4}</Markdown>
+        </p>
+        <p>
+          <Markdown>{PaymentConditionsData.data[0].des5}</Markdown>
+        </p>
+        <p>
+          <Markdown>{PaymentConditionsData.data[0].des6}</Markdown>
         </p>
       </div>
       <div>
-        <p className="font-titleBold">Payment methods:</p>
+        <p className="font-titleBold">{PaymentConditionsData.data[0].title2}</p>
         <ul>
           <li>Cash (upon arrival) </li>
           <li>Bank Transfer (Internet Banking)</li>

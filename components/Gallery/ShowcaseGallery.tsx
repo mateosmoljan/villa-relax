@@ -4,6 +4,8 @@ import { createContext, useContext, useState } from "react";
 import Gallery from "./Gallery";
 import { MdPhotoCamera } from "react-icons/md";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
+import { useLocale } from "next-intl";
+import { getTitleData } from "@/lib/title";
 
 export type AppContextType = {
   openIndexPropertyGallery: boolean;
@@ -26,6 +28,9 @@ function ShowcaseGallery() {
     setActiveIndex(index);
   };
 
+  const localeActive = useLocale();
+  const TitleData = getTitleData(localeActive);
+
   return (
     <section>
       <div className="container py-10">
@@ -46,6 +51,7 @@ function ShowcaseGallery() {
                 <Image
                   src={PropertyGalleryLib.images[0].src}
                   alt={PropertyGalleryLib.images[0].alt}
+                  placeholder="blur"
                   className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
                   onClick={() => handleImageClick(0)}
                 />
@@ -60,6 +66,7 @@ function ShowcaseGallery() {
                   <Image
                     src={image.src}
                     alt={image.alt}
+                    placeholder="blur"
                     className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90"
                     onClick={() => handleImageClick(index + 1)}
                   />
@@ -70,7 +77,7 @@ function ShowcaseGallery() {
                         className=" flex items-center p-2 sm:px-4 sm:py-2 rounded-md uppercase tracking-widest pxflex gap-2 !bg-grey2 !text-dark_blue_black font-Bold text-xs xl:text-sm"
                       >
                         <MdPhotoCamera />
-                        <span>Show Gallery</span>
+                        <span>{TitleData.data[0].button}</span>
                       </button>
                     </div>
                   )}

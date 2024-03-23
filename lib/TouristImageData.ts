@@ -15,45 +15,81 @@ import image12 from "@/public/assets/images/beach.jpg";
 import image13 from "@/public/assets/images/beach2.jpg";
 import image14 from "@/public/assets/images/kamenjak.jpg";
 
+import enData from "@/messages/en.json";
+import deData from "@/messages/de.json";
+import hrData from "@/messages/hr.json";
+import itData from "@/messages/it.json";
 
 type LocationToVisitData = {
     src: StaticImageData;
     alt: string;
+    image_title?: string;
+    subtitle?: string;
     title?: string;
-    des?: string;
+    image_des?: string;
   };
 
   type DataObject = {
-    image: LocationToVisitData[];
+    data: LocationToVisitData[];
   };
 
-  export const TouristImageData: DataObject = {
-    image: [
-      { src: image1, alt: "Aquarium Pula", title: "Aquarium Pula",
-    des: "The biggest in Croatia", },
-    { src: image2, alt: "NP Brijuni Panorama Istria", title: "NP Brijuni",
-    des: "National Park", },
-    { src: image3,  alt: "Aquacolors Porec", title: "Aquacolors Poreč",
-    des: "Water park", },
-    { src: image4, alt: "Arena Pula", title: "Arena Pula",
-    des: "Events", },
-    { src: image5,  alt: "Istralandia", title: "Istralandia",
-    des: "Water park", },
-    { src: image6,  alt: "Beach", title: "Kamenjak",
-    des: "beach/cliff jumping", },
+
+export const TouristImageData: LocationToVisitData[] = [
+  { src: image1, alt: "Aquarium Pula", image_title: "Aquarium Pula",},
+    { src: image2, alt: "NP Brijuni", image_title: "NP Brijuni",},
+    { src: image3,  alt: "Aquacolors Porec", image_title: "Aquacolors Poreč",},
+    { src: image4, alt: "Arena Pula", image_title: "Arena Pula",},
+    { src: image5,  alt: "Istralandia", image_title: "Istralandia",},
+    { src: image6,  alt: "Beach", image_title: "Kamenjak",},
     { src: image7,  alt: "Aquacolors Porec", },
     { src: image8,  alt: "Aquacolors Porec",},
-    { src: image9,  alt: "Aquacolors Porec",
-     },
-    { src: image10,  alt: "Aquarium Pula",
-     },
-    { src: image11,  alt: "Arena Pula",
-     },
-    { src: image12,  alt: "Beach",
-     },
-    { src: image13,  alt: "Beach",
-     },
-    { src: image14,  alt: "Island Kamenjak",
-     },
-    ],
-  };
+    { src: image9,  alt: "Aquacolors Porec",},
+    { src: image10,  alt: "Aquarium Pula",},
+    { src: image11,  alt: "Arena Pula",},
+    { src: image12,  alt: "Beach",},
+    { src: image13,  alt: "Beach",},
+    { src: image14,  alt: "Island Kamenjak",},
+];
+
+ const replaceTouristGuide = (data: LocationToVisitData[], subtitle: string, title: string, image_des: string[]) => {
+  return data.map((data, index) => ({
+    ...data,
+    subtitle: subtitle,
+    title: title,
+    image_des: image_des[index]
+  }));
+};
+
+  // Define the data object
+export const TouristGuideDataEn: DataObject = {
+  data: replaceTouristGuide(TouristImageData, enData.Tourist_Guide.subtitle, enData.Tourist_Guide.title, enData.Tourist_Guide.image_des)
+};
+
+// You can also define a separate object for German translations if needed
+export const TouristGuideDataDE: DataObject = {
+  data: replaceTouristGuide(TouristImageData, deData.Tourist_Guide.subtitle, deData.Tourist_Guide.title, deData.Tourist_Guide.image_des)
+};
+
+export const TouristGuideDataHR: DataObject = {
+  data: replaceTouristGuide(TouristImageData, hrData.Tourist_Guide.subtitle, hrData.Tourist_Guide.title, hrData.Tourist_Guide.image_des),
+};
+
+export const TouristGuideDataIT: DataObject = {
+  data: replaceTouristGuide(TouristImageData, itData.Tourist_Guide.subtitle, itData.Tourist_Guide.title, itData.Tourist_Guide.image_des)
+};
+
+export const getTouristGuideData = (language: string): DataObject => {
+  switch (language) {
+    case 'en':
+      return TouristGuideDataEn;
+    case 'de':
+      return TouristGuideDataDE;
+    case 'hr':
+      return TouristGuideDataHR;
+    case 'it':
+      return TouristGuideDataIT;
+    default:
+      // Return default language if specified language is not found
+      return TouristGuideDataEn;
+  }
+};

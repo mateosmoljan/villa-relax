@@ -12,8 +12,6 @@ import { NextArrow, PrevArrow } from "./SwiperNavButtons";
 import { useShowcaseGallery2Context } from "./ShowcaseGallery2";
 import { useGalleryContext } from "../PropertyGallery/PropertyGallery";
 import { useFourGalleryContext } from "./FourGallery";
-import { PropertyGalleryLib } from "@/lib/property_gallery";
-import Loading from "../Loading/Loading";
 
 type Props = {
   initIndex: number;

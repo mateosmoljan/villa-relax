@@ -3,5 +3,5 @@
 }
 
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-    @apply translate-x-4 translate-y-2 ;
+    @apply translate-y-2 pl-4;
 }

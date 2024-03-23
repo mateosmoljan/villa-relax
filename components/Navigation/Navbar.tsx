@@ -6,10 +6,11 @@ import { useState, useEffect, useRef, ChangeEvent, useTransition } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import "./nav.css";
-import { NavigationLinks } from "@/lib/Links";
+import { getNavigationLinks } from "@/lib/Links";
 import { usePathname } from "next/navigation";
 import { Divide as Hamburger } from "hamburger-react";
 import LanguageSwitch from "./languageSwitch";
+import { useLocale } from "next-intl";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -17,13 +18,14 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
   const navRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const localeActive = useLocale();
 
   const menuVars = {
     initial: {
       height: 0,
     },
     animate: {
-      height: 270,
+      height: 285,
       transition: {
         duration: 0.3,
         ease: [0.22, 1, 0.36, 1],
@@ -85,6 +87,8 @@ const Navbar = () => {
     };
   }, []);
 
+  const navigationLinks = getNavigationLinks(localeActive);
+
   return (
     <nav
       className={`bg-white shadow-md flex place-content-between sm:px-8 px-4 w-full py-2 fixed z-40 ${
@@ -109,7 +113,7 @@ const Navbar = () => {
       <div className="lg:flex hidden">
         <div className="flex gap-3 md:gap-5">
           <ul className="flex gap-4 items-center">
-            {NavigationLinks.NavData.map((item, index) => (
+            {navigationLinks.NavData.map((item, index) => (
               <li
                 key={index}
                 className={`${pathname === item.path ? "" : "hover_nav"}`}
@@ -120,7 +124,7 @@ const Navbar = () => {
                     pathname === item.path ? "active_nav" : ""
                   }`}
                 >
-                  {item.title}
+                  {item.titles}
                 </Link>
               </li>
             ))}
@@ -129,7 +133,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/contact" className="btn">
-                Book
+                {navigationLinks.NavData[0].button}
                 <MdKeyboardDoubleArrowRight />
               </Link>
             </li>
@@ -159,7 +163,7 @@ const Navbar = () => {
               className={`fixed left-0 top-14 bg-white w-full px-3  pb-3 shadow-md origin-top overflow-hidden`}
             >
               <ul className="flex flex-col gap-4 origin-top">
-                {NavigationLinks.NavData.map((item, index) => (
+                {navigationLinks.NavData.map((item, index) => (
                   <li
                     key={index}
                     className={`flex `}
@@ -176,7 +180,7 @@ const Navbar = () => {
                           pathname === item.path ? "active_nav" : "hover_nav"
                         }`}
                       >
-                        {item.title}
+                        {item.titles}
                       </div>
                     </Link>
                   </li>
@@ -189,7 +193,7 @@ const Navbar = () => {
                   onClick={() => setNavActive(() => !navActive)}
                 >
                   <Link href="/contact" className="btn pb-2">
-                    Book
+                    {navigationLinks.NavData[0].button}
                     <MdKeyboardDoubleArrowRight />
                   </Link>
                 </li>

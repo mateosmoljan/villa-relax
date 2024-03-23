@@ -1,16 +1,22 @@
+import { getBookStayData } from "@/lib/bookStay";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 
 function BookYourStayCard() {
+  const localeActive = useLocale();
+  const BookStayData = getBookStayData(localeActive);
   return (
     <div
       className={`flex flex-col gap-4 px-3 py-6 custom_border shadow-md hover:shadow-xl rounded-md `}
     >
       <p className="font-poppins text-grey font-ExtraBold text-center lg:text-right">
-        from <span className="text-3xl text-yellow">375 €</span> per night
+        {BookStayData.data[0].des}{" "}
+        <span className="text-3xl text-yellow">375 €</span>{" "}
+        {BookStayData.data[0].des2}
       </p>
       <hr />
       <Link href="/contact" className="btn justify-center">
-        Book Your Stay
+        {BookStayData.data[0].button}
       </Link>
     </div>
   );

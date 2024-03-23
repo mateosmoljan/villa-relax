@@ -12,21 +12,17 @@ import "swiper/css/pagination";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { SwiperNavButtons } from "./SwiperNavButton";
-import { HeadSwiperLib } from "@/lib/HeadSwiperLib";
+import { getHeadSwiperLib } from "@/lib/HeadSwiperLib";
+import { useLocale } from "next-intl";
 
 export default function HeadSwiper() {
-  // const scrollToAbout = () => {
-  //   const aboutSection = document.getElementById("about");
-  //   if (aboutSection) {
-  //     aboutSection.scrollIntoView({
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
+  const localeActive = useLocale();
 
   const pagination = {
     clickable: true,
   };
+
+  const headSwiperLib = getHeadSwiperLib(localeActive);
 
   return (
     <section className="block h-screen max-w-screen relative">
@@ -43,7 +39,7 @@ export default function HeadSwiper() {
           grabCursor={true}
           speed={900}
         >
-          {HeadSwiperLib.images.map((image, index) => (
+          {headSwiperLib.images.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="flex relative items-center justify-center h-full w-full">
                 <Image
@@ -59,7 +55,8 @@ export default function HeadSwiper() {
                   <p className="text-white">{image.des}</p>
                   <a href="#about">
                     <button className="btn">
-                      Read More <MdKeyboardArrowDown className="text-2xl" />
+                      {image.button}{" "}
+                      <MdKeyboardArrowDown className="text-2xl" />
                     </button>
                   </a>
                 </div>

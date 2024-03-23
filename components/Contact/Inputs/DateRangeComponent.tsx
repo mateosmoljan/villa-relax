@@ -5,6 +5,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import enGB from "date-fns/locale/en-GB";
+import { FormControl } from "@mui/material";
 
 interface CustomRange {
   startDate: Date | undefined;
@@ -124,21 +125,23 @@ function DataRangeComponent() {
           ref={dateRangeRef}
           className="absolute border-solid border-2 border-grey3 z-20"
         >
-          <DateRange
-            editableDateInputs={true}
-            onChange={(item) => setState([item.selection as CustomRange])}
-            moveRangeOnFirstSelection={false}
-            ranges={state}
-            className="relative bg-white z-20 "
-            months={2}
-            locale={enGB}
-            direction={
-              calendarWidth === "horizontal" ? "horizontal" : "vertical"
-            }
-            rangeColors={["#B29600"]}
-            disabledDates={disabledDates}
-            dateDisplayFormat="d.M.y"
-          />
+          <FormControl required>
+            <DateRange
+              editableDateInputs={true}
+              onChange={(item) => setState([item.selection as CustomRange])}
+              moveRangeOnFirstSelection={false}
+              ranges={state}
+              className="relative bg-white z-20 "
+              months={2}
+              locale={enGB}
+              direction={
+                calendarWidth === "horizontal" ? "horizontal" : "vertical"
+              }
+              rangeColors={["#B29600"]}
+              disabledDates={disabledDates}
+              dateDisplayFormat="d.M.y"
+            />
+          </FormControl>
         </div>
       )}
       <div>

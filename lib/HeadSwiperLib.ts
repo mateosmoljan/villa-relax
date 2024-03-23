@@ -17,35 +17,76 @@ type LocationData = {
   alt: string;
   title?: string;
   des?: string;
+  button?: string;
 };
 
 type DataObject = {
   images: LocationData[];
 };
 
-export const HeadSwiperLib: DataObject = {
-  images: [
-    { src: one, alt: "Draw Well Villa Panorama Istra", title: "Welcome to Villa Panorama - Istra",
-    des: "Tranquil Oasis Villa", },
-    { src: two, alt: "Jacuzzi Villa Panorama Istra", title: "Jacuzzi Paradise",
-    des: "Indulge in the ultimate relaxation experience as you unwind in the Jacuzzi", },
-    { src: three,  alt: "Fireplace Villa Panorama Istra", title: "Rustic Fireplace Retreat",
-    des: "Embrace the warmth and charm of the traditional Istrian 'Kažun' fireplace at Villa Panorama, where cozy evenings are spent in rustic tranquility.", },
-    { src: four, alt: "Dinning table Villa Panorama Istra", title: "Modern Design and Spacious Dinning Table",
-    des: "Enjoy cozy gatherings around the generously sized dining table", },
-    { src: five,  alt: "Pool Table Villa Panorama Istra", title: "Stylish Pool Table Retreat",
-    des: "Unwind with a game of pool on the sleek pool table", },
-    { src: six,  alt: "Entrance", title: "Welcome Entrance",
-    des: "Elegant entrance that seamlessly blends modern design and welcoming ambiance, inviting you to unwind in style.", },
-    { src: seven,  alt: "Swimming Pool Villa Panorama Istra", title: "Aqua Haven",
-    des: "A Modern Retreat with Private Pool, Nestled in Nature's Embrace", },
-    { src: eight, alt: "Swimming Pool at night Villa Panorama Istra", title: "Aqua Haven",
-    des: "Serene Swimming Pool under the Stars", },
-    { src: nine, alt: "Drone View Villa Panorama Istra", title: "Villa Panorama's Vast and Serene Space",
-    des: "Discover serenity in abundance at Villa Panorama, where the expansive grounds offer ample room for relaxation and exploration amidst the beauty of nature's embrace.", },
-    { src: ten, alt: "Villa Relax", title: "Spacious Retreat",
-    des: "Escape to Villa Panorama's expansive retreat, where abundant space invites relaxation and rejuvenation in the midst of tranquil surroundings.", },
-    { src: eleven, alt: "Villa Relax", title: "Unparalleled Space for Your Ultimate Retreat",
-    des: "Discover the expansive allure of Villa Panorama, where ample space and modern amenities beckon for a truly comfortable retreat.", },
-  ],
+import enData from '@/messages/en.json';
+import deData from '@/messages/de.json';
+import hrData from '@/messages/hr.json';
+import itData from '@/messages/it.json';
+
+
+// Define image data
+const imageData: LocationData[] = [
+  { src: one, alt: "Draw Well Villa Panorama Istra", },
+    { src: two, alt: "Jacuzzi Villa Panorama Istra", },
+    { src: three,  alt: "Fireplace Villa Panorama Istra", },
+    { src: four, alt: "Dinning table Villa Panorama Istra", },
+    { src: five,  alt: "Pool Table Villa Panorama Istra", },
+    { src: six,  alt: "Entrance", },
+    { src: seven,  alt: "Swimming Pool Villa Panorama Istra", },
+    { src: eight, alt: "Swimming Pool at night Villa Panorama Istra", },
+    { src: nine, alt: "Drone View Villa Panorama Istra", },
+    { src: ten, alt: "Villa Relax", },
+    { src: eleven, alt: "Villa Relax", },
+  // Define other image data similarly
+];
+
+// Function to replace titles and descriptions with translations from JSON files
+const replaceTitlesAndDescriptions = (data: LocationData[], titles: string[], descriptions: string[], button: string,) => {
+  return data.map((image, index) => ({
+    ...image,
+    title: titles[index],
+    des: descriptions[index],
+    button: button
+  }));
 };
+
+// Define the data object
+export const HeadSwiperLibEN: DataObject = {
+  images: replaceTitlesAndDescriptions(imageData, enData.HeaderSwiper.titles, enData.HeaderSwiper.descriptions, enData.HeaderSwiper.button)
+};
+
+// You can also define a separate object for German translations if needed
+export const HeadSwiperLibDE: DataObject = {
+  images: replaceTitlesAndDescriptions(imageData, deData.HeaderSwiper.titles, deData.HeaderSwiper.descriptions, deData.HeaderSwiper.button)
+};
+
+export const HeadSwiperLibHR: DataObject = {
+  images: replaceTitlesAndDescriptions(imageData, hrData.HeaderSwiper.titles, hrData.HeaderSwiper.descriptions, hrData.HeaderSwiper.button)
+};
+
+export const HeadSwiperLibIT: DataObject = {
+  images: replaceTitlesAndDescriptions(imageData, itData.HeaderSwiper.titles, itData.HeaderSwiper.descriptions, itData.HeaderSwiper.button)
+};
+
+
+export const getHeadSwiperLib = (language: string, ): DataObject => {
+
+  switch (language) {
+      case "en":
+        return HeadSwiperLibEN;
+      case "de":
+        return HeadSwiperLibDE;
+      case "hr":
+        return HeadSwiperLibHR;
+      case "it":
+        return HeadSwiperLibIT;
+      default:
+        return HeadSwiperLibEN; // Default to English
+    }
+}

@@ -65,10 +65,10 @@
   outline: none!important;
 }
 
-.MuiSelect-select {
+.nav_switch .MuiSelect-select {
   border: none !important;
   @apply pl-0;
 }
-.MuiOutlinedInput-notchedOutline {
+.nav_switch .MuiOutlinedInput-notchedOutline {
   border: none !important;
 }

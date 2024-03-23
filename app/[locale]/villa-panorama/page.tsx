@@ -7,14 +7,28 @@ import NavPath from "@/components/NavPath/NavPath";
 import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
 import PriceTable from "@/components/PriceTable/PriceTable";
 import PropertyGallery from "@/components/PropertyGallery/PropertyGallery";
-import { Categorization } from "@/lib/categorization";
-import { Features } from "@/lib/features";
+import { getCategorizationData } from "@/lib/categorization";
+import { getFeaturesData } from "@/lib/features";
+import { getFeaturesTitleData } from "@/lib/features_titles";
+import { getPaymentConditionsData } from "@/lib/paymentConditions";
+import { getPricelistData } from "@/lib/pricelist";
+import { getTitleData } from "@/lib/title";
+import { getVilla_DescriptionData } from "@/lib/Villa_Description";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Markdown from "react-markdown";
 
-const featuresLength = Features.features.length;
 function VillaPanorama() {
   const [showFeatures, setShowFeatures] = useState<boolean>(false);
+  const localeActive = useLocale();
+  const TitleData = getTitleData(localeActive);
+  const CategorizationData = getCategorizationData(localeActive);
+  const Villa_DescriptionData = getVilla_DescriptionData(localeActive);
+  const FeaturesData = getFeaturesData(localeActive);
+  const FeaturesTitleData = getFeaturesTitleData(localeActive);
+  const PricelistData = getPricelistData(localeActive);
+  const PaymentConditionsData = getPaymentConditionsData(localeActive);
 
   function handleClose() {
     setShowFeatures(false);
@@ -37,7 +51,7 @@ function VillaPanorama() {
       <NavPath />
       <div className="container">
         <h1 className="my-12 text-center flex justify-center text-3xl sm:text-4xl font-ExtraBold text-dark_blue_black tracking-wider">
-          Holiday Home Villa Panorama
+          {TitleData.data[0].title}
         </h1>
         <div className="flex gap-8 flex-col lg:flex-row">
           <div className="w-full lg:w-2/3 mx-auto">
@@ -45,7 +59,7 @@ function VillaPanorama() {
             <div className="flex flex-col gap-4">
               <hr />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Categorization.categorization.map((item, index) => (
+                {CategorizationData.data.map((item, index) => (
                   <button
                     key={index}
                     className="py-2 rounded-md border-[1px] border-black flex items-center lg:flex-row justify-center gap-2"
@@ -63,51 +77,32 @@ function VillaPanorama() {
             </div>
             <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
-                Villa Panorama
+                {}
               </h2>
               <p>
-                Stone Luxury Villa is located in Gajana, a peaceful place near
-                Vodnjan (Dignano). This 7-bedroom villa (with en-suite bathroom
-                in every bedroom) is perfect for nature lovers who like to relax
-                away from the city noise. It has a lot to offer to its guests.
+                <Markdown>{Villa_DescriptionData.data[0].des}</Markdown>
               </p>
               <p>
                 <br />
-                <h2 className="text-md font-ExtraBold">The space</h2>
-                There is an outdoor swimming pool (68 m2) with a possibility of
-                an air massage and a water cascade on the side of the pool.
-                Spacious lawn offers a children's playground with a trampoline
-                and football goals. Next to the pool, there is a replica of an
-                old Istrian house called "kazun", which offers BBQ facilities.
-                Beautiful terrace is a perfect place to enjoy your meal. Another
-                place for dining is a summer kitchen, which is located within a
-                game room with darts, billiard table and table football. Beauty
-                room next to the villa offers a sauna, jacuzzi and excercising
-                equippment. Villa has a surveillance system, which tapes the
-                villa's surroundings and provides safety to its guests. Villa
-                can accommodate 16 people. There are 7 bedrooms in the villa. 3
-                bedrooms offer a king size beds, and each of them can fit 2
-                people. In the rest of the bedrooms (4 of them), there are 2
-                single beds in each of them. Someone can also sleep on living
-                room sofas, if they wish to.
+                <h2 className="text-md font-ExtraBold">
+                  <Markdown>{Villa_DescriptionData.data[0].subtitle}</Markdown>
+                </h2>
+                <Markdown>{Villa_DescriptionData.data[0].des2}</Markdown>
                 <br />
                 <br />
-                <h2 className="font-ExtraBold text-md">Guest access</h2>
-                Guests can access 7 bedrooms, 2 living rooms, 2 kitchens, 9
-                bathrooms + a separated toilet, balconies, terrace, beauty room,
-                game room/summer kitchen, "kazun" with BBQ facilities, a room
-                with a washing machine and ironing facilities, swimming pool,
-                lawn, garden, children's playground and entire outdoor area
-                (2500 m2).
+                <h2 className="font-ExtraBold text-md">
+                  <Markdown>{Villa_DescriptionData.data[0].subtitle2}</Markdown>
+                </h2>
+                <Markdown>{Villa_DescriptionData.data[0].des3}</Markdown>
               </p>
             </div>
             <hr />
             <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black">
-                Features
+                {FeaturesTitleData.data[0].title}
               </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2">
-                {Features.features.slice(0, 6).map((item, index) => (
+                {FeaturesData.data.slice(0, 6).map((item, index) => (
                   <div
                     key={index}
                     className={`flex gap-3 items-center ${
@@ -118,7 +113,7 @@ function VillaPanorama() {
                   >
                     <Image src={item.icon} alt={item.icon_alt} />
                     <li className={`py-4 flex flex-col justify-center`}>
-                      {item.title}
+                      {item.titles}
 
                       <span className="text-sm text-grey">{item.des}</span>
                     </li>
@@ -129,31 +124,31 @@ function VillaPanorama() {
                 className="btn-2 mt-3"
                 onClick={() => setShowFeatures(true)}
               >
-                Show all 43 amenities
+                {FeaturesTitleData.data[0].button}
               </button>
               {showFeatures && <FeaturesComponent handleClose={handleClose} />}
             </div>
             <hr />
             <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
-                Pricelist
+                {PricelistData.data[0].title}
               </h2>
               <PriceTable />
               <p className="text-grey1 text-sm mt-4">
-                *The price refers to the period of 7 nights in Euros
+                {PricelistData.data[0].subtitle}
               </p>
             </div>
             <hr />
             <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
-                Payment and booking conditions
+                {PaymentConditionsData.data[0].title}
               </h2>
               <PaymentConditions />
             </div>
             <hr />
             <div className="py-10">
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
-                Location on the map
+                {TitleData.data[0].title2}
               </h2>
               <div className="h-[400px] rounded-md overflow-hidden">
                 <IFrameMaps />
@@ -168,7 +163,7 @@ function VillaPanorama() {
         </div>
         <div className="container py-10 mb-24">
           <h2 className="block text-center font-bold text-2xl text-dark_blue_black mb-6">
-            Availability Calendar
+            {TitleData.data[0].title3}
           </h2>
           <AvailabilityCalendar />
         </div>

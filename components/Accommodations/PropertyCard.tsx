@@ -7,8 +7,12 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { SwiperNavButtonsAcommodation } from "./SwiperNavButtonsAcommodation";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
+import { useLocale } from "next-intl";
+import { getAccommodationData } from "@/lib/acommodation";
 
 function PropertyCard() {
+  const localeActive = useLocale();
+  const AccommodationsData = getAccommodationData(localeActive);
   return (
     <div className=" md:w-3/5 lg:w-1/2 shadow-md hover:shadow-xl custom_border rounded-md z-10 w-full overflow-hidden">
       <Swiper
@@ -34,11 +38,14 @@ function PropertyCard() {
         <SwiperNavButtonsAcommodation />
       </Swiper>
       <div className="p-3">
-        <h2 className="font-black text-xl font-arbutus">Villa Panorama</h2>
-        <p className="text-sm">Maximum of 12 people</p>
+        <h2 className="font-black text-xl font-arbutus">
+          {AccommodationsData.data[0].card_title}
+        </h2>
+        <p className="text-sm">{AccommodationsData.data[0].card_des}</p>
         <p className="text-sm">
-          Price from{" "}
-          <span className="font-bold text-yellow text-xl">375 €</span> per night
+          {AccommodationsData.data[0].card_des2}{" "}
+          <span className="font-bold text-yellow text-xl">375 €</span>{" "}
+          {AccommodationsData.data[0].card_des3}
         </p>
       </div>
     </div>

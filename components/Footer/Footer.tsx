@@ -3,8 +3,10 @@ import SSL from "@/public/assets/images/ssl.png";
 import "./footer.css";
 import Link from "next/link";
 import FooterSvg from "./FooterSvg";
+import { useTranslations } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("Footer");
   return (
     <section className="flex relative justify-center bg-dark_blue_black xl:px-20 pb-10 xl:pb-20 ">
       <FooterSvg />
@@ -12,12 +14,14 @@ function Footer() {
         <div className="h-full relative pl-5 sm:pl-0 w-full sm:w-3/5 lg:w-auto">
           <div className="space-y-4 ">
             <Image src={SSL} alt="ssl Villa Relax" width={200} />
-            <p>©2024 . Villa Panorama - Istria</p>
-            <p>All rights protected</p>
+            <p>{t("year")}</p>
+            <p>{t("rights")}</p>
           </div>
         </div>
         <div className="w-full h-full relative pl-5 sm:pl-0 sm:w-3/5 lg:w-auto">
-          <h2 className="font-bold uppercase text-xl pb-5">DISCOVER ISTRIA</h2>
+          <h2 className="font-bold uppercase text-xl pb-5">
+            {t("Discover.title")}
+          </h2>
           <ul className="space-y-4 !text-white">
             <li>
               <Link
@@ -25,7 +29,7 @@ function Footer() {
                 target="_blank"
                 className="!text-white underline hover:!text-yellow"
               >
-                Pula Info
+                {t("Discover.list.Pula")}
               </Link>
             </li>
             <li>
@@ -34,13 +38,15 @@ function Footer() {
                 target="_blank"
                 className="!text-white underline hover:!text-yellow"
               >
-                Tourist guide Istra
+                {t("Discover.list.Guide")}
               </Link>
             </li>
           </ul>
         </div>
         <div className="h-full relative pl-5 sm:pl-0 w-full sm:w-3/5 lg:w-auto">
-          <h2 className="font-bold uppercase text-xl pb-5">Contact Us</h2>
+          <h2 className="font-bold uppercase text-xl pb-5">
+            {t("Contact_Us.title")}
+          </h2>
           <ul className="space-y-4">
             <li>Alen Smoljan</li>
             <li>Tršičani 43, 52215, Vodnjan</li>

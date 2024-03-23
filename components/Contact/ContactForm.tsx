@@ -1,5 +1,11 @@
 "use client";
-import { Alert, Button, InputLabel, TextField } from "@mui/material";
+import {
+  Alert,
+  Button,
+  FormControl,
+  InputLabel,
+  TextField,
+} from "@mui/material";
 import React, { FormEvent, useRef, useState } from "react";
 import HolidayHome from "./Inputs/HolidayHome";
 import Adults from "./Inputs/Adults";
@@ -127,6 +133,7 @@ function ContactForm() {
             rows={5}
             name="message"
             variant="outlined"
+            required
           />
         </div>
         <p className="text-xs mb-4 text-grey3">

@@ -2,12 +2,16 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { TouristImageData } from "@/lib/TouristImageData";
+import { getTouristGuideData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { NextArrow, PrevArrow } from "./SwiperNavButtonsGuide";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 function TouristSwiper() {
+  const localeActive = useLocale();
+  const PhotogalleriesData = getTouristGuideData(localeActive);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -45,7 +49,7 @@ function TouristSwiper() {
     <>
       <div className="tourist-guide max-w-full">
         <Slider {...settings}>
-          {TouristImageData.image.slice(0, 6).map((image, index) => (
+          {PhotogalleriesData.data.slice(0, 6).map((image, index) => (
             <div key={index} className="xl:h-80 h-96">
               <Link
                 href="/environs"
@@ -67,7 +71,7 @@ function TouristSwiper() {
                       "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em #B29600",
                   }}
                 >
-                  {image.title}
+                  {image.image_title}
                 </h2>
                 <p
                   className="text-white drop-shadow-xl"
@@ -76,7 +80,7 @@ function TouristSwiper() {
                       "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em #B29600",
                   }}
                 >
-                  {image.des}
+                  {image.image_des}
                 </p>
               </div>
             </div>

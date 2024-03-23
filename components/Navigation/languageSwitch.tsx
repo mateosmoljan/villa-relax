@@ -40,7 +40,7 @@ function LanguageSwitch() {
   ];
 
   return (
-    <div className="overflow-y-visible">
+    <div className="nav_switch overflow-y-visible">
       <FormControl sx={{}}>
         <Select
           value={localeActive}

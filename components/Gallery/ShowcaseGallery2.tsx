@@ -4,6 +4,8 @@ import { createContext, useContext, useState } from "react";
 import { MdPhotoCamera } from "react-icons/md";
 import { TouristImageData } from "@/lib/TouristImageData";
 import Gallery from "./Gallery";
+import { useLocale } from "next-intl";
+import { getTitleData } from "@/lib/title";
 
 export type AppContextType = {
   openIndexShowcaseGallery2Context: boolean;
@@ -27,16 +29,18 @@ function ShowcaseGallery2() {
     setOpenIndexShowcaseGallery2Context(true);
     setActiveIndex(index);
   };
+  const localeActive = useLocale();
+  const TitleData = getTitleData(localeActive);
 
   return (
     <section>
       <div className="container py-10">
         <div className="w-6xl flex flex-col gap-3 pb-10">
           <h2 className="text-pink font-semibold uppercase tracking-widest">
-            Gajana & Istra
+            {TitleData.data[0].subtitle2}
           </h2>
           <h1 className="font-bold text-2xl sm:text-3xl text-dark_blue_black">
-            Gajana and surroundings
+            {TitleData.data[0].title5}
           </h1>
         </div>
         <AppContext.Provider
@@ -46,18 +50,19 @@ function ShowcaseGallery2() {
           }}
         >
           <div className="w-full flex flex-col sm:flex-row gap-3 sm:h-96 ">
-            {TouristImageData.image.length > 0 && (
+            {TouristImageData.length > 0 && (
               <div className=" rounded-md sm:w-1/2 w-full">
                 <Image
-                  src={TouristImageData.image[0].src}
-                  alt={TouristImageData.image[0].alt}
+                  src={TouristImageData[0].src}
+                  alt={TouristImageData[0].alt}
+                  placeholder="blur"
                   className="cursor-pointer object-cover rounded-md block w-full h-full hover:opacity-90"
                   onClick={() => handleImageClick(0)}
                 />
               </div>
             )}
             <div className="grid grid-cols-2 sm:w-1/2 w-full gap-3">
-              {TouristImageData.image.slice(1, 5).map((image, index) => (
+              {TouristImageData.slice(1, 5).map((image, index) => (
                 <div
                   key={index}
                   className="w-full h-full rounded-md flex relative"
@@ -65,6 +70,7 @@ function ShowcaseGallery2() {
                   <Image
                     src={image.src}
                     alt={image.alt}
+                    placeholder="blur"
                     className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90"
                     onClick={() => handleImageClick(index + 1)}
                   />
@@ -75,7 +81,7 @@ function ShowcaseGallery2() {
                         className=" flex items-center p-2 sm:px-4 sm:py-2 rounded-md uppercase tracking-widest pxflex gap-2 !bg-grey2 !text-dark_blue_black font-Bold text-xs xl:text-sm"
                       >
                         <MdPhotoCamera />
-                        <span>Show Gallery</span>
+                        <span>{TitleData.data[0].button}</span>
                       </button>
                     </div>
                   )}
@@ -85,7 +91,7 @@ function ShowcaseGallery2() {
           </div>
 
           {openIndexShowcaseGallery2Context && (
-            <Gallery library={TouristImageData.image} initIndex={activeIndex} />
+            <Gallery library={TouristImageData} initIndex={activeIndex} />
           )}
         </AppContext.Provider>
       </div>

@@ -6,6 +6,8 @@ import GoogleMaps from "../About/GoogleMaps";
 import { TouristImageData } from "@/lib/TouristImageData";
 import GuideGallery from "./GuideGallery";
 import Gallery from "./Gallery";
+import { getEnvironsData } from "@/lib/environs";
+import { useLocale } from "next-intl";
 
 export type AppContextType = {
   openFourGalleryContext: boolean;
@@ -42,6 +44,8 @@ function FourGallery({ mapButton, range }: Props) {
   const handleMapClose = () => {
     setShowMap(false);
   };
+  const localeActive = useLocale();
+  const EnvironsData = getEnvironsData(localeActive);
 
   return (
     <section>
@@ -54,9 +58,8 @@ function FourGallery({ mapButton, range }: Props) {
         >
           <div className="w-full flex flex-col ">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-              {TouristImageData.image
-                .slice(range?.start, range?.end)
-                .map((image, index) => (
+              {TouristImageData.slice(range?.start, range?.end).map(
+                (image, index) => (
                   <div
                     key={index}
                     className="w-full h-full rounded-md flex relative"
@@ -64,13 +67,15 @@ function FourGallery({ mapButton, range }: Props) {
                     <Image
                       src={image.src}
                       alt={image.alt}
+                      placeholder="blur"
                       className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90 aspect-video md:aspect-square"
                       onClick={() =>
                         handleImageClick(index + (range?.start || 0))
                       }
                     />
                   </div>
-                ))}
+                )
+              )}
             </div>
             {mapButton && (
               <div className="flex justify-end">
@@ -79,7 +84,7 @@ function FourGallery({ mapButton, range }: Props) {
                   className=" btn-2 gap-2 mt-4"
                 >
                   <FaMap />
-                  <span>Show Map</span>
+                  <span>{EnvironsData.data[0].button}</span>
                 </button>
                 {showMap && <GoogleMaps onClose={handleMapClose} />}
               </div>
@@ -87,7 +92,7 @@ function FourGallery({ mapButton, range }: Props) {
           </div>
 
           {openFourGalleryContext && (
-            <Gallery library={TouristImageData.image} initIndex={activeIndex} />
+            <Gallery library={TouristImageData} initIndex={activeIndex} />
           )}
         </AppContext.Provider>
       </div>

@@ -5,38 +5,47 @@ import PaymentConditions from "@/components/PaymentConditions/PaymentConditions"
 import PriceTable from "@/components/PriceTable/PriceTable";
 import SendMessage from "@/components/SendMessage/SendMessage";
 import TouristGuide from "@/components/TouristGuide/TouristGuide";
+import { getPaymentConditionsData } from "@/lib/paymentConditions";
+import { getPricelistData } from "@/lib/pricelist";
+import { getTitleData } from "@/lib/title";
+import { useLocale, useTranslations } from "next-intl";
 
 function Pricelist() {
+  const localeActive = useLocale();
+  const TitleData = getTitleData(localeActive);
+  const PricelistData = getPricelistData(localeActive);
+  const PaymentConditionsData = getPaymentConditionsData(localeActive);
+  const t = useTranslations("How_Reserve");
   return (
     <section className="pt-16 md:pt-14">
       <NavPath />
       <div className="">
         <div className="mt-12 pb-28 container">
           <h2 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
-            Price list Villa Panorama
+            {TitleData.data[0].title4}
           </h2>
           <PriceTable />
           <p className="text-grey1 text-sm mt-4">
-            *The price refers to the period of 7 nights in Euros
+            {PricelistData.data[0].subtitle}
           </p>
         </div>
         <div className="py-10 bg-gray-100">
           <div className="container">
             <h2 className="text-pink font-semibold uppercase mb-2 tracking-widest">
-              TERMS & CONDITIONS
+              {PaymentConditionsData.data[0].subtitle}
             </h2>
             <h2 className="font-bold text-3xl text-dark_blue_black mb-4">
-              Payment and booking conditions
+              {PaymentConditionsData.data[0].title}
             </h2>
             <PaymentConditions />
           </div>
         </div>
         <div className="py-10 container">
           <h2 className="text-pink font-semibold uppercase mb-2 tracking-widest">
-            available appointments
+            {TitleData.data[0].subtitle}
           </h2>
           <h2 className="block font-bold text-3xl text-dark_blue_black mb-10 ">
-            Availability Calendar
+            {TitleData.data[0].title3}
           </h2>
           <div className="pt-2">
             <AvailabilityCalendar />
@@ -45,10 +54,10 @@ function Pricelist() {
         <div className="py-10 bg-gray-100">
           <div className="container">
             <h2 className="text-pink font-semibold uppercase mb-2 tracking-widest">
-              secure reservation
+              {t("subtitle")}
             </h2>
             <h2 className="block font-bold text-3xl text-dark_blue_black mb-10 ">
-              How do I reserve
+              {t("title")}
             </h2>
             <HowToReserve />
           </div>
