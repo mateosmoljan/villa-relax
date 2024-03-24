@@ -143,6 +143,21 @@
         "title": "Kontaktirajte nas"
     }
 },
+"Categorization": {
+"title": [
+"Kategorizacija",
+"Kapacitet",
+"Veličina",
+"Vrt"
+]
+},
+"Villa_Description": {
+"des": "Kamenita luksuzna vila smještena je u Gajani, mirnom mjestu blizu Vodnjana (Dignana). Ova vila s 7 spavaćih soba (svaka sa svojom kupaonicom) savršena je za ljubitelje prirode koji vole opuštajući odmor dalje od gradske buke. Ima mnogo toga za ponuditi svojim gostima.",
+"subtitle": "Prostor",
+"des2": "Ispred vile nalazi se vanjski bazen (68 m2) s mogućnošću zračne masaže i vodopada sa strane bazena. Prostrana trava nudi dječje igralište s trampolinom i nogometnim golovima. Pokraj bazena nalazi se replika stare istarske kuće nazvane \"kazun\", koja nudi sadržaje za roštiljanje. Prekrasna terasa savršeno je mjesto za uživanje u obroku. Još jedno mjesto za objedovanje je ljetna kuhinja, koja se nalazi unutar prostorije za igre s pikadom, biljarom i stolnim nogometom. Soba za ljepotu pored vile nudi saunu, jacuzzi i opremu za vježbanje. Vila ima sustav nadzora koji snima okolicu vile i pruža sigurnost svojim gostima. Vila može primiti 16 osoba. U vili se nalazi 7 spavaćih soba. U 3 spavaće sobe nalaze se bračni kreveti veličine king size, i u svakoj od njih može se smjestiti 2 osobe. U preostalim sobama (njih 4) nalaze se 2 odvojena kreveta. Netko može spavati i na kaučima u dnevnom boravku, ako to želi.",
+"subtitle2": "Pristup gostiju",
+"des3": "Gosti mogu pristupiti 7 spavaćih soba, 2 dnevna boravka, 2 kuhinje, 9 kupaonica + odvojeni WC, balkoni, terasa, prostorija za ljepotu, prostorija za igre/ljetna kuhinja, \"kazun\" s sadržajima za roštiljanje, prostorija s perilicom i opremom za glačanje, bazen, travnjak, vrt, dječje igralište i cijelo vanjsko područje (2500 m2)."
+},
 "Villa_Features": {
     "title": "Značajke",
     "title2": "Što ovo mjesto nudi",
