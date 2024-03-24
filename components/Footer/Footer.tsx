@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SSL from "@/public/assets/images/ssl.png";
 import "./footer.css";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import FooterSvg from "./FooterSvg";
 import { useTranslations } from "next-intl";
 

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { getTouristGuideData } from "@/lib/TouristImageData";
 import Image from "next/image";
 import { NextArrow, PrevArrow } from "./SwiperNavButtonsGuide";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { useLocale } from "next-intl";
 
 function TouristSwiper() {

@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useState } from "react";
 import { TfiGallery } from "react-icons/tfi";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 import PhotogalleriesImages from "./PhotogalleriesImages";
 import Gallery from "./Gallery";

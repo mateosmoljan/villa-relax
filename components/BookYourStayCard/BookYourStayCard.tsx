@@ -1,6 +1,6 @@
 import { getBookStayData } from "@/lib/bookStay";
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 function BookYourStayCard() {
   const localeActive = useLocale();
