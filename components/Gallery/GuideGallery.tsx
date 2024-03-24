@@ -90,7 +90,7 @@ function GuideGallery({ initIndex }: Props) {
               </div>
             </div>
             <Slider {...settings}>
-              {TouristImageData.image.map((image, index) => (
+              {TouristImageData.map((image, index) => (
                 <div key={index} className="my-auto">
                   <div className="sm:container flex items-center justify-center relative image_gallery m-auto overflow-hidden">
                     <Image
