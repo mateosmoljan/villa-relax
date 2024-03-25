@@ -1,87 +1,84 @@
 {
-
-"Titles": {
-  "Villa_Panorama": "Holiday Home Villa Panorama",
-  "Villa_Map_Location": "Location on the map",
-  "Availability_Calendar": "Availability Calendar",
-  "Availability_Appointments_sub": "AVAILABLE APPOINTMENTS",
-  "Price_list": "Price list Villa Panorama",
-  "Photogallery": "Photogallery Villa Panorama, Istra",
-  "Surrondings": "Gajana and surroundings",
-  "Surrondings_sub": "GAJANA & ISTRA"
-}, 
-"Buttons": {
-  "Show_Gallery": "Show Gallery"
-},
+  "Titles": {
+    "homepage_title": "Villa Panorama - Istria",
+    "Villa_Panorama": "Holiday Home Villa Panorama",
+    "Villa_Map_Location": "Location on the map",
+    "Availability_Calendar": "Availability Calendar",
+    "Availability_Appointments_sub": "AVAILABLE APPOINTMENTS",
+    "Price_list": "Price list Villa Panorama",
+    "Photogallery": "Photogallery Villa Panorama, Istra",
+    "Surrondings": "Gajana and surroundings",
+    "Surrondings_sub": "GAJANA & ISTRA"
+  },
+  "Buttons": {
+    "Show_Gallery": "Show Gallery"
+  },
   "Navigation": {
-  "navlinks": [
-    "Villa Panorama",
-    "Pricelist",
-    "Photogallery",
-    "Environs",
-    "Contact"
-],
-"navLinksButton": "Book"
-},
+    "navlinks": [
+      "Villa Panorama",
+      "Pricelist",
+      "Photogallery",
+      "Environs",
+      "Contact"
+    ],
+    "navLinksButton": "Book"
+  },
 
-"HeaderSwiper": {
-  
-  "titles": [
-    "Welcome to Villa Panorama - Istra",
-    "Jacuzzi Paradise",
-    "Rustic Fireplace Retreat",
-    "Modern Design and Spacious Dinning Table",
-    "Stylish Pool Table Retreat",
-    "Welcome Entrance",
-    "Aqua Haven",
-    "Serene Swimming Pool under the Stars",
-    "Villa Panorama's Vast and Serene Space",
-    "Spacious Retreat",
-    "Unparalleled Space for Your Ultimate Retreat"
-  ],
-  "descriptions": [
-    "Tranquil Oasis Villa",
-    "Indulge in the ultimate relaxation experience as you unwind in the Jacuzzi",
-    "Embrace the warmth and charm of the traditional Istrian 'Kažun' fireplace at Villa Panorama, where cozy evenings are spent in rustic tranquility.",
-    "Enjoy cozy gatherings around the generously sized dining table",
-    "Unwind with a game of pool on the sleek pool table",
-    "Elegant entrance that seamlessly blends modern design and welcoming ambiance, inviting you to unwind in style.",
-    "A Modern Retreat with Private Pool, Nestled in Nature's Embrace",
-    "Serene Swimming Pool under the Stars",
-    "Discover serenity in abundance at Villa Panorama, where the expansive grounds offer ample room for relaxation and exploration amidst the beauty of nature's embrace.",
-    "Escape to Villa Panorama's expansive retreat, where abundant space invites relaxation and rejuvenation in the midst of tranquil surroundings.",
-    "Discover the expansive allure of Villa Panorama, where ample space and modern amenities beckon for a truly comfortable retreat."
-  ],
-  "button": "Read More"
+  "HeaderSwiper": {
+    "titles": [
+      "Welcome to Villa Panorama - Istra",
+      "Jacuzzi Paradise",
+      "Rustic Fireplace Retreat",
+      "Modern Design and Spacious Dinning Table",
+      "Stylish Pool Table Retreat",
+      "Welcome Entrance",
+      "Aqua Haven",
+      "Serene Swimming Pool under the Stars",
+      "Villa Panorama's Vast and Serene Space",
+      "Spacious Retreat",
+      "Unparalleled Space for Your Ultimate Retreat"
+    ],
+    "descriptions": [
+      "Tranquil Oasis Villa",
+      "Indulge in the ultimate relaxation experience as you unwind in the Jacuzzi",
+      "Embrace the warmth and charm of the traditional Istrian 'Kažun' fireplace at Villa Panorama, where cozy evenings are spent in rustic tranquility.",
+      "Enjoy cozy gatherings around the generously sized dining table",
+      "Unwind with a game of pool on the sleek pool table",
+      "Elegant entrance that seamlessly blends modern design and welcoming ambiance, inviting you to unwind in style.",
+      "A Modern Retreat with Private Pool, Nestled in Nature's Embrace",
+      "Serene Swimming Pool under the Stars",
+      "Discover serenity in abundance at Villa Panorama, where the expansive grounds offer ample room for relaxation and exploration amidst the beauty of nature's embrace.",
+      "Escape to Villa Panorama's expansive retreat, where abundant space invites relaxation and rejuvenation in the midst of tranquil surroundings.",
+      "Discover the expansive allure of Villa Panorama, where ample space and modern amenities beckon for a truly comfortable retreat."
+    ],
+    "button": "Read More"
+  },
 
-},
-
-"About": 
-    {
-      "title": "Overview",
-      "des": "Beautiful Beautiful **Villa Panorama Istria** surrounded by **nature**. It's an ideal place to **rest** for all lovers of **peace**, **quiet**, and **nature**. Villa of **520m square** is located on a plot of **2500 m2**. You have at your disposal a beautiful **garden** and a large **lawn** for play and **entertainment** (**trampoline**, **football goals**). The villa is carefully **furnished**, with **quality furniture** and great attention to detail. **Traditional** and **modern elements** blend together to form an **interesting** whole.",
-      "the_space": {
-        "title": "The space",
-        "des": "In front of the Villa there is a spacious summer kitchen with a wood-burning fireplace that serves for dining and entertainment (table football, piccado and billiards). Also there is a working room and a bathroom. In addition to the summer kitchen there is a **68 m square swimming pool with air massage facilities, a waterfall** . Traditional speciality is occupied by an Istrian cape built in stone style. It consists of a fire pit for setting a grill or baking for dining. It is especially attractive large terrace that spreads on one side of the villa overlooking the sea and surrounding green areas, which also makes it an ideal place for dining and resting.",
-        "des2": "It consists of a spacious living room, fully equipped kitchen , **7 charming bedrooms with bathrooms, air conditioning and TV**. Heating in every room with radiators. All rooms are air conditioned. In addition to the villa, there is a wellness room ( **sauna ,jacuzzi, exercise equipment**).It is also a garage with **2 parking spaces** and there are **8 bikes**. Parking space offers the possibility of more than a dozen parking spaces."
-      },
-      "guest_access": {
-        "title":"Guest Access",
-        "des": "Jacuzzi, sauna, fitness, bikes, karaoke, billiards, foosball, darts, trampoline."
-      },
-      "locations": {
-        "title": "What to see and visit:",
-        "des": [
-          "- The Aquacolors water amusement park.",
-          "- Explore the beautiful islands of Brijuni National Park, rich in natural beauty and cultural heritage.",
-          "- Discover the ancient Roman amphitheater in Pula, one of the best-preserved Roman amphitheaters in the world.",
-          "- Dive into the underwater world at Pula Aquarium, located near the city center. Explore various marine habitats, observe diverse aquatic species, and learn about the importance of marine conservation.",
-          "- Experience thrilling water slides, lazy rivers, and relaxing pools at Istralandia Aquapark, located near Novigrad. Perfect for families and water enthusiasts, this aquapark offers a fun-filled day for all ages."
-        ]
-      }
+  "About": {
+    "title": "Overview",
+    "des": "Beautiful Beautiful **Villa Panorama Istria** surrounded by **nature**. It's an ideal place to **rest** for all lovers of **peace**, **quiet**, and **nature**. Villa of **520m square** is located on a plot of **2500 m2**. You have at your disposal a beautiful **garden** and a large **lawn** for play and **entertainment** (**trampoline**, **football goals**). The villa is carefully **furnished**, with **quality furniture** and great attention to detail. **Traditional** and **modern elements** blend together to form an **interesting** whole.",
+    "the_space": {
+      "title": "The space",
+      "des": "In front of the Villa there is a spacious summer kitchen with a wood-burning fireplace that serves for dining and entertainment (table football, piccado and billiards). Also there is a working room and a bathroom. In addition to the summer kitchen there is a **68 m square swimming pool with air massage facilities, a waterfall** . Traditional speciality is occupied by an Istrian cape built in stone style. It consists of a fire pit for setting a grill or baking for dining. It is especially attractive large terrace that spreads on one side of the villa overlooking the sea and surrounding green areas, which also makes it an ideal place for dining and resting.",
+      "des2": "It consists of a spacious living room, fully equipped kitchen , **7 charming bedrooms with bathrooms, air conditioning and TV**. Heating in every room with radiators. All rooms are air conditioned. In addition to the villa, there is a wellness room ( **sauna ,jacuzzi, exercise equipment**).It is also a garage with **2 parking spaces** and there are **8 bikes**. Parking space offers the possibility of more than a dozen parking spaces."
     },
+    "guest_access": {
+      "title": "Guest Access",
+      "des": "Jacuzzi, sauna, fitness, bikes, karaoke, billiards, foosball, darts, trampoline."
+    },
+    "locations": {
+      "title": "What to see and visit:",
+      "des": [
+        "- The Aquacolors water amusement park.",
+        "- Explore the beautiful islands of Brijuni National Park, rich in natural beauty and cultural heritage.",
+        "- Discover the ancient Roman amphitheater in Pula, one of the best-preserved Roman amphitheaters in the world.",
+        "- Dive into the underwater world at Pula Aquarium, located near the city center. Explore various marine habitats, observe diverse aquatic species, and learn about the importance of marine conservation.",
+        "- Experience thrilling water slides, lazy rivers, and relaxing pools at Istralandia Aquapark, located near Novigrad. Perfect for families and water enthusiasts, this aquapark offers a fun-filled day for all ages."
+      ]
+    }
+  },
 
-"Distances": {
+  "Distances": {
     "title": "Distances from Villa Panorama",
     "button": "Show Map",
     "place": [
@@ -143,12 +140,7 @@
     }
   },
   "Categorization": {
-    "title": [
-      "Categorization",
-      "Capacity",
-      "Size",
-      "Garden"
-    ]
+    "title": ["Categorization", "Capacity", "Size", "Garden"]
   },
   "Villa_Description": {
     "des": "Stone Luxury Villa is located in Gajana, a peaceful place near Vodnjan (Dignano). This 7-bedroom villa (with en-suite bathroom in every bedroom) is perfect for nature lovers who like to relax away from the city noise. It has a lot to offer to its guests.",
@@ -269,7 +261,6 @@
         "There is no carbon monoxide detector on the propert"
       ]
     }
-    
   },
   "Pricelist": {
     "title": "Pricelist",
@@ -305,7 +296,6 @@
       "span3": "Bank",
       "title3": "Confirmation of payment",
       "des3": "When payment is done, we will confirm your payment and reservation. Relax and await peacefully you vacation in summer and enjoy in your vacations in holiday home Villa Panorama, Istria - Croatia!"
-
     }
   },
   "Environs": {
@@ -321,6 +311,29 @@
     "title2": "Price*",
     "title3": "Persons",
     "title4": "Min. Stay"
+  },
+  "Contact": {
+    "title": "Contact us",
+    "Contact_Form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "home": "Holiday home",
+      "adults": "Adults",
+      "children": "Children",
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "message": "Inquiry",
+      "des": "The content of this form will be sent directly to the e-mail address of the owner of accommodation and is used exclusively for sending inquiries about booking of listed property.",
+      "button": "Send Inquiry",
+      "sent": "Successfully sent"
+    },
+    "Contact_Info": {
+      "contact_person": "contact person",
+      "mobile": "Mobile",
+      "email": "Email",
+      "address": "Address",
+      "we_speak": "We Speak"
+    }
   }
-
 }

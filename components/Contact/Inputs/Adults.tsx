@@ -1,3 +1,4 @@
+import { getContactData } from "@/lib/contact";
 import {
   FormControl,
   InputLabel,
@@ -5,10 +6,13 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
+import { useLocale } from "next-intl";
 import React from "react";
 
 function Adults() {
   const [adults, setAdults] = React.useState("");
+  const localeActive = useLocale();
+  const ContactData = getContactData(localeActive);
 
   const handleChange = (event: SelectChangeEvent) => {
     setAdults(event.target.value as string);
@@ -17,17 +21,17 @@ function Adults() {
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
-        Adults
+        {ContactData.data[0].adults}
       </InputLabel>
       <Select
         required
         labelId="demo-simple-select-label"
-        className="w-full bg-white"
+        className="w-full bg-white "
         id="demo-simple-select"
         size="small"
         name="adults"
         value={adults}
-        label={<span className="text-black">Adults</span>}
+        label={<span className="text-black">{ContactData.data[0].adults}</span>}
         onChange={handleChange}
       >
         <MenuItem value={1}>1</MenuItem>

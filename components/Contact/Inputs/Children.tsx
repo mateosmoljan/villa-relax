@@ -1,3 +1,4 @@
+import { getContactData } from "@/lib/contact";
 import {
   FormControl,
   InputLabel,
@@ -5,10 +6,13 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
+import { useLocale } from "next-intl";
 import React from "react";
 
 function Children() {
   const [children, setChildren] = React.useState("");
+  const localeActive = useLocale();
+  const ContactData = getContactData(localeActive);
 
   const handleChange = (event: SelectChangeEvent) => {
     setChildren(event.target.value as string);
@@ -17,7 +21,7 @@ function Children() {
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
-        Children
+        {ContactData.data[0].children}
       </InputLabel>
       <Select
         required

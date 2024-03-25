@@ -1,85 +1,84 @@
 {
   "Titles": {
-"Villa_Panorama": "Casa Vacanze Villa Panorama",
-"Villa_Map_Location": "Posizione sulla mappa",
-"Availability_Calendar": "Calendario disponibilità",
-"Availability_Appointments_sub": "APPUNTAMENTI DISPONIBILI",
-"Price_list": "Listino prezzi Villa Panorama",
-"Photogallery": "Fotogalleria Villa Panorama, Istra",
-"Surrondings": "Gajana e dintorni",
-"Surrondings_sub": "GAJANA & ISTRA"
-},
-"Buttons": {
-"Show_Gallery": "Mostra Galleria"
-},
-"Navigation": {
-"navlinks": [
-"Villa Panorama",
-"Listino prezzi",
-"Fotogalleria",
-"Dintorni",
-"Contatti"
-],
-"navLinksButton": "Prenota"
-},
-
-"HeaderSwiper": {
-
-"titles": [
-"Benvenuti alla Villa Panorama - Istra",
-"Paradiso del Jacuzzi",
-"Ritiro con Rustico Camino",
-"Design Moderno e Tavolo da Pranzo Spazioso",
-"Ritiro Elegante con Tavolo da Biliardo Stiloso",
-"Ingresso di Benvenuto",
-"Oasi Acquatica",
-"Piscina Serena sotto le Stelle",
-"Lo Spazio Vasto e Sereno della Villa Panorama",
-"Ritiro Spazioso",
-"Spazio Ineguagliabile per il tuo Ritiro Ultimo"
-],
-"descriptions": [
-"Villa Oasi Tranquilla",
-"Concediti l'esperienza di relax definitiva mentre ti distendi nel Jacuzzi",
-"Abbraccia il calore e il fascino del tradizionale camino istriano 'Kažun' presso Villa Panorama, dove le serate accoglienti sono trascorse in tranquillità rustica.",
-"Goditi raduni accoglienti intorno al tavolo da pranzo di dimensioni generose",
-"Rilassati con una partita a biliardo sullo splendido tavolo da biliardo",
-"Ingresso elegante che fonde perfettamente design moderno e ambiente accogliente, invitandoti a rilassarti con stile.",
-"Un Ritiro Moderno con Piscina Privata, Immersa nell'Abbraccio della Natura",
-"Piscina Serena sotto le Stelle",
-"Scopri la serenità in abbondanza presso Villa Panorama, dove gli ampi terreni offrono ampio spazio per il relax e l'esplorazione tra la bellezza dell'abbraccio della natura.",
-"Scappa nel ritiro ampio di Villa Panorama, dove lo spazio abbondante invita al relax e al rinnovamento in mezzo a un ambiente tranquillo.",
-"Scopri il fascino ampio di Villa Panorama, dove lo spazio abbondante e le moderne comodità invitano a un ritiro veramente confortevole."
-],
-"button": "Leggi Altro"
-
-},
-
-"About": {
-  "title": "Panoramica",
-  "des": "Bellissima **Villa Panorama Istria** circondata dalla **natura**. È un luogo ideale per **riposare** per tutti gli amanti della **pace**, della **tranquillità** e della **natura**. La villa di **520 metri quadrati** è situata su un terreno di **2500 m2**. Avete a disposizione un bellissimo **giardino** e un grande **prato** per il **divertimento** (**trampolino**, **porte da calcio**). La villa è arredata con cura, con **mobili di qualità** e grande attenzione ai dettagli. Gli elementi **tradizionali** e **moderni** si fondono per creare un **insieme interessante**.",
-  "the_space": {
-    "title": "Lo spazio",
-    "des": "Di fronte alla villa c'è una spaziosa cucina estiva con camino a legna che serve per pranzi e intrattenimento (calcio balilla, piccado e biliardo). C'è anche una stanza di lavoro e un bagno. Oltre alla cucina estiva c'è una **piscina di 68 metri quadrati con impianti di idromassaggio, una cascata**. Una specialità tradizionale è occupata da un capo istriano costruito in stile in pietra. È composto da un focolare per preparare una griglia o cuocere per pranzo. È particolarmente attraente il grande terrazzo che si estende su un lato della villa con vista sul mare e sulle aree verdi circostanti, il che lo rende anche un luogo ideale per pranzare e riposare.",
-    "des2": "È composto da un ampio soggiorno, cucina completamente attrezzata, **7 affascinanti camere da letto con bagni, aria condizionata e TV**. Riscaldamento in ogni stanza con radiatori. Tutte le camere sono climatizzate. Oltre alla villa, c'è una stanza benessere (sauna, jacuzzi, attrezzature per l'esercizio fisico). C'è anche un garage con **2 posti auto** e ci sono **8 biciclette**. Il parcheggio offre la possibilità di più di una dozzina di posti auto."
+    "homepage_title": "Villa Panorama - Istria",
+    "Villa_Panorama": "Casa Vacanze Villa Panorama",
+    "Villa_Map_Location": "Posizione sulla mappa",
+    "Availability_Calendar": "Calendario disponibilità",
+    "Availability_Appointments_sub": "APPUNTAMENTI DISPONIBILI",
+    "Price_list": "Listino prezzi Villa Panorama",
+    "Photogallery": "Fotogalleria Villa Panorama, Istra",
+    "Surrondings": "Gajana e dintorni",
+    "Surrondings_sub": "GAJANA & ISTRA"
   },
-  "guest_access": {
-    "title":"Accesso ospiti",
-    "des": "Jacuzzi, sauna, fitness, biciclette, karaoke, biliardo, calcetto, freccette, trampolino."
+  "Buttons": {
+    "Show_Gallery": "Mostra Galleria"
   },
-  "locations": {
-    "title": "Cosa vedere e visitare:",
-    "des": [
-      "- Il parco acquatico Aquacolors.",
-      "- Esplora le splendide isole del Parco Nazionale di Brijuni, ricche di bellezze naturali e patrimonio culturale.",
-      "- Scopri l'antico anfiteatro romano a Pula, uno dei migliori anfiteatri romani meglio conservati al mondo.",
-      "- Tuffati nel mondo sottomarino all'Acquario di Pula, situato nei pressi del centro della città. Esplora vari habitat marini, osserva diverse specie acquatiche e scopri l'importanza della conservazione marina.",
-      "- Vivi emozionanti scivoli d'acqua, fiumi pigri e piscine rilassanti all'Istralandia Aquapark, situato nei pressi di Novigrad. Perfetto per famiglie e appassionati di acqua, questo parco acquatico offre una giornata divertente per tutte le età."
-    ]
-  }
-},
+  "Navigation": {
+    "navlinks": [
+      "Villa Panorama",
+      "Listino prezzi",
+      "Fotogalleria",
+      "Dintorni",
+      "Contatti"
+    ],
+    "navLinksButton": "Prenota"
+  },
 
-"Distances": {
+  "HeaderSwiper": {
+    "titles": [
+      "Benvenuti alla Villa Panorama - Istra",
+      "Paradiso del Jacuzzi",
+      "Ritiro con Rustico Camino",
+      "Design Moderno e Tavolo da Pranzo Spazioso",
+      "Ritiro Elegante con Tavolo da Biliardo Stiloso",
+      "Ingresso di Benvenuto",
+      "Oasi Acquatica",
+      "Piscina Serena sotto le Stelle",
+      "Lo Spazio Vasto e Sereno della Villa Panorama",
+      "Ritiro Spazioso",
+      "Spazio Ineguagliabile per il tuo Ritiro Ultimo"
+    ],
+    "descriptions": [
+      "Villa Oasi Tranquilla",
+      "Concediti l'esperienza di relax definitiva mentre ti distendi nel Jacuzzi",
+      "Abbraccia il calore e il fascino del tradizionale camino istriano 'Kažun' presso Villa Panorama, dove le serate accoglienti sono trascorse in tranquillità rustica.",
+      "Goditi raduni accoglienti intorno al tavolo da pranzo di dimensioni generose",
+      "Rilassati con una partita a biliardo sullo splendido tavolo da biliardo",
+      "Ingresso elegante che fonde perfettamente design moderno e ambiente accogliente, invitandoti a rilassarti con stile.",
+      "Un Ritiro Moderno con Piscina Privata, Immersa nell'Abbraccio della Natura",
+      "Piscina Serena sotto le Stelle",
+      "Scopri la serenità in abbondanza presso Villa Panorama, dove gli ampi terreni offrono ampio spazio per il relax e l'esplorazione tra la bellezza dell'abbraccio della natura.",
+      "Scappa nel ritiro ampio di Villa Panorama, dove lo spazio abbondante invita al relax e al rinnovamento in mezzo a un ambiente tranquillo.",
+      "Scopri il fascino ampio di Villa Panorama, dove lo spazio abbondante e le moderne comodità invitano a un ritiro veramente confortevole."
+    ],
+    "button": "Leggi Altro"
+  },
+
+  "About": {
+    "title": "Panoramica",
+    "des": "Bellissima **Villa Panorama Istria** circondata dalla **natura**. È un luogo ideale per **riposare** per tutti gli amanti della **pace**, della **tranquillità** e della **natura**. La villa di **520 metri quadrati** è situata su un terreno di **2500 m2**. Avete a disposizione un bellissimo **giardino** e un grande **prato** per il **divertimento** (**trampolino**, **porte da calcio**). La villa è arredata con cura, con **mobili di qualità** e grande attenzione ai dettagli. Gli elementi **tradizionali** e **moderni** si fondono per creare un **insieme interessante**.",
+    "the_space": {
+      "title": "Lo spazio",
+      "des": "Di fronte alla villa c'è una spaziosa cucina estiva con camino a legna che serve per pranzi e intrattenimento (calcio balilla, piccado e biliardo). C'è anche una stanza di lavoro e un bagno. Oltre alla cucina estiva c'è una **piscina di 68 metri quadrati con impianti di idromassaggio, una cascata**. Una specialità tradizionale è occupata da un capo istriano costruito in stile in pietra. È composto da un focolare per preparare una griglia o cuocere per pranzo. È particolarmente attraente il grande terrazzo che si estende su un lato della villa con vista sul mare e sulle aree verdi circostanti, il che lo rende anche un luogo ideale per pranzare e riposare.",
+      "des2": "È composto da un ampio soggiorno, cucina completamente attrezzata, **7 affascinanti camere da letto con bagni, aria condizionata e TV**. Riscaldamento in ogni stanza con radiatori. Tutte le camere sono climatizzate. Oltre alla villa, c'è una stanza benessere (sauna, jacuzzi, attrezzature per l'esercizio fisico). C'è anche un garage con **2 posti auto** e ci sono **8 biciclette**. Il parcheggio offre la possibilità di più di una dozzina di posti auto."
+    },
+    "guest_access": {
+      "title": "Accesso ospiti",
+      "des": "Jacuzzi, sauna, fitness, biciclette, karaoke, biliardo, calcetto, freccette, trampolino."
+    },
+    "locations": {
+      "title": "Cosa vedere e visitare:",
+      "des": [
+        "- Il parco acquatico Aquacolors.",
+        "- Esplora le splendide isole del Parco Nazionale di Brijuni, ricche di bellezze naturali e patrimonio culturale.",
+        "- Scopri l'antico anfiteatro romano a Pula, uno dei migliori anfiteatri romani meglio conservati al mondo.",
+        "- Tuffati nel mondo sottomarino all'Acquario di Pula, situato nei pressi del centro della città. Esplora vari habitat marini, osserva diverse specie acquatiche e scopri l'importanza della conservazione marina.",
+        "- Vivi emozionanti scivoli d'acqua, fiumi pigri e piscine rilassanti all'Istralandia Aquapark, situato nei pressi di Novigrad. Perfetto per famiglie e appassionati di acqua, questo parco acquatico offre una giornata divertente per tutte le età."
+      ]
+    }
+  },
+
+  "Distances": {
     "title": "Distanze dalla Villa Panorama",
     "button": "Mostra Mappa",
     "place": [
@@ -141,12 +140,7 @@
     }
   },
   "Categorization": {
-    "title": [
-      "Categorizzazione",
-      "Capacità",
-      "Dimensioni",
-      "Giardino"
-    ]
+    "title": ["Categorizzazione", "Capacità", "Dimensioni", "Giardino"]
   },
   "Villa_Description": {
     "des": "La lussuosa Villa in Pietra è situata a Gajana, un luogo tranquillo nei pressi di Vodnjan (Dignano). Questa villa di 7 camere da letto (con bagno privato in ogni camera) è perfetta per gli amanti della natura che amano rilassarsi lontano dal rumore della città. Ha molto da offrire ai suoi ospiti.",
@@ -267,7 +261,6 @@
         "Non c'è rilevatore di monossido di carbonio nella proprietà"
       ]
     }
-    
   },
   "Pricelist": {
     "title": "Listino prezzi",
@@ -288,7 +281,7 @@
     "title": "Posizione sulla mappa"
   },
   "Availability_Calendar": {
-      "title": "Calendario disponibilità"
+    "title": "Calendario disponibilità"
   },
   "Villa_BookStay": {
     "des": "a partire da",
@@ -309,7 +302,6 @@
       "span3": "Banca",
       "title3": "Conferma del pagamento",
       "des3": "Quando il pagamento è effettuato, confermeremo il vostro pagamento e la prenotazione. Rilassatevi e attendete pacificamente le vostre vacanze in estate e godetevi le vostre vacanze nella casa vacanze Villa Panorama, Istria - Croazia!"
-
     }
   },
   "Environs": {
@@ -320,11 +312,36 @@
     "des2": "Potete raggiungere la villa in auto o in taxi. Il parcheggio è gratuito e disponibile in loco.",
     "subtitle": "Attrazioni nelle vicinanze"
   },
-  
-"PriceTable": {
-"title": "Periodo",
-"title2": "Prezzo*",
-"title3": "Persone",
-"title4": "Soggiorno minimo"
-}
+
+  "PriceTable": {
+    "title": "Periodo",
+    "title2": "Prezzo*",
+    "title3": "Persone",
+    "title4": "Soggiorno minimo"
+  },
+  "Contact": {
+    "title": "Contattaci",
+    "Contact_Form": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefono",
+      "home": "Casa vacanza",
+      "adults": "Adulti",
+      "children": "Bambini",
+      "arrival": "Arrivo",
+      "departure": "Partenza",
+      "message": "Richiesta",
+      "des": "Il contenuto di questo modulo verrà inviato direttamente all'indirizzo e-mail del proprietario dell'alloggio ed è utilizzato esclusivamente per inviare richieste di prenotazione della proprietà elencata.",
+      "button": "Invia richiesta",
+      "sent": "Inviato con successo"
+    },
+    "Contact_Info": {
+      "contact_person": "persona di contatto",
+      "mobile": "Cellulare",
+      "email": "Email",
+      "address": "Indirizzo",
+      "we_speak": "Parliamo",
+      "sent": "Inviato con successo"
+    }
+  }
 }

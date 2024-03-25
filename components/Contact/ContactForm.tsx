@@ -15,6 +15,8 @@ import DataRangeComponent from "./Inputs/DateRangeComponent";
 import emailjs from "@emailjs/browser";
 import { MuiTelInput } from "mui-tel-input";
 import "./style.css";
+import { useLocale } from "next-intl";
+import { getContactData } from "@/lib/contact";
 
 function ContactForm() {
   const form = useRef(null);
@@ -22,6 +24,8 @@ function ContactForm() {
   const [email, setEmail] = useState<string>("");
   const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
   const [value, setValue] = React.useState("");
+  const localeActive = useLocale();
+  const ContactData = getContactData(localeActive);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -94,7 +98,7 @@ function ContactForm() {
         <div className="flex flex-col sm:flex-row w-full items-end">
           <div className="w-full sm:w-1/2 px-2 mb-4 phone_input">
             <InputLabel id="outlined-required" className="font-Bold">
-              Phone
+              {ContactData.data[0].phone}
             </InputLabel>
             <MuiTelInput
               id="outlined-required"
@@ -136,11 +140,7 @@ function ContactForm() {
             required
           />
         </div>
-        <p className="text-xs mb-4 text-grey3">
-          The content of this form will be sent directly to the e-mail address
-          of the owner of accommodation and is used exclusively for sending
-          inquiries about booking of listed property.
-        </p>
+        <p className="text-xs mb-4 text-grey3">{ContactData.data[0].des}</p>
         <div className="px-4">
           <Button
             type="submit"
@@ -153,11 +153,11 @@ function ContactForm() {
           >
             {messageSent ? (
               <Alert severity="success" className="">
-                Successfully sent
+                {ContactData.data[0].sent}
               </Alert>
             ) : (
               <>
-                Send Inquiry <IoIosSend className="text-2xl" />
+                {ContactData.data[0].button} <IoIosSend className="text-2xl" />
               </>
             )}
           </Button>

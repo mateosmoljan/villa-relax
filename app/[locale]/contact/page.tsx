@@ -2,14 +2,16 @@ import IFrameMaps from "@/components/About/iFrameMaps";
 import ContactForm from "@/components/Contact/ContactForm";
 import ContactInfo from "@/components/Contact/ContactInfo";
 import NavPath from "@/components/NavPath/NavPath";
+import { useTranslations } from "next-intl";
 
 function Contact() {
+  const c = useTranslations("Contact");
   return (
     <section className="pt-16 md:pt-14">
       <NavPath />
       <div className="container">
         <h1 className="mt-12 font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
-          Contact Us
+          {c("title")}
         </h1>
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="w-full sm:w-2/3">

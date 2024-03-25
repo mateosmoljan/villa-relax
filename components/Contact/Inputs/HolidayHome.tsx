@@ -1,3 +1,4 @@
+import { getContactData } from "@/lib/contact";
 import {
   FormControl,
   InputLabel,
@@ -5,10 +6,13 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
+import { useLocale } from "next-intl";
 import React from "react";
 
 function HolidayHome() {
   const [home, setHome] = React.useState("");
+  const localeActive = useLocale();
+  const ContactData = getContactData(localeActive);
 
   const handleChange = (event: SelectChangeEvent) => {
     setHome(event.target.value as string);
@@ -17,7 +21,7 @@ function HolidayHome() {
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
-        Holiday home
+        {ContactData.data[0].home}
       </InputLabel>
       <Select
         required

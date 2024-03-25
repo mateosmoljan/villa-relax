@@ -1,84 +1,82 @@
 {
   "Titles": {
-  "Villa_Panorama": "Kuća za odmor Villa Panorama",
-  "Villa_Map_Location": "Lokacija na karti",
-  "Availability_Calendar": "Kalendar dostupnosti",
-  "Availability_Appointments_sub": "DOSTUPNI TERMINI",
-  "Price_list": "Cjenik kuće za odmor Villa Panorama",
-  "Photogallery": "Fotogalerija kuće za odmor Villa Panorama, Istra",
-  "Surrondings": "Gajana i okolica",
-  "Surrondings_sub": "GAJANA & ISTRA"
-}, 
-"Buttons": {
-  "Show_Gallery": "Prikaži galeriju"
-},
-"Navigation": {
-  "navlinks": [
-    "Villa Panorama",
-    "Cjenik",
-    "Fotogalerija",
-    "Okolica",
-    "Kontakt"
-],
-"navLinksButton": "Rezerviraj"
-},
+    "homepage_title": "Villa Panorama - Istra",
+    "Villa_Panorama": "Kuća za odmor Villa Panorama",
+    "Villa_Map_Location": "Lokacija na karti",
+    "Availability_Calendar": "Kalendar dostupnosti",
+    "Availability_Appointments_sub": "DOSTUPNI TERMINI",
+    "Price_list": "Cjenik kuće za odmor Villa Panorama",
+    "Photogallery": "Fotogalerija kuće za odmor Villa Panorama, Istra",
+    "Surrondings": "Gajana i okolica",
+    "Surrondings_sub": "GAJANA & ISTRA"
+  },
+  "Buttons": {
+    "Show_Gallery": "Prikaži galeriju"
+  },
+  "Navigation": {
+    "navlinks": [
+      "Villa Panorama",
+      "Cjenik",
+      "Fotogalerija",
+      "Okolica",
+      "Kontakt"
+    ],
+    "navLinksButton": "Rezerviraj"
+  },
 
-"HeaderSwiper": {
-  
-  "titles": [
-    "Dobrodošli u Villa Panorama - Istra",
-    "Raj s jacuzzijem",
-    "Rustikalni kamin odmor",
-    "Moderan dizajn i prostrani blagovaonski stol",
-    "Stilski bilijarski stol",
-    "Ugodan ulaz",
-    "Nebo Aqua",
-    "Tihi bazen pod zvijezdama",
-    "Prostrane i tihe sobe u vili Panorama",
-    "Prostrano utočište",
-    "Neusporediv prostor za vaš ultimate retreat"
-  ],
-  "descriptions": [
-    "Tihi oaza u vili",
-    "Uživajte u konačnom doživljaju opuštanja dok se opuštate u jacuzziju",
-    "Zagrlite toplinu i šarm tradicionalnog istarskog kamina 'Kažun' u Vili Panorama, gdje se ugodne večeri provode u rustikalnom miru.",
-    "Uživajte u opuštenim okupljanjima na prostranom blagovaonskom stolu",
-    "Opuštajte se uz partiju bilijara na elegantnom bilijarskom stolu",
-    "Elegantan ulaz koji besprijekorno spaja moderan dizajn i gostoljubivu atmosferu i poziva vas na opuštanje u stilu.",
-    "Moderan odmor s privatnim bazenom, uklopljen u zagrljaj prirode",
-    "Tihi bazen pod zvijezdama",
-    "Otkrijte spokoj u izobilju u Vili Panorama, gdje prostrani prostori obiluju prostorom za opuštanje i istraživanje.",
-    "Pobjegnite u prostrani utočište Ville Panorama, gdje ima dovoljno prostora za opuštanje i odmor u mirnom okruženju.",
-    "Otkrijte prostranu čaroliju Ville Panorama, gdje obilje prostora i modernih pogodnosti nagovješćuje zaista udoban odmor."
-  ],
-  "button": "Pročitaj više"
+  "HeaderSwiper": {
+    "titles": [
+      "Dobrodošli u Villa Panorama - Istra",
+      "Raj s jacuzzijem",
+      "Rustikalni kamin odmor",
+      "Moderan dizajn i prostrani blagovaonski stol",
+      "Stilski bilijarski stol",
+      "Ugodan ulaz",
+      "Nebo Aqua",
+      "Tihi bazen pod zvijezdama",
+      "Prostrane i tihe sobe u vili Panorama",
+      "Prostrano utočište",
+      "Neusporediv prostor za vaš ultimate retreat"
+    ],
+    "descriptions": [
+      "Tihi oaza u vili",
+      "Uživajte u konačnom doživljaju opuštanja dok se opuštate u jacuzziju",
+      "Zagrlite toplinu i šarm tradicionalnog istarskog kamina 'Kažun' u Vili Panorama, gdje se ugodne večeri provode u rustikalnom miru.",
+      "Uživajte u opuštenim okupljanjima na prostranom blagovaonskom stolu",
+      "Opuštajte se uz partiju bilijara na elegantnom bilijarskom stolu",
+      "Elegantan ulaz koji besprijekorno spaja moderan dizajn i gostoljubivu atmosferu i poziva vas na opuštanje u stilu.",
+      "Moderan odmor s privatnim bazenom, uklopljen u zagrljaj prirode",
+      "Tihi bazen pod zvijezdama",
+      "Otkrijte spokoj u izobilju u Vili Panorama, gdje prostrani prostori obiluju prostorom za opuštanje i istraživanje.",
+      "Pobjegnite u prostrani utočište Ville Panorama, gdje ima dovoljno prostora za opuštanje i odmor u mirnom okruženju.",
+      "Otkrijte prostranu čaroliju Ville Panorama, gdje obilje prostora i modernih pogodnosti nagovješćuje zaista udoban odmor."
+    ],
+    "button": "Pročitaj više"
+  },
 
-},
-
-  "About": 
-    {
-      "title": "Pregled",
-      "des": "Predivna **Villa Panorama Istria** okružena **prirodom**. To je idealno mjesto za **odmor** za sve ljubitelje **miru**, **tišine** i **prirode**. Vila od **520 kvadratnih metara** smještena je na parceli od **2500 m2**. Na raspolaganju vam je prekrasan **vrt** i velika **livada** za igru i **zabavu** (**trampolin**, **golovi za nogomet**). Vila je pažljivo **namještena**, s **kvalitetnim namještajem** i velikom pažnjom na detalje. **Tradicionalni** i **moderni elementi** sjedinjuju se kako bi stvorili **zanimljivu** cjelinu.",
-      "the_space": {
-        "title": "Prostor",
-        "des": "Ispred vile nalazi se prostrana ljetna kuhinja s kaminom na drva koji služi za objedovanje i zabavu (stolni nogomet, piccado i bilijar). Također postoji radna soba i kupaonica. Osim ljetne kuhinje, tu je i **68 kvadratnih metara bazen s masažnim mlaznicama, vodopadom**. Tradicionalna posebnost je istarski kažun izgrađen u kamenoj stilu. Sastoji se od vatrene jame za postavljanje roštilja ili pečenja za objedovanje. Posebno je atraktivna velika terasa koja se proteže s jedne strane vile s pogledom na more i okolna zelena područja, što je čini idealnim mjestom za objedovanje i odmor.",
-        "des2": "Sastoji se od prostranog dnevnog boravka, potpuno opremljene kuhinje, **7 šarmantnih spavaćih soba s kupaonicama, klima uređajem i TV-om**. Grijanje u svakoj sobi s radijatorima. Sve sobe imaju klima uređaj. Osim vile, tu je i prostor za wellness ( **sauna, jacuzzi, sprave za vježbanje**). Tu je i garaža s **2 parkirna mjesta** i **8 bicikala**. Prostor za parkiranje nudi mogućnost više od desetak parkirnih mjesta."
-      },
-      "guest_access": {
-        "title":"Pristup gostima",
-        "des": "Jacuzzi, sauna, fitness, bicikli, karaoke, bilijar, stolni nogomet, strelice, trampolin."
-      },
-      "locations": {
-        "title": "Što posjetiti:",
-        "des": [
-          "- Vodeni zabavni park Aquacolors.",
-          "- Istražite prekrasne otoke Nacionalnog parka Brijuni, bogate prirodnom ljepotom i kulturnom baštinom.",
-          "- Otkrijte drevni rimski amfiteatar u Puli, jedan od najbolje sačuvanih rimskih amfiteatara na svijetu.",
-          "- Zaronite u podvodni svijet u Akvariju Pula, smještenom blizu centra grada. Istražite različite morske habitate, promatrajte raznolike morske vrste i saznajte o važnosti očuvanja mora.",
-          "- Doživite uzbudljive tobogane, lijeni rijeke i opuštajuće bazene u aquaparku Istralandia, smještenom blizu Novigrada. Savršeno za obitelji i ljubitelje vode, ovaj aquapark nudi zabavan dan za sve uzraste."
-        ]
-      }
+  "About": {
+    "title": "Pregled",
+    "des": "Predivna **Villa Panorama Istria** okružena **prirodom**. To je idealno mjesto za **odmor** za sve ljubitelje **miru**, **tišine** i **prirode**. Vila od **520 kvadratnih metara** smještena je na parceli od **2500 m2**. Na raspolaganju vam je prekrasan **vrt** i velika **livada** za igru i **zabavu** (**trampolin**, **golovi za nogomet**). Vila je pažljivo **namještena**, s **kvalitetnim namještajem** i velikom pažnjom na detalje. **Tradicionalni** i **moderni elementi** sjedinjuju se kako bi stvorili **zanimljivu** cjelinu.",
+    "the_space": {
+      "title": "Prostor",
+      "des": "Ispred vile nalazi se prostrana ljetna kuhinja s kaminom na drva koji služi za objedovanje i zabavu (stolni nogomet, piccado i bilijar). Također postoji radna soba i kupaonica. Osim ljetne kuhinje, tu je i **68 kvadratnih metara bazen s masažnim mlaznicama, vodopadom**. Tradicionalna posebnost je istarski kažun izgrađen u kamenoj stilu. Sastoji se od vatrene jame za postavljanje roštilja ili pečenja za objedovanje. Posebno je atraktivna velika terasa koja se proteže s jedne strane vile s pogledom na more i okolna zelena područja, što je čini idealnim mjestom za objedovanje i odmor.",
+      "des2": "Sastoji se od prostranog dnevnog boravka, potpuno opremljene kuhinje, **7 šarmantnih spavaćih soba s kupaonicama, klima uređajem i TV-om**. Grijanje u svakoj sobi s radijatorima. Sve sobe imaju klima uređaj. Osim vile, tu je i prostor za wellness ( **sauna, jacuzzi, sprave za vježbanje**). Tu je i garaža s **2 parkirna mjesta** i **8 bicikala**. Prostor za parkiranje nudi mogućnost više od desetak parkirnih mjesta."
     },
+    "guest_access": {
+      "title": "Pristup gostima",
+      "des": "Jacuzzi, sauna, fitness, bicikli, karaoke, bilijar, stolni nogomet, strelice, trampolin."
+    },
+    "locations": {
+      "title": "Što posjetiti:",
+      "des": [
+        "- Vodeni zabavni park Aquacolors.",
+        "- Istražite prekrasne otoke Nacionalnog parka Brijuni, bogate prirodnom ljepotom i kulturnom baštinom.",
+        "- Otkrijte drevni rimski amfiteatar u Puli, jedan od najbolje sačuvanih rimskih amfiteatara na svijetu.",
+        "- Zaronite u podvodni svijet u Akvariju Pula, smještenom blizu centra grada. Istražite različite morske habitate, promatrajte raznolike morske vrste i saznajte o važnosti očuvanja mora.",
+        "- Doživite uzbudljive tobogane, lijeni rijeke i opuštajuće bazene u aquaparku Istralandia, smještenom blizu Novigrada. Savršeno za obitelji i ljubitelje vode, ovaj aquapark nudi zabavan dan za sve uzraste."
+      ]
+    }
+  },
 
   "Distances": {
     "title": "Udaljenosti od Ville Panorama",
@@ -112,8 +110,8 @@
     "subtitle": "Fotogalerije",
     "title": "Odaberite fotografije iz Ville Panorama",
     "button": "Prikaži fotogaleriju"
-},
-"Tourist_Guide": {
+  },
+  "Tourist_Guide": {
     "subtitle": "VODIČ ZA TURISTE",
     "title": "Što posjetiti, vidjeti i raditi?",
     "image_des": [
@@ -124,41 +122,36 @@
       "Vodeni park",
       "skakanje s plaže/stijena"
     ]
-},
-"Send_Message": {
+  },
+  "Send_Message": {
     "des": "Molimo vas **Pošaljite nam** odgovor ako želite pripadati Vili Panorama u Istri i osigurati svoju rezervaciju?",
     "button": "Pošalji poruku"
-},
-"Footer": {
+  },
+  "Footer": {
     "year": "©2024 . Villa Panorama - Istra",
     "rights": "Sva prava pridržana",
     "Discover": {
-        "title": "Otkrijte",
-        "list": {
-            "Pula": "Pula Info",
-            "Guide": "Turistički vodič Istra"
-        }
+      "title": "Otkrijte",
+      "list": {
+        "Pula": "Pula Info",
+        "Guide": "Turistički vodič Istra"
+      }
     },
     "Contact_Us": {
-        "title": "Kontaktirajte nas"
+      "title": "Kontaktirajte nas"
     }
-},
-"Categorization": {
-"title": [
-"Kategorizacija",
-"Kapacitet",
-"Veličina",
-"Vrt"
-]
-},
-"Villa_Description": {
-"des": "Kamenita luksuzna vila smještena je u Gajani, mirnom mjestu blizu Vodnjana (Dignana). Ova vila s 7 spavaćih soba (svaka sa svojom kupaonicom) savršena je za ljubitelje prirode koji vole opuštajući odmor dalje od gradske buke. Ima mnogo toga za ponuditi svojim gostima.",
-"subtitle": "Prostor",
-"des2": "Ispred vile nalazi se vanjski bazen (68 m2) s mogućnošću zračne masaže i vodopada sa strane bazena. Prostrana trava nudi dječje igralište s trampolinom i nogometnim golovima. Pokraj bazena nalazi se replika stare istarske kuće nazvane \"kazun\", koja nudi sadržaje za roštiljanje. Prekrasna terasa savršeno je mjesto za uživanje u obroku. Još jedno mjesto za objedovanje je ljetna kuhinja, koja se nalazi unutar prostorije za igre s pikadom, biljarom i stolnim nogometom. Soba za ljepotu pored vile nudi saunu, jacuzzi i opremu za vježbanje. Vila ima sustav nadzora koji snima okolicu vile i pruža sigurnost svojim gostima. Vila može primiti 16 osoba. U vili se nalazi 7 spavaćih soba. U 3 spavaće sobe nalaze se bračni kreveti veličine king size, i u svakoj od njih može se smjestiti 2 osobe. U preostalim sobama (njih 4) nalaze se 2 odvojena kreveta. Netko može spavati i na kaučima u dnevnom boravku, ako to želi.",
-"subtitle2": "Pristup gostiju",
-"des3": "Gosti mogu pristupiti 7 spavaćih soba, 2 dnevna boravka, 2 kuhinje, 9 kupaonica + odvojeni WC, balkoni, terasa, prostorija za ljepotu, prostorija za igre/ljetna kuhinja, \"kazun\" s sadržajima za roštiljanje, prostorija s perilicom i opremom za glačanje, bazen, travnjak, vrt, dječje igralište i cijelo vanjsko područje (2500 m2)."
-},
-"Villa_Features": {
+  },
+  "Categorization": {
+    "title": ["Kategorizacija", "Kapacitet", "Veličina", "Vrt"]
+  },
+  "Villa_Description": {
+    "des": "Kamenita luksuzna vila smještena je u Gajani, mirnom mjestu blizu Vodnjana (Dignana). Ova vila s 7 spavaćih soba (svaka sa svojom kupaonicom) savršena je za ljubitelje prirode koji vole opuštajući odmor dalje od gradske buke. Ima mnogo toga za ponuditi svojim gostima.",
+    "subtitle": "Prostor",
+    "des2": "Ispred vile nalazi se vanjski bazen (68 m2) s mogućnošću zračne masaže i vodopada sa strane bazena. Prostrana trava nudi dječje igralište s trampolinom i nogometnim golovima. Pokraj bazena nalazi se replika stare istarske kuće nazvane \"kazun\", koja nudi sadržaje za roštiljanje. Prekrasna terasa savršeno je mjesto za uživanje u obroku. Još jedno mjesto za objedovanje je ljetna kuhinja, koja se nalazi unutar prostorije za igre s pikadom, biljarom i stolnim nogometom. Soba za ljepotu pored vile nudi saunu, jacuzzi i opremu za vježbanje. Vila ima sustav nadzora koji snima okolicu vile i pruža sigurnost svojim gostima. Vila može primiti 16 osoba. U vili se nalazi 7 spavaćih soba. U 3 spavaće sobe nalaze se bračni kreveti veličine king size, i u svakoj od njih može se smjestiti 2 osobe. U preostalim sobama (njih 4) nalaze se 2 odvojena kreveta. Netko može spavati i na kaučima u dnevnom boravku, ako to želi.",
+    "subtitle2": "Pristup gostiju",
+    "des3": "Gosti mogu pristupiti 7 spavaćih soba, 2 dnevna boravka, 2 kuhinje, 9 kupaonica + odvojeni WC, balkoni, terasa, prostorija za ljepotu, prostorija za igre/ljetna kuhinja, \"kazun\" s sadržajima za roštiljanje, prostorija s perilicom i opremom za glačanje, bazen, travnjak, vrt, dječje igralište i cijelo vanjsko područje (2500 m2)."
+  },
+  "Villa_Features": {
     "title": "Značajke",
     "title2": "Što ovo mjesto nudi",
     "title3": "Kupaonica",
@@ -175,103 +168,103 @@
     "title14": "Nisu uključeni",
     "button": "Prikaži sve 43 pogodnosti",
     "card": {
-        "title": [
-            "Sušilo za kosu",
-            "Topla voda",
-            "Perilica rublja",
-            "Sušilica",
-            "Osnovna oprema",
-            "Vješalice",
-            "Posteljina",
-            "Dodatni jastuci i deke",
-            "Zavjese za zamračivanje",
-            "Glačalo",
-            "TV sa standardnim kabelskim programom",
-            "Dječji krevetić",
-            "Dječje knjige i igračke",
-            "Visoka stolica",
-            "Zaštitnici za kamin",
-            "Zaštitnici za prozore",
-            "Poklopci utičnica",
-            "Barijere za sigurnost djece",
-            "Zaštitnici za kutove stola",
-            "Klima uređaj",
-            "Unutarnji kamin",
-            "Grijanje",
-            "Aparat za gašenje požara",
-            "Prva pomoć",
-            "Wifi",
-            "Kuhinja",
-            "Hladnjak",
-            "Mikrovalna pećnica",
-            "Osnovni pribor za kuhanje",
-            "Posuđe i pribor za jelo",
-            "Perilica posuđa",
-            "Štednjak",
-            "Pećnica",
-            "Aparat za kavu",
-            "Protuklizni lim",
-            "Pribor za roštilj",
-            "Stražnje dvorište",
-            "Besplatno parkiralište na posjedu",
-            "Bazen",
-            "Dopušteno ostavljanje prtljage",
-            "Pušenje dopušteno",
-            "Dopušteni dugoročni boravci",
-            "Domaćin vas dočekuje",
-            "Detektor dima",
-            "Detektor ugljikovog monoksida"
-        ],
-        "des": [
-            "",
-            "",
-            "",
-            "",
-            "Ručnici, posteljina, sapun i toaletni papir",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "Prostor gdje gosti mogu pripremati vlastite obroke",
-            "",
-            "",
-            "Lonci i tave, ulje, sol i papar",
-            "Pribor za zdjele, štapiće, tanjure, šalice, itd.",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "Roštilj, ugljen, bambus štapići/željezni štapići, itd.",
-            "Otvoreni prostor na imanju obično prekriven travom",
-            "",
-            "",
-            "Za udobnost gostiju kada imaju ran dolazak ili kasni odlazak",
-            "",
-            "Dopušten boravak od 28 dana ili duže",
-            "",
-            "Na imanju nema detektora dima.",
-            "Na imanju nema detektora ugljikovog monoksida."
-        ]
+      "title": [
+        "Sušilo za kosu",
+        "Topla voda",
+        "Perilica rublja",
+        "Sušilica",
+        "Osnovna oprema",
+        "Vješalice",
+        "Posteljina",
+        "Dodatni jastuci i deke",
+        "Zavjese za zamračivanje",
+        "Glačalo",
+        "TV sa standardnim kabelskim programom",
+        "Dječji krevetić",
+        "Dječje knjige i igračke",
+        "Visoka stolica",
+        "Zaštitnici za kamin",
+        "Zaštitnici za prozore",
+        "Poklopci utičnica",
+        "Barijere za sigurnost djece",
+        "Zaštitnici za kutove stola",
+        "Klima uređaj",
+        "Unutarnji kamin",
+        "Grijanje",
+        "Aparat za gašenje požara",
+        "Prva pomoć",
+        "Wifi",
+        "Kuhinja",
+        "Hladnjak",
+        "Mikrovalna pećnica",
+        "Osnovni pribor za kuhanje",
+        "Posuđe i pribor za jelo",
+        "Perilica posuđa",
+        "Štednjak",
+        "Pećnica",
+        "Aparat za kavu",
+        "Protuklizni lim",
+        "Pribor za roštilj",
+        "Stražnje dvorište",
+        "Besplatno parkiralište na posjedu",
+        "Bazen",
+        "Dopušteno ostavljanje prtljage",
+        "Pušenje dopušteno",
+        "Dopušteni dugoročni boravci",
+        "Domaćin vas dočekuje",
+        "Detektor dima",
+        "Detektor ugljikovog monoksida"
+      ],
+      "des": [
+        "",
+        "",
+        "",
+        "",
+        "Ručnici, posteljina, sapun i toaletni papir",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Prostor gdje gosti mogu pripremati vlastite obroke",
+        "",
+        "",
+        "Lonci i tave, ulje, sol i papar",
+        "Pribor za zdjele, štapiće, tanjure, šalice, itd.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Roštilj, ugljen, bambus štapići/željezni štapići, itd.",
+        "Otvoreni prostor na imanju obično prekriven travom",
+        "",
+        "",
+        "Za udobnost gostiju kada imaju ran dolazak ili kasni odlazak",
+        "",
+        "Dopušten boravak od 28 dana ili duže",
+        "",
+        "Na imanju nema detektora dima.",
+        "Na imanju nema detektora ugljikovog monoksida."
+      ]
     }
-},
+  },
   "Pricelist": {
     "title": "Cjenik",
     "subtitle": "*Cijena se odnosi na period od 7 noćenja u eurima"
@@ -315,17 +308,41 @@
     }
   },
   "Environs": {
-"title": "Gajana & Istra",
-"des": "Gajana je savršeno mjesto za doživljaj opuštajućeg odmora, ali je također dovoljno blizu svih vrsta aktivnosti ako promijenite mišljenje. Gajana je okružena vinogradima, maslinicima, šumama i mnogim prekrasnim znamenitostima. Možete posjetiti Park Kazun - park s tradicionalnim istarskim kućama od kamena, mjesto s najviše kazuna na jednom mjestu na mediteranskom području. Nacionalni park Brijuni (koji se vidi s vile) i Limski zaljev također se nalaze u ovoj regiji. Budući da je Gajana mjesto okruženo vinogradima i maslinicima, najbolji način da ga doživite je istražiti neke od planinarskih ili biciklističkih ruta kroz područje. Budući da je obala udaljena samo 5 km, možete isprobati ribolov, jedrenje ili ronjenje. Plaže, barovi, restorani i trgovine prehrambenim proizvodima nalaze se u krugu od 5 km.",
-"button": "Prikaži Kartu",
-"title2": "Kretanje",
-"des2": "Vilu možete doseći automobilom ili taksijem. Parkiranje je besplatno i dostupno na licu mjesta.",
-"subtitle": "Zanimljivosti u blizini"
-},
-"PriceTable": {
-"title": "Razdoblje",
-"title2": "Cijena*",
-"title3": "Osobe",
-"title4": "Min. Boravak"
-}
+    "title": "Gajana & Istra",
+    "des": "Gajana je savršeno mjesto za doživljaj opuštajućeg odmora, ali je također dovoljno blizu svih vrsta aktivnosti ako promijenite mišljenje. Gajana je okružena vinogradima, maslinicima, šumama i mnogim prekrasnim znamenitostima. Možete posjetiti Park Kazun - park s tradicionalnim istarskim kućama od kamena, mjesto s najviše kazuna na jednom mjestu na mediteranskom području. Nacionalni park Brijuni (koji se vidi s vile) i Limski zaljev također se nalaze u ovoj regiji. Budući da je Gajana mjesto okruženo vinogradima i maslinicima, najbolji način da ga doživite je istražiti neke od planinarskih ili biciklističkih ruta kroz područje. Budući da je obala udaljena samo 5 km, možete isprobati ribolov, jedrenje ili ronjenje. Plaže, barovi, restorani i trgovine prehrambenim proizvodima nalaze se u krugu od 5 km.",
+    "button": "Prikaži Kartu",
+    "title2": "Kretanje",
+    "des2": "Vilu možete doseći automobilom ili taksijem. Parkiranje je besplatno i dostupno na licu mjesta.",
+    "subtitle": "Zanimljivosti u blizini"
+  },
+  "PriceTable": {
+    "title": "Razdoblje",
+    "title2": "Cijena*",
+    "title3": "Osobe",
+    "title4": "Min. Boravak"
+  },
+  "Contact": {
+    "title": "Kontaktirajte nas",
+    "Contact_Form": {
+      "name": "Ime i Prezime",
+      "email": "Email",
+      "phone": "Telefon/Mobitel",
+      "home": "Kuća za odmor",
+      "adults": "Odrasli",
+      "children": "Djeca",
+      "arrival": "Dolazak",
+      "departure": "Odlazak",
+      "message": "Upit",
+      "des": "Sadržaj ovog obrasca bit će poslan izravno na e-mail adresu vlasnika smještaja i koristi se isključivo za slanje upita o rezervaciji navedenog objekta.",
+      "button": "Pošalji upit",
+      "sent": "Uspješno poslano"
+    },
+    "Contact_Info": {
+      "contact_person": "kontakt osoba",
+      "mobile": "Mobitel",
+      "email": "Email",
+      "address": "Adresa",
+      "we_speak": "Govorimo"
+    }
+  }
 }

@@ -6,6 +6,8 @@ import "react-date-range/dist/theme/default.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import enGB from "date-fns/locale/en-GB";
 import { FormControl } from "@mui/material";
+import { useLocale } from "next-intl";
+import { getContactData } from "@/lib/contact";
 
 interface CustomRange {
   startDate: Date | undefined;
@@ -26,6 +28,8 @@ function DataRangeComponent() {
   ]);
   const [arrivalDate, setArrivalDate] = useState<string>("");
   const [departureDate, setDepartureDate] = useState<string>("");
+  const localeActive = useLocale();
+  const ContactData = getContactData(localeActive);
 
   const [calendarWidth, setCalendarWidth] = useState<string>("vertical");
 
@@ -109,14 +113,20 @@ function DataRangeComponent() {
           className="text-grey3 border-solid border-2 bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={handleButtonClick}
         >
-          {activateDate ? arrivalDate : <span>Arrival*</span>}
+          {activateDate ? (
+            arrivalDate
+          ) : (
+            <span>{ContactData.data[0].arrival}*</span>
+          )}
           <FaCalendarAlt />
         </button>
         <button
           className="text-grey3 border-solid border-2  bg-white font-Bold font-poppins mb-4 rounded-md justify-between items-center flex w-full py-[8.5px] px-[14px]"
           onClick={() => setActiveDateRange(!activeDateRange)}
         >
-          <span>{activateDate ? departureDate : "Departure*"}</span>
+          <span>
+            {activateDate ? departureDate : ContactData.data[0].departure}
+          </span>
           <FaCalendarAlt />
         </button>
       </div>
