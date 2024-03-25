@@ -58,20 +58,36 @@ const replaceTitlesAndDescriptions = (data: LocationData[], titles: string[], de
 
 // Define the data object
 export const HeadSwiperLibEN: DataObject = {
-  images: replaceTitlesAndDescriptions(imageData, enData.HeaderSwiper.titles, enData.HeaderSwiper.descriptions, enData.HeaderSwiper.button)
+  images: replaceTitlesAndDescriptions(
+    imageData, 
+    enData.HeaderSwiper.titles, 
+    enData.HeaderSwiper.descriptions, 
+    enData.HeaderSwiper.button)
 };
 
 // You can also define a separate object for German translations if needed
 export const HeadSwiperLibDE: DataObject = {
-  images: replaceTitlesAndDescriptions(imageData, deData.HeaderSwiper.titles, deData.HeaderSwiper.descriptions, deData.HeaderSwiper.button)
+  images: replaceTitlesAndDescriptions(
+    imageData, 
+    deData.HeaderSwiper.titles, 
+    deData.HeaderSwiper.descriptions, 
+    deData.HeaderSwiper.button)
 };
 
 export const HeadSwiperLibHR: DataObject = {
-  images: replaceTitlesAndDescriptions(imageData, hrData.HeaderSwiper.titles, hrData.HeaderSwiper.descriptions, hrData.HeaderSwiper.button)
+  images: replaceTitlesAndDescriptions(
+    imageData, 
+    hrData.HeaderSwiper.titles, 
+    hrData.HeaderSwiper.descriptions, 
+    hrData.HeaderSwiper.button)
 };
 
 export const HeadSwiperLibIT: DataObject = {
-  images: replaceTitlesAndDescriptions(imageData, itData.HeaderSwiper.titles, itData.HeaderSwiper.descriptions, itData.HeaderSwiper.button)
+  images: replaceTitlesAndDescriptions(
+    imageData, 
+    itData.HeaderSwiper.titles, 
+    itData.HeaderSwiper.descriptions, 
+    itData.HeaderSwiper.button)
 };
 
 

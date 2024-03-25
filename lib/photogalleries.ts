@@ -1,13 +1,12 @@
-
 type PhotogalleriesData = {
   subtitle?: string;
   title?: string;
   button?: string;
-  };
+};
 
-  type DataObject = {
-    data: PhotogalleriesData[];
-  };
+type DataObject = {
+  data: PhotogalleriesData[];
+};
 
 import enData from "@/messages/en.json";
 import deData from "@/messages/de.json";
@@ -17,31 +16,55 @@ import itData from "@/messages/it.json";
 const createPhotogalleries = (
   subtitle: string,
   title: string,
-  button: string, 
+  button: string
 ): PhotogalleriesData => {
   return {
     subtitle,
     title,
-    button
+    button,
   };
 };
 
 // Define the data object
 export const PhotogalleriesDataEn: DataObject = {
-  data: [createPhotogalleries(enData.Photogalleries.subtitle, enData.Photogalleries.title, enData.Photogalleries.button)],
+  data: [
+    createPhotogalleries(
+      enData.Photogalleries.subtitle,
+      enData.Photogalleries.title,
+      enData.Photogalleries.button
+    ),
+  ],
 };
 
 // You can also define a separate object for German translations if needed
 export const PhotogalleriesDataDE: DataObject = {
-  data: [createPhotogalleries(deData.Photogalleries.subtitle, deData.Photogalleries.title, deData.Photogalleries.button)],
+  data: [
+    createPhotogalleries(
+      deData.Photogalleries.subtitle,
+      deData.Photogalleries.title,
+      deData.Photogalleries.button
+    ),
+  ],
 };
 
 export const PhotogalleriesDataHR: DataObject = {
-  data: [createPhotogalleries(hrData.Photogalleries.subtitle, hrData.Photogalleries.title, hrData.Photogalleries.button)],
+  data: [
+    createPhotogalleries(
+      hrData.Photogalleries.subtitle,
+      hrData.Photogalleries.title,
+      hrData.Photogalleries.button
+    ),
+  ],
 };
 
 export const PhotogalleriesDataIT: DataObject = {
-  data: [createPhotogalleries(itData.Photogalleries.subtitle, itData.Photogalleries.title, itData.Photogalleries.button)],
+  data: [
+    createPhotogalleries(
+      itData.Photogalleries.subtitle,
+      itData.Photogalleries.title,
+      itData.Photogalleries.button
+    ),
+  ],
 };
 
 export const getPhotogalleriesData = (language: string): DataObject => {

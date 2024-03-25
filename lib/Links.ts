@@ -1,66 +1,79 @@
-
 type LinksData = {
   path: string;
-    titles?: string;
-    button?: string;
-  };
+  titles?: string;
+  button?: string;
+};
 
-  type DataObject = {
-    NavData: LinksData[];
-  };
+type DataObject = {
+  NavData: LinksData[];
+};
 
-import enData from '@/messages/en.json';
-import deData from '@/messages/de.json';
-import hrData from '@/messages/hr.json';
-import itData from '@/messages/it.json';
-
+import enData from "@/messages/en.json";
+import deData from "@/messages/de.json";
+import hrData from "@/messages/hr.json";
+import itData from "@/messages/it.json";
 
 const linksData: LinksData[] = [
-  {path: "/villa-panorama"}, 
-  {path: "/pricelist"},
-  {path: "/photogallery"},
-  {path: "/environs"},
-  {path: "/contact"},
+  { path: "/villa-panorama" },
+  { path: "/pricelist" },
+  { path: "/photogallery" },
+  { path: "/environs" },
+  { path: "/contact" },
 
-    // Define other image data similarly
+  // Define other image data similarly
 ];
 
-
-  const replaceTitle = (data: LinksData[], titles: string[], button: string) => {
+const replaceTitle = (data: LinksData[], titles: string[], button: string) => {
   return data.map((link, index) => ({
     ...link,
     titles: titles[index],
-    button: button
+    button: button,
   }));
 };
 
-  // Define the data object
+// Define the data object
 export const NavigationLinksEn: DataObject = {
-  NavData: replaceTitle(linksData, enData.Navigation.navlinks, enData.Navigation.navLinksButton)
+  NavData: replaceTitle(
+    linksData,
+    enData.Navigation.navlinks,
+    enData.Navigation.navLinksButton
+  ),
 };
 
 // You can also define a separate object for German translations if needed
 export const NavigationLinksDE: DataObject = {
-  NavData: replaceTitle(linksData, deData.Navigation.navlinks, deData.Navigation.navLinksButton)
+  NavData: replaceTitle(
+    linksData,
+    deData.Navigation.navlinks,
+    deData.Navigation.navLinksButton
+  ),
 };
 
 export const NavigationLinksHR: DataObject = {
-  NavData: replaceTitle(linksData, hrData.Navigation.navlinks, hrData.Navigation.navLinksButton)
+  NavData: replaceTitle(
+    linksData,
+    hrData.Navigation.navlinks,
+    hrData.Navigation.navLinksButton
+  ),
 };
 
 export const NavigationLinksIT: DataObject = {
-  NavData: replaceTitle(linksData, itData.Navigation.navlinks, itData.Navigation.navLinksButton)
+  NavData: replaceTitle(
+    linksData,
+    itData.Navigation.navlinks,
+    itData.Navigation.navLinksButton
+  ),
 };
 
 export const getNavigationLinks = (language: string): DataObject => {
   switch (language) {
-    case 'en':
+    case "en":
       return NavigationLinksEn;
-    case 'de':
+    case "de":
       return NavigationLinksDE;
-    case 'hr':
+    case "hr":
       return NavigationLinksHR;
-    case 'it':
+    case "it":
       return NavigationLinksIT;
     default:
       // Return default language if specified language is not found

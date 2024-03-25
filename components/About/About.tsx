@@ -27,7 +27,7 @@ function About() {
           <p>{a("guest_access.des")}</p>
         </div>
         <div className="pt-5">
-          <h2 className="font-ExtraBold">What to see and visit:</h2>
+          <h2 className="font-ExtraBold">{a("locations.title")}</h2>
           <ul className="list-disc	p-3 pl-8">
             {LocationsData.locations.map((item, index) => (
               <li key={index} className="mb-2 Visit">

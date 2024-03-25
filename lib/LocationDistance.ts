@@ -1,62 +1,85 @@
 type LocationData = {
   distance: number;
   place?: string;
-  button?: string; 
+  button?: string;
   title?: string;
-  };
+};
 
-  type DataObject = {
-    locations: LocationData[];
-    // You can add more arrays or properties if needed
-  };
+type DataObject = {
+  locations: LocationData[];
+  // You can add more arrays or properties if needed
+};
 
 import enData from "@/messages/en.json";
 import deData from "@/messages/de.json";
 import hrData from "@/messages/hr.json";
 import itData from "@/messages/it.json";
 
- export const Distances: LocationData[] = 
-[
-      { distance: 10 },
-      { distance: 10 },
-      { distance: 8 },
-      { distance: 7 },
-      { distance: 8 },
-      { distance: 8 },
-      { distance: 20 },
-      { distance: 8 },
-      { distance: 7 },
-      { distance: 22 },
-      { distance: 7 },
-      { distance: 22 },
-    ];
+export const Distances: LocationData[] = [
+  { distance: 10 },
+  { distance: 10 },
+  { distance: 8 },
+  { distance: 7 },
+  { distance: 8 },
+  { distance: 8 },
+  { distance: 20 },
+  { distance: 8 },
+  { distance: 7 },
+  { distance: 22 },
+  { distance: 7 },
+  { distance: 22 },
+];
 
-
-  const replaceDistances = (data: LocationData[], place: string[], button: string, title: string) => {
+const replaceDistances = (
+  data: LocationData[],
+  place: string[],
+  button: string,
+  title: string
+) => {
   return data.map((location, index) => ({
     ...location,
     place: place[index],
     button: button,
-    title: title
+    title: title,
   }));
 };
 
 // Define the data object
 export const DistancesDataEn: DataObject = {
-  locations: replaceDistances(Distances, enData.Distances.place, enData.Distances.button, enData.Distances.title),
+  locations: replaceDistances(
+    Distances,
+    enData.Distances.place,
+    enData.Distances.button,
+    enData.Distances.title
+  ),
 };
 
 // You can also define a separate object for German translations if needed
 export const DistancesDataDE: DataObject = {
-  locations: replaceDistances(Distances, deData.Distances.place, deData.Distances.button, deData.Distances.title),
+  locations: replaceDistances(
+    Distances,
+    deData.Distances.place,
+    deData.Distances.button,
+    deData.Distances.title
+  ),
 };
 
 export const DistancesDataHR: DataObject = {
-  locations: replaceDistances(Distances, hrData.Distances.place, hrData.Distances.button, hrData.Distances.title),
+  locations: replaceDistances(
+    Distances,
+    hrData.Distances.place,
+    hrData.Distances.button,
+    hrData.Distances.title
+  ),
 };
 
 export const DistancesDataIT: DataObject = {
-  locations: replaceDistances(Distances, itData.Distances.place, itData.Distances.button, itData.Distances.title),
+  locations: replaceDistances(
+    Distances,
+    itData.Distances.place,
+    itData.Distances.button,
+    itData.Distances.title
+  ),
 };
 
 export const getDistancesData = (language: string): DataObject => {
