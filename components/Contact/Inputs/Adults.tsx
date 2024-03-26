@@ -21,7 +21,8 @@ function Adults() {
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
-        {ContactData.data[0].adults}
+        {/* {ContactData.data[0].adults} */}
+        Adults
       </InputLabel>
       <Select
         required
@@ -31,7 +32,12 @@ function Adults() {
         size="small"
         name="adults"
         value={adults}
-        label={<span className="text-black">{ContactData.data[0].adults}</span>}
+        label={
+          <span className="text-black">
+            {/* {ContactData.data[0].adults} */}
+            Adults
+          </span>
+        }
         onChange={handleChange}
       >
         <MenuItem value={1}>1</MenuItem>

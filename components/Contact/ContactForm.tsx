@@ -140,7 +140,12 @@ function ContactForm() {
             required
           />
         </div>
-        <p className="text-xs mb-4 text-grey3">{ContactData.data[0].des}</p>
+        <p className="text-xs mb-4 text-grey3">
+          {/* {ContactData.data[0].des} */}
+          The content of this form will be sent directly to the e-mail address
+          of the owner of accommodation and is used exclusively for sending
+          inquiries about booking of listed property.
+        </p>
         <div className="px-4">
           <Button
             type="submit"
@@ -153,11 +158,14 @@ function ContactForm() {
           >
             {messageSent ? (
               <Alert severity="success" className="">
-                {ContactData.data[0].sent}
+                {/* {ContactData.data[0].sent} */}
+                Successfully sent
               </Alert>
             ) : (
               <>
-                {ContactData.data[0].button} <IoIosSend className="text-2xl" />
+                {/* {ContactData.data[0].button} */}
+                Send Inquiry
+                <IoIosSend className="text-2xl" />
               </>
             )}
           </Button>

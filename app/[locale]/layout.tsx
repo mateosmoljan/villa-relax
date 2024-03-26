@@ -18,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Villa Panorama",
+  title: "Villa Relax",
   description: "Experience world-class service at Villa Relax",
   icons: {
     icon: "/assets/images/logo.png",

@@ -26,35 +26,6 @@ function HowToReserve() {
           <div className="mb-8 ">
             <h3 className="font-titleBold text-xl mb-4">{t("steps.title2")}</h3>
             <p>{t("steps.des2")}</p>
-            <div className=" mt-8 px-4">
-              <div className="">
-                <h4 className="font-titleBold mb-3">{t("steps.subtitle")}</h4>
-                <ul className="flex flex-col gap-1">
-                  <li>
-                    {t("steps.span")}:{" "}
-                    <span className="font-Bold">Alen Smoljan</span>
-                  </li>
-                  <li>
-                    {t("steps.span2")}:{" "}
-                    <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
-                  </li>
-                  <li>
-                    {t("steps.span3")}:{" "}
-                    <span className="font-Bold">Zagrebačka banka dd</span>
-                  </li>
-                  <li>
-                    <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
-                  </li>
-                  <li>
-                    SWIFT: <span className="font-Bold">*********</span>
-                  </li>
-                  <li>
-                    IBAN (euro):{" "}
-                    <span className="font-Bold">********************</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
         <div className="flex gap-4">

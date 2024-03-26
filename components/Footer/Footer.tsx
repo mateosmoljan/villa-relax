@@ -48,10 +48,10 @@ function Footer() {
             {t("Contact_Us.title")}
           </h2>
           <ul className="space-y-4">
-            <li>Alen Smoljan</li>
-            <li>Tršičani 43, 52215, Vodnjan</li>
-            <li>+(385) 989406130</li>
-            <li>villa.panorama@gmail.com</li>
+            <li>Sandra Smoljan</li>
+            <li>Schiavuzzijev prilaz 36, 52100 Pula</li>
+            <li>+(385) 99 3998032</li>
+            <li>villarelaxinfo@gmail.com</li>
           </ul>
         </div>
       </div>

@@ -10,24 +10,33 @@ function ContactInfo() {
         <div className="ml-4 mb-4">
           <h2 className="mb-4 font-titleBold text-xl">Alen Smoljan</h2>
           <span className="text-sm">
-            ({ContactData.data[0].contact_person})
+            ( {/* {ContactData.data[0].contact_person} */}
+            contact person )
           </span>
         </div>
         <div>
           <ul className="flex flex-col gap-3">
             <li>
-              {ContactData.data[0].address}:{" "}
+              {/* {ContactData.data[0].address} */}
+              Address:{" "}
               <span className="font-Bold">Trsicani 42, 24323 Gajana</span>
             </li>
             <li>
-              {ContactData.data[0].mobile}:{" "}
+              {/* {ContactData.data[0].mobile} */}
+              Mobile:{" "}
               <span className="text-yellow font-Bold">+(385) 0919406130</span>
             </li>
             <li>
-              {ContactData.data[0].email_info}:{" "}
-              <span className="font-Bold text-yellow">alen.s@gmail.com</span>
+              {/* {ContactData.data[0].email_info} */}
+              Email:{" "}
+              <span className="font-Bold text-yellow">
+                villarelaxweb@gmail.com
+              </span>
             </li>
-            <li>{ContactData.data[0].we_speak}:</li>
+            <li>
+              {/* {ContactData.data[0].we_speak} */}
+              We Speak:
+            </li>
             <li className="font-Bold">Croatian, English, German</li>
           </ul>
         </div>

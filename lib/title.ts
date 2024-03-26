@@ -47,7 +47,7 @@ const createTitle = (
 export const TitleDataEn: DataObject = {
   data: [
     createTitle(
-      enData.Titles.Villa_Panorama,
+      enData.Titles.Villa_Relax,
       enData.Titles.Villa_Map_Location,
       enData.Titles.Availability_Calendar,
       enData.Titles.Price_list,

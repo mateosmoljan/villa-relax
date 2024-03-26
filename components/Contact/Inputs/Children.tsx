@@ -21,7 +21,8 @@ function Children() {
   return (
     <FormControl fullWidth>
       <InputLabel id="demo-simple-select-label" className="font-Bold">
-        {ContactData.data[0].children}
+        {/* {ContactData.data[0].children} */}
+        Children
       </InputLabel>
       <Select
         required
