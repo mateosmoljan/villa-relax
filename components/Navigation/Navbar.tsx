@@ -167,7 +167,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     className={`flex `}
-                    onClick={() => setNavActive(() => !navActive)}
+                    onClick={() => setNavActive(false)}
                   >
                     <Link
                       href={item.path}
