@@ -65,7 +65,7 @@ function VillaPanorama() {
                     className="py-2 rounded-md border-[1px] border-black flex items-center lg:flex-row justify-center gap-2"
                   >
                     <span className="tracking-widest uppercase text-xs xl:text-sm ">
-                      {item.title}
+                      {item.title}:
                     </span>
                     <span className="font-Bold text-xs xl:text-sm uppercase tracking-widest">
                       {item.value}
@@ -150,13 +150,13 @@ function VillaPanorama() {
               <h2 className="font-bold text-2xl text-dark_blue_black mb-4">
                 {TitleData.data[0].title2}
               </h2>
-              <div className="h-[400px] rounded-md overflow-hidden">
+              <div className="h-[400px] rounded-md overflow-hidden lg:mb-52">
                 <IFrameMaps />
               </div>
             </div>
           </div>
           <div className="w-full lg:w-1/3">
-            <div className="mx-auto !sticky top-14 lg:ml-2.5 w-full">
+            <div className="mx-auto !sticky top-14 lg:ml-2.5 w-full mb-52 lg:mb-auto">
               <BookYourStayCard />
             </div>
           </div>
