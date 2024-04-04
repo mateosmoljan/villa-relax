@@ -68,7 +68,7 @@ function ContactForm() {
               name="from_name"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "!font-Bold !text-grey3",
+                className: "!font-Bold ",
               }}
               label="Name"
               size="small"
@@ -80,7 +80,7 @@ function ContactForm() {
               id="outlined-required"
               className="w-full bg-white rounded-md"
               InputLabelProps={{
-                className: "!font-Bold !text-grey3",
+                className: "!font-Bold",
               }}
               name="user_email"
               type="email"

@@ -20,20 +20,17 @@ function Adults() {
 
   return (
     <FormControl fullWidth>
-      <InputLabel
-        id="demo-simple-select-label"
-        className="!font-bold !translate-y-2 !translate-x-4"
-      >
+      <InputLabel id="demo-simple-select-label" className="!font-bold">
         Adults
       </InputLabel>
       <Select
         required
         labelId="demo-simple-select-label"
         label="Adults"
-        className="w-full bg-white h-full"
+        className="w-full bg-white "
         id="demo-simple-select"
-        size="small"
         name="adults"
+        size="small"
         value={adults}
         onChange={handleChange}
       >
