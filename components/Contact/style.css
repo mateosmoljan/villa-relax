@@ -1,7 +1,7 @@
  .phone_input .MuiInputBase-root  {
-    @apply !h-[40px] pl-2;
+    @apply !h-[40px] !pl-2;
 }
 
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-    @apply translate-y-2 pl-4;
+    @apply !translate-y-2 !pl-4;
 }
