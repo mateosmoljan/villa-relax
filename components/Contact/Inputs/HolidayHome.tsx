@@ -20,8 +20,11 @@ function HolidayHome() {
 
   return (
     <FormControl fullWidth>
-      <InputLabel id="demo-simple-select-label" className="font-Bold">
-        {ContactData.data[0].home}
+      <InputLabel
+        id="demo-simple-select-label"
+        className="!font-Bold !translate-y-2 !translate-x-4"
+      >
+        Holiday Home
       </InputLabel>
       <Select
         required

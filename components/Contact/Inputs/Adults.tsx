@@ -20,7 +20,10 @@ function Adults() {
 
   return (
     <FormControl fullWidth>
-      <InputLabel id="demo-simple-select-label" className="!font-bold">
+      <InputLabel
+        id="demo-simple-select-label"
+        className="!font-bold !translate-y-2 !translate-x-4"
+      >
         Adults
       </InputLabel>
       <Select

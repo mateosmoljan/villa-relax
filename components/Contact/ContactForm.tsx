@@ -68,7 +68,7 @@ function ContactForm() {
               name="from_name"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "!font-Bold text-grey3",
+                className: "!font-Bold !text-grey3",
               }}
               label="Name"
               size="small"
@@ -80,7 +80,7 @@ function ContactForm() {
               id="outlined-required"
               className="w-full bg-white rounded-md"
               InputLabelProps={{
-                className: "font-Bold text-grey3",
+                className: "!font-Bold !text-grey3",
               }}
               name="user_email"
               type="email"
@@ -128,11 +128,11 @@ function ContactForm() {
         <div className="flex w-full mb-4 px-2 ">
           <TextField
             InputLabelProps={{
-              className: "font-Bold",
+              className: "!font-Bold",
             }}
             id="filled-multiline-static"
             label="Inquiry"
-            className="bg-white w-full"
+            className="bg-white w-full !font-Bold"
             multiline
             rows={5}
             name="message"
