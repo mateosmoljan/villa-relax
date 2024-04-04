@@ -68,7 +68,7 @@ function ContactForm() {
               name="from_name"
               className="w-full bg-white"
               InputLabelProps={{
-                className: "font-Bold text-grey3",
+                className: "!font-Bold text-grey3",
               }}
               label="Name"
               size="small"
