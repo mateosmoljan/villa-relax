@@ -74,5 +74,5 @@
 }
 
 .drawer_custom {
-  --Drawer-verticalSize: " 300px";
+  --Drawer-verticalSize: "300px" !important;
 }
