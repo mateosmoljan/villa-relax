@@ -16,41 +16,62 @@ import image13 from "@/public/assets/images/inside/kat/12.jpg";
 import image14 from "@/public/assets/images/inside/kat/13.jpg";
 import image15 from "@/public/assets/images/inside/kat/14.jpg";
 import image16 from "@/public/assets/images/inside/kat/15.jpg";
-import image17 from "@/public/assets/images/inside/pri/1.jpg";
-import image18 from "@/public/assets/images/inside/pri/2.jpg";
-import image19 from "@/public/assets/images/inside/pri/3.jpg";
-import image20 from "@/public/assets/images/inside/pri/4.jpg";
-import image21 from "@/public/assets/images/inside/pri/5.jpg";
-import image22 from "@/public/assets/images/inside/pri/6.jpg";
-import image23 from "@/public/assets/images/inside/pri/7.jpg";
-import image24 from "@/public/assets/images/inside/pri/8.jpg";
-import image25 from "@/public/assets/images/inside/pri/9.jpg";
-import image26 from "@/public/assets/images/inside/pri/10.jpg";
-import image27 from "@/public/assets/images/inside/pri/11.jpg";
-import image28 from "@/public/assets/images/inside/pri/1.jpg";
-import image29 from "@/public/assets/images/inside/pri/2.jpg";
-import image30 from "@/public/assets/images/inside/pri/3.jpg";
-import image31 from "@/public/assets/images/inside/pri/4.jpg";
-import image32 from "@/public/assets/images/inside/pri/5.jpg";
-import image33 from "@/public/assets/images/inside/pri/6.jpg";
-import image34 from "@/public/assets/images/inside/pri/7.jpg";
+import image17 from "@/public/assets/images/inside/kat/16.jpg";
 
-import image53 from "@/public/assets/images/outside/1.jpg";
-import image54 from "@/public/assets/images/outside/2.jpg";
-import image55 from "@/public/assets/images/outside/3.jpg";
-import image56 from "@/public/assets/images/outside/4.jpg";
-import image57 from "@/public/assets/images/outside/5.jpg";
-import image58 from "@/public/assets/images/outside/6.jpg";
-import image59 from "@/public/assets/images/outside/7.jpg";
-import image60 from "@/public/assets/images/outside/8.jpg";
-import image61 from "@/public/assets/images/outside/9.jpg";
-import image62 from "@/public/assets/images/outside/10.jpg";
-import image63 from "@/public/assets/images/outside/11.jpg";
-import image64 from "@/public/assets/images/outside/12.jpg";
-import image65 from "@/public/assets/images/outside/13.jpg";
-import image66 from "@/public/assets/images/outside/14.jpg";
-import image67 from "@/public/assets/images/outside/15.jpg";
-import image68 from "@/public/assets/images/outside/16.jpg";
+import image18 from "@/public/assets/images/inside/pri/1.jpg";
+import image19 from "@/public/assets/images/inside/pri/2.jpg";
+import image20 from "@/public/assets/images/inside/pri/3.jpg";
+import image21 from "@/public/assets/images/inside/pri/4.jpg";
+import image22 from "@/public/assets/images/inside/pri/5.jpg";
+import image23 from "@/public/assets/images/inside/pri/6.jpg";
+import image24 from "@/public/assets/images/inside/pri/7.jpg";
+import image25 from "@/public/assets/images/inside/pri/8.jpg";
+import image26 from "@/public/assets/images/inside/pri/9.jpg";
+import image27 from "@/public/assets/images/inside/pri/10.jpg";
+import image28 from "@/public/assets/images/inside/pri/11.jpg";
+import image29 from "@/public/assets/images/inside/pri/12.jpg";
+import image30 from "@/public/assets/images/inside/pri/13.jpg";
+
+import image31 from "@/public/assets/images/inside/pri/1.jpg";
+import image32 from "@/public/assets/images/inside/pri/2.jpg";
+import image33 from "@/public/assets/images/inside/pri/3.jpg";
+import image34 from "@/public/assets/images/inside/pri/4.jpg";
+import image35 from "@/public/assets/images/inside/pri/5.jpg";
+import image36 from "@/public/assets/images/inside/pri/6.jpg";
+import image37 from "@/public/assets/images/inside/pri/7.jpg";
+import image38 from "@/public/assets/images/inside/pri/8.jpg";
+import image39 from "@/public/assets/images/inside/pri/9.jpg";
+
+import image40 from "@/public/assets/images/outside/1.jpg";
+import image41 from "@/public/assets/images/outside/2.jpg";
+import image42 from "@/public/assets/images/outside/3.jpg";
+import image43 from "@/public/assets/images/outside/4.jpg";
+import image44 from "@/public/assets/images/outside/5.jpg";
+import image45 from "@/public/assets/images/outside/6.jpg";
+import image46 from "@/public/assets/images/outside/7.jpg";
+import image47 from "@/public/assets/images/outside/8.jpg";
+import image48 from "@/public/assets/images/outside/9.jpg";
+import image49 from "@/public/assets/images/outside/10.jpg";
+import image50 from "@/public/assets/images/outside/11.jpg";
+import image51 from "@/public/assets/images/outside/12.jpg";
+import image52 from "@/public/assets/images/outside/13.jpg";
+import image53 from "@/public/assets/images/outside/14.jpg";
+import image54 from "@/public/assets/images/outside/15.jpg";
+import image55 from "@/public/assets/images/outside/16.jpg";
+import image56 from "@/public/assets/images/outside/17.jpg";
+import image57 from "@/public/assets/images/outside/18.jpg";
+import image58 from "@/public/assets/images/outside/19.jpg";
+import image59 from "@/public/assets/images/outside/20.jpg";
+import image60 from "@/public/assets/images/outside/21.jpg";
+import image61 from "@/public/assets/images/outside/22.jpg";
+import image62 from "@/public/assets/images/outside/23.jpg";
+import image63 from "@/public/assets/images/outside/24.jpg";
+import image64 from "@/public/assets/images/outside/25.jpg";
+import image65 from "@/public/assets/images/outside/26.jpg";
+import image66 from "@/public/assets/images/outside/27.jpg";
+import image67 from "@/public/assets/images/outside/28.jpg";
+import image68 from "@/public/assets/images/outside/29.jpg";
+import image69 from "@/public/assets/images/outside/30.jpg";
 
 type LocationData = {
   src: StaticImageData;
@@ -97,6 +118,24 @@ export const PropertyGalleryLib: DataObject = {
     { src: image32, alt: "Jacuzzi Villa Panorama Istra" },
     { src: image33, alt: "Jacuzzi Villa Panorama Istra" },
     { src: image34, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image35, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image36, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image37, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image38, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image39, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image40, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image41, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image42, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image43, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image44, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image45, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image46, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image47, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image48, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image49, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image50, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image51, alt: "Jacuzzi Villa Panorama Istra" },
+    { src: image52, alt: "Jacuzzi Villa Panorama Istra" },
     { src: image53, alt: "Jacuzzi Archives Panorama Istra" },
     { src: image54, alt: "Jacuzzi Archives Panorama Istra" },
     { src: image55, alt: "Jacuzzi Archives Panorama Istra" },
@@ -113,5 +152,6 @@ export const PropertyGalleryLib: DataObject = {
     { src: image66, alt: "Jacuzzi Archives Panorama Istra" },
     { src: image67, alt: "Jacuzzi Archives Panorama Istra" },
     { src: image68, alt: "Jacuzzi Archives Panorama Istra" },
+    { src: image69, alt: "Jacuzzi Archives Panorama Istra" },
   ],
 };
