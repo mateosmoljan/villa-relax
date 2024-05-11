@@ -27,23 +27,15 @@
   "HeaderSwiper": {
     "titles": [
       "Welcome to Villa Relax - Pula",
-      "Jacuzzi Paradise",
-      "Fireplace Retreat",
       "Modern Design and Spacious Dinning Table",
-      "Stylish Pool Table Retreat",
-      "Welcome Entrance",
-      "Aqua Haven",
-      "Serene Swimming Pool under the Stars"
+      "Fireplace Retreat",
+      "Aqua Haven"
     ],
     "descriptions": [
       "Tranquil Oasis Villa",
-      "Indulge in the ultimate relaxation experience as you unwind in the Jacuzzi",
-      "Cozy haven where crackling flames and warmth embrace you, inviting relaxation and tranquility amidst the gentle glow of flickering embers.",
       "Enjoy cozy gatherings around the generously sized dining table",
-      "Unwind with a game of pool on the sleek pool table",
-      "Elegant entrance that seamlessly blends modern design and welcoming ambiance, inviting you to unwind in style.",
-      "A Modern Retreat with Private Pool, Nestled in Nature's Embrace",
-      "Serene Swimming Pool under the Stars"
+      "Cozy haven where crackling flames and warmth embrace you, inviting relaxation and tranquility amidst the gentle glow of flickering embers.",
+      "A Modern Retreat with Private Pool, Nestled in Nature's Embrace"
     ],
     "button": "Read More"
   },

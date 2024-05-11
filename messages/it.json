@@ -27,23 +27,15 @@
   "HeaderSwiper": {
     "titles": [
       "Benvenuti a Villa Relax - Pula",
-      "Paradiso Jacuzzi",
-      "Ritiro del camino",
-      "Design moderno e ampio tavolo da pranzo",
       "Elegante ritiro con tavolo da biliardo",
-      "Ingresso di benvenuto",
-      "Haven Aqua",
-      "Piscina serena sotto le stelle"
+      "Ritiro del camino",
+      "Haven Aqua"
     ],
     "descriptions": [
       "Oasi tranquilla",
-      "Goditi l'esperienza di relax ultima mentre ti rilassi nella Jacuzzi",
-      "Accogliente rifugio dove fiamme scoppiettanti e calore ti abbracciano, invitando relax e tranquillità nel dolce bagliore di brace fiammeggiante.",
       "Goditi raduni accoglienti intorno al tavolo da pranzo di generose dimensioni",
-      "Rilassati con una partita a biliardo sul moderno tavolo da biliardo",
       "Elegante ingresso che fonde perfettamente design moderno e ambiente accogliente, invitandoti a rilassarti con stile.",
-      "Un rifugio moderno con piscina privata, immerso nell'abbraccio della natura",
-      "Piscina serena sotto le stelle"
+      "Un rifugio moderno con piscina privata, immerso nell'abbraccio della natura"
     ],
     "button": "Leggi di più"
   },

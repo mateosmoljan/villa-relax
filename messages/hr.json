@@ -21,23 +21,15 @@
   "HeaderSwiper": {
     "titles": [
       "Dobrodošli u Vilu Relax - Pula",
-      "Rajski jacuzzi",
-      "Ognjište za bijeg",
       "Moderan dizajn i prostrani blagovaonski stol",
-      "Elegantni stolni nogometni stol",
-      "Dobrodošli ulaz",
-      "Aqua oaza",
-      "Mirni bazen pod zvijezdama"
+      "Ognjište za bijeg",
+      "Aqua oaza"
     ],
     "descriptions": [
       "Tranquil Oasis Vila",
-      "Uživajte u ultimativnom doživljaju opuštanja dok se opuštate u jacuzziju",
-      "Ugodno utočište gdje vam prigušene vatre i toplina pružaju zagrljaj, pozivajući vas na opuštanje i mirnost usred nježnog sjaja plamenih iskri.",
       "Uživajte u ugodnim okupljanjima oko velikog blagovaonskog stola",
-      "Opuštanje uz partiju nogometa na elegantnom stolnom nogometu",
-      "Elegantni ulaz koji besprijekorno spaja moderan dizajn i gostoljubivu atmosferu, pozivajući vas da se opustite sa stilom.",
-      "Moderan odmor s privatnim bazenom, usađen u zagrljaju prirode",
-      "Mirni bazen pod zvijezdama"
+      "Ugodno utočište gdje vam prigušene vatre i toplina pružaju zagrljaj, pozivajući vas na opuštanje i mirnost usred nježnog sjaja plamenih iskri.",
+      "Moderan odmor s privatnim bazenom, usađen u zagrljaju prirode"
     ],
     "button": "Saznajte više"
   },
