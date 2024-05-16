@@ -21,7 +21,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Villa Relax",
   description:
-    "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service.",
+    "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service. ⭐⭐⭐⭐⭐",
   icons: {
     icon: "/assets/images/logo.png",
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Accommodation Villa Relax - Pula",
     description:
-      "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service.",
+      "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service. ⭐⭐⭐⭐⭐",
     url: "https://villarelaxistra.com",
   },
   twitter: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     // site: "@YourTwitterHandle",
     title: "Accommodation Villa Relax - Istria",
     description:
-      "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service.",
+      "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service. ⭐⭐⭐⭐⭐",
     images: [
       {
         url: "https://www.villapanoramaistria.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F27.92c57344.jpg&w=3840&q=75",
