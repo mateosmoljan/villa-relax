@@ -308,5 +308,25 @@
       "address": "Address",
       "we_speak": "We Speak"
     }
+  },
+  "Calendar": {
+    "one": "Siječanj",
+    "two": "Veljača",
+    "three": "Ožujak",
+    "four": "Travanj",
+    "five": "Svibanj",
+    "six": "Lipanj",
+    "seven": "Srpanj",
+    "eight": "Kolovoz",
+    "nine": "Rujan",
+    "ten": "Listopad",
+    "eleven": "Studeni",
+    "twelve": "Prosinac",
+    "booked": "Rezervirano",
+    "checkIn": "Dolazak",
+    "checkOut": "Odlazak",
+    "reset": "Resetiraj",
+    "back": "Natrag",
+    "next": "Dalje"
   }
 }

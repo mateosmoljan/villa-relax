@@ -315,5 +315,25 @@
       "address": "Indirizzo",
       "we_speak": "Parliamo"
     }
+  },
+  "Calendar": {
+    "one": "Gennaio",
+    "two": "Febbraio",
+    "three": "Marzo",
+    "four": "Aprile",
+    "five": "Maggio",
+    "six": "Giugno",
+    "seven": "Luglio",
+    "eight": "Agosto",
+    "nine": "Settembre",
+    "ten": "Ottobre",
+    "eleven": "Novembre",
+    "twelve": "Dicembre",
+    "booked": "Prenotato",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "reset": "Ripristina",
+    "back": "Indietro",
+    "next": "Avanti"
   }
 }
