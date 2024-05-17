@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "www.villarelaxpula.com",
+        destination: "/",
         permanent: true,
         basePath: false,
       },
