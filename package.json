@@ -23,7 +23,7 @@
     "framer-motion": "^10.16.16",
     "hamburger-react": "^2.5.0",
     "mui-tel-input": "^5.1.2",
-    "next": "^14.1.0",
+    "next": "^14.2.3",
     "next-intl": "^3.9.5",
     "react": "^18.2.0",
     "react-date-range": "^2.0.0-alpha.4",
