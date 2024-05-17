@@ -41,12 +41,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     // site: "@YourTwitterHandle",
-    title: "Accommodation Villa Relax - Istria",
+    title: "Accommodation Villa Relax - Pula",
     description:
       "Welcome to Villa Relax, your luxurious accommodation in Pula. Experience breathtaking views, modern amenities, and personalized service. ⭐⭐⭐⭐⭐",
     images: [
       {
-        url: "https://www.villapanoramaistria.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F27.92c57344.jpg&w=3840&q=75",
+        url: "https://www.villarelaxpula.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmain.72f90314.jpg&w=3840&q=75",
         alt: "Villa Relax",
       },
     ],
