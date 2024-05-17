@@ -7,7 +7,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "villarelaxistra.com",
+        source: "/",
         destination: "www.villarelaxpula.com",
         permanent: true,
         basePath: false,
