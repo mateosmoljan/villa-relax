@@ -67,24 +67,35 @@ function DataRangeComponent() {
     return `${day}.${month}.${year}`;
   };
 
-  const disabledDates: Date[] = [
-    new Date("2024-03-12"),
-    new Date("2024-04-15"),
-  ];
+  // const disabledDates: Date[] = [
+  //   new Date("2024-03-12"),
+  //   new Date("2024-04-15"),
+  // ];
 
-  // const disabledDates = (date: Date): boolean => {
-  //   const disabledRanges = [
-  //     { startDate: new Date("2024-03-10"), endDate: new Date("2024-03-15") },
-  //     { startDate: new Date("2024-04-01"), endDate: new Date("2024-04-05") },
-  //   ];
+  const [disabledDateArray, setDisabledDateArray] = useState<Date[]>([]);
 
-  //   for (const range of disabledRanges) {
-  //     if (date >= range.startDate && date <= range.endDate) {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
-  // };
+  const getDisabledDates = (): Date[] => {
+    const disabledRanges = [
+      { startDate: new Date("2024-05-02"), endDate: new Date("2024-07-26") },
+      { startDate: new Date("2024-07-30"), endDate: new Date("2025-02-29") },
+    ];
+
+    const disabledDates: Date[] = [...disabledDateArray]; // Include dynamically added dates
+
+    disabledRanges.forEach((range) => {
+      let currentDate = new Date(range.startDate);
+      while (currentDate <= range.endDate) {
+        disabledDates.push(new Date(currentDate));
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+    });
+
+    return disabledDates;
+  };
+
+  const addDisabledDate = (newDate: Date) => {
+    setDisabledDateArray((prevDates) => [...prevDates, newDate]);
+  };
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -154,7 +165,7 @@ function DataRangeComponent() {
                 calendarWidth === "horizontal" ? "horizontal" : "vertical"
               }
               rangeColors={["#B29600"]}
-              disabledDates={disabledDates}
+              disabledDates={getDisabledDates()}
               dateDisplayFormat="d.M.y"
             />
           </FormControl>
