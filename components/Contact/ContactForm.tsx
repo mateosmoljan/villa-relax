@@ -114,7 +114,7 @@ function ContactForm() {
           </div>
         </div>
 
-        <div className="flex items-end mb-4">
+        <div className="flex mb-4">
           <div className="w-1/2 px-2">
             <Adults />
           </div>

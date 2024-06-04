@@ -20,7 +20,10 @@ function Children() {
 
   return (
     <FormControl fullWidth>
-      <InputLabel id="demo-simple-select-label" className="!font-Bold">
+      <InputLabel
+        id="demo-simple-select-label"
+        className="!font-Bold center-label"
+      >
         Children
       </InputLabel>
       <Select

@@ -114,7 +114,6 @@ function VillaPanorama() {
                     <Image src={item.icon} alt={item.icon_alt} />
                     <li className={`py-4 flex flex-col justify-center`}>
                       {item.titles}
-
                       <span className="text-sm text-grey">{item.des}</span>
                     </li>
                   </div>

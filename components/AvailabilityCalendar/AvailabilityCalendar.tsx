@@ -6,12 +6,22 @@ import "./style.css";
 export const bookings = [
   {
     from: new Date("05-01-2024"),
-    to: new Date("07-27-2024"),
+    to: new Date("09-17-2024"),
     middayCheckout: true,
   },
   {
-    from: new Date("07-29-2024"),
+    from: new Date("11-1-2024"),
     to: new Date("03-01-2025"),
+    middayCheckout: true,
+  },
+  {
+    from: new Date("06-07-2025"),
+    to: new Date("06-15-2025"),
+    middayCheckout: true,
+  },
+  {
+    from: new Date("08-23-2025"),
+    to: new Date("09-6-2025"),
     middayCheckout: true,
   },
 ];
