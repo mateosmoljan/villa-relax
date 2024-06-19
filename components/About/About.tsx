@@ -1,10 +1,9 @@
 import { getLocationsData } from "@/lib/LocationToVisit";
 import { useLocale, useTranslations } from "next-intl";
-import Markdown from "react-markdown";
+import Description from "./Description";
 
 function About() {
   const a = useTranslations("About");
-  const t = useTranslations("Titles");
   const localeActive = useLocale();
   const LocationsData = getLocationsData(localeActive);
 
@@ -12,11 +11,10 @@ function About() {
     <section className="pt-20 Visit" id="about">
       <div className="container">
         <h1 className="flex justify-center font-arbutus text-3xl sm:text-4xl font-bold text-dark_blue_black">
-          {/* {t("homepage_title")} */}
           Villa Relax - Pula
         </h1>
         <div className="pt-10">
-          <Markdown>{a("des")}</Markdown>
+          <Description />
           <br />
           <h2 className="font-ExtraBold text-lg">{a("guest_access.title")}</h2>
           <p>{a("guest_access.des")}</p>
