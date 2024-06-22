@@ -58,6 +58,8 @@ function TouristSwiper() {
                 <Image
                   src={image.src}
                   alt={image.alt}
+                  width={512}
+                  height={342}
                   placeholder="blur"
                   className="object-cover  h-full w-full rounded-md"
                   loading="lazy"

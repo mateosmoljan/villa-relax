@@ -108,9 +108,11 @@ function Gallery({ initIndex, library }: Props) {
                     <Image
                       src={image.src}
                       alt={image.alt}
+                      width={960}
+                      height={540}
                       placeholder="blur"
+                      priority
                       className="object-contain object-center h-[300px] sm:h-[750px] sm:min-h-[500px] sm:min-w-[700px] min-w-full m-auto"
-                      loading="lazy"
                     />
                   </div>
                 </div>

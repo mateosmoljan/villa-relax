@@ -72,6 +72,7 @@ export default function PropertyGallery() {
                       width={748}
                       height={470}
                       placeholder="blur"
+                      priority
                       className="object-cover block rounded-md max-w-full aspect-[748/470]"
                       onClick={() => handleImageClick(index)}
                     />
