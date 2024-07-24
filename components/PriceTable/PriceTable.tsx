@@ -18,13 +18,13 @@ function createData(
 }
 
 const rows = [
-  createData("01.03. - 31.03.", 1000, 16, 4),
-  createData("01.04. - 30.04.", 1120, 16, 4),
-  createData("01.05. - 31.05.", 1200, 16, 4),
-  createData("01.06. - 30.06.", 2000, 16, 4),
-  createData("01.07. - 31.08.", 4800, 16, 4),
-  createData("01.09. - 30.09.", 2000, 16, 4),
-  createData("01.10. - 31.10.", 1000, 16, 4),
+  createData("01.03. - 31.03.", 250, 16, 3),
+  createData("01.04. - 30.04.", 280, 16, 3),
+  createData("01.05. - 31.05.", 300, 16, 3),
+  createData("01.06. - 30.06.", 500, 16, 3),
+  createData("01.07. - 31.08.", 1100, 16, 3),
+  createData("01.09. - 30.09.", 500, 16, 3),
+  createData("01.10. - 31.10.", 250, 16, 3),
 ];
 
 export default function PriceTable() {
