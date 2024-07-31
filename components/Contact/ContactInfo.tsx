@@ -23,11 +23,11 @@ function ContactInfo() {
                 Schiavuzzijev prilaz 36, 52100 Pula
               </span>
             </li>
-            <li>
-              {/* {ContactData.data[0].mobile} */}
-              Mobile:{" "}
+            {/* <li> */}
+            {/* {ContactData.data[0].mobile} */}
+            {/* Mobile:{" "}
               <span className="text-yellow font-Bold">+(385) 98 263 136</span>
-            </li>
+            </li> */}
             <li>
               {/* {ContactData.data[0].email_info} */}
               Email:{" "}
