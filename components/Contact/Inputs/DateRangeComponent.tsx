@@ -78,6 +78,8 @@ function DataRangeComponent() {
     const disabledRanges = [
       { startDate: new Date("2024-05-02"), endDate: new Date("2024-09-16") },
       { startDate: new Date("2024-09-26"), endDate: new Date("2024-09-28") },
+      { startDate: new Date("2024-11-08"), endDate: new Date("2024-11-09") },
+      { startDate: new Date("2025-05-01"), endDate: new Date("2025-05-03") },
       { startDate: new Date("2025-05-25"), endDate: new Date("2025-07-01") },
       { startDate: new Date("2025-07-25"), endDate: new Date("2025-08-03") },
       { startDate: new Date("2025-08-24"), endDate: new Date("2025-09-05") },
