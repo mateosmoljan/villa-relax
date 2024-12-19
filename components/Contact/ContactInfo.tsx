@@ -32,7 +32,7 @@ function ContactInfo() {
               {/* {ContactData.data[0].email_info} */}
               Email:{" "}
               <span className="font-Bold text-yellow">
-                villarelaxinfo@gmail.com
+                info@villarelaxpula.com
               </span>
             </li>
             <li>

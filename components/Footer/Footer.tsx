@@ -59,7 +59,7 @@ function Footer() {
             <li>Sandra Smoljan</li>
             <li>Schiavuzzijev prilaz 36, 52100 Pula</li>
             {/* <li>+(385) 98 263 136</li> */}
-            <li>villarelaxinfo@gmail.com</li>
+            <li>info@villarelaxpula.com</li>
           </ul>
         </div>
       </div>
