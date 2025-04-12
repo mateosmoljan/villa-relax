@@ -37,8 +37,8 @@ function ContactForm() {
     }, 10000);
     if (form.current) {
       emailjs
-        .sendForm("service_q0fv0h8", "template_bla7yqh", form.current, {
-          publicKey: "QslYBLVV8d39BKjwl",
+        .sendForm("service_p2iywvo", "template_keliezd", form.current, {
+          publicKey: "6dFhP40mDaFV_lKRM",
         })
         .then(
           () => {
