@@ -22,13 +22,13 @@ const rows = [
   createData("01.04. - 30.04.", 250, 16, 3),
   createData("01.05. - 31.05.", 320, 16, 3),
   createData("01.06. - 30.06.", 550, 16, 3),
-  createData("01.07. - 31.08.", 760, 16, 3),
+  createData("01.07. - 31.08.", 950, 16, 3),
   createData("01.09. - 30.09.", 420, 16, 3),
   createData("01.10. - 31.10.", 360, 16, 3),
   createData("01.11. - 30.11.", 220, 16, 3),
   createData("01.12. - 21.12.", 450, 16, 3),
   createData("22.12. - 29.12.", 500, 16, 3),
-  createData("30.12. - 01.01.", 1200, 16, 3),
+  createData("30.12. - 01.01.", 1000, 16, 3),
 ];
 
 export default function PriceTable() {
