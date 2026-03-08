@@ -7,6 +7,16 @@ import SendMessage from "@/components/SendMessage/SendMessage";
 import TouristGuide from "@/components/TouristGuide/TouristGuide";
 import React from "react";
 import NavPath from "@/components/NavPath/NavPath";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return buildPageMetadata(locale, "/");
+}
 
 function Home() {
   return (

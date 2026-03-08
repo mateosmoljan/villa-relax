@@ -5,6 +5,16 @@ import { getEnvironsData } from "@/lib/environs";
 import { getLocationsData } from "@/lib/LocationToVisit";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return buildPageMetadata(locale, "/environs");
+}
 
 function Environs() {
   const localeActive = useLocale();

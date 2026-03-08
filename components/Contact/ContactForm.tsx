@@ -1,11 +1,4 @@
 "use client";
-import {
-  Alert,
-  Button,
-  FormControl,
-  InputLabel,
-  TextField,
-} from "@mui/material";
 import React, { FormEvent, useRef, useState } from "react";
 import HolidayHome from "./Inputs/HolidayHome";
 import Adults from "./Inputs/Adults";
@@ -13,28 +6,21 @@ import Children from "./Inputs/Children";
 import { IoIosSend } from "react-icons/io";
 import DataRangeComponent from "./Inputs/DateRangeComponent";
 import emailjs from "@emailjs/browser";
-import { MuiTelInput } from "mui-tel-input";
 import "./style.css";
-import { useLocale } from "next-intl";
-import { getContactData } from "@/lib/contact";
 
 function ContactForm() {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
   const [messageSent, setMessageSent] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
-  const [value, setValue] = React.useState("");
-  const localeActive = useLocale();
-  const ContactData = getContactData(localeActive);
+  const [phone, setPhone] = useState("");
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     setMessageSent(true);
 
     setTimeout(() => {
       setMessageSent(false);
     }, 10000);
+
     if (form.current) {
       emailjs
         .sendForm("service_p2iywvo", "template_keliezd", form.current, {
@@ -42,9 +28,8 @@ function ContactForm() {
         })
         .then(
           () => {
-            console.log("SUCCESS!");
-            setEmail("");
-            setValue("");
+            setPhone("");
+            form.current?.reset();
           },
           (error) => {
             console.log("FAILED...", error.text);
@@ -53,60 +38,49 @@ function ContactForm() {
     }
   };
 
-  const handleChange = (newValue: string) => {
-    setValue(newValue);
-  };
-
   return (
     <div className="rounded-md px-6 py-8 custom_border shadow-md bg-gray-100">
       <form ref={form} onSubmit={sendEmail} className="w-full">
         <div className="flex flex-col sm:flex-row w-full items-end">
           <div className="w-full sm:w-1/2 mb-4 px-2">
-            <TextField
+            <label htmlFor="from_name" className="block mb-1 text-sm font-Bold text-grey3">
+              Name
+            </label>
+            <input
               required
-              id="outlined-required"
+              id="from_name"
               name="from_name"
-              className="w-full bg-white"
-              InputLabelProps={{
-                className: "!font-Bold ",
-              }}
-              label="Name"
-              size="small"
+              className="w-full bg-white border border-gray-300 rounded-md px-3 py-[9px]"
+              type="text"
             />
           </div>
           <div className="w-full sm:w-1/2 mb-4 px-2">
-            <TextField
+            <label htmlFor="user_email" className="block mb-1 text-sm font-Bold text-grey3">
+              Email
+            </label>
+            <input
               required
-              id="outlined-required"
-              className="w-full bg-white rounded-md"
-              InputLabelProps={{
-                className: "!font-Bold",
-              }}
+              id="user_email"
+              className="w-full bg-white border border-gray-300 rounded-md px-3 py-[9px]"
               name="user_email"
               type="email"
-              label="Email:"
-              size="small"
-              style={{
-                border: isValidEmail ? "" : "1px solid red",
-              }}
             />
-            {!isValidEmail && (
-              <p style={{ color: "red" }}>Please enter a valid email address</p>
-            )}
           </div>
         </div>
+
         <div className="flex flex-col sm:flex-row w-full items-end">
           <div className="w-full sm:w-1/2 px-2 mb-4 phone_input">
-            <InputLabel id="outlined-required" className="font-Bold">
-              {ContactData.data[0].phone}
-            </InputLabel>
-            <MuiTelInput
-              id="outlined-required"
-              value={value}
+            <label htmlFor="phone" className="block mb-1 text-sm font-Bold text-grey3">
+              Phone
+            </label>
+            <input
               required
-              onChange={handleChange}
-              className="w-full bg-white rounded-md h-[40px]"
-              defaultCountry="US"
+              id="phone"
+              type="tel"
+              name="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full bg-white border border-gray-300 rounded-md px-3 py-[9px] h-[40px]"
             />
           </div>
           <div className="w-full sm:w-1/2 mb-4 px-2">
@@ -122,53 +96,46 @@ function ContactForm() {
             <Children />
           </div>
         </div>
-        <div>
-          <DataRangeComponent />
-        </div>
+
+        <DataRangeComponent />
+
         <div className="flex w-full mb-4 px-2 ">
-          <TextField
-            InputLabelProps={{
-              className: "!font-Bold",
-            }}
-            id="filled-multiline-static"
-            label="Inquiry"
-            className="bg-white w-full !font-Bold"
-            multiline
-            rows={5}
-            name="message"
-            variant="outlined"
-            required
-          />
+          <div className="w-full">
+            <label htmlFor="message" className="block mb-1 text-sm font-Bold text-grey3">
+              Inquiry
+            </label>
+            <textarea
+              id="message"
+              className="bg-white w-full border border-gray-300 rounded-md px-3 py-2"
+              rows={5}
+              name="message"
+              required
+            />
+          </div>
         </div>
+
         <p className="text-xs mb-4 text-grey3">
-          {/* {ContactData.data[0].des} */}
           The content of this form will be sent directly to the e-mail address
           of the owner of accommodation and is used exclusively for sending
           inquiries about booking of listed property.
         </p>
+
         <div className="px-4">
-          <Button
+          <button
             type="submit"
-            variant="contained"
             className={`${
-              messageSent
-                ? "bg-[#EDF7ED] hover:bg-[#EDF7ED]"
-                : "!bg-yellow hover:bg-yellow"
-            } w-full tracking-widest text-base font-Bold py-3`}
+              messageSent ? "bg-[#EDF7ED] hover:bg-[#EDF7ED] text-green-700" : "!bg-yellow hover:bg-yellow text-white"
+            } w-full tracking-widest text-base font-Bold py-3 rounded-md flex items-center justify-center gap-2`}
           >
             {messageSent ? (
-              <Alert severity="success" className="">
-                {/* {ContactData.data[0].sent} */}
-                Successfully sent
-              </Alert>
+              <span>Successfully sent</span>
             ) : (
               <>
-                {/* {ContactData.data[0].button} */}
                 Send Inquiry
                 <IoIosSend className="text-2xl" />
               </>
             )}
-          </Button>
+          </button>
         </div>
       </form>
     </div>

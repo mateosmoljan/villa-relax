@@ -40,15 +40,16 @@ export default function HeadSwiper() {
           speed={900}
         >
           {headSwiperLib.images.map((image, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex relative items-center justify-center h-full w-full">
+            <SwiperSlide key={index} className="!h-screen">
+              <div className="relative h-screen w-full flex items-center justify-center">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   width={1920}
                   height={1080}
+                  sizes="100vw"
                   placeholder="blur"
-                  priority
+                  priority={index === 0}
                   className="object-cover block h-screen w-full"
                 />
                 <div className="left-1/20 right-1/20 md:left-auto md:right-auto md:mx-0 md:max-w-2xl z-20 absolute bottom-8 flex items-center justify-center flex-col bg-black bg-opacity-60 rounded-md p-8 gap-3">

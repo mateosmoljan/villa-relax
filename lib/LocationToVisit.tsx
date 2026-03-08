@@ -1,13 +1,12 @@
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+import React from "react";
 
 type LocationToVisitData = {
-  placeToVisit: ReactJSXElement;
+  placeToVisit: React.ReactNode;
   des?: string;
 };
 
 type DataObject = {
   locations: LocationToVisitData[];
-  // You can add more arrays or properties if needed
 };
 
 import enData from "@/messages/en.json";
@@ -54,7 +53,12 @@ export const LocationToVisit: LocationToVisitData[] = [
   },
   {
     placeToVisit: (
-      <a href="https://aquarium.hr/" target="_blank" rel="noopener noreferrer" className="text-yellow">
+      <a
+        href="https://aquarium.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-yellow"
+      >
         aquarium.hr
       </a>
     ),
@@ -80,12 +84,10 @@ const replaceDes = (data: LocationToVisitData[], des: string[]) => {
   }));
 };
 
-// Define the data object
 export const LocationsDataEn: DataObject = {
   locations: replaceDes(LocationToVisit, enData.About.locations.des),
 };
 
-// You can also define a separate object for German translations if needed
 export const LocationsDataDE: DataObject = {
   locations: replaceDes(LocationToVisit, deData.About.locations.des),
 };
@@ -109,7 +111,6 @@ export const getLocationsData = (language: string): DataObject => {
     case "it":
       return LocationsDataIT;
     default:
-      // Return default language if specified language is not found
       return LocationsDataEn;
   }
 };

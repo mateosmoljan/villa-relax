@@ -68,6 +68,7 @@ function FourGallery({ mapButton, range }: Props) {
                       src={image.src}
                       alt={image.alt}
                       placeholder="blur"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                       className="relative cursor-pointer object-cover h-full rounded-md block w-full hover:opacity-90 aspect-video md:aspect-square"
                       onClick={() =>
                         handleImageClick(index + (range?.start || 0))

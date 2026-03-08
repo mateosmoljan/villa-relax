@@ -9,6 +9,16 @@ import { getPaymentConditionsData } from "@/lib/paymentConditions";
 import { getPricelistData } from "@/lib/pricelist";
 import { getTitleData } from "@/lib/title";
 import { useLocale, useTranslations } from "next-intl";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return buildPageMetadata(locale, "/pricelist");
+}
 
 function Pricelist() {
   const localeActive = useLocale();
@@ -21,9 +31,9 @@ function Pricelist() {
       <NavPath />
       <div className="">
         <div className="mt-12 pb-28 container">
-          <h2 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
+          <h1 className="font-ExtraBold text-center text-4xl text-dark_blue_black mb-12 tracking-wider">
             {TitleData.data[0].title4}
-          </h2>
+          </h1>
           <PriceTable />
           <p className="text-grey1 text-sm mt-4">
             {PricelistData.data[0].subtitle}

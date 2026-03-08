@@ -5,7 +5,6 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import enGB from "date-fns/locale/en-GB";
-import { FormControl } from "@mui/material";
 import { useLocale } from "next-intl";
 import { getContactData } from "@/lib/contact";
 
@@ -151,7 +150,7 @@ function DataRangeComponent() {
           ref={dateRangeRef}
           className="absolute border-solid border-2 border-grey3 z-20"
         >
-          <FormControl required>
+          <div>
             <DateRange
               editableDateInputs={true}
               onChange={(item) => setState([item.selection as CustomRange])}
@@ -167,7 +166,7 @@ function DataRangeComponent() {
               disabledDates={getDisabledDates()}
               dateDisplayFormat="d.M.y"
             />
-          </FormControl>
+          </div>
         </div>
       )}
       <div>

@@ -1,58 +1,31 @@
-import { getContactData } from "@/lib/contact";
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
-import { useLocale } from "next-intl";
 import React from "react";
 
 function Children() {
   const [children, setChildren] = React.useState("");
-  const localeActive = useLocale();
-  const ContactData = getContactData(localeActive);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setChildren(event.target.value as string);
-  };
 
   return (
-    <FormControl fullWidth>
-      <InputLabel
-        id="demo-simple-select-label"
-        className="!font-Bold center-label"
-      >
+    <div className="w-full">
+      <label htmlFor="children" className="block mb-1 text-sm font-Bold text-grey3">
         Children
-      </InputLabel>
-      <Select
+      </label>
+      <select
         required
-        labelId="demo-simple-select-label"
-        className="w-full bg-white label:text-grey3"
-        id="demo-simple-select"
-        size="small"
+        id="children"
         name="children"
         value={children}
-        label="Children"
-        onChange={handleChange}
+        onChange={(event) => setChildren(event.target.value)}
+        className="w-full bg-white border border-gray-300 rounded-md px-3 py-[9px] text-sm font-Bold text-grey3"
       >
-        <MenuItem value={1}>0</MenuItem>
-        <MenuItem value={2}>1</MenuItem>
-        <MenuItem value={3}>2</MenuItem>
-        <MenuItem value={4}>3</MenuItem>
-        <MenuItem value={5}>4</MenuItem>
-        <MenuItem value={6}>5</MenuItem>
-        <MenuItem value={7}>6</MenuItem>
-        <MenuItem value={8}>7</MenuItem>
-        <MenuItem value={9}>8</MenuItem>
-        <MenuItem value={10}>9</MenuItem>
-        <MenuItem value={11}>10</MenuItem>
-        <MenuItem value={12}>11</MenuItem>
-        <MenuItem value={13}>12</MenuItem>
-        <MenuItem value={14}>13</MenuItem>
-      </Select>
-    </FormControl>
+        <option value="" disabled>
+          Children
+        </option>
+        {Array.from({ length: 14 }, (_, i) => i).map((num) => (
+          <option key={num} value={num}>
+            {num}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 }
 
