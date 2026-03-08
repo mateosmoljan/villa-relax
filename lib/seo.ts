@@ -142,21 +142,14 @@ export function buildPageMetadata(locale: string, path: keyof typeof pageCopy): 
   };
 }
 
-export function getLodgingBusinessJsonLd(locale: string) {
-  const safeLocale = (supportedLocales.includes(locale as Locale)
-    ? locale
-    : "en") as Locale;
-
+export function getLodgingBusinessJsonLd(_locale: string) {
   return {
     "@context": "https://schema.org",
     "@type": "VacationRental",
     name: "Villa Relax",
-    description: localeContent[safeLocale].siteDescription,
-    image: [`${SITE_URL}${HERO_IMAGE}`],
-    url: `${SITE_URL}/${safeLocale}`,
-    telephone: "+38598898959",
-    email: "bookings@villarelaxpula.com",
-    numberOfRooms: 6,
+    description: "Modern holiday villa in Pula, 900m from sea. 6 bedrooms, pool, jacuzzi, elevator. Sleeps 16.",
+    url: "https://www.villarelaxpula.com",
+    image: `${SITE_URL}${HERO_IMAGE}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Pula",
@@ -168,6 +161,13 @@ export function getLodgingBusinessJsonLd(locale: string) {
       latitude: 44.8666,
       longitude: 13.8496,
     },
+    numberOfRooms: 6,
+    occupancy: {
+      "@type": "QuantitativeValue",
+      maxValue: 16,
+    },
     amenityFeature: amenityFeature.map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
+    petsAllowed: false,
+    smokingAllowed: false,
   };
 }

@@ -23,10 +23,10 @@ import hrData from "@/messages/hr.json";
 import itData from "@/messages/it.json";
 
 const imageData: LocationData[] = [
-  { src: one, alt: "Villa Relax swimming pool in Pula, Istria" },
-  { src: two, alt: "Villa Relax dining area in Pula, Istria" },
-  { src: three, alt: "Villa Relax fireplace lounge in Pula, Istria" },
-  { src: four, alt: "Villa Relax outdoor terrace in Pula, Istria" },
+  { src: one, alt: "Villa Relax modern exterior with pool in Pula" },
+  { src: two, alt: "Villa Relax spacious dining room" },
+  { src: three, alt: "Villa Relax fireplace lounge area" },
+  { src: four, alt: "Villa Relax private pool near Verudela beach, Pula" },
 ];
 
 const replaceTitlesAndDescriptions = (

@@ -3,7 +3,7 @@ import HeadSwiper from "@/components/HeadSwiper/HeadSwiper";
 import SendMessage from "@/components/SendMessage/SendMessage";
 import React from "react";
 import NavPath from "@/components/NavPath/NavPath";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, getLodgingBusinessJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
@@ -35,11 +35,15 @@ export async function generateMetadata({
   return buildPageMetadata(locale, "/");
 }
 
-function Home() {
+function Home({ params: { locale } }: { params: { locale: string } }) {
+  const jsonLd = getLodgingBusinessJsonLd(locale);
+
   return (
     <div>
       <HeadSwiper />
       <main>
+        <h1 className="sr-only">Villa Relax</h1>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <NavPath homePage={true} />
         <About />
         <Distances />
