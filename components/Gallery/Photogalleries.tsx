@@ -1,10 +1,11 @@
 "use client";
 import { createContext, useContext, useState } from "react";
+import dynamic from "next/dynamic";
 import { TfiGallery } from "react-icons/tfi";
 import { Link } from "@/navigation";
 import { PropertyGalleryLib } from "@/lib/property_gallery";
 import PhotogalleriesImages from "./PhotogalleriesImages";
-import Gallery from "./Gallery";
+const Gallery = dynamic(() => import("./Gallery"), { ssr: false });
 import { getPhotogalleriesData } from "@/lib/photogalleries";
 import { useLocale } from "next-intl";
 

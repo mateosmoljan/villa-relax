@@ -1,8 +1,6 @@
-"use client";
-
 import IFrameMaps from "@/components/About/iFrameMaps";
 import BookYourStayCard from "@/components/BookYourStayCard/BookYourStayCard";
-import FeaturesComponent from "@/components/Features/features";
+import FeaturesTrigger from "@/components/Features/FeaturesTrigger";
 import NavPath from "@/components/NavPath/NavPath";
 import PaymentConditions from "@/components/PaymentConditions/PaymentConditions";
 import PriceTable from "@/components/PriceTable/PriceTable";
@@ -14,28 +12,18 @@ import { getPaymentConditionsData } from "@/lib/paymentConditions";
 import { getPricelistData } from "@/lib/pricelist";
 import { getTitleData } from "@/lib/title";
 import { getVilla_DescriptionData } from "@/lib/Villa_Description";
-import { useLocale } from "next-intl";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Markdown from "react-markdown";
 
-export default function VillaRelaxClient() {
-  const [showFeatures, setShowFeatures] = useState<boolean>(false);
-  const localeActive = useLocale();
-  const TitleData = getTitleData(localeActive);
-  const CategorizationData = getCategorizationData(localeActive);
-  const Villa_DescriptionData = getVilla_DescriptionData(localeActive);
-  const FeaturesData = getFeaturesData(localeActive);
-  const FeaturesTitleData = getFeaturesTitleData(localeActive);
-  const PricelistData = getPricelistData(localeActive);
-  const PaymentConditionsData = getPaymentConditionsData(localeActive);
-
-  useEffect(() => {
-    document.body.style.overflow = showFeatures ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [showFeatures]);
+export default function VillaRelaxClient({ locale }: { locale: string }) {
+  const TitleData = getTitleData(locale);
+  const CategorizationData = getCategorizationData(locale);
+  const Villa_DescriptionData = getVilla_DescriptionData(locale);
+  const FeaturesData = getFeaturesData(locale);
+  const FeaturesTitleData = getFeaturesTitleData(locale);
+  const PricelistData = getPricelistData(locale);
+  const PaymentConditionsData = getPaymentConditionsData(locale);
 
   return (
     <section className="pt-16 md:pt-14">
@@ -94,9 +82,7 @@ export default function VillaRelaxClient() {
                   <div
                     key={index}
                     className={`flex gap-3 items-center ${
-                      index != 4 && index != 5
-                        ? "border-b-[1px] border-[#e5e7eb]"
-                        : ""
+                      index != 4 && index != 5 ? "border-b-[1px] border-[#e5e7eb]" : ""
                     }`}
                   >
                     <Image src={item.icon} alt={item.icon_alt} />
@@ -107,10 +93,7 @@ export default function VillaRelaxClient() {
                   </div>
                 ))}
               </ul>
-              <button className="btn-2 mt-3" onClick={() => setShowFeatures(true)}>
-                {FeaturesTitleData.data[0].button}
-              </button>
-              {showFeatures && <FeaturesComponent handleClose={() => setShowFeatures(false)} />}
+              <FeaturesTrigger buttonLabel={FeaturesTitleData.data[0].button ?? "View all features"} />
             </div>
             <hr />
             <div className="py-10">

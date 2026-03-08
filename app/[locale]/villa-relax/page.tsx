@@ -10,6 +10,10 @@ export async function generateMetadata({
   return buildPageMetadata(locale, "/villa-relax");
 }
 
-export default function VillaRelaxPage() {
-  return <VillaRelaxClient />;
+export default function VillaRelaxPage({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  return <VillaRelaxClient locale={locale} />;
 }

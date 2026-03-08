@@ -1,14 +1,31 @@
 import About from "@/components/About/About";
-import Acommodation from "@/components/Accommodations/Accommodation";
-import Distances from "@/components/About/Distances";
 import HeadSwiper from "@/components/HeadSwiper/HeadSwiper";
-import Photogalleries from "@/components/Gallery/Photogalleries";
 import SendMessage from "@/components/SendMessage/SendMessage";
-import TouristGuide from "@/components/TouristGuide/TouristGuide";
 import React from "react";
 import NavPath from "@/components/NavPath/NavPath";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const Distances = dynamic(() => import("@/components/About/Distances"), {
+  ssr: false,
+  loading: () => <section className="py-10" />,
+});
+
+const Acommodation = dynamic(() => import("@/components/Accommodations/Accommodation"), {
+  ssr: false,
+  loading: () => <section className="py-10 bg-gray-100" />,
+});
+
+const Photogalleries = dynamic(() => import("@/components/Gallery/Photogalleries"), {
+  ssr: false,
+  loading: () => <section className="py-10" />,
+});
+
+const TouristGuide = dynamic(() => import("@/components/TouristGuide/TouristGuide"), {
+  ssr: false,
+  loading: () => <section className="py-10 bg-gray-100" />,
+});
 
 export async function generateMetadata({
   params: { locale },

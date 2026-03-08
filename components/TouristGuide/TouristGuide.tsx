@@ -18,7 +18,7 @@ function TouristGuide() {
               {PhotogalleriesData.data[0].title}
             </h1>
           </div>
-          <TouristSwiper />
+          <TouristSwiper items={PhotogalleriesData.data} />
         </div>
       </section>
     </>

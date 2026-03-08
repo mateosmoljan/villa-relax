@@ -1,18 +1,17 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { DateRange } from "react-date-range";
-import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
 import { FaCalendarAlt } from "react-icons/fa";
-import enGB from "date-fns/locale/en-GB";
-import { useLocale } from "next-intl";
-import { getContactData } from "@/lib/contact";
+import dynamic from "next/dynamic";
 
 interface CustomRange {
   startDate: Date | undefined;
   endDate: Date | undefined;
   key: string | undefined;
 }
+
+const DateRangeCalendar = dynamic(() => import("./DateRangeCalendar"), {
+  ssr: false,
+});
 
 function DataRangeComponent() {
   const dateRangeRef = useRef<HTMLDivElement>(null);
@@ -27,8 +26,6 @@ function DataRangeComponent() {
   ]);
   const [arrivalDate, setArrivalDate] = useState<string>("");
   const [departureDate, setDepartureDate] = useState<string>("");
-  const localeActive = useLocale();
-  const ContactData = getContactData(localeActive);
 
   const [calendarWidth, setCalendarWidth] = useState<string>("vertical");
 
@@ -91,10 +88,6 @@ function DataRangeComponent() {
     return disabledDates;
   };
 
-  const addDisabledDate = (newDate: Date) => {
-    setDisabledDateArray((prevDates) => [...prevDates, newDate]);
-  };
-
   useEffect(() => {
     const width = window.innerWidth;
     if (width > 640) {
@@ -151,20 +144,11 @@ function DataRangeComponent() {
           className="absolute border-solid border-2 border-grey3 z-20"
         >
           <div>
-            <DateRange
-              editableDateInputs={true}
-              onChange={(item) => setState([item.selection as CustomRange])}
-              moveRangeOnFirstSelection={false}
-              ranges={state}
-              className="relative bg-white z-20 "
-              months={2}
-              locale={enGB}
-              direction={
-                calendarWidth === "horizontal" ? "horizontal" : "vertical"
-              }
-              rangeColors={["#B29600"]}
+            <DateRangeCalendar
+              state={state}
+              setState={setState}
+              calendarWidth={calendarWidth}
               disabledDates={getDisabledDates()}
-              dateDisplayFormat="d.M.y"
             />
           </div>
         </div>
