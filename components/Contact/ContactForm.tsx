@@ -11,7 +11,6 @@ import "./style.css";
 function ContactForm() {
   const form = useRef<HTMLFormElement>(null);
   const [messageSent, setMessageSent] = useState<boolean>(false);
-  const [phone, setPhone] = useState("");
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,7 +27,6 @@ function ContactForm() {
         })
         .then(
           () => {
-            setPhone("");
             form.current?.reset();
           },
           (error) => {
@@ -69,21 +67,7 @@ function ContactForm() {
         </div>
 
         <div className="flex flex-col sm:flex-row w-full items-end">
-          <div className="w-full sm:w-1/2 px-2 mb-4 phone_input">
-            <label htmlFor="phone" className="block mb-1 text-sm font-Bold text-grey3">
-              Phone
-            </label>
-            <input
-              required
-              id="phone"
-              type="tel"
-              name="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full bg-white border border-gray-300 rounded-md px-3 py-[9px] h-[40px]"
-            />
-          </div>
-          <div className="w-full sm:w-1/2 mb-4 px-2">
+          <div className="w-full mb-4 px-2">
             <HolidayHome />
           </div>
         </div>
