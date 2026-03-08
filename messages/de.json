@@ -23,30 +23,24 @@
     ],
     "navLinksButton": "Buchen"
   },
-
   "HeaderSwiper": {
     "titles": [
-      "Willkommen in der Villa Relax - Pula",
-      "Modernes Design und geräumiger Esstisch",
-      "Kamin-Rückzugsort",
-      "Aqua-Himmel"
+      "Villa Relax — Moderne Villa in Pula, 900m vom Meer",
+      "Privater Pool mit Kinderbereich & Hydromassage",
+      "6 Schlafzimmer · Aufzug · Nahe Verudela-Strand",
+      "Zu Fuß zu Cafés, Shops & dem antiken Zentrum von Pula"
     ],
     "descriptions": [
-      "Ruhige Oase Villa",
-      "Gönnen Sie sich das ultimative Entspannungserlebnis, während Sie im Jacuzzi entspannen",
-      "Gemütlicher Rückzugsort, an dem knisternde Flammen und Wärme Sie umarmen und zur Entspannung und Ruhe einladen, während das sanfte Glühen flackernder Glut Sie umgibt.",
-      "Genießen Sie gemütliche Zusammenkünfte am großzügig dimensionierten Esstisch",
-      "Entspannen Sie sich bei einer Partie Billard auf dem eleganten Billardtisch",
-      "Eleganter Eingang, der modernes Design und einladende Atmosphäre nahtlos verbindet und Sie dazu einlädt, stilvoll zu entspannen.",
-      "Ein moderner Rückzugsort mit privatem Pool, eingebettet in die Umarmung der Natur",
-      "Serenes Schwimmbad unter den Sternen"
+      "Eine moderne Ferienvilla in Pula — Strand, Stadtleben und Komfort an einem Ort.",
+      "Pool mit separatem Flachwasserbereich für Kinder und Hydromassage für Erwachsene.",
+      "Eine der wenigen Villen in Istrien mit Aufzug — perfekt für alle.",
+      "Erkunden Sie die Römische Arena, den Yachthafen und Pulas Nachtleben zu Fuß."
     ],
     "button": "Mehr lesen"
   },
-
   "About": {
-    "title": "Übersicht",
-    "des": "**Die Villa** befindet sich in einer ruhigen touristischen Siedlungsstraße der Stadt **Pula**. Sie ist **900 m** vom **Meer** entfernt. Der erste Hauptstrand Verudela ist ausgezeichnet, nur 3 Autominuten entfernt. Ein Café befindet sich 20 Meter entfernt und ein Geschäft 100 Meter vom Haus entfernt. Das Haus ist äußerst komfortabel und stilvoll eingerichtet, angepasst an die moderne Lebensweise. Es ist für 14 Personen + 2 Zustellbetten verfügbar. Der Innenraum umfasst 500 Quadratmeter und 2000 Quadratmeter Naturgrundstück, was zusätzliche Atmosphäre bietet. Der Rasen verfügt über **Fußballtore**, ein Trampolin, eine Schaukel und einen **Kamin**.",
+    "title": "Überblick über Villa Relax",
+    "des": "Villa Relax ist eine moderne Ferienvilla in Pula, nur 900m vom Meer und 3 Autominuten vom Strand Verudela entfernt. Eine der wenigen Villen in Istrien mit Aufzug — perfekt für Gäste jeden Alters. Der 48m²-Pool bietet einen separaten Flachwasserbereich für Kinder und Hydromassage für Erwachsene. 6 Schlafzimmer für bis zu 16 Gäste, Wellnessbereich mit Whirlpool, Sauna und Fitness, 100m² überdachte Terrasse, Spielzimmer mit Karaoke, Billard und Kamin, plus 6 Fahrräder. Nahe Cafés, Geschäften und dem antiken Stadtzentrum. Nichtraucher-Villa. Keine Haustiere.",
     "guest_access": {
       "title": "Zugang für Gäste",
       "des": "Whirlpool, Sauna, Fitness, Fahrräder, Karaoke, Billard, Fußball, Darts, Trampolin."
@@ -90,12 +84,12 @@
   },
   "Photogalleries": {
     "subtitle": "FOTOGALERIEN",
-    "title": "Wählen Sie Fotos von Villa Relax aus",
+    "title": "Fotogalerien — Villa Relax in Pula",
     "button": "Fotogalerie anzeigen"
   },
   "Tourist_Guide": {
     "subtitle": "TOURISTENFÜHRER",
-    "title": "Was zu besichtigen, sehen und tun?",
+    "title": "Reiseführer — Pula und Istrien von Villa Relax aus entdecken",
     "image_des": [
       "Der größte in Kroatien",
       "Nationalpark",
@@ -106,11 +100,11 @@
     ]
   },
   "Send_Message": {
-    "des": "Bitte **senden Sie uns eine** Antwort, wenn Sie zur Villa Relax in Pula gehören möchten und Ihre Reservierung sichern möchten?",
+    "des": "Senden Sie uns eine Nachricht, um die Villa Relax in Pula, Istrien, zu buchen.",
     "button": "Nachricht senden"
   },
   "Footer": {
-    "year": "©2024 . Villa Relax - Pula",
+    "year": "©2024 . Villa Relax — Ferienvilla in Pula, Istrien",
     "rights": "Alle Rechte vorbehalten",
     "created_by": "Webseite von BoostWeb",
     "Discover": {
@@ -125,10 +119,15 @@
     }
   },
   "Categorization": {
-    "title": ["Kategorisierung", "Kapazität", "Größe", "Garten"]
+    "title": [
+      "Kategorisierung",
+      "Kapazität",
+      "Größe",
+      "Garten"
+    ]
   },
   "Villa_Description": {
-    "des": "Die Villa befindet sich in einer ruhigen touristischen Siedlungsstraße der Stadt Pula. Sie ist 900 m vom Meer entfernt. Der erste Hauptstrand Verudela ist ausgezeichnet, nur 3 Autominuten entfernt. Ein Café befindet sich 20 Meter entfernt und ein Geschäft 100 Meter vom Haus entfernt. Das Haus ist äußerst komfortabel und stilvoll eingerichtet, angepasst an moderne Lebensweise. Es bietet Platz für 14 Personen + 2 Zustellbetten. Der Innenraum umfasst 500 Quadratmeter und das Naturgrundstück 2000 Quadratmeter, was zusätzliche Atmosphäre bietet. Der Rasen verfügt über Fußballtore, ein Trampolin, eine Schaukel und einen Kamin.",
+    "des": "Villa Relax ist eine moderne Ferienvilla in Pula, nur 900m vom Meer und 3 Autominuten vom Strand Verudela entfernt. Eine der wenigen Villen in Istrien mit Aufzug — perfekt für Gäste jeden Alters. Der 48m²-Pool bietet einen separaten Flachwasserbereich für Kinder und Hydromassage für Erwachsene. 6 Schlafzimmer für bis zu 16 Gäste, Wellnessbereich mit Whirlpool, Sauna und Fitness, 100m² überdachte Terrasse, Spielzimmer mit Karaoke, Billard und Kamin, plus 6 Fahrräder. Nahe Cafés, Geschäften und dem antiken Stadtzentrum. Nichtraucher-Villa. Keine Haustiere.",
     "subtitle": "Der Raum",
     "des2": "Im Erdgeschoss des Anwesens befindet sich ein geräumiger Wohnbereich mit einer Küche und einem Esszimmer im modernen Design, die zu einer großen Terrasse von 100 Quadratmetern führt, auf der sich Gartenmöbel und ein Pavillon befinden. Auch im Erdgeschoss befindet sich ein Wellnessbereich, von dem aus durch große Glaswände ein Blick auf den Pool, die Terrassen und das Grün geboten wird. Der Pool ist 48 Quadratmeter groß, mit einem flachen Bereich für Kinder (0,5 Meter tief) und einem tieferen Bereich für Erwachsene (1,5 Meter tief), ausgestattet mit Hydromassage. Der Aktivitätsbereich erstreckt sich durch den gesamten Keller des Hauses, mit einer zusätzlichen Küche und einem Kamin, der das Erlebnis ergänzt. Im Keller befindet sich auch eine Garage mit 2 Parkplätzen und 6 Fahrrädern für Stadtfahrten, während das vollständig umzäunte Grundstück weitere 4 Parkplätze bietet. Im Obergeschoss des Hauses befindet sich ein Arbeitszimmer, 4 Schlafzimmer mit Badezimmern, jeweils mit Zugang zu einer Terrasse, und 1 Dachzimmer. Das Haus ist klimatisiert, und alle Zimmer haben eine Zentralheizung. Neben der internen Treppe sind die Stockwerke durch einen Aufzug miteinander verbunden. Große überdachte Terrassen unterscheiden dieses Anwesen weiterhin. Das Haus befindet sich in der Nähe des Yachthafens sowie aller anderen interessanten Annehmlichkeiten, einschließlich des Zentrums des antiken Pula, das reich an kulturellen und historischen Sehenswürdigkeiten ist.",
     "subtitle2": "Zugang für Gäste",

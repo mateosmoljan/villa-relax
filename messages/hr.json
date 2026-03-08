@@ -14,29 +14,33 @@
     "Show_Gallery": "Prikaži galeriju"
   },
   "Navigation": {
-    "navlinks": ["Vila Relax", "Cjenik", "Fotogalerija", "Okolina", "Kontakt"],
+    "navlinks": [
+      "Vila Relax",
+      "Cjenik",
+      "Fotogalerija",
+      "Okolina",
+      "Kontakt"
+    ],
     "navLinksButton": "Rezerviraj"
   },
-
   "HeaderSwiper": {
     "titles": [
-      "Dobrodošli u Vilu Relax - Pula",
-      "Moderan dizajn i prostrani blagovaonski stol",
-      "Ognjište za bijeg",
-      "Aqua oaza"
+      "Villa Relax — Moderna vila u Puli, 900m od mora",
+      "Privatni bazen s dječjim dijelom i hidromasažom",
+      "6 spavaćih soba · Lift · Blizu plaže Verudela",
+      "Na korak od kafića, trgovina i antičkog centra Pule"
     ],
     "descriptions": [
-      "Tranquil Oasis Vila",
-      "Uživajte u ugodnim okupljanjima oko velikog blagovaonskog stola",
-      "Ugodno utočište gdje vam prigušene vatre i toplina pružaju zagrljaj, pozivajući vas na opuštanje i mirnost usred nježnog sjaja plamenih iskri.",
-      "Moderan odmor s privatnim bazenom, usađen u zagrljaju prirode"
+      "Moderna vila za odmor u Puli — plaža, gradski život i ugodnost na jednom mjestu.",
+      "Bazen s odvojenim plitkim dijelom za djecu i hidromasažom za odrasle.",
+      "Jedna od rijetkih vila u Istri s liftom — savršena za sve.",
+      "Istražite Rimsku arenu, marinu i noćni život Pule pješice."
     ],
     "button": "Saznajte više"
   },
-
   "About": {
-    "title": "Pregled",
-    "des": "Vila se nalazi u mirnoj ulici turističkog naselja grada Pule. Udaljena je 900 m od mora. Prva glavna plaža Verudela je odlična, udaljena samo 3 minute vožnje. Kafić je udaljen 20 metara, a trgovina 100 metara od kuće. Kuća je izuzetno udobna i stilski namještena, prilagođena modernom načinu života. Dostupna je za 14 osoba + 2 dodatna kreveta. Unutarnji prostor zauzima 500 četvornih metara, a 2000 četvornih metara prirodne parcele pruža dodatnu atmosferu. Na travnjaku se nalaze nogometni golovi, trampolin, ljuljačka i ognjište.",
+    "title": "Pregled Ville Relax",
+    "des": "Villa Relax je moderna vila za odmor u Puli, samo 900m od mora i 3 minute vožnje od plaže Verudela. Jedna od rijetkih vila u Istri s dizalom, savršena za goste svih dobi i mogućnosti. Bazen od 48m² ima odvojeni plitki dio za djecu i hidromasažu za odrasle. Sa 6 soba za do 16 gostiju, wellness s jacuzzijem, saunom i fitnessom, natkrivenom terasom od 100m², sobom za igre s karaokama, biljarom i kaminom, te 6 bicikala za istraživanje Pule. Na korak od kafića, trgovina i antičkog centra grada. Nepušačka vila. Kućni ljubimci nisu dopušteni.",
     "guest_access": {
       "title": "Pristup gostima",
       "des": "Jacuzzi, sauna, fitness, bicikli, karaoke, bilijar, nogomet, strelice."
@@ -80,12 +84,12 @@
   },
   "Photogalleries": {
     "subtitle": "FOTOGALERIJE",
-    "title": "Odaberite fotografije iz Ville Relax",
+    "title": "Foto galerije — Villa Relax u Puli",
     "button": "Prikaži fotogaleriju"
   },
   "Tourist_Guide": {
     "subtitle": "TURISTIČKI VODIČ",
-    "title": "Što posjetiti, vidjeti i raditi?",
+    "title": "Turistički vodič — Istražite Pulu i Istru iz Ville Relax",
     "image_des": [
       "Najveći u Hrvatskoj",
       "Nacionalni park",
@@ -96,11 +100,11 @@
     ]
   },
   "Send_Message": {
-    "des": "Molimo **pošaljite** nam odgovor ako želite pripadati Villi Relax u Puli i osigurati svoju rezervaciju?",
+    "des": "Pošaljite nam poruku za rezervaciju Ville Relax u Puli, Istra.",
     "button": "Pošaljite poruku"
   },
   "Footer": {
-    "year": "©2024 . Villa Relax - Pula",
+    "year": "©2024 . Villa Relax — Kuća za odmor u Puli, Istra",
     "rights": "Sva prava pridržana",
     "created_by": "Web stranica od BoostWeb",
     "Discover": {
@@ -115,10 +119,15 @@
     }
   },
   "Categorization": {
-    "title": ["Kategorizacija", "Kapacitet", "Veličina", "Vrt"]
+    "title": [
+      "Kategorizacija",
+      "Kapacitet",
+      "Veličina",
+      "Vrt"
+    ]
   },
   "Villa_Description": {
-    "des": "Villa se nalazi u mirnoj ulici turističkog naselja grada Pule. Udaljena je 900 m od mora. Prva glavna plaža Verudela izvrsna je, udaljena samo 3 minute vožnje. Kafić je udaljen 20 metara, a trgovina je udaljena 100 metara od kuće. Kuća je izuzetno udobna i stilski namještena, prilagođena modernom načinu života. Dostupna je za 14 osoba + 2 pomoćna kreveta. Unutarnji prostor zauzima 500 četvornih metara i 2000 četvornih metara prirodnog zemljišta, što pruža dodatnu atmosferu. Travnjak ima nogometne golove, trampolin, ljuljačku i kamin.",
+    "des": "Villa Relax je moderna vila za odmor u Puli, samo 900m od mora i 3 minute vožnje od plaže Verudela. Jedna od rijetkih vila u Istri s dizalom, savršena za goste svih dobi i mogućnosti. Bazen od 48m² ima odvojeni plitki dio za djecu i hidromasažu za odrasle. Sa 6 soba za do 16 gostiju, wellness s jacuzzijem, saunom i fitnessom, natkrivenom terasom od 100m², sobom za igre s karaokama, biljarom i kaminom, te 6 bicikala za istraživanje Pule. Na korak od kafića, trgovina i antičkog centra grada. Nepušačka vila. Kućni ljubimci nisu dopušteni.",
     "subtitle": "Prostor",
     "des2": "Na prizemlju objekta nalazi se prostrani dnevni boravak s kuhinjom i blagovaonicom modernog dizajna, koji vodi na veliku terasu od 100 četvornih metara gdje se nalaze vrtni namještaj i paviljon. Također na prizemlju je wellness zona, s koje se pruža pogled na bazen, terase i zelenilo kroz velike staklene zidove. Bazen je veličine 48 četvornih metara, s plitkim područjem za djecu (0,5 metara duboko) i dubljim područjem za odrasle (1,5 metara duboko), opremljen hidromasažom. Područje aktivnosti prostire se kroz cijelo podrum kuće, s dodatnom kuhinjom i kaminom koji upotpunjuje doživljaj. U podrumu, nalazi se i garaža s 2 parkirna mjesta i 6 bicikala za gradsku vožnju, dok potpuno ograđeno zemljište nudi još 4 parkirna mjesta. Na gornjem katu kuće, nalazi se studij, 4 spavaće sobe s kupaonicama, svaka s pristupom terasi, i 1 potkrovlje. Kuća je klimatizirana, a sve sobe imaju centralno grijanje. Osim unutarnjeg stubišta, katovi su povezani dizalom. Velike natkrivene terase dodatno ističu ovu nekretninu. Kuća se nalazi blizu marine, kao i svih ostalih zanimljivih sadržaja, uključujući centar antičke Pule, koji obiluje kulturnim i povijesnim znamenitostima.",
     "subtitle2": "Pristup gostima",

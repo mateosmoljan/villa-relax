@@ -23,26 +23,24 @@
     ],
     "navLinksButton": "Book"
   },
-
   "HeaderSwiper": {
     "titles": [
-      "Welcome to Villa Relax - Pula",
-      "Modern Design and Spacious Dinning Table",
-      "Fireplace Retreat",
-      "Aqua Haven"
+      "Villa Relax — Modern Villa in Pula, 900m from the Sea",
+      "Private Pool with Kids Section & Hydromassage",
+      "6 Bedrooms · Elevator · Near Verudela Beach",
+      "Walk to Cafés, Shops & Ancient Pula Center"
     ],
     "descriptions": [
-      "Tranquil Oasis Villa",
-      "Enjoy cozy gatherings around the generously sized dining table",
-      "Cozy haven where crackling flames and warmth embrace you, inviting relaxation and tranquility amidst the gentle glow of flickering embers.",
-      "A Modern Retreat with Private Pool, Nestled in Nature's Embrace"
+      "A modern holiday villa in Pula — beach, city life, and comfort in one place.",
+      "Pool with separate shallow area for children and hydromassage for adults.",
+      "One of the few villas in Istria with an elevator — perfect for everyone.",
+      "Explore the Roman Arena, marina, and Pula's nightlife on foot."
     ],
     "button": "Read More"
   },
-
   "About": {
-    "title": "Overview",
-    "des": "**The villa** is located in a quiet tourist settlement street of the city of **Pula**. It is **900 m** away from the **sea**. The first main beach Verudela is excellent, only a 3-minute drive away. A café is 20 meters away and a shop is 100 meters away from the house. The house is extremely comfortable and stylishly furnished, adapted to modern way of life. It is available for 14 people + 2 extra beds. The interior space occupies 500 square meters and 2000 square meters of natural plot, which provides additional ambiance. The lawn features **football goals**, a trampoline, a swing, and a **fireplace**.",
+    "title": "Overview of Villa Relax",
+    "des": "Villa Relax is a modern holiday villa in Pula, just 900m from the sea and a 3-minute drive from Verudela beach. One of the few villas in Istria with an elevator, making it perfect for guests of all ages and abilities. The 48m² pool features a separate shallow area for children and hydromassage for adults. With 6 bedrooms for up to 16 guests, wellness area with jacuzzi, sauna and fitness, 100m² covered terrace, games room with karaoke, billiards and fireplace, plus 6 bicycles for exploring Pula. Steps from cafés, shops, and the ancient city center. Non-smoking. Pets are not allowed.",
     "guest_access": {
       "title": "Guest Access",
       "des": "Jacuzzi, sauna, fitness, bikes, karaoke, billiards, football, darts, trampoline."
@@ -58,7 +56,6 @@
       ]
     }
   },
-
   "Distances": {
     "title": "Distances from Villa Relax",
     "button": "Show Map",
@@ -87,12 +84,12 @@
   },
   "Photogalleries": {
     "subtitle": "PHOTOGALLERIES",
-    "title": "Select photos from Villa Relax",
+    "title": "Photo Galleries — Villa Relax in Pula",
     "button": "Show Photogallery"
   },
   "Tourist_Guide": {
     "subtitle": "TOURIST GUIDE",
-    "title": "What to visit, see and do?",
+    "title": "Tourist Guide — Explore Pula and Istria from Villa Relax",
     "image_des": [
       "The biggest in Croatia",
       "National Park",
@@ -103,11 +100,11 @@
     ]
   },
   "Send_Message": {
-    "des": "Please **send us an** answer if you would like to belong to Villa Relax in Pula and secure your reservation?",
+    "des": "Send us a message to book Villa Relax in Pula, Istria.",
     "button": "Send Message"
   },
   "Footer": {
-    "year": "©2024 . Villa Relax - Pula",
+    "year": "©2024 . Villa Relax — Holiday Villa in Pula, Istria",
     "rights": "All rights protected",
     "created_by": "Website by BoostWeb",
     "Discover": {
@@ -122,10 +119,15 @@
     }
   },
   "Categorization": {
-    "title": ["Categorization", "Capacity", "Size", "Garden"]
+    "title": [
+      "Categorization",
+      "Capacity",
+      "Size",
+      "Garden"
+    ]
   },
   "Villa_Description": {
-    "des": "The villa is located in a quiet tourist settlement street of the city of Pula. It is 900 m away from the sea. The first main beach Verudela is excellent, only a 3-minute drive away. A café is 20 meters away and a shop is 100 meters away from the house. The house is extremely comfortable and stylishly furnished, adapted to modern way of life. It is available for 14 people + 2 extra beds. The interior space occupies 500 square meters and 2000 square meters of natural plot, which provides additional ambiance. The lawn features football goals, a trampoline, a swing, and a fireplace.",
+    "des": "Villa Relax is a modern holiday villa in Pula, just 900m from the sea and a 3-minute drive from Verudela beach. One of the few villas in Istria with an elevator, making it perfect for guests of all ages and abilities. The 48m² pool features a separate shallow area for children and hydromassage for adults. With 6 bedrooms for up to 16 guests, wellness area with jacuzzi, sauna and fitness, 100m² covered terrace, games room with karaoke, billiards and fireplace, plus 6 bicycles for exploring Pula. Steps from cafés, shops, and the ancient city center. Non-smoking. Pets are not allowed.",
     "subtitle": "The Space",
     "des2": "On the ground floor of the property is a spacious living area with a kitchen and dining room of modern design, leading to a large terrace of 100 square meters where garden furniture and a pavilion are located. Also on the ground floor is a wellness area, from which a view of the pool, terraces, and greenery is provided through large glass walls. The pool is 48 square meters in size, with a shallow area for children (0.5 meters deep) and a deeper area for adults (1.5 meters deep), equipped with hydro massage. The activity area extends through the entire basement of the house, with an additional kitchen and a fireplace that complements the experience. In the basement, there is also a garage with 2 parking spaces and 6 bicycles for city rides, while the fully fenced plot offers another 4 parking spaces. On the upper floor of the house, there is a study, 4 bedrooms with bathrooms, each with access to a terrace, and 1 attic room. The house is air-conditioned, and all rooms have central heating. In addition to the internal staircase, the floors are interconnected by an elevator. Large covered terraces further distinguish this property. The house is located near the marina, as well as all other interesting amenities, including the center of ancient Pula, which abounds in cultural and historical landmarks.",
     "subtitle2": "Guest access",

@@ -23,26 +23,24 @@
     ],
     "navLinksButton": "Prenota"
   },
-
   "HeaderSwiper": {
     "titles": [
-      "Benvenuti a Villa Relax - Pula",
-      "Elegante ritiro con tavolo da biliardo",
-      "Ritiro del camino",
-      "Haven Aqua"
+      "Villa Relax — Villa moderna a Pola, a 900m dal mare",
+      "Piscina privata con area bimbi e idromassaggio",
+      "6 camere · Ascensore · Vicino alla spiaggia di Verudela",
+      "A piedi verso caffè, negozi e il centro storico di Pola"
     ],
     "descriptions": [
-      "Oasi tranquilla",
-      "Goditi raduni accoglienti intorno al tavolo da pranzo di generose dimensioni",
-      "Elegante ingresso che fonde perfettamente design moderno e ambiente accogliente, invitandoti a rilassarti con stile.",
-      "Un rifugio moderno con piscina privata, immerso nell'abbraccio della natura"
+      "Una moderna villa vacanze a Pola — spiaggia, vita cittadina e comfort in un solo posto.",
+      "Piscina con area separata poco profonda per bambini e idromassaggio per adulti.",
+      "Una delle poche ville in Istria con ascensore — perfetta per tutti.",
+      "Esplorate l'Arena romana, il porto turistico e la vita notturna di Pola a piedi."
     ],
     "button": "Leggi di più"
   },
-
   "About": {
-    "title": "Panoramica",
-    "des": "**La villa** si trova in una tranquilla strada di un insediamento turistico della città di **Pula**. Dista **900 m** dal **mare**. La prima spiaggia principale di Verudela è eccellente, a soli 3 minuti di auto. Un caffè si trova a 20 metri e un negozio a 100 metri dalla casa. La casa è estremamente confortevole e arredata con stile, adattata al modo di vivere moderno. È disponibile per 14 persone + 2 letti aggiuntivi. Lo spazio interno occupa 500 metri quadrati e 2000 metri quadrati di terreno naturale, che fornisce un'atmosfera aggiuntiva. Il prato presenta **porterie da calcio**, un trampolino, un'altalena e un **camino**.",
+    "title": "Panoramica di Villa Relax",
+    "des": "Villa Relax è una moderna villa vacanze a Pola, a soli 900m dal mare e 3 minuti in auto dalla spiaggia di Verudela. Una delle poche ville in Istria con ascensore, perfetta per ospiti di ogni età. La piscina di 48m² offre un'area separata poco profonda per bambini e idromassaggio per adulti. 6 camere per un massimo di 16 ospiti, area wellness con jacuzzi, sauna e fitness, terrazza coperta di 100m², sala giochi con karaoke, biliardo e camino, più 6 biciclette. A pochi passi da bar, negozi e dal centro storico. Villa non fumatori. Animali non ammessi.",
     "guest_access": {
       "title": "Accesso ospiti",
       "des": "Jacuzzi, sauna, fitness, biciclette, karaoke, biliardo, calcio, freccette, trampolino."
@@ -58,7 +56,6 @@
       ]
     }
   },
-
   "Distances": {
     "title": "Distanze dalla Villa Relax",
     "button": "Mostra Mappa",
@@ -87,12 +84,12 @@
   },
   "Photogalleries": {
     "subtitle": "GALLERIE FOTOGRAFICHE",
-    "title": "Seleziona foto da Villa Relax",
+    "title": "Gallerie fotografiche — Villa Relax a Pola",
     "button": "Mostra Galleria Fotografica"
   },
   "Tourist_Guide": {
     "subtitle": "GUIDA TURISTICA",
-    "title": "Cosa visitare, vedere e fare?",
+    "title": "Guida turistica — Scoprite Pola e l’Istria da Villa Relax",
     "image_des": [
       "Il più grande in Croazia",
       "Parco Nazionale",
@@ -103,11 +100,11 @@
     ]
   },
   "Send_Message": {
-    "des": "Per favore, **inviateci una** risposta se desiderate appartenere alla Villa Relax a Pula e garantire la vostra prenotazione?",
+    "des": "Inviateci un messaggio per prenotare Villa Relax a Pola, Istria.",
     "button": "Invia Messaggio"
   },
   "Footer": {
-    "year": "©2024 . Villa Relax - Pula",
+    "year": "©2024 . Villa Relax — Villa vacanze a Pola, Istria",
     "rights": "Tutti i diritti riservati",
     "created_by": "Sito web di BoostWeb",
     "Discover": {
@@ -122,10 +119,15 @@
     }
   },
   "Categorization": {
-    "title": ["Categorizzazione", "Capacità", "Dimensioni", "Giardino"]
+    "title": [
+      "Categorizzazione",
+      "Capacità",
+      "Dimensioni",
+      "Giardino"
+    ]
   },
   "Villa_Description": {
-    "des": "La villa è situata in una tranquilla strada di un insediamento turistico della città di Pula. Dista 900 m dal mare. La prima spiaggia principale, Verudela, è eccellente, a soli 3 minuti di auto. Un caffè si trova a 20 metri e un negozio a 100 metri dalla casa. La casa è estremamente confortevole e arredata con stile, adattata al modo di vivere moderno. È disponibile per 14 persone + 2 letti extra. Lo spazio interno occupa 500 metri quadrati e 2000 metri quadrati di terreno naturale, che offre un'atmosfera aggiuntiva. Il prato dispone di porte da calcio, un trampolino, un'altalena e un camino.",
+    "des": "Villa Relax è una moderna villa vacanze a Pola, a soli 900m dal mare e 3 minuti in auto dalla spiaggia di Verudela. Una delle poche ville in Istria con ascensore, perfetta per ospiti di ogni età. La piscina di 48m² offre un'area separata poco profonda per bambini e idromassaggio per adulti. 6 camere per un massimo di 16 ospiti, area wellness con jacuzzi, sauna e fitness, terrazza coperta di 100m², sala giochi con karaoke, biliardo e camino, più 6 biciclette. A pochi passi da bar, negozi e dal centro storico. Villa non fumatori. Animali non ammessi.",
     "subtitle": "Lo Spazio",
     "des2": "Al piano terra della proprietà si trova una spaziosa area living con cucina e sala da pranzo di design moderno, che conduce a una grande terrazza di 100 metri quadrati dove si trovano mobili da giardino e un padiglione. Sempre al piano terra c'è un'area benessere, dalla quale si gode di una vista sulla piscina, sulle terrazze e sul verde attraverso grandi vetrate. La piscina è di 48 metri quadrati, con una zona bassa per bambini (0,5 metri di profondità) e una zona più profonda per adulti (1,5 metri di profondità), dotata di idromassaggio. L'area attività si estende per tutto il seminterrato della casa, con una cucina aggiuntiva e un camino che completano l'esperienza. Nel seminterrato si trova anche un garage con 2 posti auto e 6 biciclette per giri in città, mentre il terreno completamente recintato offre altri 4 posti auto. Al piano superiore della casa c'è uno studio, 4 camere da letto con bagni, ognuna con accesso a una terrazza, e 1 camera mansardata. La casa è climatizzata e tutte le camere hanno riscaldamento centralizzato. Oltre alla scala interna, i piani sono collegati da un ascensore. Grandi terrazze coperte distinguono ulteriormente questa proprietà. La casa si trova vicino al porto turistico, così come a tutti gli altri interessanti servizi, compreso il centro della antica Pula, ricco di luoghi culturali e storici.",
     "subtitle2": "Accesso Ospiti",

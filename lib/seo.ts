@@ -4,22 +4,35 @@ export const SITE_URL = "https://www.villarelaxpula.com";
 const SITE_NAME = "Villa Relax";
 const HERO_IMAGE = "/assets/images/outside/main.jpg";
 
+const amenityFeature = [
+  "Private Pool",
+  "Jacuzzi",
+  "Sauna",
+  "Fitness Room",
+  "Elevator",
+  "Games Room",
+  "Free Wi-Fi",
+  "Free Parking",
+  "Air Conditioning",
+  "Near the Sea",
+];
+
 const localeContent = {
   en: {
     siteDescription:
-      "Villa Relax in Pula, Croatia — luxury accommodation with private pool, spacious interiors, and easy access to Istria's top attractions.",
+      "Villa Relax in Pula, Croatia — holiday villa with private pool, jacuzzi, sauna, fitness area, elevator and easy access to Istria's top attractions.",
   },
   de: {
     siteDescription:
-      "Villa Relax in Pula, Kroatien — luxuriöse Unterkunft mit privatem Pool, großzügigem Interieur und Nähe zu den besten Attraktionen Istriens.",
+      "Villa Relax in Pula, Kroatien — Ferienvilla mit privatem Pool, Whirlpool, Sauna, Fitnessbereich, Aufzug und Nähe zu Istriens schönsten Attraktionen.",
   },
   hr: {
     siteDescription:
-      "Villa Relax u Puli, Hrvatska — luksuzan smještaj s privatnim bazenom, prostranim interijerom i blizinom najboljih atrakcija Istre.",
+      "Villa Relax u Puli, Hrvatska — vila za odmor s privatnim bazenom, jacuzzijem, saunom, fitnessom, dizalom i blizinom najboljih atrakcija Istre.",
   },
   it: {
     siteDescription:
-      "Villa Relax a Pola, Croazia — alloggio di lusso con piscina privata, interni spaziosi e vicinanza alle migliori attrazioni dell'Istria.",
+      "Villa Relax a Pola, Croazia — villa vacanze con piscina privata, jacuzzi, sauna, fitness, ascensore e facile accesso alle migliori attrazioni dell'Istria.",
   },
 } as const;
 
@@ -136,13 +149,14 @@ export function getLodgingBusinessJsonLd(locale: string) {
 
   return {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
+    "@type": "VacationRental",
     name: "Villa Relax",
     description: localeContent[safeLocale].siteDescription,
     image: [`${SITE_URL}${HERO_IMAGE}`],
     url: `${SITE_URL}/${safeLocale}`,
     telephone: "+38598898959",
     email: "bookings@villarelaxpula.com",
+    numberOfRooms: 6,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Pula",
@@ -154,10 +168,6 @@ export function getLodgingBusinessJsonLd(locale: string) {
       latitude: 44.8666,
       longitude: 13.8496,
     },
-    amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Private Pool", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Wi-Fi", value: true },
-    ],
+    amenityFeature: amenityFeature.map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
   };
 }
