@@ -32,7 +32,7 @@ function PropertyCard() {
         <p className="text-sm">{AccommodationsData.data[0].card_des}</p>
         <p className="text-sm">
           {AccommodationsData.data[0].card_des2}{" "}
-          <span className="font-bold text-yellow text-xl">375 €</span>{" "}
+          <span className="font-bold text-yellow text-xl">150 €</span>{" "}
           {AccommodationsData.data[0].card_des3}
         </p>
       </div>
