@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import { useMemo, useState } from "react";
 
 type PriceRange = {
+  year?: number;
   startMonth: number;
   startDay: number;
   endMonth: number;
@@ -26,6 +27,7 @@ const priceRanges: PriceRange[] = [
   { startMonth: 5, startDay: 1, endMonth: 5, endDay: 31, price: 350, persons: 16, stay: 3 },
   { startMonth: 6, startDay: 1, endMonth: 6, endDay: 30, price: 550, persons: 16, stay: 3 },
   { startMonth: 7, startDay: 1, endMonth: 8, endDay: 31, price: 950, persons: 16, stay: 3 },
+  { year: 2027, startMonth: 7, startDay: 1, endMonth: 8, endDay: 31, price: 1200, persons: 16, stay: 3 },
   { startMonth: 9, startDay: 1, endMonth: 9, endDay: 30, price: 420, persons: 16, stay: 3 },
   { startMonth: 10, startDay: 1, endMonth: 10, endDay: 31, price: 360, persons: 16, stay: 3 },
   { startMonth: 11, startDay: 1, endMonth: 11, endDay: 30, price: 220, persons: 16, stay: 3 },
@@ -105,7 +107,11 @@ function dayOfYear(month: number, day: number) {
   return month * 100 + day;
 }
 
-function isDayInRange(month: number, day: number, range: PriceRange) {
+function isDayInRange(year: number, month: number, day: number, range: PriceRange) {
+  if (range.year && range.year !== year) {
+    return false;
+  }
+
   const current = dayOfYear(month, day);
   const start = dayOfYear(range.startMonth, range.startDay);
   const end = dayOfYear(range.endMonth, range.endDay);
@@ -120,7 +126,7 @@ function isDayInRange(month: number, day: number, range: PriceRange) {
 function getPriceForDate(date: Date): CalendarDay {
   const month = date.getMonth() + 1;
   const day = date.getDate();
-  const range = priceRanges.find((item) => isDayInRange(month, day, item)) ?? priceRanges[0];
+  const range = [...priceRanges].reverse().find((item) => isDayInRange(date.getFullYear(), month, day, item)) ?? priceRanges[0];
 
   return {
     date,
