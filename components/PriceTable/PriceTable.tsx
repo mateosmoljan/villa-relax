@@ -1,6 +1,5 @@
 "use client";
 
-import { getPriceTableData } from "@/lib/priceTable";
 import { useLocale } from "next-intl";
 import { useMemo, useState } from "react";
 
@@ -43,8 +42,7 @@ const calendarCopy = {
     next: "Next",
     selectMonth: "Select month",
     selectYear: "Select year",
-    perNight: "/ night",
-    availabilityNote: "{copy.availabilityNote}",
+    availabilityNote: "Availability will be added in the next phase. For now, the calendar shows prices only.",
   },
   de: {
     title: "Tagespreis-Kalender",
@@ -53,7 +51,6 @@ const calendarCopy = {
     next: "Weiter",
     selectMonth: "Monat auswählen",
     selectYear: "Jahr auswählen",
-    perNight: "/ Nacht",
     availabilityNote: "Verfügbarkeiten werden in der nächsten Phase ergänzt. Der Kalender zeigt vorerst nur Preise.",
   },
   hr: {
@@ -63,7 +60,6 @@ const calendarCopy = {
     next: "Sljedeće",
     selectMonth: "Odaberite mjesec",
     selectYear: "Odaberite godinu",
-    perNight: "/ noć",
     availabilityNote: "Dostupnost ćemo dodati u sljedećoj fazi. Za sada kalendar prikazuje samo cijene.",
   },
   it: {
@@ -73,7 +69,6 @@ const calendarCopy = {
     next: "Successivo",
     selectMonth: "Seleziona mese",
     selectYear: "Seleziona anno",
-    perNight: "/ notte",
     availabilityNote: "La disponibilità verrà aggiunta nella prossima fase. Per ora il calendario mostra solo i prezzi.",
   },
 };
@@ -92,14 +87,6 @@ function getWeekdayLabels(locale: string) {
   return Array.from({ length: 7 }, (_, index) =>
     new Intl.DateTimeFormat(locale, { weekday: "short" }).format(new Date(2024, 0, index + 1))
   );
-}
-
-function formatDate(day: number, month: number) {
-  return `${String(day).padStart(2, "0")}.${String(month).padStart(2, "0")}.`;
-}
-
-function getRangeLabel(range: PriceRange) {
-  return `${formatDate(range.startDay, range.startMonth)} - ${formatDate(range.endDay, range.endMonth)}`;
 }
 
 function dayOfYear(month: number, day: number) {
@@ -146,7 +133,6 @@ function buildCalendarDays(year: number, monthIndex: number) {
 
 export default function PriceTable() {
   const localeActive = useLocale();
-  const priceTableData = getPriceTableData(localeActive);
   const copy = getCalendarCopy(localeActive);
   const monthLabels = useMemo(() => getMonthLabels(localeActive), [localeActive]);
   const weekdayLabels = useMemo(() => getWeekdayLabels(localeActive), [localeActive]);
@@ -258,7 +244,6 @@ export default function PriceTable() {
               >
                 <div className="font-Bold text-gray-800">{day.date.getDate()}</div>
                 <div className="mt-2 font-ExtraBold text-base text-gray-950">{day.price} €</div>
-                <div className="text-[11px] text-gray-600">{copy.perNight}</div>
               </div>
             ) : (
               <div key={`empty-${index}`} aria-hidden="true" />
@@ -270,37 +255,6 @@ export default function PriceTable() {
           {copy.availabilityNote}
         </p>
       </section>
-
-      <div className="overflow-x-auto rounded-md border border-gray-200 bg-white">
-        <table className="w-full" aria-label="Pricing Table">
-          <thead>
-            <tr className="bg-grey2">
-              <th className="font-titleBold py-2 px-0 w-[160px] text-center">
-                {priceTableData.data[0].title}
-              </th>
-              <th className="font-titleBold py-2 px-0 w-[112px] text-center">
-                {priceTableData.data[0].title2}
-              </th>
-              <th className="font-titleBold py-2 px-0 w-[112px] text-center">
-                {priceTableData.data[0].title3}
-              </th>
-              <th className="font-titleBold py-2 px-0 w-[112px] text-center">
-                {priceTableData.data[0].title4}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {priceRanges.map((row) => (
-              <tr key={getRangeLabel(row)} className="border-t border-gray-200">
-                <td className="px-0 font-Bold py-2 text-center">{getRangeLabel(row)}</td>
-                <td className="px-0 font-ExtraBold py-2 text-center">{row.price} €</td>
-                <td className="px-0 font-Bold py-2 text-center">{row.persons}</td>
-                <td className="px-0 font-Bold py-2 text-center">{row.stay}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </div>
   );
 }
