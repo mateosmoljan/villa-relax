@@ -27,14 +27,12 @@ const priceRanges: PriceRange[] = [
   { startMonth: 5, startDay: 1, endMonth: 5, endDay: 31, price: 350, persons: 16, stay: 3 },
   { startMonth: 6, startDay: 1, endMonth: 6, endDay: 30, price: 550, persons: 16, stay: 3 },
   { startMonth: 7, startDay: 1, endMonth: 8, endDay: 31, price: 950, persons: 16, stay: 3 },
-  { year: 2027, startMonth: 7, startDay: 1, endMonth: 8, endDay: 31, price: 1200, persons: 16, stay: 3 },
   { startMonth: 9, startDay: 1, endMonth: 9, endDay: 30, price: 420, persons: 16, stay: 3 },
   { startMonth: 10, startDay: 1, endMonth: 10, endDay: 31, price: 360, persons: 16, stay: 3 },
   { startMonth: 11, startDay: 1, endMonth: 11, endDay: 30, price: 220, persons: 16, stay: 3 },
   { startMonth: 12, startDay: 1, endMonth: 12, endDay: 21, price: 450, persons: 16, stay: 3 },
   { startMonth: 12, startDay: 22, endMonth: 12, endDay: 29, price: 500, persons: 16, stay: 3 },
   { startMonth: 12, startDay: 30, endMonth: 1, endDay: 1, price: 1000, persons: 16, stay: 3 },
-  { year: 2027, startMonth: 12, startDay: 28, endMonth: 1, endDay: 1, price: 1200, persons: 16, stay: 3 },
 ];
 
 const calendarCopy = {
